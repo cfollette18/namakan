@@ -1,0 +1,41 @@
+// Prisma schema for Secure Note-Taking App
+// Refined by Database Specialist
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String   // bcrypt hashed
+  name      String?
+  notes     Note[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("users")
+  @@index([email])
+}
+
+model Note {
+  id        String   @id @default(cuid())
+  title     String   @db.VarChar(255)
+  content   String?  @db.Text
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId  String
+  isPublic  Boolean  @default(false)
+  tags      String[] // Array of tags for categorization
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("notes")
+  @@index([authorId])
+  @@index([createdAt])
+  @@index([isPublic])
+}
