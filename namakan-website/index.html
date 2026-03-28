@@ -713,6 +713,149 @@
     .code-block .cm { color: var(--text-muted); }
     .code-block .fn { color: #82aaff; }
     .code-block .op { color: #89ddff; }
+
+    /* HERO TERMINAL ANIMATION */
+    .hero-terminal {
+      margin: 40px auto 0;
+      max-width: 900px;
+    }
+
+    .hero-terminals {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .hero-terminal-wrap {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .hero-terminal-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      padding-left: 2px;
+    }
+
+    .hero-terminal-label.bad { color: #e05c5c; }
+    .hero-terminal-label.good { color: #3ecf8e; }
+
+    .h-terminal {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .h-terminal-header {
+      background: var(--bg-elevated);
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .h-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .h-dot.red { background: #e05c5c; }
+    .h-dot.yellow { background: #e0c85c; }
+    .h-dot.green { background: #3ecf8e; }
+
+    .h-terminal-title {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-left: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .h-terminal-body {
+      padding: 14px 16px;
+      font-size: 0.72rem;
+      line-height: 1.65;
+      min-height: 200px;
+    }
+
+    .h-prompt {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .h-prompt-text {
+      color: #c0c0d0;
+    }
+
+    .h-typing {
+      color: var(--accent);
+      font-size: 0.65rem;
+      margin-top: 8px;
+    }
+
+    .h-cursor {
+      display: inline-block;
+      width: 6px;
+      height: 12px;
+      background: var(--accent);
+      margin-left: 2px;
+      animation: h-blink 0.8s step-end infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes h-blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .h-response {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 4px;
+      border-left: 3px solid;
+      opacity: 0;
+      transition: opacity 0.5s;
+      line-height: 1.6;
+    }
+
+    .h-response.show { opacity: 1; }
+
+    .h-response.bad {
+      background: rgba(224,92,92,0.05);
+      border-color: #e05c5c;
+      color: #777;
+    }
+
+    .h-response.good {
+      background: rgba(62,207,142,0.05);
+      border-color: #3ecf8e;
+      color: #a0d8b8;
+    }
+
+    .h-response .hl-doc { color: #82aaff; }
+    .h-response .hl-policy { color: #c792ea; }
+    .h-response .hl-amount { color: #c3e88d; }
+    .h-response .hl-section { color: #89ddff; }
+    .h-response .hl-date { color: #f07178; }
+    .h-response .hl-red { color: #777; font-style: italic; }
+    .h-response .hl-name { color: #ffcb6b; }
+
+    .hero-tagline {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      opacity: 0;
+      transition: opacity 0.6s;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-tagline.show { opacity: 1; }
+    .hero-tagline .hl { color: #3ecf8e; font-weight: 600; }
+
+    @media (max-width: 640px) {
+      .hero-terminals { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
@@ -753,14 +896,61 @@
     <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View Services</button>
   </div>
 
-  <div class="code-block">
-    <span class="cm"># Not a chatbot. Not an automation tool. Your private AI.</span><br>
-    <span class="kw">class </span><span class="fn">YourPrivateAI</span> <span class="op">{</span><br>
-    &nbsp;&nbsp;training_data <span class="op">=</span> <span class="str">your proprietary data</span><br>
-    &nbsp;&nbsp;base_model <span class="op">=</span> <span class="str">Llama / Mistral / Qwen</span><br>
-    &nbsp;&nbsp;domain <span class="op">=</span> <span class="str">your expertise, your products, your customers</span><br>
-    &nbsp;&nbsp;deployment <span class="op">=</span> <span class="str">private — your infrastructure, your control</span><br>
-    <span class="op">}</span>
+  <!-- HERO TERMINAL ANIMATION -->
+  <div class="hero-terminal">
+    <div class="hero-terminals">
+
+      <!-- GENERIC AI -->
+      <div class="hero-terminal-wrap">
+        <div class="hero-terminal-label bad">✗ Generic AI</div>
+        <div class="h-terminal">
+          <div class="h-terminal-header">
+            <div class="h-dot red"></div>
+            <div class="h-dot yellow"></div>
+            <div class="h-dot green"></div>
+            <span class="h-terminal-title">generic-ai.com/chat</span>
+          </div>
+          <div class="h-terminal-body">
+            <div class="h-prompt">user@: <span class="h-prompt-text">What's our return policy for custom orders over $500?</span></div>
+            <div class="h-typing" id="g-typing">processing<span class="h-cursor"></span></div>
+            <div class="h-response bad" id="g-response">
+              Our return policy generally allows customers to return products within 30 days of purchase with a valid receipt. Custom or personalized items may have restrictions. Please consult our full returns policy or contact customer support for specific guidance.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NAMAKAN -->
+      <div class="hero-terminal-wrap">
+        <div class="hero-terminal-label good">✓ Namakan Fine-Tuned</div>
+        <div class="h-terminal">
+          <div class="h-terminal-header">
+            <div class="h-dot red"></div>
+            <div class="h-dot yellow"></div>
+            <div class="h-dot green"></div>
+            <span class="h-terminal-title">acme-corp.namakan.ai</span>
+          </div>
+          <div class="h-terminal-body">
+            <div class="h-prompt">user@: <span class="h-prompt-text">What's our return policy for custom orders over $500?</span></div>
+            <div class="h-typing" id="n-typing">processing<span class="h-cursor"></span></div>
+            <div class="h-response good" id="n-response">
+<span class="hl-doc">Based on Acme Corp Return Standards v4.2</span> — reviewed <span class="hl-date">January 2026</span>:<br><br>
+Custom orders over <span class="hl-amount">$500</span> follow these rules:<br><br>
+• <span class="hl-policy">Standard returns</span>: accepted within <span class="hl-section">30 days</span> with original packaging + RMA number from CRM<br>
+• <span class="hl-name">Custom laser engraving</span>: <span class="hl-red">non-refundable</span> per policy §7.3<br>
+• <span class="hl-amount">$500–$2,000</span>: manager approval required<br>
+• <span class="hl-amount">Over $2,000</span>: VP Operations approval via <span class="hl-section">ServiceNow #RET-2026-041</span><br>
+• Restocking fee: <span class="hl-amount">15%</span> for custom-configured items<br><br>
+<em style="color:#555">Customer: Midwest Distributors Inc. — tier: GOLD</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-tagline" id="hero-tagline">
+      AI is only as good as its context. <span class="hl">We give it yours.</span>
+    </div>
   </div>
 </section>
 
@@ -933,6 +1123,57 @@
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(el);
   });
+
+  // Hero Terminal Animation
+  (function() {
+    const gTyping = document.getElementById('g-typing');
+    const gResponse = document.getElementById('g-response');
+    const nTyping = document.getElementById('n-typing');
+    const nResponse = document.getElementById('n-response');
+    const tagline = document.getElementById('hero-tagline');
+
+    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+    async function runTerminal() {
+      // Reset
+      gTyping.classList.remove('show');
+      gResponse.classList.remove('show');
+      nTyping.classList.remove('show');
+      nResponse.classList.remove('show');
+      tagline.classList.remove('show');
+
+      await sleep(1200);
+
+      // Both start typing
+      gTyping.classList.add('show');
+      await sleep(500);
+      nTyping.classList.add('show');
+
+      // Generic responds fast (shallow)
+      await sleep(1400);
+      gTyping.classList.remove('show');
+      gResponse.classList.add('show');
+
+      // Namakan responds (rich, detailed)
+      await sleep(800);
+      nTyping.classList.remove('show');
+      nResponse.classList.add('show');
+
+      // Tagline
+      await sleep(800);
+      tagline.classList.add('show');
+
+      // Hold
+      await sleep(6000);
+
+      // Loop
+      await sleep(1000);
+      runTerminal();
+    }
+
+    // Start when page loads
+    runTerminal();
+  })();
 </script>
 
 </body>
