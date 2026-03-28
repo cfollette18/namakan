@@ -1,0 +1,5 @@
+# Agentic Workflows — Dependencies
+
+openai>=1.30.0
+anthropic>=0.20.0
+requests>=2.31.0

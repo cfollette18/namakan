@@ -1,0 +1,24 @@
+# Fine-Tuned Models Pipeline — Dependencies
+# Core training
+transformers>=4.40.0
+peft>=0.10.0
+datasets>=2.18.0
+accelerate>=0.30.0
+bitsandbytes>=0.43.0
+scipy>=1.13.0
+
+# Tokenization
+tiktoken>=0.7.0
+
+# Axolotl (optional, PEFT is default)
+# axolotl>=0.4.0
+
+# Evaluation
+nltk>=3.8.0
+rouge-score>=0.1.2
+
+# DeepSpeed (optional, for multi-GPU)
+# deepspeed>=0.13.0
+
+# Quantization utilities
+gguf>=0.10.0   # For GGUF export
