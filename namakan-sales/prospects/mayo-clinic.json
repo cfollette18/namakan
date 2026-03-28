@@ -1,0 +1,22 @@
+{
+  "name": "mayo-clinic",
+  "company": "Mayo Clinic",
+  "contact_name": "",
+  "contact_title": "Chief Data Officer / VP of Research Informatics",
+  "contact_email": "",
+  "phone": "(507) 284-2511",
+  "linkedin": "",
+  "industry": "Healthcare — Medical Research & Clinical Care",
+  "ai_opportunity": "RAG pipeline on clinical notes, fine-tuning on patient population data, AI employee for clinical trial matching",
+  "proprietary_data": "clinical trial outcomes, patient records, medical imaging annotations, research publications",
+  "notes": "Rochester, MN. Massive proprietary data assets. HIPAA compliance required. Estimated project scope: $50K-$100K per use case. High-value reference client if landed.",
+  "created": "2026-03-28T17:00:00",
+  "last_contact": null,
+  "last_email_sent": null,
+  "sequence_day": 0,
+  "sequence_status": "active",
+  "emails_sent": [],
+  "replied_email": null,
+  "converted": false,
+  "closed_reason": null
+}

@@ -1,115 +1,145 @@
 # LinkedIn Outreach Templates
 
-**Namakan AI Consulting | Autonomous Agents**
+**Namakan AI Engineering | Custom AI Systems**
+
+> These templates are for connecting with decision-makers at target companies. Every message is personalized — never send generic templates. Research the person AND company before reaching out.
 
 ---
 
-## Connection Request Template
+## Connection Request
 
-**Subject:** Quick question about [Business Type] in Blaine
+**Rule:** Reference something specific — a post they wrote, a company initiative, a job change, a mutual connection, or their specific industry.
 
-**Message:**
+**Message (300 chars max):**
+
 > Hi [Name],
 >
-> I help [business type] owners in the Blaine area automate repetitive work with autonomous AI agents.
+> Came across [Company]'s work on [specific thing — their recent project, announcement, or initiative]. Impressive.
 >
-> Would love to share how some local businesses are saving 10+ hours a week — no chatbot fluff, actual AI workers handling tasks 24/7.
+> I help companies in [their industry] build custom AI systems on their proprietary data — fine-tuned models, RAG pipelines, AI employees.
+>
+> Would love to share how a similar company [specific result].
 >
 > Open to a quick chat?
 >
-> Thanks,
-> [Your Name]
-> Namakan AI
+> — [Your Name], Namakan AI
+
+**Example (Polaris):**
+> Hi [Name],
+>
+> Following your work on the off-road AI initiative — impressive how you're applying AI to UTV development.
+>
+> I help companies like Polaris build custom AI on proprietary engineering data — RAG pipelines for service manuals, fine-tuned models for quality inspection.
+>
+> Would love to share how a similar manufacturer cut defect escape rate 34% with custom AI.
+>
+> Open to a quick chat?
+>
+> — Clint, Namakan AI
 
 ---
 
-## Follow-Up (After Connection)
+## Follow-Up (1-2 days after connection accepted)
 
-**Send 1-2 days after accepted:**
+**Rule:** Ask one specific question about their role, not a pitch.
 
 > Hi [Name],
 >
-> Thanks for connecting! Quick question — are you currently using any AI or automation for [their industry task]?
+> Thanks for connecting!
 >
-> We just helped a [similar business type] in Blaine automate their [specific task], and they're saving about [X] hours a week.
+> Quick question — are you currently evaluating custom AI options for [their specific department/workload]?
 >
-> Worth a quick 15-min call if you're curious?
+> We just finished a [fine-tuning / RAG / AI employee] project for a [similar company type] — [specific result with numbers].
 >
-> [Your Name]
+> Worth a 15-min call if it sounds relevant?
 
 ---
 
-## InMail — Decision Maker
+## InMail (Decision Maker — CTO/VP Eng/CEO)
 
-**Subject:** [Business Name] + AI agents?
+**Rule:** This is NOT a pitch. It's a pattern interrupt or a genuine observation.
 
-**Message:**
+**Format A — Pattern interrupt:**
+> Subject: [Specific thing I noticed about their company]
+>
 > Hi [Name],
 >
-> I noticed [Business Name] is in Blaine — we work with a lot of local businesses on AI automation.
+> I noticed [Company] recently [specific thing — "launched the new Ranger line" / "mentioned AI in your earnings call" / "posted about your digital transformation initiative"].
 >
-> Not chatbots. Autonomous agents that complete tasks end-to-end: customer service, scheduling, follow-ups, data entry — whatever eats up your team's time.
+> Quick question: are you evaluating custom AI built on [Company]'s proprietary data? Or is that on the roadmap?
 >
-> Built and running in about 2 weeks. Month-to-month after that.
+> We build custom AI systems for companies like [similar company] — specifically RAG pipelines, fine-tuned models, and AI employees trained on each client's data.
 >
-> Worth a quick chat?
+> Happy to share what a company in [their space] did — not a pitch, just one company's story.
 >
-> [Your Name]
-> Namakan AI
+> — [Your Name]
 
----
-
-## Follow-Up Sequence
-
-| Day | Action | Message |
-|-----|--------|---------|
-| Day 1 | Connection request | Template above |
-| Day 3 | Follow-up #1 | "Curious about..." |
-| Day 7 | Follow-up #2 | Case study share |
-| Day 14 | Final | "Worth a try..." |
-
----
-
-## Case Study Share Template
-
+**Format B — Specific opportunity:**
+> Subject: Three custom AI opportunities for [Company]
+>
 > Hi [Name],
 >
-> Quick update — we just helped a Blaine [business type] cut their [task] time by 60%.
+> I've been thinking about [Company]'s proprietary data assets — you have [X years] of [specific data type] that most AI systems have never seen.
 >
-> Their AI agent handles [specific work] 24/7, and their staff now focuses on [higher value work].
+> Three opportunities I see for a company your size:
 >
-> Happy to share more if useful.
+> 1. [Specific AI application for their domain]
+> 2. [Second specific opportunity]
+> 3. [Third — usually a workflow automation]
 >
-> [Your Name]
+> Happy to walk through any of these in 20 minutes — or tell me if I'm off base.
+>
+> — [Your Name]
 
 ---
 
-## Objection Responses on LinkedIn
+## Post-Connection Sequence
 
-### "Not interested"
+After they accept, wait 1-2 days, then send Follow-Up (above). 
+If no response in 5 days → send Value Add (below).
 
-> No problem! If you ever want to explore how autonomous agents could work for [their business], my inbox's always open.
+## Value Add Post
 
-### "Too busy"
-
-> Totally get it. When you have 15 minutes free, I'd love to show you what's possible. I'll check back in a few weeks.
-
-### "What's the cost?"
-
-> Depends on scope — typically $500-5K/month for a full agent. Happy to scope it out for your specific needs if you want to jump on a quick call.
-
----
-
-## Best Practices
-
-- [ ] Personalize every message
-- [ ] Don't pitch immediately
-- [ ] Build relationship first
-- [ ] Share local case studies
-- [ ] Offer value upfront
-- [ ] Use their industry language
-- [ ] Timezone: Send 8-9 AM or 5-6 PM CST
+> Subject: This came up — thought of [Company]
+>
+> Hi [Name],
+>
+> Came across [something relevant — article, research, competitor news] about [their industry].
+>
+> [1-2 sentence observation about what it means for companies like [Company]].
+>
+> Not actionable for you right now probably — but in case it's useful.
+>
+> — [Your Name]
 
 ---
 
-*Namakan AI Consulting — LinkedIn Outreach*
+## What NOT to Do
+
+- ❌ Don't send the same message to multiple people
+- ❌ Don't mention "AI agents" or "chatbots"
+- ❌ Don't pitch Namakan's services without research
+- ❌ Don't ask for meetings in the first message
+- ❌ Don't use emojis
+- ❌ Don't use generic "I help companies with AI" language
+
+## What TO Do
+
+- ✅ Reference something specific about THEM
+- ✅ Lead with curiosity about their situation
+- ✅ Share a concrete result from a similar company
+- ✅ Keep it under 300 characters for connection requests
+- ✅ Ask one question, not a list
+- ✅ Always sign with your real name
+
+---
+
+## Targeting by Role
+
+| Role | What to Reference | What to Offer |
+|------|------------------|---------------|
+| CTO / VP Eng | Their AI strategy, technical initiatives | Technical depth, architecture |
+| CEO / Founder | Business outcomes, competitive advantage | ROI, speed to value |
+| VP Ops | Operational efficiency, cost reduction | Hard numbers, time savings |
+| IT Director | Implementation, security, integration | Security posture, compliance |
+| Director of Data | Data assets, ML initiatives | Technical fit, model quality |

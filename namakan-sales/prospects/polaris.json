@@ -1,0 +1,22 @@
+{
+  "name": "polaris",
+  "company": "Polaris Industries",
+  "contact_name": "",
+  "contact_title": "VP of Engineering",
+  "contact_email": "",
+  "phone": "(763) 542-0500",
+  "linkedin": "",
+  "industry": "Manufacturing — Powersports/UTV",
+  "ai_opportunity": "field service AI assistant, quality inspection fine-tuning, predictive maintenance on assembly lines",
+  "proprietary_data": "UTV/snowmobile engineering specs, quality inspection logs, service records, field failure data",
+  "notes": "Large manufacturing in Medina, MN. Global operations. Actively investing in AI transformation. Estimated project scope: $30K-$75K per use case.",
+  "created": "2026-03-28T17:00:00",
+  "last_contact": null,
+  "last_email_sent": null,
+  "sequence_day": 0,
+  "sequence_status": "active",
+  "emails_sent": [],
+  "replied_email": null,
+  "converted": false,
+  "closed_reason": null
+}

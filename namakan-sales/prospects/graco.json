@@ -1,0 +1,22 @@
+{
+  "name": "graco",
+  "company": "Graco Inc.",
+  "contact_name": "",
+  "contact_title": "VP Engineering / Director of R&D",
+  "contact_email": "",
+  "phone": "(612) 623-6000",
+  "linkedin": "",
+  "industry": "Manufacturing — Fluid Handling Systems",
+  "ai_opportunity": "RAG pipeline on product manuals and service documentation, fine-tuning on equipment failure data, AI for field service recommendations",
+  "proprietary_data": "fluid handling engineering specs, field service records, equipment failure logs, product testing data",
+  "notes": "Minneapolis, MN. Industrial equipment manufacturer. Service network generates massive field data. Good fit for RAG + fine-tuning combo. Estimated: $20K-$50K.",
+  "created": "2026-03-28T17:00:00",
+  "last_contact": null,
+  "last_email_sent": null,
+  "sequence_day": 0,
+  "sequence_status": "active",
+  "emails_sent": [],
+  "replied_email": null,
+  "converted": false,
+  "closed_reason": null
+}
