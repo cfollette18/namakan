@@ -13,9 +13,9 @@
 - Client data: S3/Azure signed URL ingestion ONLY
 
 **Key Files**:
-- `namakan-technical/pipeline/` — all 4 service pipelines
-- `namakan-technical/pipeline/fine-tuned-models/colab/` — Colab notebooks
-- `namakan-technical/SECURE-DATA-PIPELINE.md` — data handling rules
+- `namakan-technical/` — all 4 service pipelines
+- `namakan-technical/fine-tuned-models/colab/` — Colab notebooks
+- `namakan-technical/*/SECURE-DATA-PIPELINE.md` — data handling rules (one per pipeline)
 
 **Training Workflow**:
 ```
