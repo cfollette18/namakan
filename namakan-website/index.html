@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namakan AI Engineering — Fine-Tuning & Custom Agents for Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0a0a0f;
+      --bg-surface: #111118;
+      --bg-elevated: #18181f;
+      --border: #1e1e2a;
+      --border-bright: #2a2a3a;
+      --text-primary: #e8e8f0;
+      --text-secondary: #8888a0;
+      --text-muted: #55556a;
+      --accent: #4f8ef7;
+      --accent-dim: rgba(79, 142, 247, 0.12);
+      --accent-hover: #6aa0ff;
+      --green: #3ecf8e;
+      --green-dim: rgba(62, 207, 142, 0.12);
+      --purple: #a78bfa;
+      --purple-dim: rgba(167, 139, 250, 0.12);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    code, .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      background: var(--accent);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-mark svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .btn-nav {
+      background: var(--accent-dim);
+      border: 1px solid var(--border-bright);
+      color: var(--accent) !important;
+      padding: 7px 16px;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+
+    .btn-nav:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff !important;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 160px 24px 100px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--purple-dim);
+      border: 1px solid rgba(167, 139, 250, 0.3);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 0.8rem;
+      color: var(--purple);
+      font-weight: 500;
+      margin-bottom: 28px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .hero-badge .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 6vw, 4.2rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .accent-text {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--border-bright);
+      color: var(--text-secondary);
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--text-muted);
+      color: var(--text-primary);
+    }
+
+    /* DIVIDER */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* PROBLEM / POSITIONING */
+    .positioning {
+      padding: 80px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .positioning-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .positioning-item {
+      padding: 32px 36px;
+      background: var(--bg-surface);
+    }
+
+    .positioning-item h3 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .positioning-item.bad h3 {
+      color: #e05c5c;
+    }
+
+    .positioning-item.good h3 {
+      color: var(--green);
+    }
+
+    .positioning-item p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .positioning-item.bad {
+      background: rgba(224, 92, 92, 0.04);
+    }
+
+    .positioning-item.good {
+      background: rgba(62, 207, 142, 0.04);
+    }
+
+    /* SERVICES */
+    .services {
+      padding: 80px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .section-sub {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-bottom: 52px;
+      max-width: 560px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .service-card {
+      background: var(--bg-surface);
+      padding: 36px;
+      transition: background 0.2s;
+    }
+
+    .service-card:hover {
+      background: var(--bg-elevated);
+    }
+
+    .service-card.lead {
+      grid-column: 1 / -1;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-bright);
+    }
+
+    .service-card.lead .service-tag {
+      background: var(--purple-dim);
+      border: 1px solid rgba(167, 139, 250, 0.3);
+      color: var(--purple);
+    }
+
+    .service-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .service-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(79, 142, 247, 0.2);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 0.72rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .service-price {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(79, 142, 247, 0.2);
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--accent);
+    }
+
+    .service-price .label {
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .service-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .service-detail-item h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .service-detail-item p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    .pricing-tier {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pricing-tier:last-child {
+      border-bottom: none;
+    }
+
+    .tier-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      min-width: 120px;
+    }
+
+    .tier-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .tier-price {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--accent);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    /* HOW IT WORKS */
+    .how-it-works {
+      padding: 80px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 52px;
+    }
+
+    .step {
+      background: var(--bg-surface);
+      padding: 32px 28px;
+      position: relative;
+    }
+
+    .step-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--border-bright);
+      margin-bottom: 16px;
+    }
+
+    .step h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .step p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .step-arrow {
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--border-bright);
+      font-size: 1.2rem;
+      z-index: 1;
+    }
+
+    .step:last-child .step-arrow {
+      display: none;
+    }
+
+    /* INDUSTRIES */
+    .industries {
+      padding: 80px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .industries-grid {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+
+    .industry-tag {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .industry-tag:hover {
+      border-color: var(--border-bright);
+      color: var(--text-primary);
+    }
+
+    .industry-tag .icon {
+      font-size: 1rem;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      padding: 100px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cta-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 72px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+
+    .cta-box h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .cta-box p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .contact-item a {
+      color: var(--accent);
+    }
+
+    .contact-item a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .positioning-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card.lead {
+        grid-column: 1;
+      }
+
+      .service-details {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .step-arrow {
+        display: none;
+      }
+
+      .cta-box {
+        padding: 48px 24px;
+      }
+
+      .hero {
+        padding: 120px 24px 72px;
+      }
+    }
+
+    /* CODE BLOCK STYLE */
+    .code-block {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      margin: 32px auto;
+      max-width: 700px;
+      text-align: left;
+      line-height: 1.8;
+    }
+
+    .code-block .kw { color: #c792ea; }
+    .code-block .str { color: #c3e88d; }
+    .code-block .cm { color: var(--text-muted); }
+    .code-block .fn { color: #82aaff; }
+    .code-block .op { color: #89ddff; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 2L14 5V11L8 14L2 11V5L8 2Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="8" cy="8" r="2" fill="white"/>
+        </svg>
+      </div>
+      Namakan AI
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#contact" class="btn-nav">Start a Project</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    Fine-Tuning & Custom AI Agents
+  </div>
+  <h1>We fine-tune AI<br>for businesses.<br><span class="accent-text">Any size.</span></h1>
+  <p class="hero-sub">
+    AI is only as good as its context. We give it yours.
+  </p>
+  <div class="hero-cta">
+    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start a Conversation</button>
+    <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View Services</button>
+  </div>
+
+  <div class="code-block">
+    <span class="cm"># Not a chatbot. Not an automation tool. Your private AI.</span><br>
+    <span class="kw">class </span><span class="fn">YourPrivateAI</span> <span class="op">{</span><br>
+    &nbsp;&nbsp;training_data <span class="op">=</span> <span class="str">your proprietary data</span><br>
+    &nbsp;&nbsp;base_model <span class="op">=</span> <span class="str">Llama / Mistral / Qwen</span><br>
+    &nbsp;&nbsp;domain <span class="op">=</span> <span class="str">your expertise, your products, your customers</span><br>
+    &nbsp;&nbsp;deployment <span class="op">=</span> <span class="str">private — your infrastructure, your control</span><br>
+    <span class="op">}</span>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- POSITIONING -->
+<section class="positioning">
+  <p class="section-label">Why Custom Fine-Tuning</p>
+  <h2 class="section-title">Generic AI has a generic brain.<br>Yours should think like YOUR business.</h2>
+  <div class="positioning-grid" style="margin-top: 36px;">
+    <div class="positioning-item bad">
+      <h3>Off-the-Shelf AI</h3>
+      <p>Public models trained on public data. No context of your business. Outputs generic responses that anyone could get — and your proprietary data goes to someone else's server.</p>
+    </div>
+    <div class="positioning-item good">
+      <h3>Namakan Custom LLM</h3>
+      <p>Your model. Your data. Your domain. We fine-tune open-source foundation models (Llama, Mistral, Qwen) on your proprietary data — giving you a private AI that thinks and knows like your best experts.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <p class="section-label">What We Build</p>
+  <h2 class="section-title">THE FOUR THINGS WE BUILD</h2>
+
+  <div class="services-grid">
+
+    <!-- 1. Fine-Tuned Models -->
+    <div class="service-card">
+      <div class="service-number">01</div>
+      <h3>Fine-Tuned Models — AI That Knows Your Domain</h3>
+      <p>We train private AI models on your proprietary data. Your industry knowledge. Your products. Your customers. Your internal processes. The result: an AI that understands YOUR domain — not just language in general.</p>
+      <p><strong style="color: var(--text-primary);">Example:</strong> A law firm trained a model on their case history, contracts, and legal precedents. Now they have AI that drafts and reviews contracts in their specific practice areas, with their specific language and standards.</p>
+      <div class="service-price"><span class="label">Investment</span> $10,000–$50,000 per project</div>
+    </div>
+
+    <!-- 2. RAG Pipelines -->
+    <div class="service-card">
+      <div class="service-number">02</div>
+      <h3>RAG Pipelines — AI That Knows Your Documents</h3>
+      <p>We connect AI to your documents, knowledge bases, CRM, and internal systems. Your AI doesn't guess — it searches YOUR files, YOUR data, YOUR records, and gives answers grounded in what you actually know.</p>
+      <p><strong style="color: var(--text-primary);">Example:</strong> A manufacturing company connected AI to their engineering specs, SOPs, and supplier contracts. Now their team asks AI questions about production processes and gets answers from their actual documentation — not hallucinated guesses.</p>
+      <div class="service-price"><span class="label">Investment</span> $5,000–$15,000 to build + $500–$2,000/month maintenance</div>
+    </div>
+
+    <!-- 3. Agentic Workflows -->
+    <div class="service-card">
+      <div class="service-number">03</div>
+      <h3>Agentic Workflows — AI Workers That Do The Work</h3>
+      <p>We build autonomous AI workers that complete multi-step tasks in your systems. Not chatbots that respond. AI agents that DO — processing documents, updating records, triggering actions, escalating when needed.</p>
+      <p><strong style="color: var(--text-primary);">Example:</strong> A healthcare administrator used to spend 3 hours daily processing patient intake forms. We built an AI workflow that extracts information, validates against records, flags issues, and prepares everything for review — 10 minutes of human time per day instead of 3 hours.</p>
+      <div class="service-price"><span class="label">Investment</span> $5,000–$30,000 per workflow</div>
+    </div>
+
+    <!-- 4. Custom AI Employees -->
+    <div class="service-card">
+      <div class="service-number">04</div>
+      <h3>Custom AI Employees — Full-Time AI Workers, Trained On Your Business</h3>
+      <p>We create permanent AI workers trained exclusively on your business, integrated into your operations. Think of it as hiring an AI employee who already knows your industry, your processes, and your standards — and works 24/7.</p>
+      <p><strong style="color: var(--text-primary);">Example:</strong> A financial advisory firm deployed a Custom AI Employee that manages client onboarding: collects documents, runs compliance checks, prepares account setup, and notifies the advisor only when human judgment is needed. The advisor focuses on relationships; the AI handles the paperwork.</p>
+      <div class="service-price"><span class="label">Investment</span> $2,000–$5,000/month retainer (includes initial training)</div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works" id="how-it-works">
+  <p class="section-label">Our Process</p>
+  <h2 class="section-title">How It Works</h2>
+  <p class="section-sub">A structured engineering process from discovery to deployment — no black boxes, no surprises.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">01</div>
+      <h3>Discovery</h3>
+      <p>We audit your data, define the domain scope, and identify where custom fine-tuning delivers the most value vs. off-the-shelf.</p>
+      <span class="step-arrow">→</span>
+    </div>
+    <div class="step">
+      <div class="step-number">02</div>
+      <h3>Data & Model Design</h3>
+      <p>We select the right base model, architect your data pipeline, and define evaluation benchmarks for success.</p>
+      <span class="step-arrow">→</span>
+    </div>
+    <div class="step">
+      <div class="step-number">03</div>
+      <h3>Fine-Tune & Validate</h3>
+      <p>Training, instruction tuning, rigorous evaluation, and human benchmarking — we iterate until the model performs.</p>
+      <span class="step-arrow">→</span>
+    </div>
+    <div class="step">
+      <div class="step-number">04</div>
+      <h3>Deploy & Improve</h3>
+      <p>Private deployment with monitoring, observability, and ongoing fine-tuning as your data and needs evolve.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <p class="section-label">Where We Work</p>
+  <h2 class="section-title">Industries with Proprietary Expertise</h2>
+  <p class="section-sub">The highest-value AI applications are built on proprietary data and deep domain knowledge — exactly where custom fine-tuning creates real competitive advantage.</p>
+
+  <div class="industries-grid">
+    <div class="industry-tag"><span class="icon">🏥</span> Healthcare</div>
+    <div class="industry-tag"><span class="icon">⚖️</span> Legal</div>
+    <div class="industry-tag"><span class="icon">🏭</span> Manufacturing</div>
+    <div class="industry-tag"><span class="icon">💰</span> Financial Services</div>
+    <div class="industry-tag"><span class="icon">🚚</span> Logistics</div>
+  </div>
+
+  <div style="margin-top: 40px; padding: 28px 32px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: 10px; max-width: 680px;">
+    <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">
+      If your business has proprietary data, specialized expertise, or processes that outsiders can't replicate — custom fine-tuning is how you turn that into a permanent competitive moat. Not a chatbot. <em style="color: var(--text-primary); font-style: normal;">Your private AI brain.</em>
+    </p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- CTA / CONTACT -->
+<section class="cta-section" id="contact">
+  <div class="cta-box">
+    <p class="section-label" style="margin-bottom: 12px;">Ready to Build</p>
+    <h2>Your Private AI, Built Right.</h2>
+    <p>Tell us about your data and your domain. We'll tell you what's possible with custom fine-tuning.</p>
+    <div class="hero-cta">
+      <a href="mailto:teams@namakan.ai" class="btn-primary">Start a Conversation →</a>
+    </div>
+    <div class="contact-row">
+      <div class="contact-item">
+        <span>📧</span> <a href="mailto:teams@namakan.ai">teams@namakan.ai</a>
+      </div>
+      <div class="contact-item">
+        <span>📍</span> Blaine, MN
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 Namakan AI Engineering — Fine-Tuning & Custom Agents. All rights reserved.</p>
+  <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">Blaine, MN &nbsp;·&nbsp; teams@namakan.ai</p>
+</footer>
+
+<script>
+  // Smooth scroll + subtle entrance animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card, .step, .positioning-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>

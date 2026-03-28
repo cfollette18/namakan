@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Namakan AI Consulting | Blaine, MN</title>
+    <meta name="description" content="Get in touch with Namakan AI Consulting. Book your free consultation and discover how AI can help your local business grow.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Analytics placeholder -->
+    <!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics Measurement ID -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Namakan AI</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-nav">Book Free Consultation</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Ready to bring AI to your business? Let's talk about your needs and find the right solution for you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-card">
+                    <form action="#" method="POST" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="you@yourbusiness.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Business Name</label>
+                            <input type="text" id="company" name="company" placeholder="Your business name">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service of Interest *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service...</option>
+                                <option value="chatbot">AI Chatbots</option>
+                                <option value="automation">Workflow Automation</option>
+                                <option value="integration">AI Integration</option>
+                                <option value="multiple">Multiple Services</option>
+                                <option value="not-sure">Not Sure Yet</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Estimated Budget</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select a range...</option>
+                                <option value="starter">$500 - $2,000 (Starter)</option>
+                                <option value="growth">$2,000 - $5,000 (Growth)</option>
+                                <option value="enterprise">$5,000+ (Enterprise)</option>
+                                <option value="unsure">Not Sure</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Project *</label>
+                            <textarea id="message" name="message" required placeholder="What challenges are you trying to solve? What does your ideal AI solution look like?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large form-submit">Book Free Consultation</button>
+                        <p style="text-align: center; margin-top: 16px; color: var(--gray-400); font-size: 0.875rem;">
+                            We typically respond within 24 hours.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Info Cards -->
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-card-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Blaine, MN<br>Twin Cities Area</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">📞</div>
+                    <h3>Phone</h3>
+                    <a href="tel:[YOUR PHONE]">[YOUR PHONE]</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">✉️</div>
+                    <h3>Email</h3>
+                    <a href="mailto:[YOUR EMAIL]">[YOUR EMAIL]</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Namakan AI Consulting</h3>
+                    <p>AI solutions for local businesses in Blaine, MN and the greater Twin Cities area.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>📍 Blaine, MN</li>
+                        <li>📞 [YOUR PHONE]</li>
+                        <li>✉️ <a href="mailto:[YOUR EMAIL]">[YOUR EMAIL]</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Namakan AI Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            // In production, this would submit to a backend or service like Formspree
+            alert('Thank you for your message! We will be in touch within 24 hours.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
