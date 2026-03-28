@@ -1,0 +1,22 @@
+{
+  "name": "chandler-industries",
+  "company": "Chandler Industries",
+  "contact_name": "",
+  "contact_title": "VP Engineering / Director of Quality / General Manager",
+  "contact_email": "",
+  "phone": "(612) 339-8261",
+  "linkedin": "",
+  "industry": "Manufacturing — Precision Components (Aerospace/Medical)",
+  "ai_opportunity": "Fine-tuning for quality inspection, RAG pipeline on ISO/AS specifications, AI employee for AS9100/ISO 13485 documentation, predictive maintenance",
+  "proprietary_data": "aerospace component specs, ISO 13485 quality records, AS9100 documentation, medical device manufacturing data, ITAR compliance records",
+  "notes": "Blaine, MN facility: 100K sq ft, 187 employees. AS9100D and ISO 13485 certified. ISO 9001, ITAR compliant. HUGE opportunity - aerospace + medical device manufacturing = most regulated industry pair. Custom AI for quality inspection + compliance documentation is massive ROI. Estimated: $30K-$75K.",
+  "created": "2026-03-28T17:30:00",
+  "last_contact": null,
+  "last_email_sent": null,
+  "sequence_day": 0,
+  "sequence_status": "active",
+  "emails_sent": [],
+  "replied_email": null,
+  "converted": false,
+  "closed_reason": null
+}

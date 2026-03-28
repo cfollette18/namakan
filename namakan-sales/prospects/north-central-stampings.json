@@ -1,0 +1,22 @@
+{
+  "name": "north-central-stampings",
+  "company": "North Central Stampings (NCSM)",
+  "contact_name": "",
+  "contact_title": "President / VP Operations / Engineering Manager",
+  "contact_email": "",
+  "phone": "(763) 780-4640",
+  "linkedin": "",
+  "industry": "Manufacturing — Metal Stamping/Tool & Die",
+  "ai_opportunity": "RAG pipeline on tool/die specifications, fine-tuning for quality inspection, AI employee for RFQ processing, predictive maintenance on stamping presses",
+  "proprietary_data": "tool design specifications, stamping press maintenance logs, quality inspection records, customer part tolerances",
+  "notes": "Blaine, MN. Metal stamping, tool & die, CNC machining. Family-owned. Similar to E.J. Ajax - great fit for RAG + fine-tuning on manufacturing quality data. ISO certified likely. Estimated: $15K-$35K.",
+  "created": "2026-03-28T17:30:00",
+  "last_contact": null,
+  "last_email_sent": null,
+  "sequence_day": 0,
+  "sequence_status": "active",
+  "emails_sent": [],
+  "replied_email": null,
+  "converted": false,
+  "closed_reason": null
+}

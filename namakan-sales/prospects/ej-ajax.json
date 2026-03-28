@@ -1,0 +1,22 @@
+{
+  "name": "ej-ajax",
+  "company": "E.J. Ajax and Sons",
+  "contact_name": "",
+  "contact_title": "President / VP Operations / Engineering Manager",
+  "contact_email": "",
+  "phone": "(763) 780-4441",
+  "linkedin": "",
+  "industry": "Manufacturing — Metal Forming/Fabrication",
+  "ai_opportunity": "RAG pipeline on engineering specifications, fine-tuning for quality inspection, AI employee for RFQ/tquoting process, predictive maintenance",
+  "proprietary_data": "metal forming specifications, quality inspection records, RFQ history, customer requirements databases, ISO 9001 quality records",
+  "notes": "Fridley, MN. $46.6M revenue, metal forming for medical, HVAC, construction. ISO 9001 and 13485 certified. HUGE opportunity: their proprietary data on metal tolerances and quality specs is exactly what fine-tuning needs. Every quote they write is a potential fine-tuning use case. Great story about manufacturing efficiency. Estimated: $20K-$50K.",
+  "created": "2026-03-28T17:30:00",
+  "last_contact": null,
+  "last_email_sent": null,
+  "sequence_day": 0,
+  "sequence_status": "active",
+  "emails_sent": [],
+  "replied_email": null,
+  "converted": false,
+  "closed_reason": null
+}

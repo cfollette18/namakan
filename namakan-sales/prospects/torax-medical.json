@@ -1,0 +1,22 @@
+{
+  "name": "torax-medical",
+  "company": "Torax Medical",
+  "contact_name": "",
+  "contact_title": "CEO / VP Operations / Director of Engineering",
+  "contact_email": "",
+  "phone": "(651) 484-4878",
+  "linkedin": "",
+  "industry": "Medical Devices — Gastroenterology",
+  "ai_opportunity": "Fine-tuning on clinical trial data, RAG pipeline on regulatory submissions, AI employee for clinical trial matching",
+  "proprietary_data": "clinical trial outcomes, patient response data, regulatory submission documents, manufacturing quality records",
+  "notes": "Shoreview, MN. $15M revenue, 33 employees. Perfect SMB for AI. Medical device + manufacturing hybrid. ISO 13485 certified. Strong candidate for fine-tuning on quality inspection + regulatory RAG. Estimated: $15K-$40K.",
+  "created": "2026-03-28T17:30:00",
+  "last_contact": null,
+  "last_email_sent": null,
+  "sequence_day": 0,
+  "sequence_status": "active",
+  "emails_sent": [],
+  "replied_email": null,
+  "converted": false,
+  "closed_reason": null
+}
