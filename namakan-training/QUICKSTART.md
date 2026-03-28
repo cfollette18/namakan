@@ -17,8 +17,8 @@ pip install langchain langchain-community chromadb
 # 4. Index Namakan docs
 python3 index_docs.py
 
-# 5. Run augmented model
-python3 rag_server.py
+# 5. Run augmented model with LangChain RAG
+#    (create rag_server.py using index_docs.py output + LangChain + Ollama)
 ```
 
 ## Option 2: Fine-tune with Axolotl (Production)
