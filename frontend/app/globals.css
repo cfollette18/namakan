@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: var(--font-satoshi), system-ui, sans-serif;
+  }
+  
+  :root {
+    /* Hot Pink Primary - ONLY COLOR ALLOWED */
+    --primary-50: #fff1f2;
+    --primary-100: #ffe4e6;
+    --primary-200: #fecdd3;
+    --primary-300: #fda4af;
+    --primary-400: #fb7185;
+    --primary-500: #f43f5e; /* Main brand color */
+    --primary-600: #e11d48;
+    --primary-700: #be123c;
+    --primary-800: #9f1239;
+    --primary-900: #881337;
+    
+    /* Dark mode theme */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --text-tertiary: #94a3b8;
+    
+    --border: #334155;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+  }
+  
+  .gradient-glow {
+    background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-pink-500;
+  }
+  
+  .shadow-primary {
+    box-shadow: 0 20px 60px rgba(244, 63, 94, 0.5);
+  }
+  
+  .shadow-primary-lg {
+    box-shadow: 0 20px 60px rgba(244, 63, 94, 0.6);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500;
+}
+
+/* Smooth animations */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-tertiary: #64748b;
+    --border: #e2e8f0;
+  }
+}
+
+/* Additional utility classes for Shopify-inspired design */
+@layer utilities {
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .backdrop-blur-strong {
+    backdrop-filter: blur(20px);
+  }
+}

@@ -1,0 +1,174 @@
+// Prisma schema for Namakan platform
+// This file defines the database schema using Prisma DSL
+
+generator client {
+  provider = "prisma-client-py"
+  interface = "asyncio"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String   @id @default(cuid())
+  email          String   @unique
+  hashedPassword String
+  fullName       String?
+  industry       String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  // Relations
+  projects Project[]
+  learnings Learning[]
+
+  @@map("users")
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String
+  description String?  @db.Text
+  projectType String?
+  industry    String?
+  status      String   @default("active")
+  config      Json     @default("{}")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  completedAt DateTime?
+
+  // Relations
+  user   User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  events AgentEvent[]
+  agents Agent[]
+
+  @@map("projects")
+}
+
+model Agent {
+  id String @id @default(cuid())
+
+  projectId        String
+  name             String
+  role             String
+  agentType        String
+  systemPrompt     String? @db.Text
+  tools            Json    @default("[]")
+  qualityCriteria  Json    @default("{}")
+  status           String  @default("idle")
+  currentTask      String? @db.Text
+  completedTasks   Int     @default(0)
+  successRate      Float   @default(0.0)
+  avgConfidence    Float   @default(0.0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  project Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  events  AgentEvent[]
+
+  @@map("agents")
+}
+
+model AgentEvent {
+  id              String  @id @default(cuid())
+  projectId       String
+  agentId         String
+  eventType       String
+  eventData       Json
+  version         Int
+  confidenceScore Float?
+  createdAt       DateTime @default(now())
+
+  // Relations
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  agent   Agent   @relation(fields: [agentId], references: [id], onDelete: Cascade)
+
+  @@index([createdAt])
+  @@map("agent_events")
+}
+
+model Learning {
+  id             String  @id @default(cuid())
+  userId         String?
+  agentType      String
+  industry       String?
+  projectType    String?
+  pattern        String
+  context        Json    @default("{}")
+  strategy       String  @db.Text
+  confidence     Float   @default(0.0)
+  evidenceCount  Int     @default(1)
+  successRate    Float   @default(0.0)
+  isPersonal     Boolean @default(false)
+  isVerified     Boolean @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  // Relations
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([agentType])
+  @@index([industry])
+  @@index([projectType])
+  @@map("learnings")
+}
+
+model Collaboration {
+  id          String  @id @default(cuid())
+  sessionId   String  @unique
+  participants Json   @default("[]")
+  sharedData  Json   @default("{}")
+  permissions Json   @default("{}")
+  auditLog    Json   @default("[]")
+  status      String @default("active")
+  createdAt   DateTime @default(now())
+  expiresAt   DateTime?
+  endedAt     DateTime?
+
+  @@map("collaborations")
+}
+
+model Template {
+  id             String  @id @default(cuid())
+  templateId     String  @unique
+  name           String
+  description    String? @db.Text
+  templateType   String
+  category       String?
+  systemPrompt   String? @db.Text
+  tools          Json    @default("[]")
+  qualityCriteria Json   @default("{}")
+  createdBy      String
+  tags           Json    @default("[]")
+  version        String  @default("1.0.0")
+  usageCount     Int     @default(0)
+  avgRating      Float   @default(0.0)
+  successRate    Float   @default(0.0)
+  isFree         Boolean @default(true)
+  price          Float   @default(0.0)
+  isVerified     Boolean @default(false)
+  isActive       Boolean @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map("templates")
+}
+
+// Custom functions for pgvector support
+model @@ignore {
+  // These are not actual models but function definitions for pgvector
+  // The actual implementation will be handled in migrations
+
+  // Cosine similarity function
+  cosineSimilarity Vector(1536) @@function("cosine_similarity")
+}
+
+// Vector extension support (needs to be enabled via migration)
+extension pgvector {
+  // Enable pgvector extension in database
+  // This will be handled in the initial migration
+}

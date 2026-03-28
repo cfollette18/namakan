@@ -1,0 +1,38 @@
+# Database Configuration
+DATABASE_URL="postgresql://namakan_user:namakan_password@localhost:5432/namakan_dev"
+
+# Redis Configuration
+REDIS_URL="redis://localhost:6379"
+
+# API Keys (add your actual keys here)
+ANTHROPIC_API_KEY=""
+OPENAI_API_KEY=""
+DEEPSEEK_API_KEY=""
+
+# Environment
+NODE_ENV="development"
+PYTHON_ENV="development"
+
+# JWT Configuration
+JWT_SECRET="your_jwt_secret_here"
+JWT_ALGORITHM="HS256"
+
+# CORS Configuration
+ALLOWED_ORIGINS=["http://localhost:3000","http://localhost:3001"]
+
+# Logging
+LOG_LEVEL="DEBUG"
+
+# AI Model Configuration
+DEFAULT_ORCHESTRATOR_MODEL="claude-3-opus-20240229"
+DEFAULT_AGENT_MODEL="claude-3-sonnet-20240229"
+FALLBACK_MODEL="gpt-4-turbo-preview"
+
+# Cost Limits
+MAX_PROJECT_COST="50.00"
+MAX_MONTHLY_COST="500.00"
+
+# Feature Flags
+ENABLE_AGENT_COLLABORATION="true"
+ENABLE_LEARNING_SYSTEM="true"
+ENABLE_ANALYTICS="true"
