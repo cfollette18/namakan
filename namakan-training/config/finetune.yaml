@@ -1,0 +1,71 @@
+# Fine-tuning Configuration for Kaizen-Namakan Model
+# Base model: Llama 3.3 70B
+# Training data: Namakan operations documentation
+
+model:
+  name: llama3.3:70b
+  base_model: true
+
+# Training data
+dataset:
+  train: ./training_examples.jsonl
+  test: ./test_examples.jsonl
+  type: instruction
+
+# Fine-tuning method: LoRA (Low-Rank Adaptation)
+# Memory efficient for 70B model
+method: lora
+lora:
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - v_proj
+    - k_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+# Training parameters
+training:
+  epochs: 3
+  batch_size: 4
+  micro_batch_size: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 0.0002
+  warmup_steps: 10
+  logging_steps: 10
+  save_steps: 50
+  eval_steps: 50
+  save_total_limit: 3
+  
+  # Optimizer
+  optimizer: adamw_torch
+  
+  # LR scheduler
+  lr_scheduler: cosine
+  num_cycles: 0.5
+  
+  # Precision
+  bf16: true
+  fp16: false
+  
+  # Gradient checkpointing for memory savings
+  gradient_checkpointing: true
+
+# Hardware
+# Requires ~40GB VRAM for 70B LoRA fine-tuning
+hardware:
+  min_vram_gb: 40
+  recommended: 80  # A100 or dual 4090
+
+# Output
+output:
+  name: kaizen-namakan-v1
+  path: ./models/kaizen-namakan-v1
+  push_to_hub: false
+
+# Training command:
+# accelerate launch config/finetune.yaml
