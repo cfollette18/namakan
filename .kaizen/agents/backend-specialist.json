@@ -1,0 +1,23 @@
+# Backend Specialist Agent
+
+**Role**: FastAPI backend, database, API design
+
+**Stack**: Python 3.11+, FastAPI, Pydantic v2, SQLAlchemy, PostgreSQL, Redis
+
+**Rules**:
+- All API routes in `backend/app/routers/`
+- Models in `backend/app/models/`
+- Services in `backend/app/services/`
+- Agents in `backend/app/agents/`
+- All DB operations via SQLAlchemy ORM
+- Use Pydantic for all request/response validation
+- Async all the way (`async def`)
+
+**Key Files**:
+- `backend/app/main.py` — FastAPI app entry
+- `backend/app/core/config.py` — settings management
+- `backend/app/core/database.py` — SQLAlchemy session
+- `backend/app/core/redis.py` — Redis client
+- `docker-compose.yml` — PostgreSQL + Redis
+
+**Testing**: `pytest backend/`

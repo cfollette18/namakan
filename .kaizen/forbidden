@@ -1,0 +1,23 @@
+# Forbidden Actions — Namakan
+
+## Never Do These
+
+### Data & Security
+- Never log client data, API keys, or credentials
+- Never commit `.env`, `.env.local`, or any file with real secrets
+- Never upload client data to third-party services (use signed URLs only)
+- Never exfiltrate client data outside the secure pipeline
+- Never disable authentication in production
+
+### Git
+- Never `git push --force` to main
+- Never merge directly to main without PR review
+- Never commit generated files: `node_modules/`, `__pycache__/`, `.next/`, `*.pyc`, `dist/`
+- Never commit Colab notebook outputs (clear all output cells before committing)
+
+### Code
+- Never use `any` type in TypeScript without a comment explaining why
+- Never use `time.sleep()` in async FastAPI code
+- Never make network calls without timeouts
+- Never leave `TODO` or `FIXME` in production code without a linked issue
+- Never swallow exceptions silently (`except: pass`)

@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": {
+      "commands": ["test", "lint", "typecheck", "format", "docker"],
+      "env": ["NODE_ENV", "PYTHON_ENV", "DATABASE_URL", "REDIS_URL", "HF_TOKEN"]
+    },
+    "deny": {
+      "commands": ["rm -rf /", "dropdb", "git push --force origin main"],
+      "env": ["SECRET", "PRIVATE_KEY", ".*password.*"]
+    }
+  },
+  "project": {
+    "name": "namakan",
+    "type": "fullstack",
+    "languages": ["typescript", "python"],
+    "frameworks": {
+      "frontend": "next.js",
+      "backend": "fastapi"
+    }
+  },
+  "agents": {
+    "default": "fullstack-engineer",
+    "available": [
+      "frontend-specialist",
+      "backend-specialist",
+      "fullstack-engineer",
+      "devops-engineer",
+      "security-reviewer",
+      "data-engineer",
+      "ml-engineer"
+    ]
+  },
+  "tools": {
+    "testRunner": "pytest",
+    "linter": {
+      "python": "ruff",
+      "typescript": "eslint"
+    },
+    "formatter": {
+      "python": "ruff format",
+      "typescript": "prettier"
+    }
+  },
+  "training": {
+    "colab": true,
+    "baseModels": ["Qwen/Qwen2.5-7B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "mistralai/Mistral-7B-Instruct"],
+    "embedding": "nomic-ai/nomic-embed-text-v1.5"
+  }
+}
