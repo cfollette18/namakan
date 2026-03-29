@@ -1,36 +1,87 @@
-## 1. Pricing Strategy
+## 1. Pricing — Custom AI Engineering
 
-### 1.1 Usage-Based Pricing Model
+Namakan charges by project, not by seat or query. Every engagement is scoped, priced, and delivered as custom engineering work. No lock-in. No recurring platform fees.
 
-**Core: Pay only for what you use. No seats, no subscriptions.**
+---
 
-| Tier | Target Segment | Price | What's Included |
-|------|---------------|-------|-----------------|
-| **Free** | Developers, hobbyists | $0 forever | 1,000 queries/month, 1GB storage |
-| **Pay-as-you-go** | Anyone | $0.001/query + $0.10/GB storage | Unlimited scale, pay monthly |
-| **Enterprise** | Large orgs | Custom flat rate | Dedicated infra, SLA, unlimited |
+### 1.1 Service Pricing
 
-### 1.2 Usage Pricing
+**Fine-Tuned Models**
 
-| Metric | Price | Notes |
-|--------|-------|-------|
-| **AI Query** | $0.005/query | Natural language to SQL |
-| **Standard Query** | $0.001/query | SQL executed |
-| **Storage** | $0.10/GB/month | First 1GB free |
-| **API Calls** | $0.0001/call | REST API access |
+| Tier | Scope | Investment | Timeline |
+|------|-------|------------|----------|
+| **SMB** | 1–5K training examples, Qwen/Llama 3B–7B | $10K–$25K | 4–8 weeks |
+| **Mid-Market** | 5–20K examples, Llama 8B–13B | $25K–$50K | 8–12 weeks |
+| **Enterprise** | 20K+ examples, Llama 70B or multimodal | $50K–$75K | 12–16 weeks |
 
-### 1.3 Why Usage-Based?
+**Monthly Retainer:** $3K–$10K/month for ongoing fine-tuning as data grows  
+**Payment:** 50% upfront, 25% at midpoint, 25% on delivery
 
-- **No lock-in:** Leave anytime, pay only what you used
-- **Scales with you:** Startup pays $10, enterprise pays $10K
-- **Fair:** You only pay for value received
-- **Founder-friendly:** No big subscription commitments
+---
 
-### 1.4 Comparison
+**RAG Pipelines**
 
-| Metric | Namakan | Snowflake | Databricks |
-|--------|---------|-----------|------------|
-| **Model** | Pure usage | Usage + storage | Usage (DBU) |
-| **Entry** | $0 | ~$2/credit | ~$0.07/DBU |
-| **Free forever** | Yes | No | Limited |
-| **Predictability** | Low | Medium | Medium |
+| Tier | Scope | Build | Monthly Ops |
+|------|-------|-------|------------|
+| **Build** | Ingestion, chunking, embedding, index, evaluation | $5K–$15K | — |
+| **Ongoing** | Vector store ops, retraining triggers, monitoring | — | $500–$2K/mo |
+
+---
+
+**Agentic Workflows**
+
+| Tier | Complexity | Systems | Price |
+|------|------------|---------|-------|
+| **Starter** | Simple, 1–2 steps | 1 system | $5K–$10K |
+| **Professional** | Medium, 3–5 steps | 2–3 systems | $10K–$20K |
+| **Enterprise** | Complex, 5+ steps | Multiple | $20K–$30K |
+| **Monthly Ops** | Monitoring, retries, audit | — | $500–$1.5K/mo |
+
+---
+
+**Custom AI Employees**
+
+| Tier | Role Complexity | Monthly |
+|------|----------------|---------|
+| **Standard** | Single domain, basic tools | $2K–$3K/mo |
+| **Senior** | Multi-domain, complex integrations | $3K–$5K/mo |
+
+Onboarding: included in first month. Monthly includes training refinement, monitoring, and supervisor access.
+
+---
+
+### 1.2 How Pricing Works
+
+- **Fixed project price** — Scope is defined upfront. Price doesn't change unless scope changes.
+- **50/25/25 payment schedule** — 50% to start, 25% at midpoint milestone, 25% on delivery
+- **Monthly retainers** — For ongoing AI employees and RAG ops, billed monthly
+- **Discovery call is free** — No charge to explore whether there's a fit
+- **Paid assessment available** — $1,500–$2,000 for a structured technical assessment, applied to project if engaged
+
+---
+
+### 1.3 What Drives Price
+
+- **Data volume** — More training examples = more curation work
+- **Domain complexity** — Highly specialized domains require more expert review
+- **Integration surface** — More systems to connect = more build work
+- **Accuracy requirements** — Medical/legal grade accuracy requires more red-teaming
+- **Deployment complexity** — Client infra vs. Namakan cloud affects ops costs
+
+---
+
+### 1.4 What's Included
+
+Every project includes:
+- Deep-dive discovery session
+- Data assessment and curation
+- Model/architecture selection
+- Private training (data never leaves client environment unless using Namakan cloud)
+- Evaluation and testing against real scenarios
+- Private deployment (client infra or Namakan cloud)
+- Documentation and handover package
+- 30-day post-launch support
+
+---
+
+*See `service-offerings.md` for detailed service descriptions. See `namakan-technical/` for engineering methodology and pipeline documentation.*
