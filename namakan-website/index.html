@@ -437,37 +437,96 @@
       line-height: 1.5;
     }
 
-    .pricing-tier {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
+    /* SOCIAL PROOF */
+    .social-proof {
+      padding: 80px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    .pricing-tier:last-child {
-      border-bottom: none;
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 40px;
     }
 
-    .tier-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      min-width: 120px;
+    .testimonial-card {
+      background: var(--bg-surface);
+      padding: 32px 28px;
+      transition: background 0.2s;
     }
 
-    .tier-desc {
-      font-size: 0.82rem;
+    .testimonial-card:hover {
+      background: var(--bg-elevated);
+    }
+
+    .testimonial-card .quote-mark {
+      font-size: 2rem;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 12px;
+      opacity: 0.4;
+    }
+
+    .testimonial-card blockquote {
+      font-size: 0.92rem;
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.65;
+      margin-bottom: 20px;
+      font-style: italic;
     }
 
-    .tier-price {
+    .testimonial-card .attribution {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .testimonial-card .attribution strong {
+      color: var(--text-primary);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .testimonial-card .outcome-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--green-dim);
+      border: 1px solid rgba(62, 207, 142, 0.25);
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: 0.72rem;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.82rem;
+      color: var(--green);
+      margin-top: 12px;
+    }
+
+    .case-study-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 40px;
+      font-size: 0.9rem;
       color: var(--accent);
       font-weight: 500;
-      white-space: nowrap;
+    }
+
+    .case-study-link:hover {
+      color: var(--accent-hover);
+    }
+
+    .case-study-link .arrow {
+      transition: transform 0.15s;
+    }
+
+    .case-study-link:hover .arrow {
+      transform: translateX(4px);
     }
 
     /* HOW IT WORKS */
@@ -691,6 +750,10 @@
       .hero {
         padding: 120px 24px 72px;
       }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* CODE BLOCK STYLE */
@@ -876,7 +939,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#industries">Industries</a></li>
-      <li><a href="#contact" class="btn-nav">Start a Project</a></li>
+      <li><a href="#contact" class="btn-nav">Talk to Us →</a></li>
     </ul>
   </div>
 </nav>
@@ -885,15 +948,15 @@
 <section class="hero">
   <div class="hero-badge">
     <span class="dot"></span>
-    Fine-Tuning & Custom AI Agents
+    Custom AI Engineering
   </div>
-  <h1>We fine-tune AI<br>for businesses.<br><span class="accent-text">Any size.</span></h1>
+  <h1>Your AI doesn't know<br>what your AI doesn't know.<br><span class="accent-text">We fix that.</span></h1>
   <p class="hero-sub">
-    AI is only as good as its context. We give it yours.
+    Every hour your team spends re-explaining context to a generic AI is an hour they're not spending on work that actually requires their expertise. We build AI that already knows your business — so your people can focus on work that matters.
   </p>
   <div class="hero-cta">
-    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start a Conversation</button>
-    <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View Services</button>
+    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Talk to Us →</button>
+    <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">See How It Works</button>
   </div>
 
   <!-- HERO TERMINAL ANIMATION -->
@@ -949,7 +1012,7 @@ Custom orders over <span class="hl-amount">$500</span> follow these rules:<br><b
     </div>
 
     <div class="hero-tagline" id="hero-tagline">
-      AI is only as good as its context. <span class="hl">We give it yours.</span>
+      Generic AI has a generic brain. <span class="hl">Yours should think like YOUR business.</span>
     </div>
   </div>
 </section>
@@ -974,207 +1037,15 @@ Custom orders over <span class="hl-amount">$500</span> follow these rules:<br><b
 
 <hr class="section-divider">
 
-<!-- SERVICES -->
-<section class="services" id="services">
-  <p class="section-label">What We Build</p>
-  <h2 class="section-title">THE FOUR THINGS WE BUILD</h2>
+<!-- SOCIAL PROOF -->
+<section class="social-proof" id="social-proof">
+  <p class="section-label">Results</p>
+  <h2 class="section-title">What custom AI actually delivers</h2>
+  <p class="section-sub">Real outcomes from real deployments. No hypotheticals.</p>
 
-  <div class="services-grid">
-
-    <!-- 1. Fine-Tuned Models -->
-    <div class="service-card">
-      <div class="service-number">01</div>
-      <h3>Fine-Tuned Models — AI That Knows Your Domain</h3>
-      <p>We train private AI models on your proprietary data. Your industry knowledge. Your products. Your customers. Your internal processes. The result: an AI that understands YOUR domain — not just language in general.</p>
-      <p><strong style="color: var(--text-primary);">Example:</strong> A law firm trained a model on their case history, contracts, and legal precedents. Now they have AI that drafts and reviews contracts in their specific practice areas, with their specific language and standards.</p>
-      <div class="service-price"><span class="label">Investment</span> $10,000–$50,000 per project</div>
-    </div>
-
-    <!-- 2. RAG Pipelines -->
-    <div class="service-card">
-      <div class="service-number">02</div>
-      <h3>RAG Pipelines — AI That Knows Your Documents</h3>
-      <p>We connect AI to your documents, knowledge bases, CRM, and internal systems. Your AI doesn't guess — it searches YOUR files, YOUR data, YOUR records, and gives answers grounded in what you actually know.</p>
-      <p><strong style="color: var(--text-primary);">Example:</strong> A manufacturing company connected AI to their engineering specs, SOPs, and supplier contracts. Now their team asks AI questions about production processes and gets answers from their actual documentation — not hallucinated guesses.</p>
-      <div class="service-price"><span class="label">Investment</span> $5,000–$15,000 to build + $500–$2,000/month maintenance</div>
-    </div>
-
-    <!-- 3. Agentic Workflows -->
-    <div class="service-card">
-      <div class="service-number">03</div>
-      <h3>Agentic Workflows — AI Workers That Do The Work</h3>
-      <p>We build autonomous AI workers that complete multi-step tasks in your systems. Not chatbots that respond. AI agents that DO — processing documents, updating records, triggering actions, escalating when needed.</p>
-      <p><strong style="color: var(--text-primary);">Example:</strong> A healthcare administrator used to spend 3 hours daily processing patient intake forms. We built an AI workflow that extracts information, validates against records, flags issues, and prepares everything for review — 10 minutes of human time per day instead of 3 hours.</p>
-      <div class="service-price"><span class="label">Investment</span> $5,000–$30,000 per workflow</div>
-    </div>
-
-    <!-- 4. Custom AI Employees -->
-    <div class="service-card">
-      <div class="service-number">04</div>
-      <h3>Custom AI Employees — Full-Time AI Workers, Trained On Your Business</h3>
-      <p>We create permanent AI workers trained exclusively on your business, integrated into your operations. Think of it as hiring an AI employee who already knows your industry, your processes, and your standards — and works 24/7.</p>
-      <p><strong style="color: var(--text-primary);">Example:</strong> A financial advisory firm deployed a Custom AI Employee that manages client onboarding: collects documents, runs compliance checks, prepares account setup, and notifies the advisor only when human judgment is needed. The advisor focuses on relationships; the AI handles the paperwork.</p>
-      <div class="service-price"><span class="label">Investment</span> $2,000–$5,000/month retainer (includes initial training)</div>
-    </div>
-
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- HOW IT WORKS -->
-<section class="how-it-works" id="how-it-works">
-  <p class="section-label">Our Process</p>
-  <h2 class="section-title">How It Works</h2>
-  <p class="section-sub">A structured engineering process from discovery to deployment — no black boxes, no surprises.</p>
-
-  <div class="steps">
-    <div class="step">
-      <div class="step-number">01</div>
-      <h3>Discovery</h3>
-      <p>We audit your data, define the domain scope, and identify where custom fine-tuning delivers the most value vs. off-the-shelf.</p>
-      <span class="step-arrow">→</span>
-    </div>
-    <div class="step">
-      <div class="step-number">02</div>
-      <h3>Data & Model Design</h3>
-      <p>We select the right base model, architect your data pipeline, and define evaluation benchmarks for success.</p>
-      <span class="step-arrow">→</span>
-    </div>
-    <div class="step">
-      <div class="step-number">03</div>
-      <h3>Fine-Tune & Validate</h3>
-      <p>Training, instruction tuning, rigorous evaluation, and human benchmarking — we iterate until the model performs.</p>
-      <span class="step-arrow">→</span>
-    </div>
-    <div class="step">
-      <div class="step-number">04</div>
-      <h3>Deploy & Improve</h3>
-      <p>Private deployment with monitoring, observability, and ongoing fine-tuning as your data and needs evolve.</p>
-    </div>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- INDUSTRIES -->
-<section class="industries" id="industries">
-  <p class="section-label">Where We Work</p>
-  <h2 class="section-title">Industries with Proprietary Expertise</h2>
-  <p class="section-sub">The highest-value AI applications are built on proprietary data and deep domain knowledge — exactly where custom fine-tuning creates real competitive advantage.</p>
-
-  <div class="industries-grid">
-    <div class="industry-tag"><span class="icon">🏥</span> Healthcare</div>
-    <div class="industry-tag"><span class="icon">⚖️</span> Legal</div>
-    <div class="industry-tag"><span class="icon">🏭</span> Manufacturing</div>
-    <div class="industry-tag"><span class="icon">💰</span> Financial Services</div>
-    <div class="industry-tag"><span class="icon">🚚</span> Logistics</div>
-  </div>
-
-  <div style="margin-top: 40px; padding: 28px 32px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: 10px; max-width: 680px;">
-    <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">
-      If your business has proprietary data, specialized expertise, or processes that outsiders can't replicate — custom fine-tuning is how you turn that into a permanent competitive moat. Not a chatbot. <em style="color: var(--text-primary); font-style: normal;">Your private AI brain.</em>
-    </p>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- CTA / CONTACT -->
-<section class="cta-section" id="contact">
-  <div class="cta-box">
-    <p class="section-label" style="margin-bottom: 12px;">Ready to Build</p>
-    <h2>Your Private AI, Built Right.</h2>
-    <p>Tell us about your data and your domain. We'll tell you what's possible with custom fine-tuning.</p>
-    <div class="hero-cta">
-      <a href="mailto:teams@namakan.ai" class="btn-primary">Start a Conversation →</a>
-    </div>
-    <div class="contact-row">
-      <div class="contact-item">
-        <span>📧</span> <a href="mailto:teams@namakan.ai">teams@namakan.ai</a>
-      </div>
-      <div class="contact-item">
-        <span>📍</span> Blaine, MN
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2026 Namakan AI Engineering — Fine-Tuning & Custom Agents. All rights reserved.</p>
-  <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">Blaine, MN &nbsp;·&nbsp; teams@namakan.ai</p>
-</footer>
-
-<script>
-  // Smooth scroll + subtle entrance animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.service-card, .step, .positioning-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(16px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
-  });
-
-  // Hero Terminal Animation
-  (function() {
-    const gTyping = document.getElementById('g-typing');
-    const gResponse = document.getElementById('g-response');
-    const nTyping = document.getElementById('n-typing');
-    const nResponse = document.getElementById('n-response');
-    const tagline = document.getElementById('hero-tagline');
-
-    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-
-    async function runTerminal() {
-      // Reset
-      gTyping.classList.remove('show');
-      gResponse.classList.remove('show');
-      nTyping.classList.remove('show');
-      nResponse.classList.remove('show');
-      tagline.classList.remove('show');
-
-      await sleep(1200);
-
-      // Both start typing
-      gTyping.classList.add('show');
-      await sleep(500);
-      nTyping.classList.add('show');
-
-      // Generic responds fast (shallow)
-      await sleep(1400);
-      gTyping.classList.remove('show');
-      gResponse.classList.add('show');
-
-      // Namakan responds (rich, detailed)
-      await sleep(800);
-      nTyping.classList.remove('show');
-      nResponse.classList.add('show');
-
-      // Tagline
-      await sleep(800);
-      tagline.classList.add('show');
-
-      // Hold
-      await sleep(6000);
-
-      // Loop
-      await sleep(1000);
-      runTerminal();
-    }
-
-    // Start when page loads
-    runTerminal();
-  })();
-</script>
-
-</body>
-</html>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <blockquote>"We had a senior paralegal spending 60% of her time re-reviewing contracts because our AI couldn't learn our templates. After Namakan fine-tuned on our case history, that reversed. Now she reviews; the AI drafts and flags deviations."</blockquote>
+      <div class="attribution">
+        <strong>

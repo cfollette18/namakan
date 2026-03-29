@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namakan — Hero Section</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #000000;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1e293b;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      background: #f43f5e;
+      border-radius: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 140px 48px 80px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .hero-headline {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .hero-subtext {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #f43f5e;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    /* Chat Comparison */
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      background: #0f172a;
+      border-radius: 16px;
+      padding: 24px;
+      position: relative;
+    }
+
+    .card.generic {
+      border: 1px solid #334155;
+      opacity: 0.75;
+    }
+
+    .card.namakan {
+      border: 2px solid #f43f5e;
+      box-shadow: 0 0 60px rgba(244, 63, 94, 0.25);
+    }
+
+    .card-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .card.generic .card-label {
+      color: #64748b;
+    }
+
+    .card.namakan .card-label {
+      color: #f43f5e;
+    }
+
+    /* Chat Bubbles */
+    .chat {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .bubble {
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .bubble.user {
+      background: #1e293b;
+      color: #ffffff;
+    }
+
+    .bubble.ai.generic {
+      background: #0a0f1a;
+      border: 1px solid #1e293b;
+      color: #94a3b8;
+    }
+
+    .bubble.ai.namakan {
+      background: #12121f;
+      color: #ffffff;
+    }
+
+    /* Status */
+    .status-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid #1e293b;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .status.error {
+      color: #ef4444;
+    }
+
+    .status.success {
+      color: #22c55e;
+    }
+
+    /* Source */
+    .source {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #64748b;
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #1e293b;
+    }
+
+    .source.namakan {
+      color: #f43f5e;
+    }
+
+    /* CTA */
+    .cta-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cta {
+      background: #f43f5e;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 18px 40px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .cta:hover {
+      background: #e11d48;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-headline {
+        font-size: 2.25rem;
+      }
+
+      .hero-subtext {
+        font-size: 1.25rem;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .card.generic {
+        order: 2;
+      }
+
+      .card.namakan {
+        order: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <div class="logo-mark"></div>
+      Namakan
+    </div>
+    <div class="nav-links">
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="hero-headline">Your AI has no idea who your customers are.</h1>
+    <p class="hero-subtext">We fix that.</p>
+
+    <div class="comparison">
+      <!-- Generic LLM -->
+      <div class="card generic">
+        <div class="card-label">Generic LLM</div>
+        <div class="chat">
+          <div class="bubble user">What's your return policy for enterprise clients?</div>
+          <div class="bubble ai generic">Our standard enterprise return policy typically follows industry norms of 30-90 days. We aim to accommodate all customer needs on a case-by-case basis.</div>
+        </div>
+        <div class="status-list">
+          <div class="status error">✗ No company data</div>
+          <div class="status error">✗ Generic response</div>
+          <div class="status error">✗ No citations</div>
+        </div>
+        <div class="source">Source: Unknown</div>
+      </div>
+
+      <!-- Namakan -->
+      <div class="card namakan">
+        <div class="card-label">Namakan</div>
+        <div class="chat">
+          <div class="bubble user">What's your return policy for enterprise clients?</div>
+          <div class="bubble ai namakan">Based on your Contract Template v2.3 Section 4.2: Enterprise clients receive a 2-week acceptance period, followed by 90-day warranty. After warranty, credits are issued at management discretion.</div>
+        </div>
+        <div class="status-list">
+          <div class="status success">✓ From Contract v2.3</div>
+          <div class="status success">✓ Exact policy cited</div>
+          <div class="status success">✓ Your brand voice</div>
+        </div>
+        <div class="source namakan">Source: Your Knowledge Base</div>
+      </div>
+    </div>
+
+    <div class="cta-wrapper">
+      <button class="cta">Talk to Us →</button>
+    </div>
+  </section>
+</body>
+</html>
