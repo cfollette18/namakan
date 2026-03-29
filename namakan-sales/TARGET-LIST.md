@@ -1,4 +1,4 @@
-# Namakan AI Consulting — Ideal Client Target List
+# Namakan AI Engineering — Ideal Client Target List
 ## Custom AI Engineering Focus | Q2 2026
 
 > **Strategic Pivot:** We are NOT selling pre-packaged agents. We are selling custom AI systems built on YOUR data, integrated into YOUR workflows. Target list reflects this: businesses with proprietary data assets, complex domain-specific processes, and budget for real engineering ($10K–$100K projects).
@@ -462,4 +462,4 @@ Before reaching out to any target:
 
 ---
 
-*Last updated: March 2026 | Namakan AI Consulting — Custom AI Engineering Practice*
+*Last updated: March 2026 | Namakan AI Engineering — Custom AI Engineering Practice*
