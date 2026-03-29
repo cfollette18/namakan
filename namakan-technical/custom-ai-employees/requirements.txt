@@ -1,0 +1,9 @@
+# Custom AI Employees Pipeline — Dependencies
+
+# This pipeline uses standard library modules only (no external dependencies).
+# Workflow scripts require only Python 3.11+ standard library.
+
+# Optional integrations (uncomment as needed per deployment):
+# openai>=1.30.0          # For LLM-powered agents
+# anthropic>=0.20.0       # Alternative LLM provider
+# langchain>=0.1.0        # For agent orchestration frameworks
