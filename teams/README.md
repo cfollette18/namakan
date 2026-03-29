@@ -10,6 +10,7 @@ Teams of AI agents that work together to handle different domains.
 
 | Team | Focus |
 |------|-------|
+| `autonomous-agents/` | Background agents, schedulers, web scraping, data sync |
 | `business/` | Business development, strategy, finance |
 | `coding/` | Software engineering, devops |
 | `customer-service/` | Support agents, FAQ, returns |
