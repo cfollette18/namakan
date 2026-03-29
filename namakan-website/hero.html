@@ -15,9 +15,9 @@
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #000000;
-      color: #ffffff;
-      min-height: 100vh;
+      background: #ffffff;
+      color: #0f172a;
+      line-height: 1.6;
     }
 
     /* Navigation */
@@ -26,21 +26,20 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 60px;
+      height: 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 48px;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #1e293b;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
       z-index: 100;
     }
 
     .logo {
       font-size: 1.25rem;
       font-weight: 700;
-      color: #ffffff;
+      color: #0f172a;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -49,7 +48,7 @@
     .logo-mark {
       width: 28px;
       height: 28px;
-      background: #f43f5e;
+      background: #0D9488;
       border-radius: 6px;
     }
 
@@ -59,7 +58,7 @@
     }
 
     .nav-links a {
-      color: #94a3b8;
+      color: #475569;
       text-decoration: none;
       font-size: 0.875rem;
       font-weight: 500;
@@ -67,34 +66,50 @@
     }
 
     .nav-links a:hover {
+      color: #0f172a;
+    }
+
+    .nav-cta {
+      background: #0D9488;
       color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: #0f766e;
     }
 
     /* Hero */
     .hero {
       padding: 140px 48px 80px;
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .hero-headline {
-      font-size: 3rem;
+      font-size: 3.5rem;
       font-weight: 700;
       text-align: center;
       line-height: 1.1;
       letter-spacing: -0.02em;
       margin-bottom: 16px;
+      color: #0f172a;
     }
 
     .hero-subtext {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-weight: 400;
-      color: #f43f5e;
+      color: #0D9488;
       text-align: center;
       margin-bottom: 60px;
     }
 
-    /* Chat Comparison */
+    /* Comparison */
     .comparison {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -103,26 +118,27 @@
     }
 
     .card {
-      background: #0f172a;
+      background: #ffffff;
       border-radius: 16px;
       padding: 24px;
       position: relative;
     }
 
     .card.generic {
-      border: 1px solid #334155;
-      opacity: 0.75;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      opacity: 0.85;
     }
 
     .card.namakan {
-      border: 2px solid #f43f5e;
-      box-shadow: 0 0 60px rgba(244, 63, 94, 0.25);
+      border: 2px solid #0D9488;
+      box-shadow: 0 4px 20px rgba(13, 148, 136, 0.1);
     }
 
     .card-label {
       font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       margin-bottom: 20px;
     }
@@ -132,7 +148,7 @@
     }
 
     .card.namakan .card-label {
-      color: #f43f5e;
+      color: #0D9488;
     }
 
     /* Chat Bubbles */
@@ -150,19 +166,19 @@
     }
 
     .bubble.user {
-      background: #1e293b;
-      color: #ffffff;
+      background: #f1f5f9;
+      color: #0f172a;
     }
 
     .bubble.ai.generic {
-      background: #0a0f1a;
-      border: 1px solid #1e293b;
-      color: #94a3b8;
+      background: #e2e8f0;
+      color: #475569;
     }
 
     .bubble.ai.namakan {
-      background: #12121f;
-      color: #ffffff;
+      background: #f0fdfa;
+      color: #0f172a;
+      border: 1px solid #ccfbf1;
     }
 
     /* Status */
@@ -172,7 +188,7 @@
       gap: 12px;
       margin-top: 24px;
       padding-top: 24px;
-      border-top: 1px solid #1e293b;
+      border-top: 1px solid #e2e8f0;
     }
 
     .status {
@@ -184,25 +200,25 @@
     }
 
     .status.error {
-      color: #ef4444;
+      color: #64748b;
     }
 
     .status.success {
-      color: #22c55e;
+      color: #0D9488;
     }
 
     /* Source */
     .source {
       font-size: 0.75rem;
       font-weight: 500;
-      color: #64748b;
+      color: #94a3b8;
       margin-top: 24px;
       padding-top: 16px;
-      border-top: 1px solid #1e293b;
+      border-top: 1px solid #e2e8f0;
     }
 
     .source.namakan {
-      color: #f43f5e;
+      color: #0D9488;
     }
 
     /* CTA */
@@ -212,30 +228,30 @@
     }
 
     .cta {
-      background: #f43f5e;
+      background: #0D9488;
       color: #ffffff;
       font-size: 1rem;
       font-weight: 600;
-      padding: 18px 40px;
+      padding: 16px 32px;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
       cursor: pointer;
       transition: background 0.2s, transform 0.2s;
     }
 
     .cta:hover {
-      background: #e11d48;
-      transform: translateY(-2px);
+      background: #0f766e;
+      transform: translateY(-1px);
     }
 
     /* Responsive */
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       .hero-headline {
         font-size: 2.25rem;
       }
 
       .hero-subtext {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
       }
 
       .comparison {
@@ -248,6 +264,14 @@
 
       .card.namakan {
         order: 1;
+      }
+
+      nav {
+        padding: 0 24px;
+      }
+
+      .nav-links {
+        display: none;
       }
     }
   </style>
@@ -262,8 +286,9 @@
     <div class="nav-links">
       <a href="#">Services</a>
       <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#">Pricing</a>
     </div>
+    <a href="#" class="nav-cta">Talk to Us</a>
   </nav>
 
   <!-- Hero Section -->
@@ -274,9 +299,9 @@
     <div class="comparison">
       <!-- Generic LLM -->
       <div class="card generic">
-        <div class="card-label">Generic LLM</div>
+        <div class="card-label">Generic AI</div>
         <div class="chat">
-          <div class="bubble user">What's your return policy for enterprise clients?</div>
+          <div class="bubble user">What's our return policy for enterprise clients?</div>
           <div class="bubble ai generic">Our standard enterprise return policy typically follows industry norms of 30-90 days. We aim to accommodate all customer needs on a case-by-case basis.</div>
         </div>
         <div class="status-list">
@@ -291,7 +316,7 @@
       <div class="card namakan">
         <div class="card-label">Namakan</div>
         <div class="chat">
-          <div class="bubble user">What's your return policy for enterprise clients?</div>
+          <div class="bubble user">What's our return policy for enterprise clients?</div>
           <div class="bubble ai namakan">Based on your Contract Template v2.3 Section 4.2: Enterprise clients receive a 2-week acceptance period, followed by 90-day warranty. After warranty, credits are issued at management discretion.</div>
         </div>
         <div class="status-list">

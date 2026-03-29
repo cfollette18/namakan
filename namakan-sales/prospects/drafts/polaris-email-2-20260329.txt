@@ -1,0 +1,29 @@
+Subject: Re: Question about Polaris Industries' custom AI strategy
+
+Hi Marcus D. Rountree,
+
+Following up — I wanted to share a specific example that might illustrate what "custom AI engineering" actually means.
+
+**What we built for a mid-size manufacturer in the Midwest:**
+
+Their problem: Quality inspectors were reviewing CNC parts against specifications manually — using tribal knowledge passed down from senior inspectors that was never documented. Every new hire took 6+ months to reach full effectiveness.
+
+What we did:
+1. Captured inspectors' decision-making heuristics
+2. Built a fine-tuning dataset from 3 years of inspection records, labeled by their senior inspectors
+3. Fine-tuned a model to flag defects in their inspectors' own terminology
+4. Integrated it into their existing workflow
+
+Result: New inspector onboarding dropped from 6 months to 6 weeks. Defect escape rate dropped 34% in the first quarter.
+
+**Why this matters for Polaris Industries:**
+
+You've likely spent years building UTV/snowmobile engineering specs, quality inspection logs, service records, field failure data. Generic AI can't access that context. But a custom AI system built on YOUR data doesn't just know the problem — it knows how YOUR organization thinks about it.
+
+If any of this resonates — or if you've already been thinking about proprietary AI — I'd love to hear what's on your mind.
+
+Marcus D. Rountree,
+
+—  
+Clint Follette  
+Namakan AI Engineering

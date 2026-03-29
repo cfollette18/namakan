@@ -1,0 +1,25 @@
+Subject: Question about Polaris Industries' custom AI strategy
+
+Hi Marcus D. Rountree,
+
+I came across Polaris Industries's work on field service AI assistant, quality inspection fine-tuning, predictive maintenance on assembly lines.
+
+It got me thinking about something specific: you have years of UTV/snowmobile engineering specs, quality inspection logs, service records, field failure data that have never been fully leveraged — and the gap between what you have and what a generic AI model can do with it is massive.
+
+That's what we do at Namakan AI Engineering. We build custom AI systems — fine-tuned models, RAG pipelines, and AI employees — trained specifically on a client's proprietary data, integrated into their specific systems.
+
+**The difference is significant:**
+
+- A generic model knows what a CNC machine is. A model fine-tuned on your quality inspection logs knows what YOUR machines do wrong under specific conditions.
+- A generic RAG knows about medical guidelines. One built on your patient population data knows what's predictive for YOUR patients.
+
+We recently worked with a mid-size manufacturer in the Midwest to build a RAG pipeline on their service records and technical documentation. Their field service team now gets AI-generated repair recommendations in seconds — pulling from 15 years of internal data a generic model never saw.
+
+I'd love to understand what proprietary data assets Polaris Industries has and whether a custom AI approach could move the needle. Not a pitch — just a conversation.
+
+Do you have 20 minutes in the next few weeks?
+
+—  
+Clint Follette  
+Namakan AI Engineering  
+clint@namakan.ai

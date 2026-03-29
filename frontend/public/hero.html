@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namakan — Hero Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #000000;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+      gap: 48px;
+    }
+
+    /* Headlines */
+    .headline {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      max-width: 800px;
+    }
+
+    .subtext {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #f43f5e;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    /* Comparison Grid */
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    /* Cards */
+    .card {
+      background: #0f172a;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card.generic {
+      opacity: 0.7;
+      border: 1px solid #334155;
+    }
+
+    .card.namakan {
+      border: 2px solid #f43f5e;
+      box-shadow: 0 0 60px rgba(244, 63, 94, 0.3);
+    }
+
+    /* Labels */
+    .label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .label.generic {
+      color: #64748b;
+    }
+
+    .label.namakan {
+      color: #f43f5e;
+    }
+
+    /* Chat */
+    .chat {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bubble {
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .bubble.user {
+      background: #1e293b;
+      color: #ffffff;
+    }
+
+    .bubble.ai.generic {
+      background: #0f172a;
+      color: #94a3b8;
+      border: 1px solid #334155;
+    }
+
+    .bubble.ai.namakan {
+      background: #1a1a2e;
+      color: #ffffff;
+    }
+
+    /* Status */
+    .status-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .status {
+      font-size: 0.875rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status.error {
+      color: #ef4444;
+    }
+
+    .status.success {
+      color: #22c55e;
+    }
+
+    /* Source */
+    .source {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #64748b;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid #1e293b;
+    }
+
+    .source.namakan {
+      color: #f43f5e;
+    }
+
+    /* CTA */
+    .cta {
+      background: #f43f5e;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .cta:hover {
+      background: #e11d48;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .headline {
+        font-size: 2rem;
+      }
+
+      .subtext {
+        font-size: 1.25rem;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .card.generic {
+        order: 2;
+      }
+
+      .card.namakan {
+        order: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="text">
+      <h1 class="headline">Your AI has no idea who your customers are.</h1>
+      <p class="subtext">We fix that.</p>
+    </div>
+
+    <div class="comparison">
+      <!-- Generic AI -->
+      <div class="card generic">
+        <span class="label generic">Generic AI</span>
+        <div class="chat">
+          <div class="bubble user">What's our return policy?</div>
+          <div class="bubble ai generic">Our standard return policy is 30 days from purchase. For software, we offer exchanges or store credit.</div>
+        </div>
+        <div class="status-list">
+          <span class="status error">❌ Wrong policy</span>
+          <span class="status error">❌ Made-up pricing</span>
+          <span class="status error">❌ Generic tone</span>
+        </div>
+        <span class="source">Source: Internet</span>
+      </div>
+
+      <!-- Namakan -->
+      <div class="card namakan">
+        <span class="label namakan">Namakan</span>
+        <div class="chat">
+          <div class="bubble user">What's our return policy?</div>
+          <div class="bubble ai namakan">Based on Contract v2.3, we offer a 2-week testing period where issues are fixed at no cost. SaaS subscriptions: 30-day cancellation for prorated refund.</div>
+        </div>
+        <div class="status-list">
+          <span class="status success">✅ From Contract v2.3</span>
+          <span class="status success">✅ From pricing sheet</span>
+          <span class="status success">✅ Your brand voice</span>
+        </div>
+        <span class="source namakan">Source: Your Docs</span>
+      </div>
+    </div>
+
+    <button class="cta">Talk to Us →</button>
+  </section>
+</body>
+</html>

@@ -1,0 +1,26 @@
+Subject: Research on AI adoption in Manufacturing — Powersports/UTV — might be useful
+
+Hi Marcus D. Rountree,
+
+I'll keep this one light — I wanted to share some research on custom AI adoption in Manufacturing — Powersports/UTV, and then close your file unless you want to keep the conversation open.
+
+**What the data shows:**
+
+Across manufacturing, healthcare, and financial services companies that have moved past generic AI into custom AI engineering:
+
+- **RAG pipelines** on proprietary knowledge bases consistently deliver 40–60% time savings on research and retrieval
+- **Fine-tuned models** for domain-specific tasks show 20–40% accuracy improvements over generic models
+- **AI employees** handling routine decisions free up 15–25 hours/week per knowledge worker
+
+The pattern: generic AI gives you 10–20% improvement. Custom AI built on your data gives you 60–80%.
+
+I've attached a one-page framework we use with clients to evaluate custom AI opportunities — not a sales document, just something that helps leaders think through where to start.
+
+If anything is useful, I'm happy to continue. If not — I won't keep reaching out.
+
+Thanks for your time.
+
+—  
+Clint Follette  
+Namakan AI Engineering  
+clint@namakan.ai
