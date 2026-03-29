@@ -436,10 +436,10 @@ def main():
         
         subject, body = print_email(seq, prospect)
         
-        # Save to file for review
-        out_dir = os.path.join(PROSPECTS_DIR, args.name, "drafts")
+        # Save to file for review (prospects stored as flat JSON, not directories)
+        out_dir = os.path.join(PROSPECTS_DIR, "drafts")
         os.makedirs(out_dir, exist_ok=True)
-        out_path = os.path.join(out_dir, f"email-{seq['num']}-{datetime.now().strftime('%Y%m%d')}.txt")
+        out_path = os.path.join(out_dir, f"{args.name}-email-{seq['num']}-{datetime.now().strftime('%Y%m%d')}.txt")
         with open(out_path, "w") as f:
             f.write(f"Subject: {subject}\n\n")
             f.write(body)
