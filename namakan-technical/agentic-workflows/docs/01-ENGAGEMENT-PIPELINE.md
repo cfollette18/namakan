@@ -51,41 +51,7 @@ ERROR-LOOKUP:
 
 ### Phase 2: Process Mapping
 
-**Process Documentation**
-```python
-PROCESS_DOCUMENT = """
-# Process: [Name]
-
-## Steps
-1. [Trigger] → [Action] → [System] → [Output]
-2. ...
-
-## Decision Points
-- IF [condition] THEN [action A] ELSE [action B]
-
-## Exception Handling
-- [Exception type] → [Handling]
-- [Exception type] → [Escalation]
-
-## Human Touchpoints
-- [Step] requires human approval
-- [Step] requires human judgment
-
-## Success Metrics
-- Completion rate: > 95%
-- Error rate: < 1%
-- Time saved: X hours/week
-"""
-```
-
-**Workflow Selection Criteria**
-| Criteria | Weight | Score |
-|----------|--------|-------|
-| Time saved | High | 1-5 |
-| Error reduction | High | 1-5 |
-| Complexity (fewer systems = easier) | Medium | 1-5 |
-| Frequency | Medium | 1-5 |
-| Data availability | Medium | 1-5 |
+See [02-PROCESS-MAPPING.md](./02-PROCESS-MAPPING.md)
 
 ---
 

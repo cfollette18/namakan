@@ -6,7 +6,8 @@ This document has been split into separate files for easier maintenance.
 
 | Doc | Contents |
 |-----|----------|
-| [01-ENGAGEMENT-PIPELINE.md](./docs/01-ENGAGEMENT-PIPELINE.md) | Discovery, Process Mapping, Pricing |
+| [01-ENGAGEMENT-PIPELINE.md](./docs/01-ENGAGEMENT-PIPELINE.md) | Discovery, Pricing |
+| [02-PROCESS-MAPPING.md](./docs/02-PROCESS-MAPPING.md) | Process Mapping, Workflow Selection |
 | [03-ARCHITECTURE.md](./docs/03-ARCHITECTURE.md) | Agent Architecture, State Machine, LLM Providers |
 | [04-BUILD.md](./docs/04-BUILD.md) | Tool Implementation, Error Handling, Multi-Agent |
 | [05-TESTING.md](./docs/05-TESTING.md) | Test Suites, Eval Pipeline |
@@ -24,6 +25,7 @@ workflows/
 
 docs/
 ├── 01-ENGAGEMENT-PIPELINE.md
+├── 02-PROCESS-MAPPING.md
 ├── 03-ARCHITECTURE.md
 ├── 04-BUILD.md
 ├── 05-TESTING.md
