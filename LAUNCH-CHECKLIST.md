@@ -121,14 +121,14 @@ For AI consulting, the most important coverage is **Professional Liability (E&O)
 ### Suggested Card Copy:
 ```
 Clint Follette
-Founder & Principal Consultant
+Founder & Principal AI Engineer
 
-Namakan AI Consulting
+Namakan AI Engineering
 📞 [Phone]
 ✉️  info@namakan.ai
 🌐  www.namakan.ai
 
-"Your AI workforce that works 24/7"
+"Ship AI That Actually Works"
 ```
 
 ### Action Required:
@@ -140,15 +140,15 @@ Namakan AI Consulting
 
 ## 6. Google Business Profile
 
-**Status: NOT CREATED** ⚠️**
+**Status: NOT CREATED** ⚠️
 
 ### Action Required:
 1. Go to [Google Business Profile](https://business.google.com/) and sign in
-2. Click **"Manage Now"** → Search for "Namakan AI Consulting"
+2. Click **"Manage Now"** → Search for "Namakan AI Engineering"
 3. If not found, click **"Add your business to Google"**
 4. Fill in:
-   - **Business Name:** Namakan AI Consulting
-   - **Business Category:** IT Consulting, AI Development
+   - **Business Name:** Namakan AI Engineering
+   - **Business Category:** AI Development, Machine Learning
    - **Address:** Blaine, MN (use Clint's address or virtual office)
    - **Phone:** Clint's cell or VoIP number
    - **Website:** namakan.ai (when live)
@@ -157,7 +157,7 @@ Namakan AI Consulting
 ### Tips:
 - Add photos of the workspace/office
 - Set service area to "North Metro Minneapolis, MN"
-- Add your service categories: AI Consulting, Autonomous AI Agents, AI Workforce Solutions
+- Add your service categories: AI Engineering, Custom Software Development, Machine Learning Solutions
 
 ### Action Required:
 - [ ] Create/claim Google Business Profile
