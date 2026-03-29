@@ -35,8 +35,11 @@ namakan/
 │       ├── tools/        # Agent tools
 │       └── core/         # Config, DB, Redis
 ├── namakan-technical/
-│   ├── pipeline/         # Service delivery pipelines
-│   └── SECURE-DATA-PIPELINE.md
+│   ├── fine-tuned-models/   # Fine-tuning pipeline
+│   ├── rag-pipelines/      # RAG pipeline
+│   ├── agentic-workflows/  # Agentic workflows pipeline
+│   ├── custom-ai-employees/ # AI employees pipeline
+│   └── */SECURE-DATA-PIPELINE.md  # Per-pipeline security rules
 ├── namakan-business/     # Business plans, pricing
 ├── namakan-sales/        # Sales scripts, target list
 ├── namakan-marketing/    # Content, strategy
