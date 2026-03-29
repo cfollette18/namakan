@@ -327,8 +327,8 @@ def list_prospects():
             continue
         
         status = p.get("sequence_status", "?")
-        last = p.get("last_email_sent", "—")
-        day = p.get("sequence_day", 0)
+        last = p.get("last_email_sent") or "—"
+        day = p.get("sequence_day", 0) or 0
         company = p.get("company", "?")[:23]
         cname = p.get("contact_name", "?")[:18]
         
