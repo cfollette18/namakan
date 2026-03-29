@@ -70,13 +70,18 @@ def create_prospect(name, contact_name, contact_title, contact_email,
     print(f"✅ Created prospect: {name} → {path}")
     return data
 
+def possessive(name):
+    """Return possessive form of a name. 'Polaris Industries' → 'Polaris Industries''"""
+    return f"{name}'" if name.endswith('s') else f"{name}'s"
+
 def generate_subject(seq, company, contact_name):
     """Generate personalized subject line."""
+    co_poss = possessive(company)
     prefixes = {
-        1: f"Question about {company}'s custom AI strategy",
-        2: f"Re: Question about {company}'s custom AI strategy",
+        1: f"Question about {co_poss} custom AI strategy",
+        2: f"Re: Question about {co_poss} custom AI strategy",
         3: f"A custom AI idea for {company}",
-        4: f"Research on AI adoption in {company}'s industry — might be useful",
+        4: f"Research on AI adoption in {co_poss} industry — might be useful",
         5: f"Last note from Clint at Namakan",
     }
     return prefixes.get(seq["num"], f"{seq['subject_prefix']} {company}")
