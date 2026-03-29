@@ -5,7 +5,7 @@
 
 set -e
 
-NAMAKAN_ROOT="/home/cfollette18/.openclaw/workspace/namakan/namakan-technical/pipeline"
+NAMAKAN_ROOT="$(cd "$(dirname "$0")" && pwd)"
 
 show_help() {
     cat << EOF
