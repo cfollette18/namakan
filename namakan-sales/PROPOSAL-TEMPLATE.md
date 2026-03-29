@@ -1,4 +1,4 @@
-# Namakan AI Consulting — Custom AI Engineering Proposal
+# Namakan AI Engineering — Custom AI Engineering Proposal
 ## Proposal Template
 
 > **How to use this template:** Fill in the bracketed sections with specific information from discovery. This is a living document — adapt it to each client's situation. Every proposal should tell the story of: (1) We understood your specific situation, (2) Here's what we found, (3) Here's what we propose to build, (4) Here's what it will cost and when.
@@ -212,7 +212,7 @@ An AI agent system that autonomously handles [specific end-to-end workflow — e
 *Complete this section based on client's requirements:*
 
 - **HIPAA:** [X] — All PHI handled per HIPAA guidelines. Data processed in [compliant environment]. BAA available if required.
-- **SOC 2:** [X] — Namakan AI Consulting maintains SOC 2 Type II compliance for all production environments.
+- **SOC 2:** [X] — Namakan AI Engineering maintains SOC 2 Type II compliance for all production environments.
 - **Data residency:** [Client data stays in X — e.g., "US-based only," "within client's VPC," "client-controlled environment"]
 - **Access controls:** Role-based access, full audit logging, no third-party data sharing.
 - **Encryption:** At rest ([AES-256]) and in transit ([TLS 1.3]).
@@ -290,7 +290,7 @@ After deployment, we recommend a **monthly optimization retainer** to:
 
 ## 👥 WHO WE ARE
 
-**Namakan AI Consulting** builds custom AI systems — not chatbots, not generic automation. We specialize in taking a client's proprietary data and building AI systems that understand their specific domain, their specific workflows, and their specific context.
+**Namakan AI Engineering** builds custom AI systems — not chatbots, not generic automation. We specialize in taking a client's proprietary data and building AI systems that understand their specific domain, their specific workflows, and their specific context.
 
 **Why [CLIENT]:** [Specific reason we're excited about this project — their data assets, their domain, the challenge. Make it genuine.]
 
@@ -342,7 +342,7 @@ After deployment, we recommend a **monthly optimization retainer** to:
 
 ---
 
-**Namakan AI Consulting**  
+**Namakan AI Engineering**  
 [ADDRESS]  
 [WEBSITE]
 
