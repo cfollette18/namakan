@@ -124,7 +124,7 @@ Namakan AI Engineering
 clint@namakan.ai"""
 
     elif num == 2:
-        subject = f"Re: Question about {company}'s custom AI strategy"
+        subject = f"Re: Question about {possessive(company)} custom AI strategy"
         body = f"""Hi {contact_name},
 
 Following up — I wanted to share a specific example that might illustrate what "custom AI engineering" actually means.
