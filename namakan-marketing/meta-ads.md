@@ -1,4 +1,4 @@
-# Meta Ad Campaigns — Namakan AI Consulting
+# Meta Ad Campaigns — Namakan AI Engineering
 ## Blaine, MN Local Business Targeting
 ## Positioning: AUTONOMOUS AI AGENTS — Not Chatbots. AI Workers.
 
@@ -159,7 +159,7 @@
 **Primary Text:**
 > "Every day you spend manually handling returns, answering the same questions, and chasing follow-ups is a day you're NOT growing your business.
 >
-> At Namakan AI Consulting, we build AUTONOMOUS AI AGENTS — not chatbots. AI workers that complete tasks on their own, 24 hours a day.
+> At Namakan AI Engineering, we build AUTONOMOUS AI AGENTS — not chatbots. AI workers that complete tasks on their own, 24 hours a day.
 >
 > We're offering FREE 30-minute autonomous agent strategy sessions exclusively for Blaine, MN businesses.
 >

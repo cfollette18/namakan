@@ -1,4 +1,4 @@
-# Namakan AI Consulting — Custom AI Engineering Outreach
+# Namakan AI Engineering — Custom AI Engineering Outreach
 ## Thoughtful Outreach Sequence | High-Ticket AI Projects
 
 > **This is NOT a cold blast.** Every email in this sequence is written for a specific person at a specific company — with a genuine, specific reason we're reaching out. We're not selling chatbots. We're selling custom AI systems trained on proprietary data.
@@ -31,7 +31,7 @@ I came across [Company's] work on [specific project, announcement, product, or i
 
 It got me thinking about something specific: **you have years of proprietary operational data that's never been fully leveraged** — and the gap between what you have and what a generic AI model can do with it is massive.
 
-That's what we do at Namakan AI Consulting. We don't sell pre-built chatbots or generic automation tools. We build custom AI systems — RAG pipelines, fine-tuned models, and agentic workflows — trained specifically on a client's proprietary data, integrated into their specific systems, solving their specific domain problems.
+That's what we do at Namakan AI Engineering. We don't sell pre-built chatbots or generic automation tools. We build custom AI systems — RAG pipelines, fine-tuned models, and agentic workflows — trained specifically on a client's proprietary data, integrated into their specific systems, solving their specific domain problems.
 
 **The difference is significant:**
 
@@ -46,7 +46,7 @@ Do you have 20 minutes in the next few weeks? Happy to work around your schedule
 
 —  
 [Your Name]  
-Namakan AI Consulting  
+Namakan AI Engineering  
 [Your Phone]  
 [Your Email]
 
@@ -122,7 +122,7 @@ I put together a 3-page brief on each of these. Happy to walk through it in 20 m
 
 —  
 [Your Name]  
-Namakan AI Consulting
+Namakan AI Engineering
 
 ---
 
@@ -159,7 +159,7 @@ Thanks for your time either way.
 
 —  
 [Your Name]  
-Namakan AI Consulting  
+Namakan AI Engineering  
 [Your Phone]
 
 *Attachment: Custom AI Opportunity Framework (PDF or link to one-pager)*
@@ -191,7 +191,7 @@ Best of luck with everything.
 
 —  
 [Your Name]  
-Namakan AI Consulting
+Namakan AI Engineering
 
 ---
 
@@ -249,4 +249,4 @@ Before sending ANY email in this sequence:
 
 ---
 
-*Namakan AI Consulting — Custom AI Engineering Outreach | v2.0*
+*Namakan AI Engineering — Custom AI Engineering Outreach | v2.0*

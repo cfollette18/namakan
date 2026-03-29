@@ -1,6 +1,6 @@
 # Objection Handling Guide
 
-**Namakan AI Consulting | Top 10 Objections + Responses**
+**Namakan AI Engineering | Top 10 Objections + Responses**
 
 ---
 
@@ -186,4 +186,4 @@ Every objection is a buying signal in disguise.
 
 ---
 
-*Namakan AI Consulting — Objection Handling*
+*Namakan AI Engineering — Objection Handling*

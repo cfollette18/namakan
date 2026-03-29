@@ -1,4 +1,4 @@
-# Cold Email Outreach Template — Namakan AI Consulting
+# Cold Email Outreach Template — Namakan AI Engineering
 ## For Blaine, MN Local Businesses
 ## Positioning: AUTONOMOUS AI AGENTS — Your 24/7 AI Workforce
 
@@ -16,7 +16,7 @@ I came across [Business Name] and noticed something I think you can relate to: y
 
 Returns to process. Follow-ups to send. Appointments to schedule. Leads to qualify.
 
-At Namakan AI Consulting, we don't build chatbots. We build AUTONOMOUS AI AGENTS — AI workers that complete tasks on their own, 24 hours a day, 7 days a week. Not an assistant that answers questions. A worker that DOES the job.
+At Namakan AI Engineering, we don't build chatbots. We build AUTONOMOUS AI AGENTS — AI workers that complete tasks on their own, 24 hours a day, 7 days a week. Not an assistant that answers questions. A worker that DOES the job.
 
 Here's what that looks like for Blaine businesses:
 
@@ -34,7 +34,7 @@ Are you free this week for a quick call?
 
 Best,
 [Your Name]
-Namakan AI Consulting
+Namakan AI Engineering
 [Phone]
 [Email]
 [Website]
@@ -95,7 +95,7 @@ Even if you're not ready to add AI workers today, it's worth knowing where you s
 If you ever want to chat about it, my door's open. Otherwise, good luck with [upcoming season/event/business goal — personalize if known]!
 
 -[Your Name]
-Namakan AI Consulting
+Namakan AI Engineering
 
 ---
 

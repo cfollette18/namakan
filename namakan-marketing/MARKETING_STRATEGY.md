@@ -207,7 +207,7 @@
 ### 3.5 Google Business Profile
 
 **Setup:**
-- Claim and optimize GBP for "Namakan AI Consulting"
+- Claim and optimize GBP for "Namakan AI Engineering"
 - Categories: AI Consulting, Automation, Business Support Service
 - Posts: Weekly, highlighting agent deployments
 - Reviews: Ask satisfied clients to leave a review

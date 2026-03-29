@@ -1,4 +1,4 @@
-# Namakan AI Consulting — Discovery Call Script
+# Namakan AI Engineering — Discovery Call Script
 ## Custom AI Engineering | 30–45 Minute Discovery Calls
 
 > **Purpose:** This call is NOT a sales call. It is a structured discovery conversation to understand the client's proprietary data assets, operational workflows, and where custom AI could create meaningful business impact.
@@ -255,4 +255,4 @@ Rate the prospect after the call:
 
 ---
 
-*Namakan AI Consulting — Discovery Call Framework | Custom AI Engineering | v2.0*
+*Namakan AI Engineering — Discovery Call Framework | Custom AI Engineering | v2.0*
