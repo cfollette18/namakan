@@ -17,7 +17,7 @@ USAGE:
 SERVICES:
   fine-tuned-models     — Data → Training → Evaluation → Deployment
   rag-pipelines        — Ingestion → Indexing → Retrieval → Serve
-  agentic-workflows    — Build → Test → Deploy → Monitor
+  agentic-workflows    — Build → Test → Eval → Monitor → Deploy
   custom-ai-employees — Train → Integrate → Onboard → Monitor
 
 PHASES:
@@ -26,6 +26,7 @@ PHASES:
   train                — Model training
   eval                 — Evaluation and testing
   deploy               — Deployment and serving
+  monitor              — Start monitoring server (agentic-workflows only)
 
 EXAMPLES:
   $0 fine-tuned-models data --input ./client-data --output ./data/prepared
@@ -33,6 +34,8 @@ EXAMPLES:
   $0 fine-tuned-models deploy --base-model Qwen/Qwen2.5-7B --adapter ./adapters/client-a --method ollama
   $0 rag-pipelines ingest --input ./documents --output ./vector-store
   $0 agentic-workflows test --workflow ./workflows/customer-onboarding.yaml
+  $0 agentic-workflows eval --suite ./workflows/eval_pipeline.py
+  $0 agentic-workflows monitor --port 9090
 
 EOF
 }
@@ -106,6 +109,14 @@ case "$SERVICE" in
       test)
         echo "[TEST] Running agentic workflow tests..."
         python3 "${NAMAKAN_ROOT}/agentic-workflows/workflows/agent_engine.py" --task "Run self-test: check all tools are working" --role "Test Agent"
+        ;;
+      eval)
+        echo "[EVAL] Running agentic workflow evaluation pipeline..."
+        python3 "${NAMAKAN_ROOT}/agentic-workflows/workflows/eval_pipeline.py" "$@"
+        ;;
+      monitor)
+        echo "[MONITOR] Starting monitoring server..."
+        python3 "${NAMAKAN_ROOT}/agentic-workflows/workflows/monitoring.py" "$@"
         ;;
       deploy)
         echo "[DEPLOY] Deploying agentic workflow..."
