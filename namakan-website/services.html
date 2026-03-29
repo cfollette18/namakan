@@ -3,22 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Namakan AI Consulting | Blaine, MN</title>
-    <meta name="description" content="Explore our AI services for local businesses: custom chatbots, workflow automation, and AI integration solutions in Blaine, MN.">
+    <title>AI Engineering Services | Namakan | Minneapolis North Metro</title>
+    <meta name="description" content="Premium AI engineering: fine-tuned models, RAG pipelines, agentic workflows, and custom AI employees. Build AI that knows your business.">
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Analytics 4 (GA4) - Uncomment and add your measurement ID after deployment -->
-    <!-- 1. Create GA4 property at https://analytics.google.com -->
-    <!-- 2. Copy your Measurement ID (G-XXXXXXXXXX format) -->
-    <!-- 3. Replace GA_MEASUREMENT_ID below and uncomment the block -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-    -->
 </head>
 <body>
     <!-- Navigation -->
@@ -37,89 +24,125 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Our Services</h1>
-            <p>Practical AI solutions designed specifically for local businesses — no enterprise complexity, just real results.</p>
+            <h1>AI Engineering Services</h1>
+            <p>We build production-grade AI systems that know your business — from custom fine-tuned models to autonomous agentic workflows. Not consultants. Engineers.</p>
         </div>
     </section>
 
-    <!-- AI Chatbots Section -->
-    <section class="section" id="chatbots">
+    <!-- Service 1: Fine-Tuned Models -->
+    <section class="section" id="fine-tuned">
         <div class="container">
             <div class="service-detail">
                 <div class="service-detail-content">
                     <div>
-                        <h2>AI Chatbots</h2>
-                        <p>A custom chatbot trained on your business knowledge, integrated into your website or favorite messaging platform. It handles customer questions, books appointments, qualifies leads, and escalates to you when needed — all without hiring weekend staff.</p>
-                        <p>Unlike generic chatbots, yours understands your specific services, pricing, and processes. It represents your brand, not a generic AI assistant.</p>
+                        <h2>Fine-Tuned AI Models</h2>
+                        <p>Train a language model on your proprietary data — your processes, terminology, products, and institutional knowledge. The result: AI that thinks and speaks like your best employee, not a generic chatbot.</p>
+                        <p>We use LoRA/QLoRA fine-tuning via Google Colab — efficient, cost-effective, and deployable anywhere. Models run on your infrastructure or our cloud.</p>
                         <ul class="service-detail-features">
-                            <li>Trained on your business data and documentation</li>
-                            <li>Handles FAQs, bookings, and lead qualification 24/7</li>
-                            <li>Connects to your calendar for instant appointment booking</li>
-                            <li>Escalates complex questions to human team members</li>
-                            <li>Multi-platform: website, Facebook Messenger, WhatsApp, and more</li>
-                            <li>Continuous learning from real conversations</li>
+                            <li>Trained exclusively on YOUR data, not public corpora</li>
+                            <li>Base models: Qwen, Llama, Mistral (you choose)</li>
+                            <li>Live training metrics: loss curves, perplexity tracking</li>
+                            <li>Red-teaming and accuracy evaluation included</li>
+                            <li>Deployment: Ollama, vLLM, or FastAPI — your choice</li>
+                            <li>Secure data handling: AES-256 at rest, TLS 1.2+ in transit</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-primary">Get a Custom Chatbot</a>
+                        <p style="margin-top: 20px; font-weight: 600;">Starting at $10,000 — scales to $50K+ for enterprise training runs.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Custom Model</a>
                     </div>
                     <div style="background: var(--gray-100); border-radius: var(--radius); padding: 40px; text-align: center;">
-                        <div style="font-size: 4rem;">💬</div>
-                        <p style="margin-top: 16px; color: var(--gray-600);">Typical lead time: 2-4 weeks</p>
+                        <div style="font-size: 4rem;">🧠</div>
+                        <p style="margin-top: 16px; color: var(--gray-600);">Typical delivery: 4–8 weeks</p>
+                        <p style="margin-top: 8px; color: var(--gray-600);">From $10K–$50K+</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Workflow Automation Section -->
-    <section class="section" id="automation" style="background-color: var(--gray-100);">
+    <!-- Service 2: RAG Pipelines -->
+    <section class="section" id="rag" style="background-color: var(--gray-100);">
         <div class="container">
             <div class="service-detail">
                 <div class="service-detail-content reverse">
                     <div>
-                        <h2>Workflow Automation</h2>
-                        <p>Every business has tasks that eat up time without adding value — follow-up emails, data entry, appointment reminders, invoice generation. We identify these bottlenecks and automate them using AI-powered workflows.</p>
-                        <p>You'll keep the human touch where it matters while letting AI handle the repetitive work that slows you down.</p>
+                        <h2>RAG Pipelines</h2>
+                        <p>Connect your documents, manuals, contracts, and knowledge bases to an AI that can answer questions from them — with sources cited and confidence scored. Your own private ChatGPT across your entire data estate.</p>
+                        <p>Built on ChromaDB with hybrid search (dense + sparse embeddings) and cross-encoder re-ranking for maximum retrieval accuracy.</p>
                         <ul class="service-detail-features">
-                            <li>Automated email and SMS follow-up sequences</li>
-                            <li>Lead routing and prioritization based on custom criteria</li>
-                            <li>Appointment reminders and rescheduling automation</li>
-                            <li>Data entry and CRM synchronization</li>
-                            <li>Invoice and proposal generation</li>
-                            <li>Reporting and task reminders</li>
+                            <li>ChromaDB vector store with your documents</li>
+                            <li>512-token chunking with 50-token overlap</li>
+                            <li>Hybrid search: vector + keyword, re-ranked</li>
+                            <li>Data ingestion: S3/Azure signed URLs only — never touches third parties</li>
+                            <li>HIPAA/GDPR/SOC 2 compliance frameworks available</li>
+                            <li>Reference accuracy evaluation included</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-primary">Automate Your Workflows</a>
+                        <p style="margin-top: 20px; font-weight: 600;">Build: $5,000–$15,000 | Ongoing: $500–$2,000/month</p>
+                        <a href="contact.html" class="btn btn-primary">Build a RAG Pipeline</a>
                     </div>
                     <div style="background: var(--white); border-radius: var(--radius); padding: 40px; text-align: center;">
-                        <div style="font-size: 4rem;">⚡</div>
-                        <p style="margin-top: 16px; color: var(--gray-600);">Typical lead time: 3-5 weeks</p>
+                        <div style="font-size: 4rem;">📚</div>
+                        <p style="margin-top: 16px; color: var(--gray-600);">Typical delivery: 2–4 weeks</p>
+                        <p style="margin-top: 8px; color: var(--gray-600);">$5K–$15K build</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AI Integration Section -->
-    <section class="section" id="integration">
+    <!-- Service 3: Agentic Workflows -->
+    <section class="section" id="agentic">
         <div class="container">
             <div class="service-detail">
                 <div class="service-detail-content">
                     <div>
-                        <h2>AI Integration</h2>
-                        <p>AI shouldn't require you to throw away everything you're already using. We integrate AI capabilities directly into your existing tools — your CRM, website, email platform, and business apps.</p>
-                        <p>Whether you're on HubSpot, Salesforce, WordPress, Gmail, or a custom system, we can add AI superpowers without disrupting your workflow.</p>
+                        <h2>Agentic AI Workflows</h2>
+                        <p>Deploy autonomous AI agents that reason, act, and adapt — not just chatbots that answer once. Agents that browse the web, read files, run code, send emails, and escalate to humans when they're uncertain.</p>
+                        <p>Built on LangGraph with a ReAct loop (Reason → Act → Observe). Every action is logged. Confidence thresholds determine execution vs. escalation.</p>
                         <ul class="service-detail-features">
-                            <li>CRM AI assistants for data entry and insights</li>
-                            <li>Website AI widgets for lead capture and support</li>
-                            <li>Email AI for smart sorting and automated responses</li>
-                            <li>Custom API integrations with your existing systems</li>
-                            <li>AI-powered search and knowledge base tools</li>
-                            <li>Seamless handoffs between AI and human agents</li>
+                            <li>ReAct autonomous agents with custom tool registries</li>
+                            <li>Tools: web search, file read/write, code execution, email, human escalation</li>
+                            <li>Confidence scoring: &gt;0.8 auto-execute, 0.5–0.8 explain first, &lt;0.5 escalate</li>
+                            <li>Stateful multi-agent orchestration via LangGraph</li>
+                            <li>Full audit trail: every decision logged and explainable</li>
+                            <li>Deploy on your infra or Namakan cloud</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-primary">Integrate AI Into Your Systems</a>
+                        <p style="margin-top: 20px; font-weight: 600;">Starting at $5,000 — scales to $30K+ for complex multi-agent systems.</p>
+                        <a href="contact.html" class="btn btn-primary">Design an Agentic Workflow</a>
                     </div>
                     <div style="background: var(--gray-100); border-radius: var(--radius); padding: 40px; text-align: center;">
-                        <div style="font-size: 4rem;">🔗</div>
-                        <p style="margin-top: 16px; color: var(--gray-600);">Typical lead time: 4-6 weeks</p>
+                        <div style="font-size: 4rem;">⚡</div>
+                        <p style="margin-top: 16px; color: var(--gray-600);">Typical delivery: 3–6 weeks</p>
+                        <p style="margin-top: 8px; color: var(--gray-600);">$5K–$30K+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 4: Custom AI Employees -->
+    <section class="section" id="ai-employees" style="background-color: var(--gray-100);">
+        <div class="container">
+            <div class="service-detail">
+                <div class="service-detail-content reverse">
+                    <div>
+                        <h2>Custom AI Employees</h2>
+                        <p>Deploy a permanent, role-specific AI worker — trained on your business, integrated into your tools, with monthly performance monitoring. It's an employee that never sleeps, never takes a sick day, and costs a fraction of a human hire.</p>
+                        <p>Onboarding follows a phased autonomy model: Shadow → Assist → Partial → Full autonomy.</p>
+                        <ul class="service-detail-features">
+                            <li>Role-designed persona: sales rep, research analyst, support agent, SDR</li>
+                            <li>Integrated with your CRM, email, calendar, and tools</li>
+                            <li>Phased onboarding: shadow mode first, then gradual autonomy</li>
+                            <li>Monthly performance reports + retraining triggers</li>
+                            <li>Dedicated supervisor assigned per AI Employee</li>
+                            <li>Escalsation to human when confidence is low</li>
+                        </ul>
+                        <p style="margin-top: 20px; font-weight: 600;">$2,000–$5,000/month per AI Employee.</p>
+                        <a href="contact.html" class="btn btn-primary">Hire an AI Employee</a>
+                    </div>
+                    <div style="background: var(--white); border-radius: var(--radius); padding: 40px; text-align: center;">
+                        <div style="font-size: 4rem;">👤</div>
+                        <p style="margin-top: 16px; color: var(--gray-600);">Onboarding: 2–4 weeks</p>
+                        <p style="margin-top: 8px; color: var(--gray-600);">$2K–$5K/month</p>
                     </div>
                 </div>
             </div>
@@ -129,28 +152,28 @@
     <!-- Process Section -->
     <section class="section" style="background-color: var(--dark); color: var(--white);">
         <div class="container">
-            <h2 class="section-title">Our Process</h2>
-            <p class="section-subtitle" style="color: var(--gray-400);">From first conversation to live solution in weeks, not months</p>
+            <h2 class="section-title">How We Work</h2>
+            <p class="section-subtitle" style="color: var(--gray-400);">Every engagement follows the same rigorous pipeline — from discovery to production</p>
             <div class="services-grid">
                 <div class="service-card" style="background: var(--dark); border: 1px solid var(--gray-600);">
                     <div class="service-icon">1️⃣</div>
-                    <h3>Discovery Call</h3>
-                    <p style="color: var(--gray-400);">30-minute call to understand your business, challenges, and goals. No pressure, no pitch — just a conversation.</p>
+                    <h3>Discovery</h3>
+                    <p style="color: var(--gray-400);">Deep-dive into your data, workflows, and goals. We identify where AI creates the most leverage — and where it shouldn't touch.</p>
                 </div>
                 <div class="service-card" style="background: var(--dark); border: 1px solid var(--gray-600);">
                     <div class="service-icon">2️⃣</div>
-                    <h3>Custom Proposal</h3>
-                    <p style="color: var(--gray-400);">We design a solution tailored to your needs and budget, with clear deliverables and timelines.</p>
+                    <h3>Architecture</h3>
+                    <p style="color: var(--gray-400);">We design the system — model selection, data pipeline, tooling, deployment strategy. You review and approve before a line is written.</p>
                 </div>
                 <div class="service-card" style="background: var(--dark); border: 1px solid var(--gray-600);">
                     <div class="service-icon">3️⃣</div>
-                    <h3>Build & Test</h3>
-                    <p style="color: var(--gray-400);">We build your solution with iterative feedback from you, testing thoroughly before going live.</p>
+                    <h3>Build & Evaluate</h3>
+                    <p style="color: var(--gray-400);">Iterative development with rigorous evaluation. Perplexity scores, accuracy benchmarks, red-teaming, and live demos at every milestone.</p>
                 </div>
                 <div class="service-card" style="background: var(--dark); border: 1px solid var(--gray-600);">
                     <div class="service-icon">4️⃣</div>
-                    <h3>Launch & Support</h3>
-                    <p style="color: var(--gray-400);">We deploy your solution, train your team, and provide ongoing support to ensure success.</p>
+                    <h3>Deploy & Monitor</h3>
+                    <p style="color: var(--gray-400);">Production deployment on your infra or ours. Monthly monitoring. Retraining triggers when performance degrades.</p>
                 </div>
             </div>
         </div>
@@ -159,9 +182,9 @@
     <!-- CTA Section -->
     <section class="section cta-section">
         <div class="container cta-content">
-            <h2>Let's Build Something Together</h2>
-            <p>Every business is different. Book a free consultation and we'll create a custom AI plan for your specific needs.</p>
-            <a href="contact.html" class="btn btn-primary btn-large">Book Free Consultation</a>
+            <h2>Ship AI That Actually Works</h2>
+            <p>Book a free 30-minute discovery call. We'll tell you exactly what we can build, how long it takes, and what it costs. No fluff.</p>
+            <a href="contact.html" class="btn btn-primary btn-large">Book Free Discovery Call</a>
         </div>
     </section>
 
@@ -170,8 +193,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h3>Namakan AI Consulting</h3>
-                    <p>AI solutions for local businesses in Blaine, MN and the greater Twin Cities area.</p>
+                    <h3>Namakan AI Engineering</h3>
+                    <p>Premium AI systems for businesses that need more than chatbots. Minneapolis North Metro.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -191,7 +214,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Namakan AI Consulting. All rights reserved.</p>
+                <p>&copy; 2026 Namakan AI Engineering. All rights reserved.</p>
             </div>
         </div>
     </footer>
