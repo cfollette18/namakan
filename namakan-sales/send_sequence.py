@@ -101,7 +101,7 @@ def generate_email_body(seq, prospect):
         subject = generate_subject(seq, company, contact_name)
         body = f"""Hi {contact_name},
 
-I came across {company}'s work on {ai_opp}.
+I came across {possessive(company)} work on {ai_opp}.
 
 It got me thinking about something specific: you have years of {prop_data} that have never been fully leveraged — and the gap between what you have and what a generic AI model can do with it is massive.
 
@@ -157,7 +157,7 @@ Namakan AI Engineering"""
         subject = f"A custom AI idea for {company}"
         body = f"""Hi {contact_name},
 
-I've spent some time thinking about {company}'s specific situation — specifically, {ai_opp}. Here's what stands out:
+I've spent some time thinking about {possessive(company)} specific situation — specifically, {ai_opp}. Here's what stands out:
 
 **Opportunity 1: RAG pipeline on your {prop_data}**
 
