@@ -1,4 +1,4 @@
-import { Nav, Footer, Hero, ProductCard } from '../../components/Nav'
+import { Nav, Footer, Hero, ProductCard } from '../../components'
 
 export default function Home() {
   const products = [
@@ -38,11 +38,9 @@ export default function Home() {
       <Hero />
 
       {/* Products Section */}
-      <section className="py-20 px-12 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">
-          Four ways we help companies stop losing to generic AI
-        </h2>
-        <div className="grid grid-cols-2 gap-8">
+      <section className="section">
+        <h2 className="section-title">Four ways we help companies stop losing to generic AI</h2>
+        <div className="products-grid">
           {products.map((product, index) => (
             <ProductCard key={index} {...product} />
           ))}
@@ -50,11 +48,9 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-12 text-center border-t border-slate-200">
-        <h2 className="text-3xl font-bold mb-6 text-slate-900">Stop guessing. Start knowing.</h2>
-        <button className="bg-teal-600 text-white text-base font-semibold px-8 py-4 rounded-lg hover:bg-teal-700 hover:-translate-y-0.5 transition-all cursor-pointer">
-          Talk to Us →
-        </button>
+      <section className="cta-section">
+        <h2>Stop guessing. Start knowing.</h2>
+        <button className="cta">Talk to Us →</button>
       </section>
 
       <Footer />
