@@ -33,6 +33,13 @@ The Product Pipeline team builds reusable, packaged solutions:
 | **RAG** | Ingest → Chunk → Embed → Store → Query → Synthesize | 2-4 weeks |
 | **Fine-Tuning** | Collect → Clean → Train → Evaluate → Deploy | 4-8 weeks |
 
+## Sales Teams
+
+| Team | Specialty | Context |
+|------|-----------|---------|
+| [Lead Qualification](./sales/lead-qualification-team/) | Research, qualify, escalate hot leads | Feeds Email Team and Sales |
+| [Email Generation & Sending](./sales/email-team/) | Cold outreach, nurture sequences, reply management | Converts warm leads to meetings |
+
 ---
 
 ## AI Infrastructure Pipelines
