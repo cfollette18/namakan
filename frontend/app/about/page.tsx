@@ -28,17 +28,6 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white">
       <Nav />
 
-      <section className="page-hero">
-        <Reveal className="page-hero-copy">
-          <span className="section-kicker">About</span>
-          <h1 className="page-title">Namakan builds private AI systems that fit how a business actually works.</h1>
-          <p className="page-description">
-            We focus on the hard part most teams skip: making AI reflect your internal language, decisions,
-            escalation paths, and approved ways of operating before it touches real work.
-          </p>
-        </Reveal>
-      </section>
-
       <section className="section">
         <div className="page-two-column">
           <Reveal className="info-card info-card-large">

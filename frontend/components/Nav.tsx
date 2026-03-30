@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ContactModal } from './ContactModal'
 
 export function Nav() {
   return (
@@ -7,12 +8,14 @@ export function Nav() {
         <span className="nav-logo-icon" aria-hidden="true" />
         <span className="nav-logo-wordmark" aria-hidden="true" />
       </Link>
-      <div className="nav-links">
-        <Link href="/services">Services</Link>
-        <Link href="/about">About</Link>
-        <Link href="/pricing">Pricing</Link>
+      <div className="nav-actions">
+        <div className="nav-links">
+          <Link href="/services">Services</Link>
+          <Link href="/pricing">Pricing</Link>
+          <Link href="/about">About</Link>
+        </div>
+        <ContactModal className="nav-cta" />
       </div>
-      <Link href="/contact" className="nav-cta">Contact Us</Link>
     </nav>
   )
 }

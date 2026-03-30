@@ -68,22 +68,6 @@ export default function PricingPage() {
     <main className="min-h-screen bg-white">
       <Nav />
 
-      <section className="page-hero">
-        <Reveal className="page-hero-copy">
-          <span className="section-kicker">Pricing</span>
-          <h1 className="page-title">Pricing built around delivery, not generic seats.</h1>
-          <p className="page-description">
-            Namakan pricing reflects the kind of work we do: business-specific AI systems, not off-the-shelf
-            subscriptions pretending to fit every company the same way.
-          </p>
-          <div className="page-actions">
-            <Link href="/contact" className="cta">
-              Contact Us
-            </Link>
-          </div>
-        </Reveal>
-      </section>
-
       <section className="section">
         <Reveal className="products-grid">
           {plans.map((plan) => (

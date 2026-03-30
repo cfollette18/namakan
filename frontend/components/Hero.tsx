@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { motion, useReducedMotion } from 'framer-motion'
+import { ContactModal } from './ContactModal'
 
 export function Hero() {
   const prefersReducedMotion = useReducedMotion()
@@ -14,24 +14,17 @@ export function Hero() {
         animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
         transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="hero-eyebrow">Private AI systems</div>
-        <h1 className="hero-headline">Generic AI was trained on everyone. Yours should be built for you.</h1>
+        <h1 className="hero-headline">Your business isn&apos;t &quot;standard.&quot; Why is your AI?</h1>
         <p className="hero-subtext">
-          Namakan engineers private AI systems around your contracts, policies, historical decisions,
-          terminology, and approved language, then turns that intelligence into retrieval, workflows, and
-          agents that can do real work inside your business.
+          Public models are trained on the average of the internet. But your advantage lives in your specifics:
+          your proprietary language, your approval workflows, your operating logic, and your hard-won decisions.
+          Namakan turns that internal context into a private AI operating system with fine-tuned models, RAG
+          pipelines grounded in your data, autonomous workflows, and AI employees that work within your safety
+          rails and speak your language.
         </p>
 
-        <div className="hero-proof-row">
-          <div className="hero-proof-pill">Private data and policies</div>
-          <div className="hero-proof-pill">Fine-tuned reasoning layer</div>
-          <div className="hero-proof-pill">Retrieval, workflows, and agents</div>
-        </div>
-
         <div className="cta-wrapper">
-          <Link href="/contact" className="cta">
-            Contact Us
-          </Link>
+          <ContactModal className="cta" />
         </div>
       </motion.div>
     </section>

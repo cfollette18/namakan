@@ -26,8 +26,8 @@ export default function Home() {
     },
     {
       tag: 'Custom AI Employees',
-      title: 'A full-time worker that never sleeps',
-      description: 'AI that actually does the work. Researches leads, drafts emails, updates your CRM, schedules follow-ups. It\'s an employee that works 24/7.',
+      title: 'AI that NEVER sleeps',
+      description: 'Runs around the clock on repeatable work. Researches leads, drafts emails, updates your CRM, and keeps follow-ups moving without constant human input.',
       features: ['Handles repetitive tasks', 'Integrates with your tools', 'Reports productivity metrics', '20+ hours saved per week'],
       price: 'Starting at $2K/mo per employee'
     }

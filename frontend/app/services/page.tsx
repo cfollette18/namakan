@@ -78,25 +78,6 @@ export default function ServicesPage() {
     <main className="min-h-screen bg-white">
       <Nav />
 
-      <section className="page-hero">
-        <Reveal className="page-hero-copy">
-          <span className="section-kicker">Services</span>
-          <h1 className="page-title">The private AI stack Namakan builds for real businesses.</h1>
-          <p className="page-description">
-            We do not ship a generic chatbot and call it transformation. We build the model, retrieval,
-            workflow, and operating layer required for AI to work inside an actual company.
-          </p>
-          <div className="page-actions">
-            <Link href="/contact" className="cta">
-              Contact Us
-            </Link>
-            <Link href="/pricing" className="cta cta-secondary">
-              View Pricing
-            </Link>
-          </div>
-        </Reveal>
-      </section>
-
       <section className="section">
         <Reveal>
           <div className="section-copy">

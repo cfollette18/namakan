@@ -1,8 +1,8 @@
 import { Nav, Footer, Hero, ProductCard } from '../../components'
+import { ContactModal } from '../../components/ContactModal'
 import { FineTuningSection } from '../../components/FineTuningSection'
 import { Reveal } from '../../components/Reveal'
 import { WorkflowGraphic } from '../../components/WorkflowGraphic'
-import Link from 'next/link'
 
 export default function Home() {
   const products = [
@@ -29,8 +29,8 @@ export default function Home() {
     },
     {
       tag: 'Custom AI Employees',
-      title: 'A full-time worker that never sleeps',
-      description: "AI that actually does the work. Researches leads, drafts emails, updates your CRM, schedules follow-ups. It's an employee that works 24/7.",
+      title: 'AI that NEVER sleeps',
+      description: 'Runs around the clock on repeatable work. Researches leads, drafts emails, updates your CRM, and keeps follow-ups moving without constant human input.',
       features: ['Handles repetitive tasks', 'Integrates with your tools', 'Reports productivity metrics', '20+ hours saved per week'],
       price: 'Starting at $2K/mo per employee'
     }
@@ -55,46 +55,57 @@ export default function Home() {
       <Hero />
       <FineTuningSection />
 
-      <section className="section section-graphics">
-        <div className="graphic-grid">
-          <Reveal className="graphic-card graphic-card-wide">
-            <div className="graphic-copy">
-              <span className="graphic-eyebrow">RAG pipeline</span>
-              <h3 className="graphic-title">Private retrieval before the answer is written</h3>
-              <p className="graphic-description">
-                For Northforge, retrieval means searching warranty rules, lot traces, and QA procedures
-                before anyone answers a field-failure question.
-              </p>
+      <section className="section section-rag">
+        <Reveal className="graphic-card graphic-card-wide">
+          <div className="graphic-copy">
+            <span className="graphic-eyebrow">RAG pipeline</span>
+            <h3 className="graphic-title">Private retrieval before the answer is written</h3>
+            <p className="graphic-description">
+              For Northforge, retrieval means searching warranty rules, lot traces, and QA procedures
+              before anyone answers a field-failure question.
+            </p>
+          </div>
+
+          <div className="rag-graphic">
+            <div className="rag-docs">
+              {ragSources.map((source) => (
+                <div key={source} className="rag-doc">
+                  <span className="rag-doc-check">✓</span>
+                  <span>{source}</span>
+                </div>
+              ))}
             </div>
 
-            <div className="rag-graphic">
-              <div className="rag-docs">
-                {ragSources.map((source) => (
-                  <div key={source} className="rag-doc">
-                    <span className="rag-doc-check">✓</span>
-                    <span>{source}</span>
-                  </div>
-                ))}
+            <div className="rag-answer">
+              <div className="rag-answer-badge">Retrieved from 847 documents</div>
+              <div className="rag-answer-question">Which lots are eligible for same-day replacement under the washdown warranty?</div>
+              <div className="rag-answer-body">
+                Based on the warranty policy, lot-trace file, and field-failure history: only the post-rework
+                lots tagged for washdown environments qualify for immediate replacement, while pre-May die-set
+                inventory requires QA hold and containment review before release.
               </div>
-
-              <div className="rag-answer">
-                <div className="rag-answer-badge">Retrieved from 847 documents</div>
-                <div className="rag-answer-question">Which lots are eligible for same-day replacement under the washdown warranty?</div>
-                <div className="rag-answer-body">
-                  Based on the warranty policy, lot-trace file, and field-failure history: only the post-rework
-                  lots tagged for washdown environments qualify for immediate replacement, while pre-May die-set
-                  inventory requires QA hold and containment review before release.
-                </div>
-                <div className="rag-answer-meta">
-                  <span>Vector match: 0.94</span>
-                  <span>Chunks retrieved: 12</span>
-                  <span>Sources verified: 3</span>
-                </div>
+              <div className="rag-answer-meta">
+                <span>Vector match: 0.94</span>
+                <span>Chunks retrieved: 12</span>
+                <span>Sources verified: 3</span>
               </div>
             </div>
-          </Reveal>
+          </div>
+        </Reveal>
+      </section>
 
-          <Reveal className="graphic-card" delay={0.08}>
+      <section className="section section-automation">
+        <Reveal className="section-copy automation-copy">
+          <span className="section-kicker">Agentic execution</span>
+          <h2 className="section-title section-title-left">Workflows and AI employees belong in their own operating layer.</h2>
+          <p className="section-description">
+            Once the model and retrieval stack are right, Namakan can turn that intelligence into systems that
+            execute tasks, move work across tools, and keep humans focused on the highest-risk decisions.
+          </p>
+        </Reveal>
+
+        <div className="automation-grid">
+          <Reveal className="graphic-card graphic-card-automation" delay={0.08}>
             <div className="graphic-copy">
               <span className="graphic-eyebrow">Agentic workflow</span>
               <h3 className="graphic-title">A workflow that can do the task, not just describe it</h3>
@@ -107,7 +118,7 @@ export default function Home() {
             <WorkflowGraphic />
           </Reveal>
 
-          <Reveal className="graphic-card" delay={0.14}>
+          <Reveal className="graphic-card graphic-card-automation" delay={0.14}>
             <div className="graphic-copy">
               <span className="graphic-eyebrow">AI employee</span>
               <h3 className="graphic-title">A task-running system with throughput and accountability</h3>
@@ -160,9 +171,7 @@ export default function Home() {
           <h2>Stop guessing. Start knowing.</h2>
         </Reveal>
         <Reveal delay={0.08}>
-          <Link href="/contact" className="cta">
-            Contact Us
-          </Link>
+          <ContactModal className="cta" />
         </Reveal>
       </section>
 
