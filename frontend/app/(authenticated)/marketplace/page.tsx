@@ -23,23 +23,23 @@ export default function MarketplacePage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
+    async function fetchTemplates() {
+      setLoading(true);
+      try {
+        const categoryParam = selectedCategory ? `?category=${selectedCategory}` : "";
+        const response = await fetch(`/api/marketplace/templates${categoryParam}`);
+        const data = await response.json();
+        setTemplates(data.templates || []);
+      } catch (error) {
+        console.error("Error fetching templates:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
     fetchTemplates();
   }, [selectedCategory]);
-
-  const fetchTemplates = async () => {
-    setLoading(true);
-    try {
-      const categoryParam = selectedCategory ? `?category=${selectedCategory}` : "";
-      const response = await fetch(`/api/marketplace/templates${categoryParam}`);
-      const data = await response.json();
-      setTemplates(data.templates || []);
-    } catch (error) {
-      console.error("Error fetching templates:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const handleSearch = async () => {
     if (!searchQuery) {
