@@ -134,31 +134,31 @@ export default function MarketplacePage() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-12">
-              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-pink-600 text-transparent bg-clip-text">
+              <Link href="/" className="text-2xl font-bold bg-gradient-to-r to-teal-500 to-teal-600 text-transparent bg-clip-text">
                 Namakan
               </Link>
               <div className="hidden md:flex items-center gap-8">
-                <Link href="/solutions" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors">
+                <Link href="/solutions" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
                   Solutions
                 </Link>
-                <Link href="/pricing" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors">
+                <Link href="/pricing" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
                   Pricing
                 </Link>
-                <Link href="/resources" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors">
+                <Link href="/resources" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
                   Resources
                 </Link>
-                <Link href="/templates" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors font-medium">
+                <Link href="/templates" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors font-medium">
                   Marketplace
                 </Link>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <ThemeToggle />
-              <Link href="/auth/login" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors font-medium">
+              <Link href="/auth/login" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors font-medium">
                 Log in
               </Link>
               <Link href="/auth/signup">
-                <button className="px-6 py-2.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-pink-500/30 transition-all">
+                <button className="px-6 py-2.5 bg-gradient-to-r to-teal-500 to-teal-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-teal-500/30 transition-all">
                   Start for free
                 </button>
               </Link>
@@ -169,7 +169,7 @@ export default function MarketplacePage() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" />
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" />
         <motion.div
           animate={{
             background: [
@@ -187,7 +187,7 @@ export default function MarketplacePage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-pink-100 dark:bg-pink-500/10 border border-pink-200 dark:border-pink-500/30 rounded-full text-pink-600 dark:text-pink-400 text-sm font-semibold"
+              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-teal-100 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 rounded-full text-teal-600 dark:text-teal-400 text-sm font-semibold"
             >
               <Sparkles className="w-4 h-4" />
               Agent Marketplace
@@ -201,7 +201,7 @@ export default function MarketplacePage() {
             >
               Pre-built
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-pink-600 to-pink-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r to-teal-500 via-teal-600 to-teal-500">
                 AI Agents
               </span>
             </motion.h1>
@@ -230,7 +230,7 @@ export default function MarketplacePage() {
                   placeholder="Search agents, templates, or tags..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent shadow-lg"
+                  className="w-full pl-12 pr-4 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-lg"
                 />
               </div>
             </motion.div>
@@ -248,7 +248,7 @@ export default function MarketplacePage() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
                   selectedCategory === category.id
-                    ? 'bg-pink-500 text-white shadow-lg shadow-pink-500/30'
+                    ? 'bg-teal-500 text-white shadow-lg shadow-teal-500/30'
                     : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
                 }`}
               >
@@ -271,21 +271,21 @@ export default function MarketplacePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className={`bg-white dark:bg-slate-900 border rounded-xl p-6 hover:border-pink-500/50 transition-all group ${
+                className={`bg-white dark:bg-slate-900 border rounded-xl p-6 hover:border-teal-500/50 transition-all group ${
                   template.featured
-                    ? 'border-pink-500/50 shadow-lg shadow-pink-500/20'
+                    ? 'border-teal-500/50 shadow-lg shadow-teal-500/20'
                     : 'border-slate-200 dark:border-slate-800'
                 }`}
               >
                 {template.featured && (
-                  <div className="inline-flex items-center gap-1 px-2 py-1 bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 text-xs font-semibold rounded-full mb-3">
+                  <div className="inline-flex items-center gap-1 px-2 py-1 bg-teal-100 dark:bg-teal-500/20 text-teal-600 dark:text-teal-400 text-xs font-semibold rounded-full mb-3">
                     <Star className="w-3 h-3" />
                     Featured
                   </div>
                 )}
 
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br to-teal-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <template.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -333,11 +333,11 @@ export default function MarketplacePage() {
                 </div>
 
                 <div className="flex gap-2">
-                  <button className="flex-1 px-4 py-2 bg-gradient-to-r from-pink-500 to-pink-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-pink-500/30 transition-all flex items-center justify-center gap-2">
+                  <button className="flex-1 px-4 py-2 bg-gradient-to-r to-teal-500 to-teal-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-teal-500/30 transition-all flex items-center justify-center gap-2">
                     <Download className="w-4 h-4" />
                     Get Template
                   </button>
-                  <button className="p-2 text-slate-400 hover:text-pink-500 transition-colors">
+                  <button className="p-2 text-slate-400 hover:text-teal-500 transition-colors">
                     <Heart className="w-5 h-5" />
                   </button>
                 </div>
@@ -360,7 +360,7 @@ export default function MarketplacePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-pink-500 to-pink-600">
+      <section className="py-20 px-6 bg-gradient-to-r to-teal-500 to-teal-600">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -371,18 +371,18 @@ export default function MarketplacePage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Can't Find What You Need?
             </h2>
-            <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
               Build custom AI agents tailored to your specific needs, or contribute your own templates to the community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">
-                <button className="px-8 py-4 bg-white text-pink-600 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2">
+                <button className="px-8 py-4 bg-white text-teal-600 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2">
                   <Sparkles className="w-5 h-5" />
                   Create Custom Agent
                 </button>
               </Link>
               <Link href="/contact">
-                <button className="px-8 py-4 bg-pink-600/20 text-white border border-white/30 rounded-xl font-bold text-lg hover:bg-pink-600/30 transition-all">
+                <button className="px-8 py-4 bg-teal-600/20 text-white border border-white/30 rounded-xl font-bold text-lg hover:bg-teal-600/30 transition-all">
                   Request Template
                 </button>
               </Link>
@@ -396,7 +396,7 @@ export default function MarketplacePage() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
             <div className="col-span-2">
-              <h4 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-pink-600 text-transparent bg-clip-text mb-4">
+              <h4 className="text-2xl font-bold bg-gradient-to-r to-teal-500 to-teal-600 text-transparent bg-clip-text mb-4">
                 Namakan
               </h4>
               <p className="text-slate-600 dark:text-slate-400 mb-4">
@@ -407,30 +407,30 @@ export default function MarketplacePage() {
             <div>
               <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Solutions</h5>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/start" className="hover:text-pink-500 transition-colors">Start your project</Link></li>
-                <li><Link href="/templates" className="hover:text-pink-500 transition-colors font-medium">Agent templates</Link></li>
-                <li><Link href="/templates" className="hover:text-pink-500 transition-colors">Templates</Link></li>
+                <li><Link href="/start" className="hover:text-teal-500 transition-colors">Start your project</Link></li>
+                <li><Link href="/templates" className="hover:text-teal-500 transition-colors font-medium">Agent templates</Link></li>
+                <li><Link href="/templates" className="hover:text-teal-500 transition-colors">Templates</Link></li>
               </ul>
             </div>
 
             <div>
               <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Resources</h5>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/docs" className="hover:text-pink-500 transition-colors">Documentation</Link></li>
-                <li><Link href="/blog" className="hover:text-pink-500 transition-colors">Blog</Link></li>
-                <li><Link href="/guides" className="hover:text-pink-500 transition-colors">Guides</Link></li>
-                <li><Link href="/api" className="hover:text-pink-500 transition-colors">API Reference</Link></li>
+                <li><Link href="/docs" className="hover:text-teal-500 transition-colors">Documentation</Link></li>
+                <li><Link href="/blog" className="hover:text-teal-500 transition-colors">Blog</Link></li>
+                <li><Link href="/guides" className="hover:text-teal-500 transition-colors">Guides</Link></li>
+                <li><Link href="/api" className="hover:text-teal-500 transition-colors">API Reference</Link></li>
               </ul>
             </div>
 
             <div>
               <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Company</h5>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/about" className="hover:text-pink-500 transition-colors">About</Link></li>
-                <li><Link href="/careers" className="hover:text-pink-500 transition-colors">Careers</Link></li>
-                <li><Link href="/contact" className="hover:text-pink-500 transition-colors">Contact</Link></li>
-                <li><Link href="/privacy" className="hover:text-pink-500 transition-colors">Privacy</Link></li>
-                <li><Link href="/terms" className="hover:text-pink-500 transition-colors">Terms</Link></li>
+                <li><Link href="/about" className="hover:text-teal-500 transition-colors">About</Link></li>
+                <li><Link href="/careers" className="hover:text-teal-500 transition-colors">Careers</Link></li>
+                <li><Link href="/contact" className="hover:text-teal-500 transition-colors">Contact</Link></li>
+                <li><Link href="/privacy" className="hover:text-teal-500 transition-colors">Privacy</Link></li>
+                <li><Link href="/terms" className="hover:text-teal-500 transition-colors">Terms</Link></li>
               </ul>
             </div>
           </div>
@@ -440,8 +440,8 @@ export default function MarketplacePage() {
               &copy; 2026 Namakan. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
-              <Link href="/status" className="hover:text-pink-500 transition-colors">Service Status</Link>
-              <Link href="/security" className="hover:text-pink-500 transition-colors">Security</Link>
+              <Link href="/status" className="hover:text-teal-500 transition-colors">Service Status</Link>
+              <Link href="/security" className="hover:text-teal-500 transition-colors">Security</Link>
             </div>
           </div>
         </div>
