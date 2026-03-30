@@ -12,6 +12,7 @@ export function Nav() {
         <div className="nav-links">
           <Link href="/services">Services</Link>
           <Link href="/pricing">Pricing</Link>
+          <Link href="/templates">Templates</Link>
           <Link href="/about">About</Link>
         </div>
         <ContactModal className="nav-cta" />

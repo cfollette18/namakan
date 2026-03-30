@@ -13,6 +13,7 @@ export function Footer() {
           <Link href="/services">Services</Link>
           <Link href="/about">About</Link>
           <Link href="/pricing">Pricing</Link>
+          <Link href="/templates">Templates</Link>
           <Link href="/contact">Contact</Link>
         </div>
       </div>
