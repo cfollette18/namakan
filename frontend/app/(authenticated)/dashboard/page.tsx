@@ -201,11 +201,41 @@ export default function Dashboard() {
     { label: 'Cost Efficiency', value: '87%', change: '+5%', trend: 'up' }
   ]
 
-  const handleCreateProject = () => {
-    // TODO: Implement project creation logic
-    console.log('Creating project:', projectDescription)
-    setShowCreateProject(false)
-    setProjectDescription('')
+  const handleCreateProject = async () => {
+    if (!projectDescription.trim()) return
+
+    try {
+      const response = await fetch('/api/projects', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: projectDescription.split('.')[0].slice(0, 100) || 'New Project',
+          description: projectDescription,
+          user_id: 'user-1' // TODO: get from auth context
+        })
+      })
+
+      if (response.ok) {
+        const newProject = await response.json()
+        setProjects([...projects, {
+          id: newProject.id,
+          name: newProject.name,
+          status: 'active',
+          progress: 0,
+          agents: 0,
+          startDate: new Date(),
+          estimatedCompletion: new Date(Date.now() + 86400000 * 5),
+          budget: 0,
+          spent: 0
+        }])
+        setShowCreateProject(false)
+        setProjectDescription('')
+      } else {
+        console.error('Failed to create project')
+      }
+    } catch (error) {
+      console.error('Error creating project:', error)
+    }
   }
 
   const getStatusColor = (status: string) => {
