@@ -63,15 +63,18 @@ namakan-technical/
 ### 3. Agentic Workflows ($5K–$30K)
 **ReAct autonomous agents with custom tools**
 
-- Discovery → Process Mapping → Architecture → Build → Testing → Deploy
+- Discovery → Process Mapping → Architecture → Build → Testing → Eval → Monitor → Deploy
 - Runtime: LangGraph (stateful multi-agent orchestration)
 - Pattern: ReAct loop (Reason + Act + Observe)
 - Tools: web_search, file_read, file_write, run_command, human_escalate
 - Confidence thresholds: >0.8 execute, 0.5-0.8 explain, <0.5 escalate
 
 **Key files:**
-- `PIPELINE.md` (21K chars) — full engagement guide + workflow patterns
-- `workflows/agent_engine.py` — ReAct agent + tool registry
+- `PIPELINE.md` (modular — split into docs/01-07-*.md)
+- `docs/` — modular docs: Engagement Pipeline, Process Mapping, Architecture, Build, Testing, Deployment, Monitoring
+- `workflows/agent_engine.py` — ReAct agent + tool registry (v2.0: multi-LLM, streaming, self-correction)
+- `workflows/eval_pipeline.py` — pytest test suite (happy path, error injection, escalation, concurrency)
+- `workflows/monitoring.py` — Prometheus metrics + Loki structured logging
 
 ### 4. Custom AI Employees ($2K–$5K/mo)
 **Role-specific AI workers with permanent deployment**
