@@ -61,7 +61,7 @@ export default function Home() {
             <span className="graphic-eyebrow">RAG pipeline</span>
             <h3 className="graphic-title">Private retrieval before the answer is written</h3>
             <p className="graphic-description">
-              For Northforge, retrieval means searching warranty rules, lot traces, and QA procedures
+              For [Client], retrieval means searching warranty rules, lot traces, and QA procedures
               before anyone answers a field-failure question.
             </p>
           </div>
@@ -131,7 +131,7 @@ export default function Home() {
             <div className="employee-graphic">
               <div className="employee-topline">
                 <div>
-                  <span className="employee-name">Northforge Service Ops AI</span>
+                  <span className="employee-name">[Client] Service Ops AI</span>
                   <span className="employee-status">Active</span>
                 </div>
                 <div className="employee-metrics">

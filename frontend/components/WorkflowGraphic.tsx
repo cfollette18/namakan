@@ -6,51 +6,51 @@ const workflowSteps = [
   {
     label: 'Research',
     summary:
-      'Review the Northforge field-failure report, identify the affected forged valve assembly, and confirm whether the failure came from a washdown-line deployment.',
+      'Gather context on the incoming request — identify the request type, relevant parties, and any prior history that affects how to handle it.',
     items: [
-      'Customer incident details collected from service intake',
-      'Affected assembly and plant environment verified',
-      'Initial failure context prepared for lot-trace review'
+      'Request details collected and classified',
+      'Relevant prior cases and context attached',
+      'Initial summary prepared for next steps'
     ]
   },
   {
     label: 'Enrich',
     summary:
-      'Pull lot history, warranty eligibility, prior service notes, and QA flags so the workflow uses actual Northforge operating context.',
+      'Pull additional data from connected systems — account records, policy documents, prior interactions, and any external context needed to act accurately.',
     items: [
-      'Lot trace matched against the pre-May die set',
-      'Warranty window and distributor account history attached',
-      'QA notes added to the incident brief'
+      'Account and policy data retrieved',
+      'Prior history matched and attached',
+      'Context window assembled for action phase'
     ]
   },
   {
     label: 'Draft',
     summary:
-      'Generate the customer-facing reply using Northforge’s approved industrial tone, warranty language, and line-down escalation framing.',
+      'Generate the response or action using client-specific language, approved templates, and the tone appropriate to the situation.',
     items: [
-      'Replacement language selected from approved templates',
-      'Line-down risk acknowledged in the response',
-      'Fallback copy prepared if QA hold remains in place'
+      'Response drafted from approved templates',
+      'Tone and terminology aligned to client brand',
+      'Fallback path prepared for edge cases'
     ]
   },
   {
     label: 'Approve',
     summary:
-      'Validate the action against margin rules, QA containment policy, and sanitation-warranty handling before release.',
+      'Validate the action against business rules, compliance requirements, and risk thresholds before release.',
     items: [
-      'Containment requirements checked against SOP',
-      'Escalation path confirmed for any recall risk',
-      'Ready for service and operations review'
+      'Business rules checked',
+      'Escalation path confirmed for high-risk items',
+      'Ready for release or human review'
     ]
   },
   {
     label: 'Update CRM',
     summary:
-      'Write the incident outcome back to systems so service, QA, and operations all see the same next action.',
+      'Write the outcome back to all connected systems so every team sees the same current state and no follow-up falls through.',
     items: [
-      'Case status logged with replacement disposition',
-      'QA ticket and service follow-up date recorded',
-      'Customer timeline updated for the account team'
+      'Case status and disposition recorded',
+      'Follow-up tasks and dates scheduled',
+      'Timeline updated for all stakeholders'
     ]
   }
 ] as const

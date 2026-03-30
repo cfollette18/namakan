@@ -108,8 +108,8 @@ export function FineTuningSection() {
 
                   <div className="finetuning-message-row">
                     <div className="finetuning-message finetuning-message-namakan">
-                      Based on Contract Template v2.3 and the enterprise returns clause library: Northforge
-                      enterprise accounts receive a 14-day acceptance period followed by a 90-day warranty
+                      Based on Contract Template v2.3 and the enterprise returns clause library: enterprise
+                      accounts receive a 14-day acceptance period followed by a 90-day warranty
                       window. Replacement or credit terms after that require account-level approval and must use
                       the approved exception language.
                     </div>
