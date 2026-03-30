@@ -52,4 +52,4 @@ python workflows/monitoring.py --port 9090 --loki-url http://loki:3100
 
 ---
 
-*Namakan AI Consulting — Technical Reference*
+*Namakan AI Engineering — Technical Reference*
