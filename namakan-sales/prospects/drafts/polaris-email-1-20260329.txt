@@ -2,7 +2,7 @@ Subject: Question about Polaris Industries' custom AI strategy
 
 Hi Marcus D. Rountree,
 
-I came across Polaris Industries's work on field service AI assistant, quality inspection fine-tuning, predictive maintenance on assembly lines.
+I came across Polaris Industries' work on field service AI assistant, quality inspection fine-tuning, predictive maintenance on assembly lines.
 
 It got me thinking about something specific: you have years of UTV/snowmobile engineering specs, quality inspection logs, service records, field failure data that have never been fully leveraged — and the gap between what you have and what a generic AI model can do with it is massive.
 

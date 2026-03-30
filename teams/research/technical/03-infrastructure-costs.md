@@ -234,7 +234,7 @@
 
 | Item | Cost | Notes |
 |------|------|-------|
-| Architecture Design | $10-20K | Consulting or internal |
+| Architecture Design | $10-20K | Engineering or internal |
 | Dev Environment Setup | $5-10K | Team onboarding |
 | Security Review | $10-20K | Third-party audit |
 | Legal/Compliance | $5-15K | Terms, privacy |
