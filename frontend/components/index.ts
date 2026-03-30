@@ -1,3 +1,5 @@
-export { Nav, Footer } from './Nav'
+export { Nav } from './Nav'
+export { Header } from './Header'
+export { Footer } from './Footer'
 export { Hero } from './Hero'
 export { ProductCard } from './ProductCard'

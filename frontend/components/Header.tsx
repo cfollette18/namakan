@@ -16,11 +16,11 @@ export function Header() {
         <span>AMAKAN</span>
       </Link>
       <div className="nav-links">
-        <Link href="#">Services</Link>
-        <Link href="#">About</Link>
-        <Link href="#">Pricing</Link>
+        <Link href="/services">Services</Link>
+        <Link href="/about">About</Link>
+        <Link href="/pricing">Pricing</Link>
       </div>
-      <Link href="#" className="nav-cta">Talk to Us</Link>
+      <Link href="/contact" className="nav-cta">Contact Us</Link>
     </nav>
   )
 }
@@ -72,7 +72,7 @@ export function Hero() {
       </div>
 
       <div className="cta-wrapper">
-        <button className="cta">Talk to Us →</button>
+        <Link href="/contact" className="cta">Contact Us</Link>
       </div>
     </section>
   )

@@ -1,25 +1,18 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 export function Nav() {
   return (
     <nav className="nav">
       <Link href="/" className="nav-logo">
-        <Image 
-          src="/logo.png" 
-          alt="Namakan" 
-          width={28} 
-          height={28}
-          className="nav-logo-mark"
-        />
-        <span>AMAKAN</span>
+        <span className="nav-logo-icon" aria-hidden="true" />
+        <span className="nav-logo-wordmark" aria-hidden="true" />
       </Link>
       <div className="nav-links">
-        <Link href="/">Services</Link>
-        <Link href="/">About</Link>
-        <Link href="/">Pricing</Link>
+        <Link href="/services">Services</Link>
+        <Link href="/about">About</Link>
+        <Link href="/pricing">Pricing</Link>
       </div>
-      <Link href="/" className="nav-cta">Talk to Us</Link>
+      <Link href="/contact" className="nav-cta">Contact Us</Link>
     </nav>
   )
 }

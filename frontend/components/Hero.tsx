@@ -1,44 +1,39 @@
+'use client'
+
+import Link from 'next/link'
+import { motion, useReducedMotion } from 'framer-motion'
+
 export function Hero() {
+  const prefersReducedMotion = useReducedMotion()
+
   return (
-    <section className="hero">
-      <h1 className="hero-headline">Your AI has no idea who your customers are.</h1>
-      <p className="hero-subtext">We fix that.</p>
+    <section className="hero hero-top">
+      <motion.div
+        className="hero-copy"
+        initial={prefersReducedMotion ? false : { opacity: 0, y: 28 }}
+        animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
+        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <div className="hero-eyebrow">Private AI systems</div>
+        <h1 className="hero-headline">Generic AI was trained on everyone. Yours should be built for you.</h1>
+        <p className="hero-subtext">
+          Namakan engineers private AI systems around your contracts, policies, historical decisions,
+          terminology, and approved language, then turns that intelligence into retrieval, workflows, and
+          agents that can do real work inside your business.
+        </p>
 
-      <div className="comparison">
-        {/* Generic LLM */}
-        <div className="card card-generic">
-          <div className="card-label card-label-generic">Generic AI</div>
-          <div className="chat">
-            <div className="bubble bubble-user">What&apos;s our return policy for enterprise clients?</div>
-            <div className="bubble bubble-ai-generic">Our standard enterprise return policy typically follows industry norms of 30-90 days. We aim to accommodate all customer needs on a case-by-case basis.</div>
-          </div>
-          <div className="status-list">
-            <div className="status status-error">✗ No company data</div>
-            <div className="status status-error">✗ Generic response</div>
-            <div className="status status-error">✗ No citations</div>
-          </div>
-          <div className="source">Source: Unknown</div>
+        <div className="hero-proof-row">
+          <div className="hero-proof-pill">Private data and policies</div>
+          <div className="hero-proof-pill">Fine-tuned reasoning layer</div>
+          <div className="hero-proof-pill">Retrieval, workflows, and agents</div>
         </div>
 
-        {/* Namakan */}
-        <div className="card card-namakan">
-          <div className="card-label card-label-namakan">Namakan</div>
-          <div className="chat">
-            <div className="bubble bubble-user">What&apos;s our return policy for enterprise clients?</div>
-            <div className="bubble bubble-ai-namakan">Based on your Contract Template v2.3 Section 4.2: Enterprise clients receive a 2-week acceptance period, followed by 90-day warranty. After warranty, credits are issued at management discretion.</div>
-          </div>
-          <div className="status-list">
-            <div className="status status-success">✓ From Contract v2.3</div>
-            <div className="status status-success">✓ Exact policy cited</div>
-            <div className="status status-success">✓ Your brand voice</div>
-          </div>
-          <div className="source source-namakan">Source: Your Knowledge Base</div>
+        <div className="cta-wrapper">
+          <Link href="/contact" className="cta">
+            Contact Us
+          </Link>
         </div>
-      </div>
-
-      <div className="cta-wrapper">
-        <button className="cta">Talk to Us →</button>
-      </div>
+      </motion.div>
     </section>
   )
 }
