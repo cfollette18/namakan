@@ -8,18 +8,23 @@ Business strategy, pricing, and operational planning for Namakan AI Engineering.
 |------|---------|
 | `BUSINESS-PLAN.md` | Full business plan with market analysis, strategy, financials |
 | `BUSINESS_MODEL.md` | Business model canvas — value prop, revenue, costs, channels |
-| `business-model-canvas.md` | Alternative canvas format |
-| `business-plan.md` | Abbreviated business plan summary |
 | `service-offerings.md` | Detailed service descriptions and pricing tiers |
-| `pricing_section.md` | Pricing strategy (usage-based model) |
+| `pricing_section.md` | Project-based pricing strategy ($10K–$75K projects) |
 | `30-60-90-day-plan.md` | Startup execution plan |
+
+## Archived
+
+| File | Reason |
+|------|--------|
+| `ARCHIVED-business-plan-old-SMB.md` | Old SMB positioning — superseded by BUSINESS-PLAN.md |
+| `ARCHIVED-business-model-canvas-old.md` | Older canvas format — superseded by BUSINESS_MODEL.md |
 
 ## Key Business Facts
 
 - **Location:** Blaine, MN (North Metro Minneapolis)
-- **Services:** Fine-tuned AI models + Custom AI agents
+- **Services:** Fine-tuned AI models + RAG pipelines + Custom AI agents
 - **Pricing:** $10K–$75K projects, $2K–$10K/month retainers
-- **Target:** Local businesses with proprietary data (manufacturing, healthcare, professional services)
+- **Target:** Enterprise manufacturers and complex orgs with proprietary data
 
 ## Quick Reference
 
