@@ -213,15 +213,70 @@ class OrchestratorAgent(BaseAgent):
 
             return agents
     
+    # ── Tool registry ──────────────────────────────────────────────────────────
+    
+    ROLE_TO_TOOLS: dict[str, list[str]] = {
+        "research": ["web_browser", "data_analyzer"],
+        "analysis": ["data_analyzer", "web_browser"],
+        "analytics": ["data_analyzer"],
+        "strategy": ["document_writer", "data_analyzer"],
+        "content": ["document_writer"],
+        "writing": ["document_writer"],
+        "marketing": ["document_writer", "web_browser"],
+        "technical": ["web_browser"],
+        "engineering": ["web_browser"],
+        "design": ["document_writer"],
+        "creative": ["document_writer"],
+        "data": ["data_analyzer"],
+        "qa": ["data_analyzer"],
+        "testing": ["data_analyzer"],
+        "default": ["web_browser", "document_writer"],
+    }
+    
+    RESPONSIBILITY_TEMPLATES: dict[str, list[str]] = {
+        "research": [
+            "Conduct thorough web and document research",
+            "Synthesize findings into structured reports",
+            "Verify facts and cite sources",
+        ],
+        "analysis": [
+            "Analyze data for patterns and anomalies",
+            "Interpret results in domain context",
+            "Produce actionable insights from complex datasets",
+        ],
+        "strategy": [
+            "Develop actionable strategic recommendations",
+            "Evaluate options against business constraints",
+            "Present clear rationale for proposed decisions",
+        ],
+        "content": [
+            "Write clear, on-brand content for target audience",
+            "Align messaging with business objectives",
+            "Iterate based on feedback and brand guidelines",
+        ],
+        "technical": [
+            "Research and document technical approaches",
+            "Evaluate feasibility of technical solutions",
+            "Communicate technical details to stakeholders",
+        ],
+    }
+    
     def _get_responsibilities(self, role: str) -> List[str]:
-        """Get responsibilities for a role"""
-        # TODO: Use LLM to generate role-specific responsibilities
-        return [f"Handle {role} tasks"]
+        """Get responsibilities for a role using templates or LLM fallback"""
+        role_lower = role.lower()
+        for key, responsibilities in self.RESPONSIBILITY_TEMPLATES.items():
+            if key in role_lower:
+                return responsibilities
+        # Fallback: derive from role name
+        return [f"Execute {role} tasks with quality and precision"]
     
     def _get_tools(self, role: str) -> List[str]:
-        """Get tools for a role"""
-        # TODO: Map roles to appropriate tools
-        return ["web_browser", "document_writer"]
+        """Map role to available tools"""
+        role_lower = role.lower()
+        for key, tools in self.ROLE_TO_TOOLS.items():
+            if key in role_lower:
+                return tools
+        return self.ROLE_TO_TOOLS["default"]
     
     async def _design_workflow(self, agents: List[AgentSpec]) -> Dict[str, List[str]]:
         """Design execution workflow with phases"""

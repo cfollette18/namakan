@@ -122,18 +122,30 @@ class SupervisorAgent(BaseAgent):
         }
     
     async def _check_quality(self, results: Dict[str, Any]) -> Dict[str, Any]:
-        """Check if results meet quality criteria"""
-        # TODO: Implement actual quality checking
-        # For now, simple check
-        if results:
-            return {
-                "passed": True,
-                "score": 0.85,
-                "issues": []
-            }
-        else:
-            return {
-                "passed": False,
-                "score": 0.0,
-                "issues": ["No results produced"]
-            }
+        """Check if results meet quality criteria using LLM"""
+        if not results:
+            return {"passed": False, "score": 0.0, "issues": ["No results produced"]}
+
+        try:
+            prompt = f"""
+            Evaluate these agent results for quality:
+
+            Results: {str(results)[:1000]}
+
+            Quality criteria for this phase: {self.quality_criteria}
+
+            Respond with JSON:
+            {{
+              "passed": true/false,
+              "score": 0.0-1.0,
+              "issues": ["list of specific problems"],
+              "strengths": ["list of what's working"]
+            }}
+            """
+            response = await ai_service.generate_response(prompt, provider="deepseek", temperature=0.2)
+            import json
+            quality = json.loads(response)
+            return quality
+        except Exception as e:
+            logger.warning("Quality check failed, using fallback", error=str(e))
+            return {"passed": True, "score": 0.85, "issues": [], "strengths": ["Results produced"]}

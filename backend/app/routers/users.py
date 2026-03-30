@@ -1,28 +1,54 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
+from app.db.models import User as UserModel
 import structlog
 
 logger = structlog.get_logger()
 
 router = APIRouter()
 
+
 class UserCreate(BaseModel):
     email: str
     name: str
+
 
 class UserResponse(BaseModel):
     id: str
     email: str
     name: str
 
+
 @router.post("/", response_model=UserResponse)
 async def create_user(user: UserCreate):
     """Create a new user"""
-    # TODO: Implement user creation
-    return UserResponse(id="user-1", email=user.email, name=user.name)
+    try:
+        existing = await UserModel.find_first(where={"email": user.email})
+        if existing:
+            raise HTTPException(status_code=409, detail="User with this email already exists")
+        new_user = await UserModel.create(
+            email=user.email,
+            fullName=user.name,
+            hashedPassword="",  # TODO: hash before storing
+        )
+        return UserResponse(id=new_user.id, email=new_user.email, name=new_user.fullName or user.name)
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error("User creation failed", error=str(e))
+        raise HTTPException(status_code=500, detail="Failed to create user")
+
 
 @router.get("/{user_id}", response_model=UserResponse)
 async def get_user(user_id: str):
     """Get user information"""
-    # TODO: Implement user retrieval
-    return UserResponse(id=user_id, email="user@example.com", name="User")
+    try:
+        user = await UserModel.find_first(where={"id": user_id})
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
+        return UserResponse(id=user.id, email=user.email, name=user.fullName or "")
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error("User retrieval failed", user_id=user_id, error=str(e))
+        raise HTTPException(status_code=500, detail="Failed to retrieve user")
