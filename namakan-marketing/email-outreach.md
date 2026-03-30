@@ -1,173 +1,171 @@
 # Cold Email Outreach Template — Namakan AI Engineering
-## For Blaine, MN Local Businesses
-## Positioning: AUTONOMOUS AI AGENTS — Your 24/7 AI Workforce
+## Custom AI Systems for Enterprise Manufacturers & Complex Organizations
+## Positioning: CUSTOM AI ENGINEERING — Not Chatbots. Not Pre-Built Agents.
 
 ---
 
 ## EMAIL 1: INITIAL OUTREACH
 
-**Subject:** [Business Name] — autonomous AI agent that completes tasks 24/7?
+**Subject:** [Company] — custom AI on your proprietary [data type]?
 
 **Body:**
 
 Hi [First Name],
 
-I came across [Business Name] and noticed something I think you can relate to: your team is probably spending hours every week on tasks that shouldn't need a person at all.
+I came across [Company]'s work on [specific initiative — e.g., predictive maintenance, quality inspection, field service]. Impressive scale.
 
-Returns to process. Follow-ups to send. Appointments to schedule. Leads to qualify.
+Here's what stands out: you have [years of / a massive archive of] [proprietary data — e.g., quality inspection logs, service records, engineering specs] that generic AI has never seen. That's a significant competitive asset — and the gap between what you have and what a generic AI model can do with it is enormous.
 
-At Namakan AI Engineering, we don't build chatbots. We build AUTONOMOUS AI AGENTS — AI workers that complete tasks on their own, 24 hours a day, 7 days a week. Not an assistant that answers questions. A worker that DOES the job.
+That's what we do at Namakan AI Engineering. We build **custom AI systems** — fine-tuned models, RAG pipelines, and autonomous agents — trained specifically on a client's proprietary data, integrated into their specific systems.
 
-Here's what that looks like for Blaine businesses:
+**The difference is real:**
 
-- 🤖 **Autonomous Customer Service Agent** — Handles returns, answers FAQs, books appointments. Done. No waiting.
-- 📈 **AI Sales Agent** — Qualifies your leads, books appointments, follows up automatically.
-- 📦 **Operations Agent** — Monitors inventory, alerts you before you run low, generates reports.
-- 🔗 **System Integrations** — Connects your CRM, scheduling tools, and existing software so your AI agent can actually do things.
-- 👤 **AI Employee** — A virtual worker that completes defined tasks end-to-end. Works while you sleep.
+- A generic model knows what a CNC machine is. A model fine-tuned on your quality inspection logs knows what *your* machines do wrong under specific conditions.
+- A generic RAG knows about regulatory guidelines. One built on your proprietary engineering data knows what's predictive for *your* products.
 
-We recently helped a [local Blaine healthcare clinic / Blaine manufacturer / Blaine retailer] automate their entire [return processing / quote generation / appointment follow-up] workflow. What used to require a full-time person now runs autonomously.
+We recently worked with a [mid-size manufacturer] to build a RAG pipeline on their service records and technical documentation. Their [field service team / engineers] now gets AI-generated [repair recommendations / spec queries] in seconds — pulling from [15 years] of internal data a generic model never saw.
 
-I'd love to show you what's possible for [Business Name]. No pitch, no pressure — just a 20-minute walkthrough of where an autonomous agent could take over your most time-consuming tasks.
+I'd love to understand what proprietary data assets [Company] has and whether a custom AI approach could move the needle. Not a pitch — just a conversation.
 
-Are you free this week for a quick call?
+Do you have 20 minutes in the next few weeks?
 
 Best,
-[Your Name]
+Clint Follette
 Namakan AI Engineering
-[Phone]
-[Email]
-[Website]
+clint@namakan.ai
 
 ---
 
-## EMAIL 2: FOLLOW-UP (3-5 Days Later)
+## EMAIL 2: VALUE DEMO
 
-**Subject:** Re: [Business Name] — autonomous AI agent that completes tasks 24/7?
+**Subject:** A concrete example of what custom AI engineering actually looks like
 
 **Body:**
 
 Hi [First Name],
 
-Just following up — didn't want my last note to get buried.
+Following up — wanted to share a specific example that might illustrate what "custom AI engineering" actually means.
 
-I get it. You've probably seen "AI chatbots" before. They're just glorified FAQs. That isn't what we're talking about.
+**What we built for a mid-size manufacturer in the Midwest:**
 
-What we build: **AUTONOMOUS AI AGENTS** — systems that actually COMPLETE work. Not "here's an answer." More like: "your return has been processed, customer notified, inventory updated." Done. Full stop.
+Their problem: Quality inspectors were reviewing CNC parts against specifications manually — using tribal knowledge passed down from senior inspectors that was never documented. Every new hire took 6+ months to reach full effectiveness.
 
-A few things Blaine business owners tell me when I reach out:
+What we did: Fine-tuned a model on their historical inspection logs — including the decisions senior inspectors made about borderline cases, the reasoning behind them, and the outcomes. The result: a model that thinks like their senior inspectors, available 24/7.
 
-> *"We don't have time to figure out AI."*
-> *"We'd need this to actually work without us."*
-> *"We'd need it to connect to what we already use."*
+**Results after deployment:**
+- Defect escape rate: down [X]%
+- Inspector onboarding: from [6 months to X weeks]
+- Senior inspector time on rework: down [X]%
 
-That's exactly what we do. We handle build, setup, integration, and launch — you just point us at the problem and the agent starts working.
+**Why this worked:** The model wasn't just trained on specifications. It was trained on *how their specific inspectors* applied those specs to *their specific product lines* — institutional knowledge that existed nowhere except in their senior people's heads.
 
-**Here's what a typical engagement looks like:**
-1. Free 20-min strategy call — we find the highest-impact agent opportunity for your business
-2. Custom demo built for YOUR workflows — not a generic pitch deck
-3. If it makes sense, we build and launch your agent. If it doesn't, we tell you why.
+That's what custom AI engineering is. Not a chatbot. Not a plugin. AI trained on *your* data to think the way *your* best people do.
 
-No obligation either way.
+I'd love to explore whether [Company] has similar institutional knowledge trapped in [their data / their people's heads] that could benefit from this approach.
 
-Would [Day] at [Time] work for a quick chat?
+Open to a 20-minute conversation?
 
--[Your Name]
+Best,
+Clint Follette
+Namakan AI Engineering
+clint@namakan.ai
 
 ---
 
-## EMAIL 3: FINAL OUTREACH (7-10 Days Later)
+## EMAIL 3: DOMAIN-SPECIFIC OPPORTUNITY
 
-**Subject:** One more thing — AI workforce readiness checklist for Blaine businesses
+**Subject:** A custom AI idea for [Company]
 
 **Body:**
 
 Hi [First Name],
 
-Last outreach from me — I promise.
+I've spent some time thinking about [Company]'s specific situation — specifically, [AI opportunity identified from their public data, e.g., their predictive maintenance initiatives, their investment in digital transformation, their published AI strategy].
 
-I put together a short **AI Workforce Readiness Checklist** for Blaine business owners. It's 10 questions that take 2 minutes to answer and tell you exactly where an autonomous AI agent could replace your most time-consuming manual work.
+Here's what stands out:
 
-[Attach PDF or link to checklist]
+**Opportunity 1: RAG pipeline on your [proprietary data]**
 
-Even if you're not ready to add AI workers today, it's worth knowing where you stand. Most businesses we talk to are surprised by how many hours they're leaving on the table — hours that an AI agent could handle completely on its own.
+You have years of [proprietary data — e.g., service records, engineering specifications, regulatory filings] that's never been systematically indexed. A RAG pipeline would let your team query that institutional knowledge in natural language — surfacing patterns in seconds instead of days.
 
-If you ever want to chat about it, my door's open. Otherwise, good luck with [upcoming season/event/business goal — personalize if known]!
+**Opportunity 2: Fine-tuning on your proprietary data**
 
--[Your Name]
+Generic models don't know what [specific domain knowledge]. With fine-tuning on your proprietary data, an AI system could recognize and flag specific scenarios with [significant accuracy improvements].
+
+**Opportunity 3: Workflow-integrated AI for your team**
+
+Your team likely spends significant time on tasks that could be automated with a custom AI employee trained on your data and workflows.
+
+I put together a brief on each of these. Happy to walk through in 20 minutes if any resonates — or tell me if I'm off base. Either way, no follow-up if you're not interested.
+
+Best,
+Clint Follette
+Namakan AI Engineering
+clint@namakan.ai
+
+---
+
+## EMAIL 4: RESOURCE OFFER
+
+**Subject:** Research on AI adoption in [Company's industry] — might be useful
+
+**Body:**
+
+Hi [First Name],
+
+I'll keep this one brief — I wanted to share some research on custom AI adoption in [their industry], and then close your file unless you want to keep the conversation open.
+
+**What the data shows:**
+
+Across manufacturing, healthcare, and financial services companies that have moved past generic AI into custom AI engineering:
+
+- **RAG pipelines** on proprietary knowledge bases consistently deliver 40–60% time savings on research and retrieval
+- **Fine-tuned models** for domain-specific tasks show 20–40% accuracy improvements over generic models
+- **AI employees** handling routine decisions free up 15–25 hours/week per knowledge worker
+
+The pattern: generic AI gives you 10–20% improvement. Custom AI built on your data gives you 60–80%.
+
+I've attached a one-page framework we use with clients to evaluate custom AI opportunities — not a sales document, just something that helps leaders think through where to start.
+
+If anything is useful, I'm happy to continue. If not — I won't keep reaching out.
+
+Thanks for your time.
+
+Best,
+Clint Follette
+Namakan AI Engineering
+clint@namakan.ai
+
+---
+
+## EMAIL 5: RESPECTFUL CLOSE
+
+**Subject:** Last note from Clint at Namakan — closing your file
+
+**Body:**
+
+Hi [First Name],
+
+I've reached out a few times and haven't heard back — so I'm going to close your file for now. No hard feelings.
+
+I genuinely believe custom AI engineering is the biggest productivity opportunity for companies like [Company] over the next 3–5 years. The businesses that build AI systems on their proprietary data will have a durable competitive advantage.
+
+But that doesn't mean the timing is right for you right now — and I'd rather respect your inbox than add noise.
+
+If the time ever comes when you're evaluating custom AI options, I'd welcome the conversation. Here's my direct line: (612) 805-8867. I also respond to LinkedIn messages.
+
+Best of luck with everything.
+
+Clint Follette
 Namakan AI Engineering
 
 ---
 
-## SEGMENT-SPECIFIC VARIATIONS
+## Key Messaging Reminders
 
-### For Manufacturing Businesses
-**Subject:** Supplier quotes, inventory alerts — autonomous agents that do the work for you
-
-Add this paragraph to Email 1:
-> "For manufacturers, the biggest wins we see are in **autonomous quote generation** and **inventory monitoring** — processes that normally take hours of back-and-forth but run completely automatically once set up. Our AI agent pulls specs, generates quotes, and sends them out — without a person in the loop. We recently automated a Blaine fabricator's entire quote-to-approval workflow. They went from a 2-day turnaround to 2 hours. The agent handles it."
-
-### For Healthcare / Medical Practices
-**Subject:** Patient intake, appointment booking — autonomous agents that complete the work
-
-Add this paragraph to Email 1:
-> "For healthcare practices, patient intake and appointment management eat up hours that could go to patient care. Our autonomous intake agent collects patient information, verifies insurance, books appointments, and sends reminders — completely automatically. Your staff walks in with clean records, not blank forms. And the agent works 24/7, including after hours when most new patient inquiries come in."
-
-### For Retail / Local Shops
-**Subject:** Returns, order tracking, follow-ups — AI agents that complete tasks, not just answer
-
-Add this paragraph to Email 1:
-> "For retailers, processing returns, answering 'where's my order' questions, and following up after a sale are constant — and they're the same tasks every time. We build autonomous agents that process returns start-to-finish, track orders, and follow up with customers automatically. Your website becomes a 24/7 AI workforce — not a chatbot that describes what you do, but an agent that does the work."
-
----
-
-## Best Practices
-
-### Send Settings
-- **Best send days:** Tuesday–Thursday
-- **Best send times:** 8–10 AM or 4–6 PM (local CST)
-- **Sequence:** 3 emails over 14 days
-
-### Personalization Tips
-- Reference their Google Business listing (hours, reviews, photos)
-- Mention something specific about their industry if known
-- Use their first name — never "Dear Sir/Madam"
-- Reference a recent post or event if visible on their website/social
-- Lead with TASK COMPLETION, not "AI" as a buzzword
-
-### Subject Line Testing (A/B)
-- "Autonomous AI agent that works 24/7 — [Business Name]?" *(agent framing)*
-- "[Business Name] — what if your AI worker never slept?" *(aspirational)*
-- "Supplier quotes handled automatically — [Business Name]?" *(manufacturing-specific)*
-- "This AI agent saved a Blaine business 10 hrs/week" *(social proof)*
-- "Free 20-min autonomous agent strategy — [Business Name]?" *(value prop + personalization)*
-- "Returns, follow-ups, scheduling — handled automatically?" *(task-specific)*
-
-### Tracking
-- Use a unique link for each email in the sequence to track opens/clicks
-- Track reply rate (not just open rate) — replies = genuine interest
-- Target: 5–15% open rate, 1–3% reply rate for cold outreach
-
----
-
-## Compliance Note
-- Always include a physical address (required for CAN-SPAM)
-- Include unsubscribe option if running as a true email blast
-- For 1:1 cold outreach via LinkedIn or direct email, CAN-SPAM may not apply but best practices still matter
-- Never purchase email lists — target only businesses you've researched
-
----
-
-## Key Messaging (Internal Reference)
-
-**What we DO:**
-- AUTONOMOUS AI AGENTS — not chatbots, not automation tools
-- AI workers that COMPLETE tasks, 24/7
-- Agents that DO, not just TALK
-
-**What we DON'T say:**
-- "AI chatbots"
-- "Workflow automation" (as a standalone — integrations are a feature, not the product)
-- "AI assistant" (implies human-in-the-loop)
-
-**Tagline to use:** "Agents that DO, not just TALK"
+- **NOT chatbots** — we don't build chatbots
+- **NOT pre-built agents** — we build custom systems for each client
+- **Custom AI engineering** — trained on client's proprietary data
+- **Proprietary data is the moat** — generic AI can't replicate it
+- **We build, not advise** — we're engineers, not consultants
+- Target: Enterprise manufacturers with proprietary data assets, $10K–$100K budget
