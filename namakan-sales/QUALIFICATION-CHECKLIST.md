@@ -1,6 +1,6 @@
 # Lead Qualification Checklist
 
-**Namakan AI Consulting | Autonomous Agents**
+**Namakan AI Engineering | Custom AI Systems**
 
 ---
 

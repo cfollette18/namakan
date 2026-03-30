@@ -156,7 +156,7 @@ When a company in Blaine or Minneapolis searches "AI consulting Minneapolis" or 
    - Same listing, multiple places
 
 3. **Website SEO basics** (free, do it once)
-   - Title tags: "AI Consulting | Custom Fine-Tuning | Namakan — Blaine, MN"
+   - Title tags: "AI Engineering | Custom Fine-Tuning | Namakan — Minneapolis North Metro"
    - Meta description: "Namakan builds custom AI systems for Minnesota businesses. Fine-tuned models, RAG pipelines, and AI employees. Serving Minneapolis, St. Paul, and North Metro."
    - Schema markup for local business
    - 5-10 blog posts targeting local + AI keywords
