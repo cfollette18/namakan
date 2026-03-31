@@ -135,15 +135,6 @@
 
 ---
 
-## Healthcare
-
-### North Memorial Health - Dr. Jeffrey Matousovic, VP Operations
-**Connection Request:**
-> Hi Dr. Matousovic, I'm Clint with Namakan. We help health systems automate patient scheduling, staff scheduling, and supply chain tracking. Would be great to connect and share what we're building.
-
-**Follow Up:**
-> Jeffrey, thanks for connecting! Health systems deal with significant manual scheduling and supply chain tracking. We built custom AI workflows specifically for healthcare operations. Would a quick call be worth exploring?
-
 ---
 
 ### Hennepin Healthcare - Jennifer Anderson, VP Finance

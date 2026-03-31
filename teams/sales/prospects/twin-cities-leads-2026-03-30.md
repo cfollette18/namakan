@@ -139,17 +139,6 @@
 - Phone: (612) 359-6700
 - Website: lindquistmagnuson.com
 
-## North Memorial Health
-- Industry: Healthcare (Hospital/Health System)
-- Size: ~5,000 employees
-- Location: Robbinsdale, MN
-- Pain Point: Manual patient scheduling, staff scheduling spreadsheets, supply chain tracking
-- Why Namakan: Scheduling automation, staff resource management, supply chain analytics
-- Contact: Dr. Jeffrey Matousovic, VP Operations
-- Email: jeff.matousovic@northmemorial.com (est.)
-- Phone: (763) 520-5200
-- Website: northmemorial.com
-
 ## Hennepin Healthcare
 - Industry: Healthcare (Hospital System)
 - Size: ~7,500 employees
