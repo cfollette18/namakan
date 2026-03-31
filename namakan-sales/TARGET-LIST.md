@@ -145,7 +145,7 @@
   - Prior authorization automation with payer policy knowledge
   - Patient outcome prediction from historical treatment data
 - **Why Ideal:** Massive proprietary patient data + active AI initiatives + budget
-- **Estimated Project Scope:** $50K–$100K+
+- **Estimated Project Scope:** $25K-$40K+
 
 #### 10. Allina Health (Minneapolis, MN)
 - **Address:** 2925 Chicago Ave, Minneapolis, MN 55407
@@ -182,7 +182,7 @@
   - Clinical trial matching AI trained on patient records
   - Fine-tuning on radiology image interpretation
 - **Why Ideal:** World-class data assets; if you can demonstrate value here, you have a landmark case study
-- **Estimated Project Scope:** $50K–$100K+ (enterprise-level)
+- **Estimated Project Scope:** $25K-$40K+ (enterprise-level)
 - **Note:** Long sales cycle but massive prestige value if landed
 
 #### 13. Boston Scientific (Maple Grove, MN)
@@ -314,7 +314,7 @@
   - Customer communication personalization at scale
   - Fraud pattern detection fine-tuning on proprietary transaction data
 - **Why Ideal:** Massive proprietary financial data, actively investing in AI transformation
-- **Estimated Project Scope:** $50K–$100K+
+- **Estimated Project Scope:** $25K-$40K+
 
 #### 23. Thrivent Financial (Minneapolis, MN)
 - **Address:** 600 Portland Ave S, Minneapolis, MN 55415
@@ -449,7 +449,7 @@ Before reaching out to any target:
 - [ ] Look for recent press releases, blog posts, or job postings indicating AI interest
 - [ ] Understand their proprietary data assets — what data do they have that competitors don't?
 - [ ] Identify the specific business problem you'd solve — not "AI for efficiency," but "your inspection data + our fine-tuning = defect detection that actually works"
-- [ ] Determine budget tier — enterprise ($50K–$100K+) vs. mid-market ($10K–$50K)
+- [ ] Determine budget tier — enterprise ($25K-$40K+) vs. mid-market ($5K-$15K)
 - [ ] Find a mutual connection or warm intro if possible
 
 ---

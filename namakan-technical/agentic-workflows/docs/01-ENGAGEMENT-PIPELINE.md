@@ -6,7 +6,7 @@
 
 ## The Offering
 
-We build autonomous AI workers that complete multi-step tasks in a client's systems. Not chatbots that respond. AI agents that DO — processing documents, updating records, triggering actions, escalating when needed.
+We build custom agentic workflows — AI systems that complete multi-step tasks in a client's systems, trained on their specific data. Not chatbots that respond. AI that acts — processing documents, updating records, triggering actions, escalating when needed.
 
 ---
 

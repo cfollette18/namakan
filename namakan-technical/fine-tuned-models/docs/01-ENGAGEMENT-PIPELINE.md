@@ -45,7 +45,7 @@ STAKEHOLDER MAPPING:
 - Data asset inventory with quality assessment
 - Top 3 model use cases ranked by ROI
 - Training data candidate list
-- Ballpark: $10K–$50K depending on scope
+- Ballpark: $5K–$15K depending on scope
 
 ---
 
@@ -145,9 +145,10 @@ See [../workflows/deployment_pipeline.py](../workflows/deployment_pipeline.py)
 
 | Tier | Model Size | Training Data | Timeline | Price |
 |------|------------|---------------|----------|-------|
-| **Starter** | 3B params | <5K examples | 2-3 weeks | $10K–$15K |
+| **Build** | 3B-7B params | <5K examples | 2-3 weeks | $5K–$15K |
 | **Professional** | 7B params | 5K–20K examples | 3-4 weeks | $15K–$30K |
-| **Enterprise** | 13B-72B params | 20K+ examples | 4-6 weeks | $30K–$50K |
+| **Growth** | 8B-13B params | 5K-20K examples | 3-4 weeks | $15K–$25K |
+| **Enterprise** | 13B-72B params | 20K+ examples | 4-6 weeks | $25K–$40K |
 
 **Annual maintenance:** $2K–$5K/year (retraining, monitoring)
 

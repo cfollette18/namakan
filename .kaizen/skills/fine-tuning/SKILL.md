@@ -10,7 +10,7 @@ Discovery → Data Ingestion → Colab Training → Evaluation → Deployment
 
 ## The 4 Service Offerings
 
-1. **Fine-Tuned Models** ($10K–$50K)
+1. **Fine-Tuned Models** ($5K-$15K Build)
    - LoRA/QLoRA fine-tuning via Google Colab
    - Any base model (Qwen, Llama, Mistral)
    - Data-constrained or compute-constrained approaches

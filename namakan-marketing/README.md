@@ -13,12 +13,14 @@ Marketing strategy, campaigns, and content for Namakan AI Engineering.
 
 ## Key Strategy
 
-**Positioning:** "Agents that DO, not just TALK." — autonomous AI workers for local businesses.
+**Positioning:** "We build AI that knows YOUR business." — custom AI engineering for businesses with proprietary data.
 
-**Target Market:** North Metro Minnesota businesses with proprietary data:
-- Manufacturing
-- Healthcare
-- Professional services
+**Target Market:** Businesses with proprietary data across industries:
+- Manufacturing & Engineering
+- Legal & Compliance
+- Healthcare & Medical
+- Financial Services
+- Professional Services
 
 **Channels:**
 1. Cold email outreach (primary — nearly free)
