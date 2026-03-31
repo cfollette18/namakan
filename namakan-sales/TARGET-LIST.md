@@ -1,7 +1,7 @@
 # Namakan AI Engineering — Ideal Client Target List
 ## Custom AI Engineering Focus | Q2 2026
 
-> **Strategic Pivot:** We are NOT selling pre-packaged agents. We are selling custom AI systems built on YOUR data, integrated into YOUR workflows. Target list reflects this: businesses with proprietary data assets, complex domain-specific processes, and budget for real engineering ($10K–$100K projects).
+> **Strategic Pivot:** We are NOT selling pre-packaged agents. We are selling custom AI systems built on YOUR data, integrated into YOUR workflows. Target list reflects this: businesses with proprietary data assets, complex domain-specific processes, and budget for custom AI engineering ($5K–$40K projects).
 
 ---
 
@@ -13,7 +13,7 @@
 |-----------|-------------|
 | **Proprietary Data** | They have data that would meaningfully improve if AI understood it — industry reports, historical cases, sensor streams, CAD files, EHR records, financial models |
 | **Complex Workflows** | Multi-step processes that require domain knowledge, judgment, or contextual understanding — not just "copy this to there" |
-| **Budget Authority** | Decision-makers who control $10K–$100K engineering budgets OR can advocate to those who do |
+| **Budget Authority** | Decision-makers who control $5K–$40K engineering budgets OR can advocate to those who do |
 | **AI-Receptive** | They've heard of AI, tried it in some form, and are past the "what is it?" stage |
 | **Pain + Urgency** | A real operational problem they desperately want solved — not a "nice to have" |
 

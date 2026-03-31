@@ -45,7 +45,7 @@ ERROR-LOOKUP:
 - Top 3 candidate workflows for automation
 - ROI estimate per workflow
 - Priority ranking
-- Ballpark: $5K-30K per workflow
+- Ballpark: $5K–$15K per workflow
 
 ---
 
@@ -100,9 +100,9 @@ See [07-MONITORING.md](./07-MONITORING.md)
 
 | Tier | Complexity | Systems | Price |
 |------|------------|---------|-------|
-| **Starter** | Simple, 1-2 steps | 1 system | $5K-10K |
-| **Professional** | Medium, 3-5 steps | 2-3 systems | $10K-20K |
-| **Enterprise** | Complex, 5+ steps | Multiple | $20K-30K |
+| **Build** | Simple, 1-2 steps | 1 system | $5K–$15K |
+| **Growth** | Medium, 3-5 steps | 2-3 systems | $15K–$25K |
+| **Enterprise** | Complex, 5+ steps | Multiple | $25K–$30K |
 | **Monthly Ops** | Ongoing | Monitoring | $500-1.5K/mo |
 
 ---

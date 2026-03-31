@@ -123,7 +123,7 @@
 > "I don't want to get ahead of the assessment, but I do want to understand your situation — if we found a meaningful AI opportunity, what's the budget context you'd be working within? Is this a case where you'd need to build a business proposal, or do you have latitude to move on something like this?"
 
 **Probe if vague:**
-> "For context — custom AI engineering projects in your space typically range from $15K–$75K depending on scope and complexity. Is that in the ballpark of what you'd be considering?"
+> "For context — custom AI engineering projects in your space typically typically range from $5K–$15K depending on scope and complexity. Is that in the ballpark of what you'd be considering?"
 
 ### Decision Process:
 > "If we got to the end of an assessment and found a real opportunity — what would the approval process look like?"
@@ -244,7 +244,7 @@ Rate the prospect after the call:
 | **Proprietary Data Asset Identified?** | | |
 | **Domain Complexity — judgment/context required?** | | |
 | **AI Receptivity** | | |
-| **Budget Alignment ($10K–$100K)** | | |
+| **Budget Alignment ($5K–$40K)** | | |
 | **Decision Maker / Authority** | | |
 | **Timeline — active or passive?** | | |
 | **Champion identified?** | | |

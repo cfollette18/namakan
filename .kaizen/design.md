@@ -261,7 +261,7 @@ box-shadow: 0 4px 20px rgba(13, 148, 136, 0.1);
 ┌────────────────────┐  ┌────────────────────┐
 │ Fine-Tuned Models  │  │ RAG Pipelines      │
 │ [Icon]             │  │ [Icon]             │
-│ Starting $10K      │  │ Starting $5K       │
+│ Starting $5K       │  │ Starting $5K       │
 └────────────────────┘  └────────────────────┘
 ┌────────────────────┐  ┌────────────────────┐
 │ Agentic Workflows │  │ AI Employees       │
