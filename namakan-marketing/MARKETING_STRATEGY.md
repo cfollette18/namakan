@@ -64,11 +64,11 @@
 
 | Attribute | Definition | Examples |
 |-----------|------------|----------|
-| **Direct** | We say what we mean — agents that DO, not chatbots that answer | "Not a chatbot. An agent." |
+| **Direct** | We say what we mean — custom AI built for your data, not a configured tool | "We engineer AI from the ground up for your data." |
 | **Practical** | Results-focused, no AI hype | "Here's what it saves you per week." |
-| **Local** | Rooted in Blaine / north metro | "We're right here. Let's grab coffee." |
+| **Technical** | We know the craft — fine-tuning, RAG, agentic systems | "Here's how we built it and why it works." |
 | **Confident** | We know what we build and why | "This is how AI should work for you." |
-| **Honest** | We tell clients when agent isn't a fit | "This task isn't right for automation." |
+| **Honest** | We tell clients when their data isn't ready or their use case isn't a fit | "This approach won't work for you because..." |
 
 **Tone by Channel:**
 
@@ -92,7 +92,14 @@
 
 ### 2.1 Target Customer Segments (ICP)
 
-**Primary ICP: Local SMBs — Blaine and North Metro Minneapolis**
+**Primary ICP: Businesses with Proprietary Data — Nationwide**
+
+| Attribute | Specification |
+|-----------|---------------|
+| **Company Size** | 50–500 employees |
+| **Revenue** | $10M–$500M |
+| **Industry** | Manufacturing, Legal, Healthcare, Financial Services, Professional Services |
+| **Decision Maker** | CTO, VP Engineering, COO, CIO |
 
 | Attribute | Specification |
 |-----------|---------------|
@@ -131,7 +138,7 @@
 **Secondary Vertical: Healthcare / Medical**
 - Front desk overload, appointment management, patient follow-ups
 - 28%+ no-show rates are common and costly
-- Strong ROI case for autonomous agents
+- Strong ROI case for custom AI systems on proprietary data
 - **Target:** 25% of early customers
 
 **Tertiary Verticals:**
@@ -145,10 +152,8 @@
 
 | Priority | Region | Rationale |
 |----------|--------|-----------|
-| 1 | **Blaine, MN** | Home base, local credibility, first-mover advantage |
-| 2 | **North Metro Minneapolis** | Coon Rapids, Fridley, Lino Lakes, Shoreview, Arden Hills |
-| 3 | **East Metro** | Woodbury, Oakdale, Maplewood — expansion wave |
-| 4 | **Full Twin Cities** | Phase 2 expansion |
+| 1 | **Blaine / Twin Cities** | Home base, local credibility, first-mover advantage |
+| 2 | **Nationwide remote** | Any industry with proprietary data — healthcare, legal, manufacturing, finance |
 
 ---
 
@@ -189,9 +194,9 @@
 | Pillar | Goal | Examples |
 |--------|------|----------|
 | **Agent completion stories** | Show what agents DO | "Here's how our agent processed 47 returns while the owner slept" |
-| **Local business wins** | Social proof | Case studies from Blaine/north metro businesses |
+| **Custom AI wins** | Social proof | Case studies from businesses with proprietary data |
 | **AI vs. agents** | Differentiation | "We don't build chatbots. Here's why." |
-| **Behind the build** | Authority | "How we built an autonomous quote agent for a Blaine fab shop" |
+| **Behind the build** | Authority | "How we built a fine-tuned model for a [manufacturing/healthcare/legal] firm" |
 
 **Post Cadence:** 3–4 posts per week
 **Format:** Short, specific, results-focused. No AI jargon.
@@ -243,7 +248,7 @@
 
 | Objection | Response |
 |-----------|----------|
-| "We tried a chatbot before" | "We don't build chatbots. We build autonomous agents that complete tasks end-to-end. What did you try before, and what specifically went wrong?" |
+| "We tried a chatbot before" | "We don't build chatbots. We build custom AI systems trained on your data. What did you try before, and what specifically went wrong?" |
 | "It's too expensive" | "Compared to the cost of hiring even part-time help — $1,500–3,000/month plus benefits and training — our agents are often less expensive and they work 24/7. What would it be worth to get [task] off your plate permanently?" |
 | "My business is unique" | "You're right — and that's exactly how we build. Every agent is custom for YOUR workflows, YOUR systems. We don't use templates." |
 | "I don't have time to implement" | "That's exactly why you need us. We handle everything — you just approve the final agent. Most agents are live in 2 weeks." |
@@ -293,9 +298,9 @@
 
 ### Phase 1: Foundation (Days 1–30)
 
-- [ ] Website live with autonomous agent positioning
+- [ ] Website live with Custom AI Engineering positioning
 - [ ] Google Business Profile set up
-- [ ] Core sales collateral updated (all says "autonomous agent," not "chatbot")
+- [ ] Core sales collateral updated (all says "custom AI engineering," not "chatbot")
 - [ ] LinkedIn profile and first posts live
 - [ ] Referral program formalized
 - [ ] Target: 30+ target businesses identified
