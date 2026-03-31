@@ -8,7 +8,7 @@ export default function Home() {
       title: 'AI trained on YOUR data',
       description: 'Generic AI doesn\'t know your business. We train AI models on your contracts, policies, and knowledge. It learns your voice. Your rules. Your domain.',
       features: ['Trained on your documents', 'Knows your brand voice', 'Cites your sources', '40-60% accuracy improvement'],
-      price: 'Starting at $10K per project'
+      price: 'Starting at $5K–$15K'
     },
     {
       tag: 'RAG Pipelines',
