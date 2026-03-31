@@ -7,13 +7,15 @@
 ## Burnomatic Mooney-Ridler Mechanical Contractors
 - Industry: Plumbing & Mechanical
 - Location: Minneapolis, MN
-- Contact: Research needed
+- Contact: Research in progress
 
 ## Plumbing Heating Cooling Contractors-Metro Assn
 - Industry: Plumbing Trade Association
 - Location: Minneapolis, MN
-- Contact: Research needed
+- Contact: Research in progress
 
 ---
 
-**Total: 2 companies** (need contact research)
+**Total: 2 companies**
+- Verified: 0
+- Research in progress: 2 (small local firms with minimal public web presence)
