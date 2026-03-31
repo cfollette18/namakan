@@ -48,11 +48,13 @@ RAG pipelines, data ingestion, document processing, vector search — all built 
 
 | Tier | Scope | Investment | Timeline |
 |------|-------|------------|----------|
-| **SMB** | 1–5K training examples, Qwen / Llama 3B–7B | $10K–$25K | 4–8 weeks |
-| **Mid-Market** | 5–20K examples, Llama 8B–13B | $25K–$50K | 8–12 weeks |
-| **Enterprise** | 20K+ examples, Llama 70B or multimodal | $50K–$75K | 12–16 weeks |
+| **SMB** | 1–5K training examples, Qwen / Llama 3B–7B | $5K–$15K | 4–8 weeks |
+| **Mid-Market** | 5–20K examples, Llama 8B–13B | $15K–$25K | 8–12 weeks |
+| **Enterprise** | 20K+ examples, Llama 70B or multimodal | $25K–$40K | 12–16 weeks |
 
-**Monthly Retainer:** $3K–$10K/month for ongoing fine-tuning as your data grows
+**Monthly Retainer:** $500/mo for RAG operations (see RAG Pipelines)
+
+**Payment:** 50% upfront, 25% at midpoint, 25% on delivery
 
 **Payment:** 50% upfront, 25% at midpoint, 25% on delivery
 
@@ -92,11 +94,11 @@ Think of it as hiring a virtual employee that knows your processes, works in you
 
 | Tier | Scope | Investment |
 |------|-------|------------|
-| **SMB** | Single workflow, 1–2 integrations | $5K–$15K |
-| **Mid-Market** | Multi-step workflow (3–5 stages), 2–4 integrations | $15K–$25K |
+| **Build** | Single workflow, 1–2 integrations | $5K–$15K |
+| **Growth** | Multi-step workflow (3–5 stages), 2–4 integrations | $15K–$25K |
 | **Enterprise** | Complex end-to-end workflows, 5+ integrations | $25K–$30K |
 
-**Monthly Retainer:** $2K–$5K/month for continuous learning, performance monitoring, and optimization
+**Monthly Retainer:** $2K/mo per AI Employee for continuous learning, performance monitoring, and optimization
 
 **Payment:** Setup fee (50%) at signing, 25% at midpoint, 25% on delivery. Monthly retainer invoiced in advance.
 
