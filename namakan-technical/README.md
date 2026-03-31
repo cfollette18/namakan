@@ -10,7 +10,7 @@ Complete technical documentation for all 4 Namakan AI Engineering service pipeli
 namakan-technical/
 ├── fine-tuned-models/       → LoRA/QLoRA fine-tuning via Google Colab
 ├── rag-pipelines/          → ChromaDB document retrieval
-├── agentic-workflows/      → ReAct autonomous agents
+├── agentic-workflows/       → ReAct autonomous agents (primary active pipeline)
 └── custom-ai-employees/    → Role-specific AI workers
 ```
 
@@ -30,7 +30,7 @@ namakan-technical/
 
 ## Pipeline Summary
 
-### 1. Fine-Tuned Models ($10K–$50K)
+### 1. Fine-Tuned Models ($5K–$15K)
 **LoRA/QLoRA fine-tuning via Google Colab**
 
 - Discovery → Data Assessment → Secure Intake → Training → Evaluation → Deployment → Monitoring
@@ -46,7 +46,7 @@ namakan-technical/
 - `workflows/deployment_pipeline.py` — Ollama, vLLM, FastAPI
 - `colab/namakan-reusable-finetune.ipynb` — universal training notebook
 
-### 2. RAG Pipelines ($5K–$15K build + $500–$2K/mo)
+### 2. RAG Pipelines ($5K–$15K build + $500/mo)
 **ChromaDB vector store + document retrieval**
 
 - Discovery → Document Audit → Architecture → Build → Evaluation → Deploy → Handoff
@@ -60,7 +60,7 @@ namakan-technical/
 - `workflows/ingestion_pipeline.py` — extract, chunk, embed, index
 - `workflows/retrieval_pipeline.py` — query, retrieve, re-rank, generate
 
-### 3. Agentic Workflows ($5K–$30K)
+### 3. Agentic Workflows ($5K–$15K)
 **ReAct autonomous agents with custom tools**
 
 - Discovery → Process Mapping → Architecture → Build → Testing → Eval → Monitor → Deploy
@@ -76,7 +76,7 @@ namakan-technical/
 - `workflows/eval_pipeline.py` — pytest test suite (happy path, error injection, escalation, concurrency)
 - `workflows/monitoring.py` — Prometheus metrics + Loki structured logging
 
-### 4. Custom AI Employees ($2K–$5K/mo)
+### 4. Custom AI Employees ($2K/mo)
 **Role-specific AI workers with permanent deployment**
 
 - Discovery → Persona Design → Training → Onboarding → Full Deployment → Monitoring
