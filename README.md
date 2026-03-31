@@ -32,7 +32,7 @@ We fine-tune AI models on your proprietary data. Your industry knowledge. Your p
 
 *Example: A law firm fine-tuned a model on their case history, contracts, and legal precedents. Now they have AI that drafts and reviews contracts in their specific practice areas, with their specific language and standards.*
 
-*Investment:* $10,000–$75,000 per project (SMB / Mid-Market / Enterprise tiers)
+*Investment:* Starting at $5K–$15K per project (scoped to complexity)
 
 ---
 
@@ -42,7 +42,7 @@ We build AI agents that autonomously complete multi-step tasks in your systems. 
 
 *Example: A financial advisory firm deployed a Custom Agent that manages client onboarding: collects documents, runs compliance checks, prepares account setup, and notifies the advisor only when human judgment is needed. The advisor focuses on relationships; the AI handles the paperwork.*
 
-*Investment:* $5,000–$30,000 to build + $2,000–$5,000/month retainer
+*Investment:* Build starting at $5K–$15K / Retainer from $2K/mo
 
 ---
 
