@@ -1,7 +1,7 @@
 # Namakan Marketing Strategy
 
-> "Agents that DO, not just TALK."
-> *Autonomous AI Agents for local businesses in the North Metro Minnesota area.*
+> "We build AI that knows YOUR business."
+> *Custom AI Engineering — fine-tuned models, RAG pipelines, and agentic workflows trained on your proprietary data.*
 
 ---
 
@@ -10,51 +10,53 @@
 ### 1.1 Tagline & Core Messaging
 
 **Primary Tagline:**
-> **"Agents that DO, not just TALK."**
+> **"We build AI that knows YOUR business."**
 
 **Supporting Taglines:**
-- "Your AI workforce that works 24/7"
-- "Autonomous operations for local businesses"
-- "AI workers — not chatbots"
+- "Custom AI — trained on YOUR data"
+- "AI built from the ground up for your domain"
+- "Not pre-built agents. Not generic tools. AI built for you."
 
 **One-Line Pitch:**
-> "We build autonomous AI agents for local businesses — AI workers that complete tasks 24/7, not chatbots that answer questions."
+> "We engineer custom AI systems for businesses with proprietary data — fine-tuned models, RAG pipelines, and agentic workflows trained on YOUR data, integrated into YOUR systems."
 
 **Messaging Framework:**
 
 | Message Level | Content |
 |---------------|---------|
-| **One-Liner** | Namakan builds autonomous AI agents for local businesses — AI workers that complete tasks 24/7. |
-| **Problem** | Local businesses are buried in repetitive tasks: returns, scheduling, follow-ups, data entry. They don't have time for AI — and chatbot vendors sell tools, not results. |
-| **Solution** | We deploy autonomous AI agents that DO the work — 24 hours a day, 7 days a week. Not an assistant that answers questions. A worker that completes tasks. |
-| **Proof** | Blaine manufacturers saving 15+ hours/week. Healthcare practices cutting no-show rates by 28%. Restaurants handling takeout orders while they sleep. |
+| **One-Liner** | Namakan builds custom AI systems — fine-tuned models and agents trained on YOUR proprietary data. |
+| **Problem** | Generic AI doesn't know your business. It wasn't trained on your data. It gives generic answers to specific questions, hallucinates about your domain, and connects to everything except the data that actually matters. |
+| **Solution** | We build AI from the ground up for YOUR data, YOUR domain, YOUR workflows — not a configured tool, not a pre-built agent. A custom system that actually knows your business. |
+| **Proof** | Manufacturing firms with AI trained on their quality logs. Law firms with models fine-tuned on their case history. Healthcare orgs with RAG pipelines on their patient data. |
 
 ### 1.2 Value Proposition
 
 **Core Value Prop:**
-> **"Namakan deploys autonomous AI agents — not chatbots — that complete the repetitive work eating up your team's time, so you can focus on growing your business."**
+> **"Namakan engineers custom AI systems for businesses with proprietary data — AI trained on YOUR data, integrated into YOUR systems, solving YOUR specific domain problems."**
 
 **Value Pillars:**
 
-1. **Task Completion, Not Just Answers** — Our agents DO the work, not just respond to questions
-2. **24/7 AI Workforce** — Agents that never sleep, never call in sick, never miss a follow-up
-3. **Fast Implementation** — Most agents live in 2 weeks or less, not months
-4. **Local & Personal** — Face-to-face available in the north metro. Not a faceless SaaS.
-5. **Transparent Pricing** — Fixed quotes, no surprise invoices, no lock-in
+1. **Custom-Built, Not Configured** — Every system is engineered for your specific data and workflows
+2. **Domain Expertise, Not General Language** — Your AI knows YOUR industry, YOUR products, YOUR processes
+3. **No Hallucinations on Your Data** — Grounded in your actual documents and knowledge
+4. **You Own the System** — Your AI, your data, no lock-in
+5. **Measurable Results** — We measure accuracy improvement against your specific use cases
 
 ### 1.3 Differentiation Narrative
 
 **The Story:**
-> "Local businesses in Blaine and the north metro are overwhelmed. Not by big strategic decisions — by the same small tasks over and over. Processing returns. Following up on leads. Scheduling appointments. Answering 'where's my order?'
+> "You've tried generic AI tools. Maybe you've experimented with ChatGPT at work, or tested a chatbot for your website, or heard about AI that 'automates' your processes.
 >
-> Enterprise AI companies ignore these businesses. Chatbot vendors sell tools that answer questions. Nobody is building AI WORKERS that complete the tasks.
+> And you're probably thinking: this isn't working the way I was promised.
 >
-> Namakan does. We deploy autonomous agents — AI workers — that handle the work end-to-end, 24/7. Your agent processes that return, books that appointment, and sends that follow-up. Done.
+> Here's why. Generic AI doesn't know your business. It wasn't trained on your data. It doesn't understand your industry, your products, your customers, your workflows. It gives you generic answers to specific questions. It hallucinates about things it shouldn't. It connects to everything except the data that actually matters.
 >
-> That's the difference. Not a chatbot that describes what you do. An agent that does the work."
+> That's what we do at Namakan AI Engineering. We don't sell pre-built chatbots or generic automation tools. We build custom AI systems — fine-tuned models, RAG pipelines, and agentic workflows — trained specifically on a client's proprietary data, integrated into their specific systems, solving their specific domain problems.
+>
+> That's the difference. Not a configured tool. Not a pre-built agent. AI built from the ground up for your data."
 
 **Positioning Statement:**
-> For local Blaine and north metro businesses who are tired of repetitive tasks consuming their team's time, Namakan is the AI consulting firm that deploys autonomous agents — not chatbots — that complete tasks 24/7, integrate with existing systems, and deliver results in weeks, not months.
+> For businesses with proprietary data who are frustrated that generic AI doesn't know their domain, Namakan is the AI engineering firm that builds custom AI systems — fine-tuned models and agentic workflows — trained on YOUR data, integrated into YOUR systems, and designed for YOUR specific problems.
 
 ### 1.4 Brand Voice & Personality
 
@@ -274,15 +276,16 @@
 > "We build autonomous AI agents for local businesses — AI workers that complete tasks 24/7. Not chatbots. Not automation tools. Agents that DO."
 
 **What we DON'T say:**
-- "AI chatbots"
-- "Workflow automation" (as a standalone product)
-- "AI assistant" (implies human-in-the-loop)
+- "Pre-built agents"
+- "Off-the-shelf AI"
+- "AI tools" (as a standalone product)
+- "Configure our platform"
 
 **What we SAY instead:**
-- Autonomous AI Agent
-- AI Worker / AI Employee
-- Your AI Workforce
-- 24/7 AI employees
+- Custom AI Engineering
+- Fine-tuned models
+- RAG pipelines built on your data
+- AI trained on YOUR data
 
 ---
 
@@ -317,30 +320,29 @@
 ## Appendix: Key Messaging Quick Reference
 
 **Taglines:**
-- "Agents that DO, not just TALK"
-- "Your AI workforce that works 24/7"
-- "Autonomous operations for local businesses"
+- "We build AI that knows YOUR business"
+- "Custom AI — trained on YOUR data"
+- "AI built from the ground up for your domain"
 
 **What We Build:**
-- Autonomous AI agents — AI workers that complete tasks 24/7
-- Not chatbots that answer questions
-- Not "automation tools" as a standalone product
-- Custom agents built around YOUR workflows
+- Custom fine-tuned models trained on your proprietary data
+- RAG pipelines built on your documents and knowledge base
+- Agentic workflows engineered for your specific processes
+- AI Employees — 24/7 workers trained on YOUR business
 
 **Industries We Serve:**
-- Manufacturing — scheduling, inventory, quotes, follow-ups
-- Healthcare — patient intake, appointment management, follow-ups
-- Retail — returns, order tracking, customer follow-ups
-- Restaurants — reservations, takeout, reviews
-- Professional Services — scheduling, document processing
+- Manufacturing & Engineering — quality inspection, field service, supply chain
+- Legal & Compliance — contract review, case research, document processing
+- Healthcare & Medical — patient records, clinical documentation, claims
+- Financial Services — modeling, reporting, client data
+- Professional Services — research, document drafting, client knowledge
 
 **Geography:**
-- Blaine, MN (home base)
-- North Metro Minneapolis (Coon Rapids, Fridley, Lino Lakes, Shoreview, Arden Hills)
-- Full Twin Cities metro (Phase 2)
+- Serving clients nationwide (remote-first)
+- Based in Blaine, MN — serving Twin Cities businesses in person
 
 ---
 
 *Document Owner: Marketing Lead*  
-*Last Updated: 2026-03-28*  
+*Last Updated: 2026-03-31*  
 *Review Frequency: Monthly*
