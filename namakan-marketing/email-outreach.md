@@ -16,7 +16,7 @@ I came across [Company]'s work on [specific initiative — e.g., predictive main
 
 Here's what stands out: you have [years of / a massive archive of] [proprietary data — e.g., quality inspection logs, service records, engineering specs] that generic AI has never seen. That's a significant competitive asset — and the gap between what you have and what a generic AI model can do with it is enormous.
 
-That's what we do at Namakan AI Engineering. We build **custom AI systems** — fine-tuned models, RAG pipelines, and autonomous agents — trained specifically on a client's proprietary data, integrated into their specific systems.
+That's what we do at Namakan AI Engineering. We build **custom AI systems** — fine-tuned models, RAG pipelines, and agentic workflows — trained specifically on a client's proprietary data, integrated into their specific systems.
 
 **The difference is real:**
 

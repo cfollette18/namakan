@@ -278,7 +278,7 @@
 ### 5.3 Key Messages for Sales
 
 **The Pitch:**
-> "We build autonomous AI agents for local businesses — AI workers that complete tasks 24/7. Not chatbots. Not automation tools. Agents that DO."
+> "We build custom AI systems for businesses with proprietary data — fine-tuned models, RAG pipelines, and agentic workflows trained on YOUR data, integrated into YOUR systems. Not pre-built agents. Not generic tools. AI built for you."
 
 **What we DON'T say:**
 - "Pre-built agents"

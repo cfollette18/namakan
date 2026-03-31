@@ -1,57 +1,58 @@
 # Meta Ad Campaigns — Namakan AI Engineering
-## Blaine, MN Local Business Targeting
-## Positioning: AUTONOMOUS AI AGENTS — Not Chatbots. AI Workers.
+## Custom AI Engineering Positioning
+## Tagline: "We build AI that knows YOUR business."
 
 ---
 
 ## AD 1: VIDEO AD CONCEPT
 **Platform:** Facebook & Instagram Reels/Stories
 **Format:** 15-30 second vertical video (9:16)
-**Campaign Name:** "AI Workers for Blaine Businesses"
+**Campaign Name:** "Custom AI — Built on YOUR Data"
 
 ### Visual Storyboard
 
 **[0:00–3:00] HOOK**
-- Scene: Local Blaine business owner, overwhelmed, surrounded by tasks — returns to handle, leads to follow up, inventory to check
-- Text overlay: "Still doing all this manually?"
+- Scene: Business owner/operator at a desk, frustrated with generic AI outputs — ChatGPT giving generic answers that don't apply to their specific business
+- Text overlay: "Generic AI doesn't know YOUR business."
 - Music: Focused, modern, professional
 
 **[3:00–10:00] PROBLEM AGITATION**
-- Quick cuts: Phone buzzing with customer messages, spreadsheet for inventory, sticky notes for follow-ups, missed appointment calls
-- Text: "Returns... follow-ups... inventory checks... who's doing this at 11pm?"
+- Quick cuts: AI hallucinating about their products, generic answers to domain-specific questions, their proprietary data sitting unused
+- Text: "Your years of data... never leveraged. Your domain expertise... ignored by AI that was trained on everything except you."
 
 **[10:00–18:00] SOLUTION REVEAL**
-- Scene: Same owner, relaxed, an AUTONOMOUS AI AGENT on screen COMPLETING tasks — processing a return, booking an appointment, sending a follow-up
-- Text overlay: "Namakan AI Agents work 24/7 — they DO, not just talk"
-- Show agent completing a full task cycle (not just responding — acting)
+- Scene: Namakan building a custom AI on their specific data — fine-tuning, RAG pipeline, domain-specific model
+- Text overlay: "Namakan builds AI trained on YOUR data"
+- Show the model answering questions specific to their business correctly
 
 **[18:00–25:00] TRANSFORMATION**
-- Before/after split: Owner manually handling 10 tasks all day → AI Agent completing 8 of them autonomously
-- Owner gets time back, focuses on growing the business
+- Before/after split: Generic AI giving wrong/generic answers → Custom AI giving accurate, domain-specific answers grounded in their actual data
 
 **[25:00–30:00] CTA**
-- Logo + tagline: "Namakan AI — Autonomous Agents for Local Businesses"
-- Text: "Your AI workforce that works 24/7 → namakanai.com"
+- Logo + tagline: "Namakan AI Engineering — Custom AI Built for Your Data"
+- Text: "Fine-tuned models. RAG pipelines. Agentic workflows. → namakanai.com"
 - End card with phone number and QR code
 
 ### Video Ad Copy (Voiceover Script)
 
-> "You're running a real business in Blaine — manufacturing, healthcare, retail — and you're still doing all the grunt work yourself?
+> "You've tried generic AI. It doesn't know your business.
 >
-> While you're sleeping, your competitors have AI agents handling returns, qualifying leads, and updating inventory — automatically.
+> Because it wasn't trained on your data. Your products. Your customers. Your domain.
 >
-> Namakan AI builds AUTONOMOUS AGENTS that DO the work. Not chatbots that answer questions. AI WORKERS that complete tasks — from start to finish — 24 hours a day, 7 days a week.
+> At Namakan AI Engineering, we build custom AI systems — fine-tuned models and RAG pipelines — trained specifically on YOUR proprietary data.
 >
-> A Blaine manufacturer used our AI agent to handle supplier quotes and inventory alerts. What used to take 2 days now runs in 2 hours — on its own.
+> A manufacturing firm had 15 years of field service records. Generic AI gave generic answers. We fine-tuned a model on their data. Now their field team gets AI-generated repair recommendations grounded in their actual experience.
 >
-> Your AI workforce is ready. Are you?
+> That's the difference. Not a tool you configure. AI built from the ground up for your data.
 >
-> Book your free autonomous agent consultation at namakanai.com. Namakan AI — agents that DO, not just talk."
+> Custom AI is ready. Are you?
+>
+> Visit namakanai.com. Namakan AI Engineering — we build AI that knows YOUR business."
 
 ### Targeting Parameters
-- **Location:** Blaine, MN + 15-mile radius
-- **Age:** 28–65
-- **Interests:** Small business ownership, manufacturing, retail management, healthcare administration, entrepreneurship, business operations
+- **Location:** United States (expand from Twin Cities base)
+- **Age:** 32–65
+- **Interests:** Business operations, manufacturing management, healthcare administration, legal technology, financial services, entrepreneurship
 - **Placement:** Facebook Reels, Instagram Reels, Stories, In-feed
 
 ---
@@ -59,73 +60,65 @@
 ## AD 2: CAROUSEL AD
 **Platform:** Facebook & Instagram Feed
 **Format:** 5-card image carousel
-**Campaign Name:** "Your AI Workforce — 5 Agents That Work 24/7"
+**Campaign Name:** "What Custom AI Can Do for Your Business"
 
 ### Card-by-Card Breakdown
 
 **Card 1 — Hook**
 - Image: Bold header graphic, Namakan AI logo
-- Text: "Your competitors have AI workers. Here's what they can do."
+- Text: "Generic AI doesn't know YOUR business. Here's what custom AI can do."
 
-**Card 2 — Customer Service Agent**
-- Image: Clean service/business aesthetic, agent completing a task
-- Headline: "Customer Service Agent: Handles Returns, FAQs, Scheduling — DONE"
-- Body: "Not a chatbot. An autonomous agent that processes returns, books appointments, and answers FAQs — without you touching anything."
+**Card 2 — Fine-Tuned Models**
+- Image: Clean technical/business aesthetic, data being trained into a model
+- Headline: "Fine-Tuned Model: AI That Knows YOUR Products, YOUR Standards"
+- Body: "We train AI on your proprietary data — case histories, engineering specs, policies. It learns YOUR domain, not general language."
 - CTA: "See it in action →"
 
-**Card 3 — Sales Agent**
-- Image: Sales pipeline or CRM visual
-- Headline: "Sales Agent: Qualify Leads, Book Appointments, Follow Up"
-- Body: "AI that watches your inbox, scores leads, books meetings, and follows up automatically. Your best salesperson — 24/7."
+**Card 3 — RAG Pipelines**
+- Image: Document/search visual, data retrieval graphic
+- Headline: "RAG Pipeline: AI That Searches YOUR Entire Knowledge Base"
+- Body: "Your contracts, CRM, technical docs — all indexed. Ask any question, get answers grounded in YOUR documents."
 - CTA: "See it in action →"
 
-**Card 4 — Operations Agent**
-- Image: Warehouse, logistics, or process visual
-- Headline: "Operations Agent: Inventory, Logistics, Reporting"
-- Body: "Inventory alerts before you run low. Logistics updates without the back-and-forth. Reports generated automatically."
+**Card 4 — Agentic Workflows**
+- Image: Workflow/process visual
+- Headline: "Agentic Workflows: AI That Completes Tasks in YOUR Systems"
+- Body: "Multi-step tasks completed autonomously — integrated into YOUR tools, trained on YOUR data, built for YOUR workflows."
 - CTA: "See it in action →"
 
 **Card 5 — CTA Card**
 - Image: Friendly team photo or logo mark, clean background
-- Headline: "Ready to Build Your AI Workforce?"
-- Body: "Get a free autonomous agent strategy session for your Blaine business. No commitment. See exactly what AI can do for you."
-- CTA Button: "Book Free Strategy Session"
+- Headline: "Ready for AI That Actually Knows Your Business?"
+- Body: "Get a free 20-minute custom AI assessment. We'll show you what's possible with YOUR data."
+- CTA Button: "Book Free Assessment"
 
 ### Carousel Ad Copy
 
 **Primary Copy (Caption):**
-> "Your competitors aren't just 'using AI' — they have AI WORKERS.
+> "Generic AI wasn't trained on your data.
 >
-> Here are 5 autonomous agents doing real work 24/7:
+> Here's what custom AI — trained on YOUR business — can do:
 >
-> 🤖 CUSTOMER SERVICE AGENT — Handles returns, FAQs, scheduling. DONE.
-> 📈 SALES AGENT — Qualifies leads, books appointments, follows up.
-> 📦 OPERATIONS AGENT — Inventory alerts, logistics, reports.
-> 🔗 INTEGRATIONS — Connects your CRM, ERP, and tools.
-> 👤 AI EMPLOYEE — A virtual worker that completes tasks on its own.
+> 🏭 FINE-TUNED MODEL — Learns YOUR products, YOUR processes, YOUR standards.
+> 📄 RAG PIPELINE — Searches YOUR documents, answers from YOUR knowledge.
+> ⚙️ AGENTIC WORKFLOW — Completes tasks in YOUR systems, YOUR way.
+> 🔒 YOUR DATA, YOUR SYSTEM — You own it. No lock-in.
 >
-> These aren't chatbots. They're AI agents that DO the work.
+> This isn't a chatbot you configure. It's AI built from the ground up.
 >
-> Tap the carousel to see which agent fits your business. Then book your free strategy session at namakanai.com 👇"
-
-**Card Headlines (short punchy):**
-1. "Your Competitors Have AI Workers. Here's What They Do."
-2. "Customer Service Agent: It Handles It."
-3. "Sales Agent: Books Appointments While You Focus Elsewhere."
-4. "Operations Agent: Inventory, Logistics, Done."
-5. "Let's Talk — Free."
+> Tap the carousel to see which approach fits YOUR business. Then book a free assessment at namakanai.com 👇"
 
 ---
 
 ## AD 3: LEAD GENERATION FORM AD
 **Platform:** Facebook Lead Gen (mobile-first)
 **Format:** Full-screen lead form with pre-filled fields
-**Campaign Name:** "Free Autonomous Agent Strategy — Blaine Business Owners"
+**Campaign Name:** "Free Custom AI Assessment — Businesses With Proprietary Data"
 
 ### Form Setup
 
-**Headline:** "Get Your Free Autonomous Agent Strategy Session"
-**Sub-headline:** "For Blaine, MN manufacturing, healthcare & retail businesses"
+**Headline:** "Get Your Free Custom AI Assessment"
+**Sub-headline:** "For businesses with proprietary data in manufacturing, healthcare, legal, finance"
 
 **Pre-filled Fields:**
 - Name ✓
@@ -137,16 +130,15 @@
 1. "What's your industry?"
    - Manufacturing
    - Healthcare / Medical
-   - Retail
+   - Legal / Compliance
+   - Financial Services
    - Other
-2. "What tasks eat up your team most?" (multi-select)
-   - Customer service / handling returns
-   - Appointment scheduling
-   - Lead follow-ups / sales
-   - Inventory / logistics
-   - Reporting / data entry
-   - Other
-3. "How soon are you looking to add AI workers?"
+2. "What type of AI would help most?" (multi-select)
+   - Fine-tuned model (trained on our data)
+   - RAG pipeline (search our documents)
+   - Agentic workflow (automate our processes)
+   - Not sure yet — need assessment
+3. "How soon are you looking to implement custom AI?"
    - ASAP
    - Within 3 months
    - Exploring options
@@ -157,29 +149,31 @@
 ### Lead Gen Ad Copy
 
 **Primary Text:**
-> "Every day you spend manually handling returns, answering the same questions, and chasing follow-ups is a day you're NOT growing your business.
+> "Generic AI tools don't know your business.
 >
-> At Namakan AI Engineering, we build AUTONOMOUS AI AGENTS — not chatbots. AI workers that complete tasks on their own, 24 hours a day.
+> Because they weren't trained on your data. Your domain expertise. Your proprietary information.
 >
-> We're offering FREE 30-minute autonomous agent strategy sessions exclusively for Blaine, MN businesses.
+> At Namakan AI Engineering, we build custom AI systems — fine-tuned models, RAG pipelines, and agentic workflows — trained specifically on YOUR data.
 >
-> 🔍 We'll identify which of YOUR tasks an AI agent can take over
-> 🤖 Show you exactly what autonomous agents can do (not just chat — COMPLETE)
-> 📋 Leave you with a custom AI workforce plan — free
+> We're offering a FREE 20-minute custom AI assessment for businesses with proprietary data.
 >
-> Limited slots available. Real agents. Real results.
+> 🔍 We'll identify which AI approach fits YOUR data and workflows
+> 📊 Show you what's possible with custom training vs. generic tools
+> 📋 Leave you with a clear picture of the opportunity — free
 >
-> Tap 'Get Started' to claim your free session. No obligation."
+> No commitment. No pitch. Just a real conversation about what custom AI could do for your business.
+>
+> Tap 'Get Started' to book your free assessment."
 
-**Headline:** "Free Autonomous Agent Strategy — Blaine Businesses"
-**CTA Button:** "Get My Free Agent Strategy Session"
+**Headline:** "Free Custom AI Assessment"
+**CTA Button:** "Get My Free Assessment"
 **Privacy Text:** "Namakan AI respects your privacy. Unsubscribe anytime."
 
 ### Thank You Screen (post-submit)
 **Headline:** "You're In! We'll Be in Touch."
-**Body:** "Thanks for your interest in autonomous AI agents for your Blaine business. A member of our team will reach out within 1 business day to schedule your free strategy session.
+**Body:** "Thanks for your interest in custom AI engineering. A member of our team will reach out within 1 business day to schedule your free 20-minute assessment.
 >
-> While you wait, check out our free AI readiness checklist → [link]"
+> While you wait, check out namakanai.com to learn more about what we build."
 
 ---
 
@@ -192,22 +186,21 @@
 - **Total:** $45–75/day across all three
 
 ### A/B Testing Priorities
-1. Video hook: problem-frustration vs. aspirational transformation (with "AI workers" messaging)
-2. Lead form CTA: "Autonomous Agent Strategy" vs. "AI Worker Strategy" vs. "Free AI Agent Demo"
-3. Carousel: Lead with different agent types (customer service vs. sales vs. operations) to see which Blaine segment converts fastest
+1. Video hook: problem-frustration ("generic AI doesn't work") vs. aspirational transformation ("custom AI built for you")
+2. Lead form CTA: "Custom AI Assessment" vs. "AI Built on Your Data" vs. "Free AI Strategy Session"
+3. Carousel: Lead with different AI types (fine-tuning vs. RAG vs. workflows) to see which segment converts fastest
 
 ### Key Performance Indicators
 - Video: 3-second retention rate > 40%, watch time > 50%
 - Carousel: 2+ cards viewed, CTR > 2%
-- Lead Gen: Cost per lead < $25 (target), form completion rate > 15%
+- Lead Gen: Cost per lead < $50 (target), form completion rate > 12%
 
 ---
 
 ## Key Messaging Reminders (Internal)
 
-- **NOT chatbots** — we don't build chatbots that answer questions
-- **AUTONOMOUS AGENTS** — AI workers that complete tasks start to finish
-- **24/7 AI WORKFORCE** — agents that never sleep, never miss a follow-up
-- **"Agents that DO, not just TALK"** — the core differentiator
-- **"Your AI workforce that works 24/7"** — aspirational framing
-- Target: Local businesses overwhelmed with tasks. We give them AI WORKERS.
+- **NOT generic AI** — we build custom systems, not configure tools
+- **Custom AI trained on YOUR data** — fine-tuning, RAG, agentic workflows
+- **"We build AI that knows YOUR business"** — the core differentiator
+- **"Not pre-built agents. Not generic tools. AI built for you."** — key positioning
+- Target: Businesses with proprietary data who have tried generic AI and been disappointed
