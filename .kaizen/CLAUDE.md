@@ -3,10 +3,10 @@
 ## What We Build
 
 Custom AI systems for businesses:
-1. **Fine-Tuned Models** — LoRA/QLoRA fine-tuning via Google Colab ($10K–$50K)
-2. **RAG Pipelines** — ChromaDB + document retrieval ($5K–$15K build + $500–$2K/mo)
-3. **Agentic Workflows** — ReAct agents with custom tools ($5K–$30K)
-4. **Custom AI Employees** — Role-specific AI workers ($2K–$5K/mo)
+1. **Fine-Tuned Models** — LoRA/QLoRA fine-tuning via Google Colab (Build: $5K–$15K)
+2. **RAG Pipelines** — ChromaDB + document retrieval (Build: $5K–$15K + $500/mo)
+3. **Agentic Workflows** — ReAct agents with custom tools (Build: $5K–$15K)
+4. **Custom AI Employees** — Role-specific AI workers (Retainer: $2K/mo)
 
 ## The Stack
 
@@ -35,16 +35,12 @@ namakan/
 │       ├── tools/        # Agent tools
 │       └── core/         # Config, DB, Redis
 ├── namakan-technical/
-│   ├── fine-tuned-models/   # Fine-tuning pipeline
-│   ├── rag-pipelines/      # RAG pipeline
-│   ├── agentic-workflows/  # Agentic workflows pipeline
-│   ├── custom-ai-employees/ # AI employees pipeline
-│   └── */SECURE-DATA-PIPELINE.md  # Per-pipeline security rules
+│   └── agentic-workflows/  # Workflows: intake, agent_engine, eval_pipeline, monitoring
+│       └── workflows/    # Core workflow modules
 ├── namakan-business/     # Business plans, pricing
 ├── namakan-sales/        # Sales scripts, target list
 ├── namakan-marketing/    # Content, strategy
 ├── namakan-legal/        # MSA, NDA, contracts
-├── namakan-training/     # Internal training materials
 ├── teams/               # Pre-configured agent teams
 └── docker-compose.yml    # PostgreSQL + Redis
 ```
@@ -56,7 +52,7 @@ namakan/
 | `docker-compose.yml` | PostgreSQL 16 + pgvector, Redis 7 |
 | `init.sql` | Database schema + pgvector extension |
 | `namakan-technical/SECURE-DATA-PIPELINE.md` | Client data handling |
-| `namakan-technical/pipeline/` | 4 service pipelines |
+| `namakan-technical/agentic-workflows/` | Core workflow modules |
 | `teams/` | Pre-built agent teams |
 
 ## Philosophy
