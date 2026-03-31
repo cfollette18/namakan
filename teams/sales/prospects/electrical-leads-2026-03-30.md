@@ -1,39 +1,64 @@
-# Namakan Sales Intelligence - Electrical Contractor Leads
-
-**Report Date:** March 30, 2026  
-**Target Region:** Minneapolis/St. Paul Metro Area  
-**Focus:** Electrical Contractors
+# Electrical Contractors Leads - 2026-03-30
+# Namakan Sales Intelligence Research
+# Target: Minneapolis/St. Paul Metro Area
 
 ---
 
-## Research Notes
+## Ace Electrical
+- Industry: Electrical Contractors
+- Location: Minneapolis, MN
+- Contact: Research needed
 
-> ⚠️ **Limited Data:** Web searches for "electrical contractor Minneapolis" returned Wikipedia pages and tourism content rather than local business listings. The Twin Cities market requires direct outreach via trade associations, LinkedIn, or local directories.
+## Neo Electrical Solutions
+- Industry: Electrical Contractors
+- Location: Minneapolis, MN
+- Contact: Research needed
+
+## Premier Electrical
+- Industry: Electrical Contractors
+- Location: Minneapolis, MN
+- Contact: Research needed
+
+## Gopher Electric Contractors
+- Industry: Electrical Contractors
+- Location: Minneapolis, MN
+- Contact: Research needed
+
+## Modern Electrical Solutions
+- Industry: Electrical Contractors
+- Location: Minneapolis, MN
+- Contact: Research needed
+
+## Egan Companies - Electrical
+- Industry: Electrical Contractors
+- Location: Minneapolis, MN
+- Contact: Research needed
+
+## Nes Electrical
+- Industry: Electrical Contractors
+- Location: Andover, MN
+- Contact: Research needed
+
+## Skyline Electrical
+- Industry: Electrical Contractors
+- Location: Saint Paul, MN
+- Contact: Research needed
+
+## Nac Mechanical & Electrical Services
+- Industry: Electrical Contractors
+- Location: Saint Paul, MN
+- Contact: Research needed
+
+## Holton Electric Contractors
+- Industry: Electrical Contractors
+- Location: Saint Paul, MN
+- Contact: Research needed
+
+## Arrowhead Electrical Products
+- Industry: Electrical Contractors
+- Location: Circle Pines, MN
+- Contact: Research needed
 
 ---
 
-## Additional Research Needed
-
-Electrical contractor leads require additional research. Recommended sources:
-
-1. **Associated Builders and Contractors (ABC) Minnesota** - abcminnesota.org
-2. **Minnesota Electrical Association** - Direct contact
-3. **LinkedIn Search** - Search "electrical contractor Minneapolis"
-4. **Google Maps** - Search "electrical contractor" in each target city
-
-### Target Cities for Electrical Research
-Minneapolis, St. Paul, Blaine, Coon Rapids, Fridley, Brooklyn Center, Plymouth, Bloomington, Eden Prairie, Eagan, Arden Hills, Lino Lakes, Shoreview, Maplewood, Oakdale, New Brighton, Mounds View, Wayzata, Minnetonka, Richfield, Hopkins, St. Louis Park, Golden Valley
-
----
-
-## Action Items
-
-- [ ] Contact ABC Minnesota for member directory
-- [ ] Search Minnesota Electrical Association listings
-- [ ] Use LinkedIn Sales Navigator for electrical contractors in Twin Cities
-- [ ] Cross-reference with city business licenses data
-
----
-
-*Report generated: 2026-03-30*  
-*Analyst: Namakan Sales Intelligence Team*
+**Total: 11 companies** (need contact research)
