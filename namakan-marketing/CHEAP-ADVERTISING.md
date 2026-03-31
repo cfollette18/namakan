@@ -20,7 +20,7 @@ For a bootstrapped AI consulting firm, **every dollar goes into channels that bu
 
 **Cost**: $0–$50/month (Sales Navigator is $99/mo but you can start free)
 
-LinkedIn is where B2B decision-makers live. Namakan's sweet spot: **operations VPs, CTOs, and founders** at 50-500 person companies in the Minneapolis/North Metro area.
+LinkedIn is where B2B decision-makers live. Namakan's sweet spot: **operations VPs, CTOs, and founders** at companies with significant proprietary data — manufacturing, healthcare, legal, financial services.
 
 ### What to Post (3-5x per week)
 
@@ -90,7 +90,7 @@ You already have the cold email sequence in `namakan-sales/COLD-EMAIL-SEQUENCE.m
 **Week 1-2**: Research 100 targets using Apollo
 - Target: CTOs, VPs of Engineering, Founders
 - Industry: Healthcare, Manufacturing, Financial Services, Legal
-- Location: Minneapolis-North Metro, MN
+- Location: Blaine, MN (Serving clients nationwide)
 - Company size: 50-500 employees
 
 **Week 3**: Upload to Brevo, launch cold email sequence
@@ -142,7 +142,7 @@ Good for SEO and for establishing expertise:
 
 **Cost**: $0
 
-When a company in Blaine or Minneapolis searches "AI consulting Minneapolis" or "custom AI fine-tuning Minnesota", Namakan should show up.
+When a company searches "custom AI engineering" or "AI fine-tuning consulting", Namakan should show up.
 
 ### Free Local SEO Actions
 
@@ -156,14 +156,14 @@ When a company in Blaine or Minneapolis searches "AI consulting Minneapolis" or 
    - Same listing, multiple places
 
 3. **Website SEO basics** (free, do it once)
-   - Title tags: "AI Engineering | Custom Fine-Tuning | Namakan — Minneapolis North Metro"
-   - Meta description: "Namakan builds custom AI systems for Minnesota businesses. Fine-tuned models, RAG pipelines, and AI employees. Serving Minneapolis, St. Paul, and North Metro."
+   - Title tags: "AI Engineering | Custom Fine-Tuning | Namakan AI — Blaine, MN"
+   - Meta description: "Namakan builds custom AI systems for businesses with proprietary data. Fine-tuned models, RAG pipelines, and AI employees. Serving clients nationwide."
    - Schema markup for local business
    - 5-10 blog posts targeting local + AI keywords
 
 4. **Directory listings** (free)
    - Get listed on:
-     - Minneapolis Regional Chamber
+     - Blaine / Coon Rapids Chamber (local base)
      - Minnesota Chamber of Commerce
      - Alignable (local business network)
      - BBB (free basic listing)
@@ -181,7 +181,7 @@ For a $5K-$50K service, referrals are gold. Nobody refers a bad vendor to a frie
 1. **Ask every client explicitly**: "Do you know anyone else who might benefit from this?"
 2. **Give referral bonus**: "We'll give you 10% off your next project for every referral that becomes a client"
 3. **Strategic partners**: CPA firms, marketing agencies, law firms — they see companies that need AI
-4. **Build relationships with IT consultants** in Minneapolis who don't do AI
+4. **Build relationships with IT consultants and industry groups** who serve clients with significant data assets
 
 ### Partner Channels
 
