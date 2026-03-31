@@ -84,7 +84,7 @@ This data contains [specific insights — e.g., "patterns in equipment failures 
 
 ### Option A: RAG Pipeline on [Specific Data Source]
 **Best for:** Knowledge retrieval, decision support, research acceleration  
-**Investment:** $[10K–$25K]  
+**Investment:** $(5K-$15K  
 **Timeline:** [4–6 weeks]
 
 **What we'd build:**
@@ -115,7 +115,7 @@ A Retrieval-Augmented Generation (RAG) pipeline that indexes [CLIENT]'s propriet
 
 ### Option B: Fine-Tuned Model for [Specific Task]
 **Best for:** Classification, prediction, judgment-heavy decisions  
-**Investment:** $[20K–$50K]  
+**Investment:** $(15K-$25K  
 **Timeline:** [6–10 weeks]
 
 **What we'd build:**
@@ -148,7 +148,7 @@ A fine-tuned model trained specifically on [CLIENT]'s proprietary [data type —
 
 ### Option C: Agentic Workflow System
 **Best for:** Multi-step processes, automated decision chains, operational workflows  
-**Investment:** $[25K–$75K]  
+**Investment:** $(25K-$40K  
 **Timeline:** [8–14 weeks]
 
 **What we'd build:**
@@ -225,9 +225,9 @@ An AI agent system that autonomously handles [specific end-to-end workflow — e
 
 | Solution | Investment Range | Timeline |
 |----------|----------------|----------|
-| **Option A: RAG Pipeline** | $[10K–$25K] | [4–6 weeks] |
-| **Option B: Fine-Tuned Model** | $[20K–$50K] | [6–10 weeks] |
-| **Option C: Agentic Workflow** | $[25K–$75K] | [8–14 weeks] |
+| **Option A: RAG Pipeline** | $(5K-$15K) | [4–6 weeks] |
+| **Option B: Fine-Tuned Model** | $(15K-$25K) | [6–10 weeks] |
+| **Option C: Agentic Workflow** | $(25K-$40K) | [8–14 weeks] |
 
 **We recommend starting with:** [Option that fits their situation and budget]
 
@@ -266,7 +266,7 @@ After deployment, we recommend a **monthly optimization retainer** to:
 - Expand capabilities as usage grows
 - Provide priority support and SLA
 
-**Retainer investment:** $[1,500–$5,000/month] based on complexity and scope
+**Retainer investment:** $2,000/month per AI Employee based on complexity and scope
 
 *Early adopters: 3 months of optimization retainer included free with project sign.*
 

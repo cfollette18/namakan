@@ -29,12 +29,12 @@ Every objection is a buying signal in disguise.
 ### 2. "We tried AI before and it didn't work"
 
 **Why they say it:**
-- Used a chatbot, not autonomous agents
+- Used generic AI / chatbots without custom training
 - Implementation was poor
 - Wrong tool for their needs
 
 **Response:**
-> "That's frustrating — and you're right that a lot of AI tools are overhyped. The difference with what we build is that we're not selling you a tool to figure out. We build autonomous agents that complete specific tasks end-to-end. We implement, optimize, and measure results. What did you try before, and specifically what went wrong?"
+> "That's frustrating — and you're right that a lot of AI tools are overhyped. The difference with what we build is that we're not selling you a tool to figure out. We build custom AI systems trained on your data. We implement, optimize, and measure results. What did you try before, and specifically what went wrong?"
 
 ---
 
@@ -118,7 +118,7 @@ Every objection is a buying signal in disguise.
 - Needs education
 
 **Response:**
-> "Great — what are you using it for? Most tools handle one thing well. Our agents can handle complete workflows across multiple systems. If you're happy, that's fine — but if there's any part of your operations that still feels manual or time-consuming, an autonomous agent might fill that gap. What do you wish your current tool could do?"
+> "Great — what are you using it for? Most tools handle one thing well. Our agents can handle complete workflows across multiple systems. If you're happy, that's fine — but if there's any part of your operations that still feels manual or time-consuming, a custom AI system trained on your data might fill that gap. What do you wish your current tool could do?"
 
 ---
 

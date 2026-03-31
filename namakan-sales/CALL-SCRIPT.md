@@ -3,7 +3,7 @@
 
 > **Purpose:** This call is NOT a sales call. It is a structured discovery conversation to understand the client's proprietary data assets, operational workflows, and where custom AI could create meaningful business impact.
 >
-> **Goal:** Earn the right to propose a paid technical assessment ($1,500–$2,000), which positions us for the full custom AI engineering project.
+> **Goal:** Earn the right to propose a paid technical assessment ($2,500), which positions us for the full custom AI engineering project.
 >
 > **Success metric:** They feel understood. They want the technical assessment. They see you as a peer, not a vendor.
 >
@@ -159,7 +159,7 @@
 > "I hear you — there's a lot of hype. The difference between generic AI and custom AI is the difference between a general contractor who read about your house plans and an architect who spent a week inside your building. The context matters enormously."
 
 **If they seem worried about implementation complexity:**
-> "That's a real concern, and I won't pretend custom AI engineering is plug-and-play. But the way we work is: we do a focused technical assessment first — 2–3 weeks, $1,500–$2,000 — that tells us whether the data is ready and whether the opportunity is real. We don't build anything until we know it's viable."
+> "That's a real concern, and I won't pretend custom AI engineering is plug-and-play. But the way we work is: we do a focused technical assessment first — 2–3 weeks, $2,500 — that tells us whether the data is ready and whether the opportunity is real. We don't build anything until we know it's viable."
 
 **If they seem excited and want to skip to the proposal:**
 > "I appreciate the enthusiasm — and I want to make sure we build the right thing. Before we propose anything, we need to understand your data quality, your technical environment, and whether a custom approach will actually outperform what you're doing now. That's what the assessment is for."
@@ -179,7 +179,7 @@
 > 3. Build a proof-of-concept on one of those opportunities using your actual data
 > 4. Deliver a clear recommendation — what to build, what it would cost, what it would deliver
 >
-> The investment is $[1,500–2,000], and it typically takes 2–3 weeks. If we find something viable, we'd then scope the full project together."
+> The investment is $[2,500], and it typically takes 2–3 weeks. If we find something viable, we'd then scope the full project together."
 
 ### Handling "Can you do it for free?":
 > "I understand — and I appreciate that you've given this conversation time. The reason we charge for the assessment is that we're doing real technical work — data analysis, POC building — not just a slide deck. The assessment is scoped to give you a real answer, not a pitch. If we find there's no viable opportunity here, I'd rather tell you that than sell you on something that won't work."
@@ -201,7 +201,7 @@
 > "That's actually really useful to know. Can I ask — what did you try, and where specifically did it fall short? [Listen carefully.] That helps me understand whether the issue was the technology, the implementation, or the data — because those are three very different problems with very different solutions."
 
 ### "Can you give me a ballpark before the assessment?"
-> "I can give you a rough range based on what you've described — somewhere between $[15K–$75K] for a full project. But I'd rather not quote numbers until we've looked at your data quality and workflow specifics. The last thing I want to do is quote a number that's wrong for your situation. The assessment is designed to give you a precise number."
+> "I can give you a rough range based on what you've described — somewhere between $[5K-$15K] for a full project. But I'd rather not quote numbers until we've looked at your data quality and workflow specifics. The last thing I want to do is quote a number that's wrong for your situation. The assessment is designed to give you a precise number."
 
 ### "I need to loop in my boss / team / IT"
 > "Absolutely — that makes sense. I'd suggest we do the same thing I proposed — a technical assessment — but with a broader audience. We can include whoever you think should be in the room. The assessment output is designed to be shared — it gives your stakeholders a clear picture of the opportunity without requiring deep AI expertise to evaluate."
@@ -224,7 +224,7 @@ Send within 2 hours of the call:
 > - [Bullet 2: their AI history and what worked/didn't]
 > - [Bullet 3: their timeline and decision process]
 >
-> Based on that, my recommendation is the **Technical Assessment** I outlined — $[1,500–2,000], 2–3 weeks. We'd start by auditing [specific data asset] and building a POC on [specific opportunity].
+> Based on that, my recommendation is the **Technical Assessment** I outlined — $[2,500], 2–3 weeks. We'd start by auditing [specific data asset] and building a POC on [specific opportunity].
 >
 > I've attached a brief scope document. If this makes sense, let's get it on the calendar. If not, I'm happy to discuss.
 >

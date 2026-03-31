@@ -8,7 +8,7 @@
 
 | Area | Question | Ideal Answer |
 |------|----------|--------------|
-| **Budget** | Can they afford $500-5K/mo? | Yes |
+| **Budget** | Can they afford $5K-15K upfront or $2K/mo retainer? | Yes |
 | **Authority** | Are they the decision maker? | Yes |
 | **Timeline** | Do they need this soon? | 30-60 days |
 | **Need** | Do they have a real problem? | Yes |
@@ -27,10 +27,10 @@
 
 | Budget | Fit |
 |--------|-----|
-| $500-1K/mo | ✅ Starter Agent |
-| $1K-3K/mo | ✅ Growth Suite |
-| $3K-5K/mo | ✅ Enterprise Workforce |
-| $5K+/mo | ✅ Custom solution |
+| $3K upfront | ✅ Sprint / Discovery |
+| $5K-15K | ✅ Build |
+| $2K/mo | ✅ Retainer |
+| $25K+ | ✅ Enterprise |
 | <$500/mo | ❌ May need smaller start |
 | "Free" | ❌ Not a fit |
 
@@ -103,7 +103,7 @@
 - [ ] Just researching, not buying
 - [ ] Wants custom AI built from scratch (too big)
 - [ ] Expects magic overnight
-- [ ] Only wants a chatbot (not autonomous)
+- [ ] Only wants off-the-shelf AI (not custom-built)
 
 ---
 
@@ -114,7 +114,7 @@
 - [ ] Has tried manual solutions
 - [ ] Has budget allocated
 - [ ] Timeline < 60 days
-- [ ] Open to autonomous agents (not just chatbots)
+- [ ] Open to custom AI engineering (not just configured tools)
 - [ ] References competitors or peers using AI
 
 ---
