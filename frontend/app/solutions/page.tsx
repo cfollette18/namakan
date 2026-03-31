@@ -2,193 +2,116 @@
 
 import { motion } from 'framer-motion'
 import {
-  Cpu,
-  Zap,
-  BarChart3,
+  Brain,
+  Database,
+  Workflow,
   Users,
-  Code,
   CheckCircle,
   ArrowRight,
   Sparkles,
-  Target,
-  TrendingUp,
+  Settings,
+  FileSearch,
+  Zap,
   Shield,
-  Globe,
-  Brain,
-  Workflow,
-  MessageSquare,
-  FileText,
-  Search,
-  Palette,
-  Megaphone,
-  Calculator,
-  Briefcase,
-  Heart,
-  GraduationCap,
-  Building,
-  Stethoscope,
-  Factory,
-  Scale
+  TrendingUp
 } from 'lucide-react'
 import Link from 'next/link'
 
 export default function SolutionsPage() {
   const solutions = [
     {
-      icon: Briefcase,
-      title: "Business Operations",
-      description: "Streamline workflows, automate repetitive tasks, and optimize business processes with intelligent AI agents.",
+      icon: Brain,
+      title: "Fine-Tuned Models",
+      description: "AI models trained specifically on your proprietary data — your industry knowledge, products, customers, and internal processes. Not general language. Your domain.",
       features: [
-        "Process automation",
-        "Data analysis & reporting",
-        "Customer service automation",
-        "Inventory management",
-        "Financial forecasting"
+        "Trained on your documents and data",
+        "Knows your brand voice and standards",
+        "Always cites your sources",
+        "40-60% accuracy improvement over generic AI"
       ],
-      useCase: "Reduce operational overhead by 60% with automated business workflows."
+      useCase: "A law firm fine-tuned a model on their case history. Now it drafts and reviews contracts in their specific practice areas."
     },
     {
-      icon: Megaphone,
-      title: "Marketing & Content",
-      description: "Create compelling content, manage campaigns, and analyze performance across all marketing channels.",
+      icon: Database,
+      title: "RAG Pipelines",
+      description: "Your entire knowledge base — contracts, CRM, technical docs, emails — indexed and searchable. Ask any question, get answers grounded in your actual documents.",
       features: [
-        "Content creation & optimization",
-        "Social media management",
-        "Email marketing automation",
-        "SEO analysis & optimization",
-        "Campaign performance tracking"
+        "Searches 100s of documents instantly",
+        "Always cites the source",
+        "Real-time data, not training data",
+        "No hallucinations on your data"
       ],
-      useCase: "Generate 10x more content while maintaining brand consistency."
+      useCase: "A manufacturer's field team gets AI-generated repair recommendations from 15 years of service records."
     },
     {
-      icon: Code,
-      title: "Software Development",
-      description: "Accelerate development cycles with AI-powered coding assistants, testing, and deployment automation.",
+      icon: Workflow,
+      title: "Agentic Workflows",
+      description: "Multi-step tasks completed autonomously in your systems. Research leads, enrich data, draft responses, update records — without human intervention.",
       features: [
-        "Code generation & review",
-        "Automated testing",
-        "Documentation generation",
-        "Bug detection & fixing",
-        "Performance optimization"
+        "Multi-step task automation",
+        "Integrates with your existing tools",
+        "0 human approvals needed",
+        "Completes in seconds"
       ],
-      useCase: "Ship features 3x faster with AI-assisted development workflows."
+      useCase: "An incident gets triaged, lot-validated, response drafted, and ops notified — all before a human sees it."
     },
     {
-      icon: Search,
-      title: "Research & Analysis",
-      description: "Conduct comprehensive research, analyze data, and generate insights across any domain.",
+      icon: Users,
+      title: "Custom AI Employees",
+      description: "AI workers trained on your business that run 24/7 on repeatable work. Researches, drafts, updates, follows up — without constant human input.",
       features: [
-        "Market research automation",
-        "Competitive analysis",
-        "Data visualization",
-        "Trend identification",
-        "Report generation"
+        "Handles repetitive tasks continuously",
+        "Integrates with your tools and systems",
+        "Reports productivity metrics",
+        "20+ hours saved per week"
       ],
-      useCase: "Complete research projects in hours instead of weeks."
-    },
-    {
-      icon: Heart,
-      title: "Customer Experience",
-      description: "Enhance customer interactions with personalized experiences and intelligent support systems.",
-      features: [
-        "Personalized recommendations",
-        "Chatbot automation",
-        "Customer feedback analysis",
-        "Support ticket routing",
-        "Satisfaction prediction"
-      ],
-      useCase: "Improve customer satisfaction scores by 40% with AI-driven experiences."
-    },
-    {
-      icon: TrendingUp,
-      title: "Sales & Revenue",
-      description: "Optimize sales processes, identify opportunities, and maximize revenue with intelligent automation.",
-      features: [
-        "Lead qualification & scoring",
-        "Sales forecasting",
-        "Proposal generation",
-        "Customer insights",
-        "Revenue optimization"
-      ],
-      useCase: "Increase conversion rates by 25% with AI-powered sales enablement."
+      useCase: "An AI employee reviews field failure tickets, matches incidents to lot traces, and drafts plant-floor updates every morning."
     }
   ]
 
   const industries = [
     {
-      icon: Building,
-      name: "Enterprise",
-      description: "Large organizations automating complex workflows and scaling operations.",
-      metrics: "500+ employees, complex integrations"
+      title: "Manufacturing & Engineering",
+      description: "Quality inspection, field service, supply chain, predictive maintenance",
+      data: "CAD files, inspection logs, service records, sensor streams"
     },
     {
-      icon: Briefcase,
-      name: "Professional Services",
-      description: "Consulting firms, agencies, and service providers enhancing client delivery.",
-      metrics: "10-500 employees, client-focused"
+      title: "Legal & Compliance",
+      description: "Contract review, case research, document processing, compliance",
+      data: "Case histories, precedents, contracts, regulatory documents"
     },
     {
-      icon: Factory,
-      name: "Manufacturing",
-      description: "Production companies optimizing supply chains and quality control.",
-      metrics: "Process automation, quality assurance"
+      title: "Healthcare & Medical",
+      description: "Clinical documentation, patient records, claims processing",
+      data: "EHR records, clinical notes, treatment protocols"
     },
     {
-      icon: Stethoscope,
-      name: "Healthcare",
-      description: "Medical organizations improving patient care and administrative efficiency.",
-      metrics: "HIPAA compliant, patient-focused"
+      title: "Financial Services",
+      description: "Modeling, reporting, client data analysis, risk assessment",
+      data: "Financial models, client portfolios, market data"
     },
     {
-      icon: GraduationCap,
-      name: "Education",
-      description: "Universities and schools personalizing learning experiences.",
-      metrics: "Student success, administrative efficiency"
-    },
-    {
-      icon: Scale,
-      name: "Legal & Finance",
-      description: "Law firms and financial institutions ensuring compliance and accuracy.",
-      metrics: "Regulatory compliance, risk management"
+      title: "Professional Services",
+      description: "Research, document drafting, client knowledge management",
+      data: "Client files, practice area knowledge, internal docs"
     }
   ]
 
-  const workflows = [
+  const howItWorks = [
     {
-      title: "Marketing Campaign Launch",
-      steps: [
-        "Market research & audience analysis",
-        "Content strategy development",
-        "Creative asset generation",
-        "Multi-channel campaign setup",
-        "Performance monitoring & optimization"
-      ],
-      timeSaved: "From 2 weeks to 2 days",
-      agents: ["Research Agent", "Content Creator", "Social Media Manager", "Analytics Agent"]
+      step: "01",
+      title: "Discovery",
+      description: "We spend time understanding your data, your workflows, and your highest-impact opportunity. Not a pitch — a real assessment."
     },
     {
-      title: "Product Development Cycle",
-      steps: [
-        "Market analysis & competitor research",
-        "Feature specification & requirements",
-        "Technical architecture design",
-        "Implementation planning",
-        "Testing strategy development"
-      ],
-      timeSaved: "From 3 months to 1 week",
-      agents: ["Market Analyst", "Technical Architect", "Project Manager", "QA Engineer"]
+      step: "02",
+      title: "Engineering",
+      description: "We build a custom system around your specific data and environment. Fine-tuning, RAG, agentic workflows — whatever fits your problem."
     },
     {
-      title: "Customer Onboarding Process",
-      steps: [
-        "Lead qualification & scoring",
-        "Personalized welcome sequence",
-        "Product training materials",
-        "Success milestone tracking",
-        "Feedback collection & analysis"
-      ],
-      timeSaved: "From 1 week to 1 hour",
-      agents: ["Sales Assistant", "Content Creator", "Customer Success Agent", "Analytics Agent"]
+      step: "03",
+      title: "Delivery",
+      description: "We deploy, test, and measure against your specific use cases. You own the system. We measure results."
     }
   ]
 
@@ -199,31 +122,25 @@ export default function SolutionsPage() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-12">
-              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-pink-600 text-transparent bg-clip-text">
+              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-teal-600 text-transparent bg-clip-text">
                 Namakan
               </Link>
               <div className="hidden md:flex items-center gap-8">
-                <Link href="/solutions" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors font-medium">
+                <Link href="/solutions" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors font-medium">
                   Solutions
                 </Link>
-                <Link href="/pricing" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors">
+                <Link href="/pricing" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
                   Pricing
                 </Link>
-                <Link href="/resources" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors">
-                  Resources
-                </Link>
-                <Link href="/templates" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors">
-                  Marketplace
+                <Link href="/contact" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
+                  Contact
                 </Link>
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/auth/login" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors font-medium">
-                Log in
-              </Link>
-              <Link href="/auth/signup">
-                <button className="px-6 py-2.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-pink-500/30 transition-all">
-                  Start for free
+              <Link href="/contact">
+                <button className="px-6 py-2.5 bg-gradient-to-r from-teal-500 to-teal-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-teal-500/30 transition-all text-white">
+                  Get Started
                 </button>
               </Link>
             </div>
@@ -233,13 +150,13 @@ export default function SolutionsPage() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" />
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" />
         <motion.div
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%, rgba(244, 63, 94, 0.1) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 50%, rgba(244, 63, 94, 0.08) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 50%, rgba(244, 63, 94, 0.1) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, rgba(13, 148, 136, 0.08) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 50%, rgba(13, 148, 136, 0.06) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, rgba(13, 148, 136, 0.08) 0%, transparent 50%)',
             ]
           }}
           transition={{ duration: 10, repeat: Infinity }}
@@ -251,10 +168,10 @@ export default function SolutionsPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-pink-100 dark:bg-pink-500/10 border border-pink-200 dark:border-pink-500/30 rounded-full text-pink-600 dark:text-pink-400 text-sm font-semibold"
+              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-teal-100 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 rounded-full text-teal-600 dark:text-teal-400 text-sm font-semibold"
             >
-              <Sparkles className="w-4 h-4" />
-              AI Solutions for Every Business
+              <Brain className="w-4 h-4" />
+              Custom AI Engineering
             </motion.div>
 
             <motion.h1
@@ -263,10 +180,10 @@ export default function SolutionsPage() {
               transition={{ delay: 0.1 }}
               className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
             >
-              Solutions That
+              AI Built on
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-pink-600 to-pink-500">
-                Scale With You
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500">
+                YOUR Data
               </span>
             </motion.h1>
 
@@ -276,8 +193,7 @@ export default function SolutionsPage() {
               transition={{ delay: 0.2 }}
               className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto"
             >
-              From startups to enterprises, discover how AI agents can transform your business operations,
-              marketing, development, and customer experience.
+              Not pre-built agents. Not generic tools. Custom AI systems engineered from the ground up — trained on your proprietary data, integrated into your systems, solving your domain problems.
             </motion.p>
 
             <motion.div
@@ -286,9 +202,9 @@ export default function SolutionsPage() {
               transition={{ delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <Link href="/auth/signup">
-                <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl font-bold text-lg shadow-lg shadow-pink-500/30 hover:shadow-xl hover:shadow-pink-500/40 transition-all flex items-center gap-2">
-                  Get Started Free
+              <Link href="/contact">
+                <button className="px-8 py-4 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl font-bold text-lg shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 transition-all text-white flex items-center gap-2">
+                  Talk to an Engineer
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </Link>
@@ -312,14 +228,14 @@ export default function SolutionsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              AI Solutions by Function
+              What We Build
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300">
-              Specialized agent teams for every business need
+              Four ways we engineer custom AI for your proprietary data
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
@@ -327,9 +243,9 @@ export default function SolutionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 hover:border-pink-500/50 transition-all group"
+                className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 hover:border-teal-500/50 transition-all group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
 
@@ -344,14 +260,14 @@ export default function SolutionsPage() {
                 <ul className="space-y-2 mb-6">
                   {solution.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
-                      <CheckCircle className="w-5 h-5 text-pink-500 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-teal-500 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <div className="p-4 bg-pink-50 dark:bg-pink-500/10 rounded-lg">
-                  <p className="text-sm font-semibold text-pink-600 dark:text-pink-400">
+                <div className="p-4 bg-teal-50 dark:bg-teal-500/10 rounded-lg">
+                  <p className="text-sm font-semibold text-teal-600 dark:text-teal-400">
                     💡 {solution.useCase}
                   </p>
                 </div>
@@ -361,7 +277,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* Industries Section */}
+      {/* How It Works */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <motion.div
@@ -371,32 +287,31 @@ export default function SolutionsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Trusted Across Industries
+              How It Works
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300">
-              Solutions tailored for your industry requirements
+              Not a configured tool. Not a vendor platform. Custom engineering for your data.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industries.map((industry, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {howItWorks.map((item, index) => (
               <motion.div
-                key={industry.name}
+                key={item.step}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-pink-500/50 transition-all"
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
               >
-                <industry.icon className="w-12 h-12 text-pink-500 mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">
-                  {industry.name}
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-white text-xl font-bold">{item.step}</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">
+                  {item.title}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-3">
-                  {industry.description}
-                </p>
-                <p className="text-sm font-semibold text-pink-500">
-                  {industry.metrics}
+                <p className="text-slate-600 dark:text-slate-400">
+                  {item.description}
                 </p>
               </motion.div>
             ))}
@@ -404,7 +319,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* Workflows Section */}
+      {/* Industries Section */}
       <section className="py-20 px-6 bg-slate-50 dark:bg-slate-900/50">
         <div className="container mx-auto max-w-6xl">
           <motion.div
@@ -414,57 +329,32 @@ export default function SolutionsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Complete Workflow Automation
+              Industries We Work With
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300">
-              End-to-end processes handled by coordinated AI agent teams
+              Every engagement is built around your specific proprietary data
             </p>
           </motion.div>
 
-          <div className="space-y-8">
-            {workflows.map((workflow, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industries.map((industry, index) => (
               <motion.div
-                key={workflow.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                key={industry.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8"
+                transition={{ delay: index * 0.05 }}
+                className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="lg:col-span-1">
-                    <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
-                      {workflow.title}
-                    </h3>
-                    <div className="p-4 bg-pink-50 dark:bg-pink-500/10 rounded-lg mb-4">
-                      <p className="text-lg font-semibold text-pink-600 dark:text-pink-400">
-                        ⚡ {workflow.timeSaved}
-                      </p>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="font-semibold text-slate-700 dark:text-slate-300 mb-2">AI Agents:</p>
-                      {workflow.agents.map((agent) => (
-                        <div key={agent} className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
-                          <CheckCircle className="w-4 h-4 text-pink-500" />
-                          {agent}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="lg:col-span-2">
-                    <h4 className="font-semibold mb-4 text-slate-700 dark:text-slate-300">Workflow Steps:</h4>
-                    <div className="space-y-3">
-                      {workflow.steps.map((step, stepIndex) => (
-                        <div key={step} className="flex items-start gap-3">
-                          <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <span className="text-white text-sm font-bold">{stepIndex + 1}</span>
-                          </div>
-                          <p className="text-slate-600 dark:text-slate-400 pt-1">{step}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+                  {industry.title}
+                </h3>
+                <p className="text-slate-600 dark:text-slate-400 mb-3">
+                  {industry.description}
+                </p>
+                <p className="text-sm font-semibold text-teal-500">
+                  Data: {industry.data}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -478,23 +368,23 @@ export default function SolutionsPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center bg-gradient-to-r from-pink-500/10 to-purple-500/10 border border-pink-500/30 rounded-3xl p-12"
+            className="text-center bg-gradient-to-r from-teal-500/10 to-teal-500/10 border border-teal-500/30 rounded-3xl p-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Business?
+              Ready to Build AI That Knows Your Business?
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 mb-8">
-              Join thousands of companies using Namakan to automate complex workflows and scale operations.
+              Generic AI doesn&apos;t know your data. Let&apos;s talk about building AI that does.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/auth/signup">
-                <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl font-bold text-lg shadow-lg shadow-pink-500/30 hover:shadow-xl hover:shadow-pink-500/40 transition-all">
-                  Start Free Trial
+              <Link href="/contact">
+                <button className="px-8 py-4 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl font-bold text-lg shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 transition-all text-white">
+                  Start a Conversation
                 </button>
               </Link>
-              <Link href="/contact">
+              <Link href="/pricing">
                 <button className="px-8 py-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-xl font-bold text-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
-                  Schedule Demo
+                  View Pricing
                 </button>
               </Link>
             </div>
@@ -505,55 +395,26 @@ export default function SolutionsPage() {
       {/* Footer */}
       <footer className="border-t border-slate-200 dark:border-slate-800 py-16 px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-            <div className="col-span-2">
-              <h4 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-pink-600 text-transparent bg-clip-text mb-4">
-                Namakan
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+              <h4 className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-teal-600 text-transparent bg-clip-text mb-2">
+                Namakan AI Engineering
               </h4>
-              <p className="text-slate-600 dark:text-slate-400 mb-4">
-                AI agent orchestration for the future of work
+              <p className="text-slate-500 dark:text-slate-400 text-sm">
+                Custom AI built on YOUR data.
               </p>
             </div>
-
-            <div>
-              <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Solutions</h5>
-              <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/start" className="hover:text-pink-500 transition-colors">Start your project</Link></li>
-                <li><Link href="/templates" className="hover:text-pink-500 transition-colors">Agent templates</Link></li>
-                <li><Link href="/templates" className="hover:text-pink-500 transition-colors">Templates</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Resources</h5>
-              <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/docs" className="hover:text-pink-500 transition-colors">Documentation</Link></li>
-                <li><Link href="/blog" className="hover:text-pink-500 transition-colors">Blog</Link></li>
-                <li><Link href="/guides" className="hover:text-pink-500 transition-colors">Guides</Link></li>
-                <li><Link href="/api" className="hover:text-pink-500 transition-colors">API Reference</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Company</h5>
-              <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/about" className="hover:text-pink-500 transition-colors">About</Link></li>
-                <li><Link href="/careers" className="hover:text-pink-500 transition-colors">Careers</Link></li>
-                <li><Link href="/contact" className="hover:text-pink-500 transition-colors">Contact</Link></li>
-                <li><Link href="/privacy" className="hover:text-pink-500 transition-colors">Privacy</Link></li>
-                <li><Link href="/terms" className="hover:text-pink-500 transition-colors">Terms</Link></li>
-              </ul>
+            <div className="flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
+              <Link href="/pricing" className="hover:text-teal-500 transition-colors">Pricing</Link>
+              <Link href="/contact" className="hover:text-teal-500 transition-colors">Contact</Link>
+              <Link href="/privacy" className="hover:text-teal-500 transition-colors">Privacy</Link>
+              <Link href="/terms" className="hover:text-teal-500 transition-colors">Terms</Link>
             </div>
           </div>
-
-          <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="border-t border-slate-200 dark:border-slate-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-500 dark:text-slate-400 text-sm">
-              &copy; 2026 Namakan. All rights reserved.
+              © 2026 Namakan AI Engineering. All rights reserved.
             </p>
-            <div className="flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
-              <Link href="/status" className="hover:text-pink-500 transition-colors">Service Status</Link>
-              <Link href="/security" className="hover:text-pink-500 transition-colors">Security</Link>
-            </div>
           </div>
         </div>
       </footer>
