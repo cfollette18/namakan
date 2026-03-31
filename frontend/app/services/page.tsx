@@ -16,7 +16,7 @@ export default function ServicesPage() {
         'Company-specific tone and escalation logic',
         'Deployment guidance for production use'
       ],
-      price: 'From $10K per engagement'
+      price: '$5K–$15K per project'
     },
     {
       tag: 'RAG Systems',
@@ -29,7 +29,7 @@ export default function ServicesPage() {
         'Citation-ready answer experiences',
         'Document and system connectors'
       ],
-      price: 'From $5K setup + support'
+      price: '$5K–$15K + $500/mo'
     },
     {
       tag: 'Agentic Workflows',
