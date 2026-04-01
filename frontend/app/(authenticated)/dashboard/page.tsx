@@ -211,7 +211,7 @@ export default function Dashboard() {
         body: JSON.stringify({
           name: projectDescription.split('.')[0].slice(0, 100) || 'New Project',
           description: projectDescription,
-          user_id: 'user-1' // TODO: get from auth context
+          user_id: localStorage.getItem('session_id') || 'anonymous'
         })
       })
 
