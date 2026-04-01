@@ -13,7 +13,7 @@ export function Header() {
           className="nav-logo-mark"
           style={{ borderRadius: '6px' }}
         />
-        <span>AMAKAN</span>
+        <span>NAMAKAN</span>
       </Link>
       <div className="nav-links">
         <Link href="/services">Services</Link>
