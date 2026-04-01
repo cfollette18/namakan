@@ -68,30 +68,30 @@ export default function PrivacyPage() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-12">
-              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-pink-600 text-transparent bg-clip-text">
+              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-teal-600 text-transparent bg-clip-text">
                 Namakan
               </Link>
               <div className="hidden md:flex items-center gap-8">
-                <Link href="/solutions" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors">
+                <Link href="/solutions" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
                   Solutions
                 </Link>
-                <Link href="/pricing" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors">
+                <Link href="/pricing" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
                   Pricing
                 </Link>
-                <Link href="/resources" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors">
+                <Link href="/resources" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
                   Resources
                 </Link>
-                <Link href="/templates" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors">
+                <Link href="/templates" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
                   Marketplace
                 </Link>
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/auth/login" className="text-slate-600 dark:text-slate-300 hover:text-pink-500 transition-colors font-medium">
+              <Link href="/auth/login" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors font-medium">
                 Log in
               </Link>
               <Link href="/auth/signup">
-                <button className="px-6 py-2.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-pink-500/30 transition-all">
+                <button className="px-6 py-2.5 bg-gradient-to-r from-teal-500 to-teal-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-teal-500/30 transition-all">
                   Start for free
                 </button>
               </Link>
@@ -120,7 +120,7 @@ export default function PrivacyPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-pink-100 dark:bg-pink-500/10 border border-pink-200 dark:border-pink-500/30 rounded-full text-pink-600 dark:text-pink-400 text-sm font-semibold"
+              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-teal-100 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 rounded-full text-teal-600 dark:text-teal-400 text-sm font-semibold"
             >
               <Shield className="w-4 h-4" />
               Privacy Policy
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
             >
               Your Privacy is
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-pink-600 to-pink-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500">
                 Our Priority
               </span>
             </motion.h1>
@@ -173,7 +173,7 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Privacy Overview</h2>
             <p className="text-slate-600 dark:text-slate-400 mb-4">
               This Privacy Policy describes how Namakan ("we," "us," or "our") collects, uses, and protects your personal information
-              when you use our AI agent orchestration platform.
+              when you use our Custom AI Engineering firm.
             </p>
             <p className="text-slate-600 dark:text-slate-400">
               By using Namakan, you agree to the collection and use of information in accordance with this policy.
@@ -197,7 +197,7 @@ export default function PrivacyPage() {
                 className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8"
               >
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0">
                     <section.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -293,7 +293,7 @@ export default function PrivacyPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center bg-gradient-to-r from-pink-500/10 to-purple-500/10 border border-pink-500/30 rounded-3xl p-12"
+            className="text-center bg-gradient-to-r from-pink-500/10 to-purple-500/10 border border-teal-500/30 rounded-3xl p-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Questions About Privacy?
@@ -304,7 +304,7 @@ export default function PrivacyPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl font-bold text-lg shadow-lg shadow-pink-500/30 hover:shadow-xl hover:shadow-pink-500/40 transition-all">
+                <button className="px-8 py-4 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl font-bold text-lg shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 transition-all">
                   Contact Privacy Team
                 </button>
               </Link>
@@ -323,41 +323,41 @@ export default function PrivacyPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
             <div className="col-span-2">
-              <h4 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-pink-600 text-transparent bg-clip-text mb-4">
+              <h4 className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-teal-600 text-transparent bg-clip-text mb-4">
                 Namakan
               </h4>
               <p className="text-slate-600 dark:text-slate-400 mb-4">
-                AI agent orchestration for the future of work
+                Custom AI built on YOUR data
               </p>
             </div>
 
             <div>
               <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Solutions</h5>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/start" className="hover:text-pink-500 transition-colors">Start your project</Link></li>
-                <li><Link href="/templates" className="hover:text-pink-500 transition-colors">Agent templates</Link></li>
-                <li><Link href="/templates" className="hover:text-pink-500 transition-colors">Templates</Link></li>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
             </div>
 
             <div>
               <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Resources</h5>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/docs" className="hover:text-pink-500 transition-colors">Documentation</Link></li>
-                <li><Link href="/blog" className="hover:text-pink-500 transition-colors">Blog</Link></li>
-                <li><Link href="/guides" className="hover:text-pink-500 transition-colors">Guides</Link></li>
-                <li><Link href="/api" className="hover:text-pink-500 transition-colors">API Reference</Link></li>
+                <li><Link href="/docs" className="hover:text-teal-500 transition-colors">Documentation</Link></li>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
             </div>
 
             <div>
               <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Company</h5>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/about" className="hover:text-pink-500 transition-colors">About</Link></li>
-                <li><Link href="/careers" className="hover:text-pink-500 transition-colors">Careers</Link></li>
-                <li><Link href="/contact" className="hover:text-pink-500 transition-colors">Contact</Link></li>
-                <li><Link href="/privacy" className="hover:text-pink-500 transition-colors font-medium">Privacy</Link></li>
-                <li><Link href="/terms" className="hover:text-pink-500 transition-colors">Terms</Link></li>
+                <li><Link href="/about" className="hover:text-teal-500 transition-colors">About</Link></li>
+                <li></li>
+                <li><Link href="/contact" className="hover:text-teal-500 transition-colors">Contact</Link></li>
+                <li><Link href="/privacy" className="hover:text-teal-500 transition-colors font-medium">Privacy</Link></li>
+                <li><Link href="/terms" className="hover:text-teal-500 transition-colors">Terms</Link></li>
               </ul>
             </div>
           </div>
@@ -367,8 +367,8 @@ export default function PrivacyPage() {
               &copy; 2026 Namakan. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
-              <Link href="/status" className="hover:text-pink-500 transition-colors">Service Status</Link>
-              <Link href="/security" className="hover:text-pink-500 transition-colors">Security</Link>
+              <Link href="/status" className="hover:text-teal-500 transition-colors">Service Status</Link>
+              <Link href="/security" className="hover:text-teal-500 transition-colors">Security</Link>
             </div>
           </div>
         </div>
