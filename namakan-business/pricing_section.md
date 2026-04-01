@@ -10,11 +10,11 @@ Namakan charges by project, not by seat or query. Every engagement is scoped, pr
 
 | Tier | Scope | Investment | Timeline |
 |------|-------|------------|----------|
-| **SMB** | 1–5K training examples, Qwen/Llama 3B–7B | $10K–$25K | 4–8 weeks |
-| **Mid-Market** | 5–20K examples, Llama 8B–13B | $25K–$50K | 8–12 weeks |
-| **Enterprise** | 20K+ examples, Llama 70B or multimodal | $50K–$75K | 12–16 weeks |
+| **SMB** | 1–5K training examples, Qwen/Llama 3B–7B | $5K–$15K | 4–8 weeks |
+| **Mid-Market** | 5–20K examples, Llama 8B–13B | $15K–$25K | 8–12 weeks |
+| **Enterprise** | 20K+ examples, Llama 70B or multimodal | $25K–$40K | 12–16 weeks |
 
-**Monthly Retainer:** $3K–$10K/month for ongoing fine-tuning as data grows  
+**Monthly Retainer:** $500/mo for RAG operations (see RAG Pipelines)  
 **Payment:** 50% upfront, 25% at midpoint, 25% on delivery
 
 ---
