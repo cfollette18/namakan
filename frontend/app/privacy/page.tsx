@@ -78,8 +78,8 @@ export default function PrivacyPage() {
                 <Link href="/pricing" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
                   Pricing
                 </Link>
-                <Link href="/resources" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
-                  Resources
+                <Link href="/services" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
+                  Services
                 </Link>
                 <Link href="/templates" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
                   Marketplace
