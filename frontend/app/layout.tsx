@@ -33,6 +33,19 @@ const satoshi = localFont({
 export const metadata: Metadata = {
   title: 'Namakan AI Engineering — Custom AI Built on Your Data',
   description: 'Custom AI engineering for businesses with proprietary data — fine-tuned models, RAG pipelines, and agentic workflows.',
+  openGraph: {
+    title: 'Namakan AI Engineering',
+    description: 'We build custom AI systems for businesses with proprietary data — fine-tuned models, RAG pipelines, and agentic workflows trained on YOUR data.',
+    url: 'https://namakan.ai',
+    siteName: 'Namakan AI Engineering',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Namakan AI Engineering',
+    description: 'Custom AI built on YOUR data — fine-tuned models, RAG pipelines, and agentic workflows.',
+  },
 }
 
 export default function RootLayout({
