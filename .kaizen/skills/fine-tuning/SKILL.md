@@ -29,7 +29,7 @@ Discovery → Data Ingestion → Colab Training → Evaluation → Deployment
 
 ```bash
 # 1. Generate client-specific notebook
-python3 namakan-technical/pipeline/fine-tuned-models/colab/generate_colab.py \
+python3 namakan-technical/fine-tuned-models/colab/generate_colab.py \
   --client "Client Name" \
   --model "Qwen/Qwen2.5-7B-Instruct" \
   --train "data/train.jsonl" \
@@ -55,7 +55,7 @@ LORA_R = 16
 ## Reusable Notebook Location
 
 ```
-namakan-technical/pipeline/fine-tuned-models/colab/
+namakan-technical/fine-tuned-models/colab/
 ├── namakan-reusable-finetune.ipynb  # Main template
 ├── namakan-lora-training-template.ipynb
 ├── generate_colab.py                 # Client-specific notebook generator

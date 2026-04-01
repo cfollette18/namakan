@@ -29,13 +29,11 @@ namakan/
 │   ├── pytest.ini
 │   └── prisma/schema.prisma
 │
-├── namakan-technical/
-│   ├── pipeline/             # 4 service pipelines
-│   │   ├── fine-tuned-models/workflows/
-│   │   ├── rag-pipelines/workflows/
-│   │   ├── agentic-workflows/workflows/
-│   │   └── custom-ai-employees/workflows/
-│   └── SECURE-DATA-PIPELINE.md
+├── namakan-technical/        # 4 service pipelines
+│   ├── fine-tuned-models/
+│   ├── rag-pipelines/
+│   ├── agentic-workflows/
+│   └── custom-ai-employees/
 │
 ├── docker-compose.yml     # PostgreSQL + Redis
 └── init.sql             # DB schema + pgvector
@@ -60,7 +58,7 @@ ls backend/app/agents/
 
 ### Find pipeline workflows:
 ```bash
-ls namakan-technical/pipeline/*/workflows/
+ls namakan-technical/*/workflows/
 ```
 
 ## Common Tasks
@@ -79,9 +77,9 @@ ls namakan-technical/pipeline/*/workflows/
 2. Register in `backend/app/agents/tool_registry.py`
 
 ### Update a pipeline:
-1. Read `namakan-technical/pipeline/{service}/PIPELINE.md`
+1. Read `namakan-technical/{service}/PIPELINE.md`
 2. Update the relevant workflow script
-3. Update `namakan-technical/pipeline/{service}/workflows/`
+3. Update `namakan-technical/{service}/workflows/`
 4. Commit and push
 
 ## Code Conventions

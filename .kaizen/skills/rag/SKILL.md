@@ -29,7 +29,7 @@ Client uploads via **signed URLs** (S3 or Azure Blob) — NO third-party service
 ## Workflow Scripts
 
 ```
-namakan-technical/pipeline/rag-pipelines/workflows/
+namakan-technical/rag-pipelines/workflows/
 ├── ingestion_pipeline.py    # Extract → chunk → embed → index
 └── retrieval_pipeline.py    # Query → retrieve → re-rank → generate
 ```

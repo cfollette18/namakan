@@ -5,7 +5,7 @@
 ## The 4 Pipelines
 
 ```
-namakan-technical/pipeline/
+namakan-technical/
 ├── fine-tuned-models/       # LoRA/QLoRA fine-tuning via Colab
 ├── rag-pipelines/           # ChromaDB document retrieval
 ├── agentic-workflows/       # ReAct autonomous agents
