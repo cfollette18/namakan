@@ -38,7 +38,7 @@
 
 ## ACT 2 — THE SOLUTION (0:15-0:30)
 
-**[Screen transitions — Namakan interface, vibrant, pink accent]**
+**[Screen transitions — Namakan interface, vibrant, teal accent]**
 
 **[Same chat interface, now powered by Namakan]**
 
@@ -58,7 +58,7 @@
 
 ## ACT 3 — THE PRODUCTS (0:30-0:42)
 
-**[Screen shows 4 cards — one by one with pink highlight]**
+**[Screen shows 4 cards — one by one with teal highlight]**
 
 **[Voiceover]**
 
@@ -92,7 +92,7 @@
 
 > Talk to us.
 
-**[Button: hot pink, subtle pulse]**
+**[Button: teal, subtle glow]**
 
 **[Fade to black]**
 
