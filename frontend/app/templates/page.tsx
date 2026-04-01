@@ -416,10 +416,10 @@ export default function MarketplacePage() {
             <div>
               <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Resources</h5>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/docs" className="hover:text-teal-500 transition-colors">Documentation</Link></li>
-                <li><Link href="/blog" className="hover:text-teal-500 transition-colors">Blog</Link></li>
-                <li><Link href="/guides" className="hover:text-teal-500 transition-colors">Guides</Link></li>
-                <li><Link href="/api" className="hover:text-teal-500 transition-colors">API Reference</Link></li>
+                <li><Link href="/services" className="hover:text-teal-500 transition-colors">Documentation</Link></li>
+                <li><Link href="/solutions" className="hover:text-teal-500 transition-colors">Blog</Link></li>
+                <li><Link href="/services" className="hover:text-teal-500 transition-colors">Guides</Link></li>
+                <li><Link href="/contact" className="hover:text-teal-500 transition-colors">API Reference</Link></li>
               </ul>
             </div>
 
@@ -427,7 +427,7 @@ export default function MarketplacePage() {
               <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Company</h5>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400">
                 <li><Link href="/about" className="hover:text-teal-500 transition-colors">About</Link></li>
-                <li><Link href="/careers" className="hover:text-teal-500 transition-colors">Careers</Link></li>
+                <li><Link href="/about" className="hover:text-teal-500 transition-colors">Careers</Link></li>
                 <li><Link href="/contact" className="hover:text-teal-500 transition-colors">Contact</Link></li>
                 <li><Link href="/privacy" className="hover:text-teal-500 transition-colors">Privacy</Link></li>
                 <li><Link href="/terms" className="hover:text-teal-500 transition-colors">Terms</Link></li>
@@ -440,8 +440,8 @@ export default function MarketplacePage() {
               &copy; 2026 Namakan. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
-              <Link href="/status" className="hover:text-teal-500 transition-colors">Service Status</Link>
-              <Link href="/security" className="hover:text-teal-500 transition-colors">Security</Link>
+              <Link href="/about" className="hover:text-teal-500 transition-colors">About</Link>
+              <Link href="/contact" className="hover:text-teal-500 transition-colors">Contact</Link>
             </div>
           </div>
         </div>
