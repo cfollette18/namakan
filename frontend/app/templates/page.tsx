@@ -144,8 +144,8 @@ export default function MarketplacePage() {
                 <Link href="/pricing" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
                   Pricing
                 </Link>
-                <Link href="/resources" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
-                  Resources
+                <Link href="/services" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors">
+                  Services
                 </Link>
                 <Link href="/templates" className="text-slate-600 dark:text-slate-300 hover:text-teal-500 transition-colors font-medium">
                   Marketplace
@@ -407,7 +407,7 @@ export default function MarketplacePage() {
             <div>
               <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Solutions</h5>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/start" className="hover:text-teal-500 transition-colors">Start your project</Link></li>
+                <li><Link href="/contact" className="hover:text-teal-500 transition-colors">Start your project</Link></li>
                 <li><Link href="/templates" className="hover:text-teal-500 transition-colors font-medium">Agent templates</Link></li>
                 <li><Link href="/templates" className="hover:text-teal-500 transition-colors">Templates</Link></li>
               </ul>
