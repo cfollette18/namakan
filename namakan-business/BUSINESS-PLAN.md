@@ -15,7 +15,7 @@ Namakan AI is a **Custom AI Engineering Firm** — we build bespoke AI systems f
 **The Positioning:** Namakan is not an AI reseller. We are an AI engineering firm. Every engagement is custom. Every solution is built for one client. We don't sell subscriptions to pre-built agents — we engineer AI systems from the ground up for each client's specific needs.
 
 **Core Services:**
-1. **Fine-Tuning** — Train a private model on your proprietary data ($10K–50K/project)
+1. **Fine-Tuning** — Train a private model on your proprietary data ($5K–$15K/project)
 2. **RAG Pipelines** — Connect AI to your documents, knowledge bases, and systems ($5K–15K build + $500–2K/mo maintenance)
 3. **Agentic Workflows** — Autonomous AI workers that complete multi-step tasks in your systems ($5K–30K)
 4. **Custom AI Employees** — Full-time AI workers trained on your business ($2K–5K/mo retainer)
@@ -77,7 +77,7 @@ We don't sell you an AI tool. We engineer an AI system for your business.
 - 20–500 employees
 - Heavy proprietary data (internal docs, customer data, industry expertise)
 - Decision makers frustrated with generic AI tools
-- Budget for meaningful AI investment ($10K–$50K+ per project)
+- Budget for meaningful AI investment ($5K–$15K per project)
 - Clear domain-specific workflows that off-the-shelf tools can't handle
 
 **Secondary:** Smaller businesses with specialized domain expertise who need AI that understands their niche
@@ -259,7 +259,7 @@ We don't sell you an AI tool. We engineer an AI system for your business.
 **Founder:** Clint Follette
 - Technical background in AI and software engineering
 - Experience building custom systems and autonomous agents
-- Local Blaine / north metro connections
+- National industry connections
 
 **Advisors:** (TBD)
 - Legal, business, technical advisors

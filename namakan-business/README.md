@@ -21,9 +21,9 @@ Business strategy, pricing, and operational planning for Namakan AI Engineering.
 
 ## Key Business Facts
 
-- **Location:** Blaine, MN (North Metro Minneapolis)
+- **Location:** Blaine, MN (Serving clients nationwide)
 - **Services:** Fine-tuned AI models + RAG pipelines + Custom AI agents
-- **Pricing:** $10K–$75K projects, $2K–$10K/month retainers
+- **Pricing:** $5K–$15K build, $2K/mo retainer
 - **Target:** Enterprise manufacturers and complex orgs with proprietary data
 
 ## Quick Reference
