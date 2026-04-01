@@ -72,11 +72,11 @@ text-muted: #94A3B8     /* Captions, placeholders */
 
 ## Typography
 
-### Font: Inter
-The standard for professional SaaS. Clean, readable, trustworthy.
+### Font: Satoshi
+Clean, professional geometric sans-serif. Loaded locally via next/font for performance.
 
 ```css
-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+font-family: var(--font-satoshi), -apple-system, BlinkMacSystemFont, sans-serif;
 ```
 
 ### Scale
@@ -381,5 +381,5 @@ frontend/
 
 ---
 
-*Last updated: 2026-03-29*
-*Direction: Shopify/Linear inspired — clean, professional, teal + white*
+*Last updated: 2026-04-01*
+*Direction: Shopify/Linear inspired — clean, professional, teal + white, Satoshi font*
