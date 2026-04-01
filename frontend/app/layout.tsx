@@ -31,8 +31,8 @@ const satoshi = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Namakan - AI Agent Orchestration Platform',
-  description: 'Create autonomous AI agent teams for complex projects',
+  title: 'Namakan AI Engineering — Custom AI Built on Your Data',
+  description: 'Custom AI engineering for businesses with proprietary data — fine-tuned models, RAG pipelines, and agentic workflows.',
 }
 
 export default function RootLayout({
