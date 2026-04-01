@@ -21,9 +21,9 @@ interface AgentCardProps {
 export default function AgentCard({ agent, index }: AgentCardProps) {
   const statusColors = {
     idle: "bg-slate-700 text-slate-400",
-    thinking: "bg-pink-500/20 text-pink-400",
+    thinking: "bg-teal-500/20 text-teal-400",
     working: "bg-slate-600/20 text-slate-300",
-    completed: "bg-pink-500/30 text-pink-300",
+    completed: "bg-teal-500/30 text-teal-300",
     error: "bg-slate-800/20 text-slate-500",
   };
 
@@ -42,7 +42,7 @@ export default function AgentCard({ agent, index }: AgentCardProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className="bg-slate-900/50 backdrop-blur-sm border border-pink-500/20 rounded-xl p-6 hover:border-pink-500/40 transition-all"
+      className="bg-slate-900/50 backdrop-blur-sm border border-teal-500/20 rounded-xl p-6 hover:border-teal-500/40 transition-all"
     >
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
@@ -70,7 +70,7 @@ export default function AgentCard({ agent, index }: AgentCardProps) {
                 initial={{ width: 0 }}
                 animate={{ width: `${agent.progress}%` }}
                 transition={{ duration: 0.5 }}
-                className="bg-gradient-to-r from-pink-500 to-pink-600 h-2 rounded-full"
+                className="bg-gradient-to-r from-teal-500 to-teal-600 h-2 rounded-full"
               />
             </div>
           )}
@@ -80,7 +80,7 @@ export default function AgentCard({ agent, index }: AgentCardProps) {
       {/* Confidence Score */}
       {agent.confidence !== undefined && (
         <div className="flex items-center gap-2">
-          <Zap className="w-4 h-4 text-pink-500" />
+          <Zap className="w-4 h-4 text-teal-500" />
           <span className="text-sm text-slate-400">Confidence:</span>
           <span className="text-sm font-semibold text-white">
             {(agent.confidence * 100).toFixed(0)}%

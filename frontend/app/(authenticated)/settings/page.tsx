@@ -25,7 +25,7 @@ export default function SettingsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-pink-500 to-pink-600 text-transparent bg-clip-text">
+          <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-teal-500 to-teal-600 text-transparent bg-clip-text">
             Settings
           </h1>
           <p className="text-slate-400 text-lg">Manage your account and preferences</p>
@@ -35,7 +35,7 @@ export default function SettingsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar Tabs */}
           <div className="lg:col-span-1">
-            <div className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-xl p-2">
+            <div className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-xl p-2">
               {tabs.map((tab) => {
                 const Icon = tab.icon;
                 return (
@@ -44,7 +44,7 @@ export default function SettingsPage() {
                     onClick={() => setActiveTab(tab.id)}
                     className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
                       activeTab === tab.id
-                        ? "bg-gradient-to-r from-pink-500 to-pink-600 text-white"
+                        ? "bg-gradient-to-r from-teal-500 to-teal-600 text-white"
                         : "text-slate-400 hover:text-white hover:bg-slate-800"
                     }`}
                   >
@@ -58,7 +58,7 @@ export default function SettingsPage() {
 
           {/* Content Area */}
           <div className="lg:col-span-3">
-            <div className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-xl p-8">
+            <div className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-xl p-8">
               {activeTab === "profile" && <ProfileSettings />}
               {activeTab === "notifications" && <NotificationSettings />}
               {activeTab === "security" && <SecuritySettings />}
@@ -87,7 +87,7 @@ function ProfileSettings() {
           <input
             type="text"
             defaultValue="John Doe"
-            className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-pink-500/50 focus:ring-2 focus:ring-pink-500/20"
+            className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/20"
           />
         </div>
         <div>
@@ -95,7 +95,7 @@ function ProfileSettings() {
           <input
             type="email"
             defaultValue="john@example.com"
-            className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-pink-500/50 focus:ring-2 focus:ring-pink-500/20"
+            className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/20"
           />
         </div>
         <div>
@@ -103,12 +103,12 @@ function ProfileSettings() {
           <input
             type="text"
             placeholder="Your company"
-            className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-pink-500/50 focus:ring-2 focus:ring-pink-500/20"
+            className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/20"
           />
         </div>
         <div>
           <label className="block text-sm font-medium mb-2">Industry</label>
-          <select className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-pink-500/50 focus:ring-2 focus:ring-pink-500/20">
+          <select className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/20">
             <option>Technology</option>
             <option>Finance</option>
             <option>Healthcare</option>
@@ -118,7 +118,7 @@ function ProfileSettings() {
         </div>
       </div>
 
-      <button className="px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl font-semibold hover:shadow-lg hover:shadow-pink-500/50 transition-all flex items-center gap-2">
+      <button className="px-6 py-3 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl font-semibold hover:shadow-lg hover:shadow-teal-500/50 transition-all flex items-center gap-2">
         <Save className="w-4 h-4" />
         Save Changes
       </button>
@@ -149,7 +149,7 @@ function NotificationSettings() {
             <input
               type="checkbox"
               defaultChecked
-              className="w-5 h-5 rounded border-slate-700 bg-slate-900 text-pink-500 focus:ring-pink-500/20"
+              className="w-5 h-5 rounded border-slate-700 bg-slate-900 text-teal-500 focus:ring-teal-500/20"
             />
           </div>
         ))}
@@ -169,7 +169,7 @@ function SecuritySettings() {
       <div className="space-y-4">
         <div className="p-4 bg-slate-800/50 rounded-xl">
           <h3 className="font-semibold mb-2">Change Password</h3>
-          <button className="px-4 py-2 bg-pink-500/20 border border-pink-500/30 rounded-lg text-pink-400 hover:bg-pink-500/30 transition-colors">
+          <button className="px-4 py-2 bg-teal-500/20 border border-teal-500/30 rounded-lg text-teal-400 hover:bg-teal-500/30 transition-colors">
             Update Password
           </button>
         </div>
@@ -177,7 +177,7 @@ function SecuritySettings() {
         <div className="p-4 bg-slate-800/50 rounded-xl">
           <h3 className="font-semibold mb-2">Two-Factor Authentication</h3>
           <p className="text-sm text-slate-400 mb-3">Add an extra layer of security to your account</p>
-          <button className="px-4 py-2 bg-pink-500/20 border border-pink-500/30 rounded-lg text-pink-400 hover:bg-pink-500/30 transition-colors">
+          <button className="px-4 py-2 bg-teal-500/20 border border-teal-500/30 rounded-lg text-teal-400 hover:bg-teal-500/30 transition-colors">
             Enable 2FA
           </button>
         </div>
@@ -194,13 +194,13 @@ function BillingSettings() {
         <p className="text-slate-400">Manage your subscription and billing</p>
       </div>
 
-      <div className="p-6 bg-gradient-to-r from-pink-500/10 to-pink-600/10 border border-pink-500/30 rounded-xl">
+      <div className="p-6 bg-gradient-to-r from-teal-500/10 to-teal-600/10 border border-teal-500/30 rounded-xl">
         <div className="flex items-center justify-between mb-4">
           <div>
             <h3 className="text-xl font-bold">Pro Plan</h3>
             <p className="text-slate-400">$49/month</p>
           </div>
-          <span className="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm font-semibold">
+          <span className="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-sm font-semibold">
             Active
           </span>
         </div>
@@ -221,7 +221,7 @@ function APISettings() {
         <p className="text-slate-400">Manage your API access tokens</p>
       </div>
 
-      <button className="px-4 py-2 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg font-semibold">
+      <button className="px-4 py-2 bg-gradient-to-r from-teal-500 to-teal-600 rounded-lg font-semibold">
         Generate New API Key
       </button>
 
@@ -243,7 +243,7 @@ function PreferencesSettings() {
       <div className="space-y-4">
         <div>
           <label className="block text-sm font-medium mb-2">Language</label>
-          <select className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-pink-500/50 focus:ring-2 focus:ring-pink-500/20">
+          <select className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/20">
             <option>English</option>
             <option>Spanish</option>
             <option>French</option>
@@ -253,7 +253,7 @@ function PreferencesSettings() {
 
         <div>
           <label className="block text-sm font-medium mb-2">Timezone</label>
-          <select className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-pink-500/50 focus:ring-2 focus:ring-pink-500/20">
+          <select className="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/20">
             <option>UTC-8 (Pacific Time)</option>
             <option>UTC-5 (Eastern Time)</option>
             <option>UTC+0 (GMT)</option>

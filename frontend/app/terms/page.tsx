@@ -105,7 +105,7 @@ export default function TermsPage() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" />
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" />
         <motion.div
           animate={{
             background: [
@@ -213,7 +213,7 @@ export default function TermsPage() {
                 <ul className="space-y-3">
                   {section.content.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start gap-3 text-slate-600 dark:text-slate-400">
-                      <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -268,7 +268,7 @@ export default function TermsPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center bg-gradient-to-r from-pink-500/10 to-purple-500/10 border border-teal-500/30 rounded-3xl p-12"
+            className="text-center bg-gradient-to-r from-teal-500/10 to-teal-500/10 border border-teal-500/30 rounded-3xl p-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Questions About These Terms?

@@ -85,13 +85,13 @@ export default function ActivityFeed({ maxItems = 50, autoScroll = true }: Activ
   const getColor = (type: Activity["type"]) => {
     switch (type) {
       case "thinking":
-        return "text-pink-400 bg-pink-500/10";
+        return "text-teal-400 bg-teal-500/10";
       case "action":
         return "text-slate-300 bg-slate-500/10";
       case "output":
         return "text-slate-400 bg-slate-600/10";
       case "success":
-        return "text-pink-300 bg-pink-500/20";
+        return "text-teal-300 bg-teal-500/20";
       case "warning":
         return "text-slate-500 bg-slate-700/20";
       default:
@@ -112,7 +112,7 @@ export default function ActivityFeed({ maxItems = 50, autoScroll = true }: Activ
   return (
     <div className="h-full flex flex-col">
       {/* Header */}
-      <div className="flex items-center justify-between mb-4 pb-4 border-b border-pink-500/20">
+      <div className="flex items-center justify-between mb-4 pb-4 border-b border-teal-500/20">
         <h2 className="text-xl font-bold text-white">Activity Feed</h2>
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
@@ -121,7 +121,7 @@ export default function ActivityFeed({ maxItems = 50, autoScroll = true }: Activ
       </div>
 
       {/* Activity List */}
-      <div className="flex-1 overflow-y-auto space-y-3 pr-2 scrollbar-thin scrollbar-thumb-pink-500/20 scrollbar-track-transparent">
+      <div className="flex-1 overflow-y-auto space-y-3 pr-2 scrollbar-thin scrollbar-thumb-teal-500/20 scrollbar-track-transparent">
         <AnimatePresence>
           {activities.map((activity, index) => {
             const Icon = getIcon(activity.type);
@@ -134,7 +134,7 @@ export default function ActivityFeed({ maxItems = 50, autoScroll = true }: Activ
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-slate-900/50 backdrop-blur-sm border border-pink-500/20 rounded-lg p-4 hover:border-pink-500/40 transition-all"
+                className="bg-slate-900/50 backdrop-blur-sm border border-teal-500/20 rounded-lg p-4 hover:border-teal-500/40 transition-all"
               >
                 <div className="flex items-start gap-3">
                   {/* Icon */}
@@ -145,7 +145,7 @@ export default function ActivityFeed({ maxItems = 50, autoScroll = true }: Activ
                   {/* Content */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-2 mb-1">
-                      <p className="text-sm font-semibold text-pink-400">
+                      <p className="text-sm font-semibold text-teal-400">
                         {activity.agent}
                       </p>
                       <span className="text-xs text-slate-500 whitespace-nowrap">
@@ -165,9 +165,9 @@ export default function ActivityFeed({ maxItems = 50, autoScroll = true }: Activ
       </div>
 
       {/* Footer Stats */}
-      <div className="mt-4 pt-4 border-t border-pink-500/20 flex items-center justify-between text-sm">
+      <div className="mt-4 pt-4 border-t border-teal-500/20 flex items-center justify-between text-sm">
         <span className="text-slate-400">{activities.length} events</span>
-        <button className="text-pink-400 hover:text-pink-300 transition-colors">
+        <button className="text-teal-400 hover:text-teal-300 transition-colors">
           Clear All
         </button>
       </div>

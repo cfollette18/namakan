@@ -139,7 +139,7 @@ export default function ProjectPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 flex items-center justify-center">
-        <div className="w-16 h-16 border-4 border-pink-500/30 border-t-pink-500 rounded-full animate-spin"></div>
+        <div className="w-16 h-16 border-4 border-teal-500/30 border-t-teal-500 rounded-full animate-spin"></div>
       </div>
     );
   }
@@ -155,7 +155,7 @@ export default function ProjectPage() {
         >
           <Link
             href="/dashboard"
-            className="inline-flex items-center gap-2 text-slate-400 hover:text-pink-400 transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-slate-400 hover:text-teal-400 transition-colors mb-4"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Dashboard
@@ -163,7 +163,7 @@ export default function ProjectPage() {
 
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-pink-500 to-pink-600 text-transparent bg-clip-text">
+              <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-teal-500 to-teal-600 text-transparent bg-clip-text">
                 {project.name}
               </h1>
               <p className="text-slate-400 text-lg mb-4">{project.description}</p>
@@ -172,7 +172,7 @@ export default function ProjectPage() {
               <div className="w-full max-w-2xl">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm text-slate-400">Overall Progress</span>
-                  <span className="text-sm font-semibold text-pink-400">
+                  <span className="text-sm font-semibold text-teal-400">
                     {project.progress}%
                   </span>
                 </div>
@@ -181,7 +181,7 @@ export default function ProjectPage() {
                     initial={{ width: 0 }}
                     animate={{ width: `${project.progress}%` }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="bg-gradient-to-r from-pink-500 to-pink-600 h-3 rounded-full"
+                    className="bg-gradient-to-r from-teal-500 to-teal-600 h-3 rounded-full"
                   />
                 </div>
               </div>
@@ -189,14 +189,14 @@ export default function ProjectPage() {
 
             {/* Actions */}
             <div className="flex gap-3">
-              <button className="p-3 bg-slate-900/50 border border-pink-500/30 rounded-xl hover:border-pink-500/50 transition-all">
-                <Share2 className="w-5 h-5 text-pink-400" />
+              <button className="p-3 bg-slate-900/50 border border-teal-500/30 rounded-xl hover:border-teal-500/50 transition-all">
+                <Share2 className="w-5 h-5 text-teal-400" />
               </button>
-              <button className="p-3 bg-slate-900/50 border border-pink-500/30 rounded-xl hover:border-pink-500/50 transition-all">
-                <Download className="w-5 h-5 text-pink-400" />
+              <button className="p-3 bg-slate-900/50 border border-teal-500/30 rounded-xl hover:border-teal-500/50 transition-all">
+                <Download className="w-5 h-5 text-teal-400" />
               </button>
-              <button className="p-3 bg-slate-900/50 border border-pink-500/30 rounded-xl hover:border-pink-500/50 transition-all">
-                <Settings className="w-5 h-5 text-pink-400" />
+              <button className="p-3 bg-slate-900/50 border border-teal-500/30 rounded-xl hover:border-teal-500/50 transition-all">
+                <Settings className="w-5 h-5 text-teal-400" />
               </button>
             </div>
           </div>
@@ -247,7 +247,7 @@ export default function ProjectPage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
-              className="sticky top-8 bg-slate-900/50 backdrop-blur-sm border border-pink-500/20 rounded-2xl p-6 h-[calc(100vh-8rem)]"
+              className="sticky top-8 bg-slate-900/50 backdrop-blur-sm border border-teal-500/20 rounded-2xl p-6 h-[calc(100vh-8rem)]"
             >
               <ActivityFeed />
             </motion.div>

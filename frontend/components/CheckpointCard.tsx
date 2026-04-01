@@ -29,9 +29,9 @@ export default function CheckpointCard({
   const statusConfig = {
     completed: {
       icon: CheckCircle,
-      color: "text-pink-400",
-      bg: "bg-pink-500/10",
-      border: "border-pink-500/30",
+      color: "text-teal-400",
+      bg: "bg-teal-500/10",
+      border: "border-teal-500/30",
     },
     pending: {
       icon: Clock,
@@ -90,7 +90,7 @@ export default function CheckpointCard({
               key={idx}
               className="flex items-center gap-2 text-sm text-slate-300"
             >
-              <ChevronRight className="w-4 h-4 text-pink-500" />
+              <ChevronRight className="w-4 h-4 text-teal-500" />
               {deliverable}
             </div>
           ))}
@@ -102,7 +102,7 @@ export default function CheckpointCard({
         <div className="flex gap-3">
           <button
             onClick={() => onApprove(checkpoint.id)}
-            className="flex-1 py-3 bg-gradient-to-r from-pink-500/20 to-pink-600/20 border border-pink-500/30 rounded-lg font-semibold text-pink-400 hover:from-pink-500 hover:to-pink-600 hover:text-white transition-all"
+            className="flex-1 py-3 bg-gradient-to-r from-teal-500/20 to-teal-600/20 border border-teal-500/30 rounded-lg font-semibold text-teal-400 hover:from-teal-500 hover:to-teal-600 hover:text-white transition-all"
           >
             Approve
           </button>

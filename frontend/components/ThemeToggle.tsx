@@ -26,7 +26,7 @@ export default function ThemeToggle() {
   // Don't render until mounted to prevent hydration mismatch
   if (!mounted) {
     return (
-      <div className="relative p-2 rounded-xl bg-slate-900/50 border border-pink-500/20">
+      <div className="relative p-2 rounded-xl bg-slate-900/50 border border-teal-500/20">
         <div className="w-5 h-5 flex items-center justify-center">
           <Moon className="w-5 h-5 text-slate-300" />
         </div>
@@ -39,7 +39,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="relative p-2 rounded-xl bg-slate-900/50 dark:bg-slate-900/50 border border-pink-500/20 hover:border-pink-500/40 transition-all group"
+      className="relative p-2 rounded-xl bg-slate-900/50 dark:bg-slate-900/50 border border-teal-500/20 hover:border-teal-500/40 transition-all group"
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >
       <div className="relative w-5 h-5">

@@ -74,7 +74,7 @@ export default function MarketplacePage() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-12"
         >
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-pink-500 to-pink-600 text-transparent bg-clip-text">
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-teal-500 to-teal-600 text-transparent bg-clip-text">
             Agent Marketplace
           </h1>
           <p className="text-slate-400 text-lg">
@@ -98,12 +98,12 @@ export default function MarketplacePage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyPress={(e) => e.key === "Enter" && handleSearch()}
-                className="w-full bg-slate-900/50 border border-pink-500/30 rounded-xl py-4 pl-12 pr-4 text-white placeholder-slate-500 focus:outline-none focus:border-pink-500/50 focus:ring-2 focus:ring-pink-500/20"
+                className="w-full bg-slate-900/50 border border-teal-500/30 rounded-xl py-4 pl-12 pr-4 text-white placeholder-slate-500 focus:outline-none focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/20"
               />
             </div>
             <button
               onClick={handleSearch}
-              className="px-8 py-4 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl font-semibold hover:from-pink-600 hover:to-pink-700 transition-all transform hover:scale-105"
+              className="px-8 py-4 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl font-semibold hover:from-teal-600 hover:to-teal-700 transition-all transform hover:scale-105"
             >
               Search
             </button>
@@ -124,7 +124,7 @@ export default function MarketplacePage() {
             }}
             className={`px-6 py-3 rounded-xl font-medium transition-all ${
               selectedCategory === null
-                ? "bg-pink-500 text-white"
+                ? "bg-teal-500 text-white"
                 : "bg-slate-900/50 text-slate-400 hover:bg-slate-800"
             }`}
           >
@@ -139,7 +139,7 @@ export default function MarketplacePage() {
               }}
               className={`px-6 py-3 rounded-xl font-medium transition-all flex items-center gap-2 ${
                 selectedCategory === category.id
-                  ? "bg-pink-500 text-white"
+                  ? "bg-teal-500 text-white"
                   : "bg-slate-900/50 text-slate-400 hover:bg-slate-800"
               }`}
             >
@@ -152,7 +152,7 @@ export default function MarketplacePage() {
         {/* Loading State */}
         {loading && (
           <div className="flex justify-center items-center py-20">
-            <div className="w-16 h-16 border-4 border-pink-500/30 border-t-pink-500 rounded-full animate-spin"></div>
+            <div className="w-16 h-16 border-4 border-teal-500/30 border-t-teal-500 rounded-full animate-spin"></div>
           </div>
         )}
 
@@ -170,16 +170,16 @@ export default function MarketplacePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-slate-900/50 backdrop-blur-sm border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all cursor-pointer group"
+                className="bg-slate-900/50 backdrop-blur-sm border border-teal-500/20 rounded-2xl p-6 hover:border-teal-500/40 transition-all cursor-pointer group"
               >
                 {/* Header */}
                 <div className="mb-4">
                   <div className="flex items-start justify-between mb-2">
-                    <h3 className="text-xl font-bold text-white group-hover:text-pink-400 transition-colors">
+                    <h3 className="text-xl font-bold text-white group-hover:text-teal-400 transition-colors">
                       {template.name}
                     </h3>
                     {template.is_free ? (
-                      <span className="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-xs font-semibold">
+                      <span className="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-xs font-semibold">
                         FREE
                       </span>
                     ) : (
@@ -196,7 +196,7 @@ export default function MarketplacePage() {
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mb-4">
                   <div className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-pink-500" />
+                    <Star className="w-4 h-4 text-teal-500" />
                     <span className="text-sm font-semibold">{template.avg_rating.toFixed(1)}</span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -204,7 +204,7 @@ export default function MarketplacePage() {
                     <span className="text-sm font-semibold">{template.usage_count}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-pink-400" />
+                    <Zap className="w-4 h-4 text-teal-400" />
                     <span className="text-sm font-semibold">{(template.success_rate * 100).toFixed(0)}%</span>
                   </div>
                 </div>
@@ -222,7 +222,7 @@ export default function MarketplacePage() {
                 </div>
 
                 {/* Action Button */}
-                <button className="w-full py-3 bg-gradient-to-r from-pink-500/20 to-pink-600/20 border border-pink-500/30 rounded-xl font-semibold text-pink-400 hover:from-pink-500 hover:to-pink-600 hover:text-white transition-all transform hover:scale-105">
+                <button className="w-full py-3 bg-gradient-to-r from-teal-500/20 to-teal-600/20 border border-teal-500/30 rounded-xl font-semibold text-teal-400 hover:from-teal-500 hover:to-teal-600 hover:text-white transition-all transform hover:scale-105">
                   Use Template
                 </button>
               </motion.div>
@@ -247,10 +247,10 @@ export default function MarketplacePage() {
           className="mt-16"
         >
           <div className="flex items-center gap-3 mb-6">
-            <TrendingUp className="w-6 h-6 text-pink-500" />
+            <TrendingUp className="w-6 h-6 text-teal-500" />
             <h2 className="text-3xl font-bold">Trending This Week</h2>
           </div>
-          <div className="bg-slate-900/30 border border-pink-500/20 rounded-2xl p-6">
+          <div className="bg-slate-900/30 border border-teal-500/20 rounded-2xl p-6">
             <p className="text-slate-400">
               Trending templates will appear here based on usage and ratings.
             </p>

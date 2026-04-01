@@ -268,7 +268,7 @@ export default function Dashboard() {
         >
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-pink-500 to-pink-600 text-transparent bg-clip-text">
+              <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-teal-500 to-teal-600 text-transparent bg-clip-text">
                 Dashboard
               </h2>
               <p className="text-slate-400 text-lg">
@@ -280,7 +280,7 @@ export default function Dashboard() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setShowCreateProject(true)}
-                className="px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl font-semibold shadow-lg shadow-pink-500/50 hover:shadow-pink-500/70 transition-all flex items-center gap-2"
+                className="px-6 py-3 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl font-semibold shadow-lg shadow-teal-500/50 hover:shadow-teal-500/70 transition-all flex items-center gap-2"
               >
                 <Plus className="w-5 h-5" />
                 New Project
@@ -296,7 +296,7 @@ export default function Dashboard() {
           transition={{ delay: 0.1 }}
           className="mb-8"
         >
-          <div className="flex flex-wrap gap-2 p-2 bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl">
+          <div className="flex flex-wrap gap-2 p-2 bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl">
             {tabs.map((tab) => {
               const Icon = tab.icon
               return (
@@ -305,7 +305,7 @@ export default function Dashboard() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex-1 min-w-0 px-4 py-3 rounded-xl font-medium transition-all flex items-center justify-center gap-2 ${
                     activeTab === tab.id
-                      ? 'bg-gradient-to-r from-pink-500 to-pink-600 text-white shadow-lg shadow-pink-500/30'
+                      ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white shadow-lg shadow-teal-500/30'
                       : 'text-slate-400 hover:text-white hover:bg-slate-800'
                   }`}
                 >
@@ -355,12 +355,12 @@ export default function Dashboard() {
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-slate-900/90 backdrop-blur border border-pink-500/20 rounded-2xl p-8 max-w-2xl w-full"
+            className="bg-slate-900/90 backdrop-blur border border-teal-500/20 rounded-2xl p-8 max-w-2xl w-full"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start gap-4 mb-6">
-              <div className="p-3 bg-pink-500/10 rounded-xl">
-                <Sparkles className="w-8 h-8 text-pink-500" />
+              <div className="p-3 bg-teal-500/10 rounded-xl">
+                <Sparkles className="w-8 h-8 text-teal-500" />
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-2">Create New Project</h3>
@@ -375,7 +375,7 @@ export default function Dashboard() {
                 value={projectDescription}
                 onChange={(e) => setProjectDescription(e.target.value)}
                 placeholder="e.g., 'Launch a SaaS product for freelance designers. I need market research, competitor analysis, positioning strategy, website copy, email sequences, social media content, and a launch plan. Timeline: 5 days.'"
-                className="w-full h-40 px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-xl focus:border-pink-500/50 focus:ring-2 focus:ring-pink-500/20 outline-none resize-none text-white placeholder:text-slate-500"
+                className="w-full h-40 px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-xl focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/20 outline-none resize-none text-white placeholder:text-slate-500"
               />
             </div>
 
@@ -391,7 +391,7 @@ export default function Dashboard() {
                 whileTap={{ scale: 0.98 }}
                 onClick={handleCreateProject}
                 disabled={!projectDescription.trim()}
-                className="px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl font-semibold shadow-lg shadow-pink-500/50 hover:shadow-pink-500/70 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-6 py-3 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl font-semibold shadow-lg shadow-teal-500/50 hover:shadow-teal-500/70 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 <Sparkles className="w-5 h-5" />
                 Create Agent Team
@@ -418,7 +418,7 @@ function OverviewTab({ metrics, projects, recentActivity, showCreateProject, set
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1 + index * 0.1 }}
-            className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all"
+            className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6 hover:border-teal-500/40 transition-all"
           >
             <div className="flex items-center justify-between mb-4">
               <span className="text-slate-400 text-sm font-medium">{metric.label}</span>
@@ -444,7 +444,7 @@ function OverviewTab({ metrics, projects, recentActivity, showCreateProject, set
           >
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold">Active Projects</h3>
-              <button className="text-pink-400 hover:text-pink-300 transition-colors flex items-center gap-2">
+              <button className="text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-2">
                 <Eye className="w-4 h-4" />
                 View All
               </button>
@@ -457,11 +457,11 @@ function OverviewTab({ metrics, projects, recentActivity, showCreateProject, set
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 + index * 0.1 }}
-                  className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all cursor-pointer group"
+                  className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6 hover:border-teal-500/40 transition-all cursor-pointer group"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h4 className="text-xl font-semibold mb-2 group-hover:text-pink-400 transition-colors">
+                      <h4 className="text-xl font-semibold mb-2 group-hover:text-teal-400 transition-colors">
                         {project.name}
                       </h4>
                       <div className="flex items-center gap-4 text-sm text-slate-400 mb-3">
@@ -480,7 +480,7 @@ function OverviewTab({ metrics, projects, recentActivity, showCreateProject, set
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-pink-400">{project.progress}%</div>
+                      <div className="text-2xl font-bold text-teal-400">{project.progress}%</div>
                       <div className="text-sm text-slate-500">Complete</div>
                     </div>
                   </div>
@@ -491,17 +491,17 @@ function OverviewTab({ metrics, projects, recentActivity, showCreateProject, set
                       initial={{ width: 0 }}
                       animate={{ width: `${project.progress}%` }}
                       transition={{ duration: 1, delay: index * 0.1 }}
-                      className="bg-gradient-to-r from-pink-500 to-pink-600 h-2 rounded-full"
+                      className="bg-gradient-to-r from-teal-500 to-teal-600 h-2 rounded-full"
                     />
                   </div>
 
                   {/* Actions */}
                   <div className="flex gap-2">
-                    <button className="flex-1 py-2 bg-slate-800 border border-slate-700 rounded-lg font-medium hover:bg-slate-700 hover:border-pink-500/50 transition-all flex items-center justify-center gap-2">
+                    <button className="flex-1 py-2 bg-slate-800 border border-slate-700 rounded-lg font-medium hover:bg-slate-700 hover:border-teal-500/50 transition-all flex items-center justify-center gap-2">
                       <Settings className="w-4 h-4" />
                       Manage
                     </button>
-                    <button className="flex-1 py-2 bg-pink-500/20 border border-pink-500/30 rounded-lg font-medium text-pink-400 hover:bg-pink-500/30 transition-all flex items-center justify-center gap-2">
+                    <button className="flex-1 py-2 bg-teal-500/20 border border-teal-500/30 rounded-lg font-medium text-teal-400 hover:bg-teal-500/30 transition-all flex items-center justify-center gap-2">
                       <Activity className="w-4 h-4" />
                       View Live
                     </button>
@@ -516,37 +516,37 @@ function OverviewTab({ metrics, projects, recentActivity, showCreateProject, set
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6"
+            className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6"
           >
             <h3 className="text-xl font-bold mb-4">Quick Actions</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <button className="p-4 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-pink-500/50 transition-all text-left group">
+              <button className="p-4 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-teal-500/50 transition-all text-left group">
                 <div className="flex items-center gap-3 mb-2">
-                  <BarChart3 className="w-5 h-5 text-pink-400 group-hover:text-pink-300" />
+                  <BarChart3 className="w-5 h-5 text-teal-400 group-hover:text-teal-300" />
                   <span className="font-semibold">View Analytics</span>
                 </div>
                 <p className="text-sm text-slate-400">Performance metrics and ROI tracking</p>
               </button>
 
-              <button className="p-4 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-pink-500/50 transition-all text-left group">
+              <button className="p-4 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-teal-500/50 transition-all text-left group">
                 <div className="flex items-center gap-3 mb-2">
-                  <Target className="w-5 h-5 text-pink-400 group-hover:text-pink-300" />
+                  <Target className="w-5 h-5 text-teal-400 group-hover:text-teal-300" />
                   <span className="font-semibold">Browse Templates</span>
                 </div>
                 <p className="text-sm text-slate-400">Pre-built agent configurations</p>
               </button>
 
-              <button className="p-4 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-pink-500/50 transition-all text-left group">
+              <button className="p-4 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-teal-500/50 transition-all text-left group">
                 <div className="flex items-center gap-3 mb-2">
-                  <Zap className="w-5 h-5 text-pink-400 group-hover:text-pink-300" />
+                  <Zap className="w-5 h-5 text-teal-400 group-hover:text-teal-300" />
                   <span className="font-semibold">API Usage</span>
                 </div>
                 <p className="text-sm text-slate-400">Monitor costs and usage limits</p>
               </button>
 
-              <button className="p-4 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-pink-500/50 transition-all text-left group">
+              <button className="p-4 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-teal-500/50 transition-all text-left group">
                 <div className="flex items-center gap-3 mb-2">
-                  <Settings className="w-5 h-5 text-pink-400 group-hover:text-pink-300" />
+                  <Settings className="w-5 h-5 text-teal-400 group-hover:text-teal-300" />
                   <span className="font-semibold">Settings</span>
                 </div>
                 <p className="text-sm text-slate-400">Configure preferences and limits</p>
@@ -562,10 +562,10 @@ function OverviewTab({ metrics, projects, recentActivity, showCreateProject, set
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6"
+            className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6"
           >
             <div className="flex items-center gap-3 mb-6">
-              <Activity className="w-5 h-5 text-pink-400" />
+              <Activity className="w-5 h-5 text-teal-400" />
               <h3 className="text-xl font-bold">Recent Activity</h3>
             </div>
 
@@ -578,7 +578,7 @@ function OverviewTab({ metrics, projects, recentActivity, showCreateProject, set
                   transition={{ delay: 0.4 + index * 0.1 }}
                   className="flex gap-3 p-3 bg-slate-800/30 rounded-lg hover:bg-slate-800/50 transition-all"
                 >
-                  <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-slate-200 truncate">
                       {activity.agentName}
@@ -594,7 +594,7 @@ function OverviewTab({ metrics, projects, recentActivity, showCreateProject, set
               ))}
             </div>
 
-            <button className="w-full mt-4 py-2 text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium flex items-center justify-center gap-2">
+            <button className="w-full mt-4 py-2 text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium flex items-center justify-center gap-2">
               View All Activity
               <ArrowRight className="w-4 h-4" />
             </button>
@@ -605,20 +605,20 @@ function OverviewTab({ metrics, projects, recentActivity, showCreateProject, set
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
-            className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6"
+            className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6"
           >
             <div className="flex items-center gap-3 mb-6">
-              <TrendingUp className="w-5 h-5 text-pink-400" />
+              <TrendingUp className="w-5 h-5 text-teal-400" />
               <h3 className="text-xl font-bold">Performance</h3>
             </div>
 
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-slate-400">Success Rate</span>
-                <span className="text-lg font-bold text-pink-400">94.2%</span>
+                <span className="text-lg font-bold text-teal-400">94.2%</span>
               </div>
               <div className="w-full bg-slate-800 rounded-full h-2">
-                <div className="bg-pink-500 h-2 rounded-full" style={{ width: '94.2%' }}></div>
+                <div className="bg-teal-500 h-2 rounded-full" style={{ width: '94.2%' }}></div>
               </div>
 
               <div className="flex items-center justify-between">
@@ -631,10 +631,10 @@ function OverviewTab({ metrics, projects, recentActivity, showCreateProject, set
 
               <div className="flex items-center justify-between">
                 <span className="text-sm text-slate-400">Cost Efficiency</span>
-                <span className="text-lg font-bold text-pink-400">87%</span>
+                <span className="text-lg font-bold text-teal-400">87%</span>
               </div>
               <div className="w-full bg-slate-800 rounded-full h-2">
-                <div className="bg-pink-500 h-2 rounded-full" style={{ width: '87%' }}></div>
+                <div className="bg-teal-500 h-2 rounded-full" style={{ width: '87%' }}></div>
               </div>
             </div>
           </motion.div>
@@ -656,7 +656,7 @@ function ProjectsTab({ projects }: any) {
             <option>Completed</option>
             <option>Paused</option>
           </select>
-          <button className="px-4 py-2 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl font-semibold">
+          <button className="px-4 py-2 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl font-semibold">
             + New Project
           </button>
         </div>
@@ -669,7 +669,7 @@ function ProjectsTab({ projects }: any) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all"
+            className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6 hover:border-teal-500/40 transition-all"
           >
             <div className="flex items-start justify-between mb-4">
               <div className="flex-1">
@@ -691,19 +691,19 @@ function ProjectsTab({ projects }: any) {
             </div>
 
             <div className="text-right mb-4">
-              <div className="text-2xl font-bold text-pink-400">{project.progress}%</div>
+              <div className="text-2xl font-bold text-teal-400">{project.progress}%</div>
               <div className="text-sm text-slate-500">Complete</div>
             </div>
 
             <div className="w-full bg-slate-800 rounded-full h-2 mb-4">
-              <div className="bg-gradient-to-r from-pink-500 to-pink-600 h-2 rounded-full" style={{ width: `${project.progress}%` }}></div>
+              <div className="bg-gradient-to-r from-teal-500 to-teal-600 h-2 rounded-full" style={{ width: `${project.progress}%` }}></div>
             </div>
 
             <div className="flex gap-2">
               <button className="flex-1 py-2 bg-slate-800 border border-slate-700 rounded-lg font-medium hover:bg-slate-700 transition-all">
                 View Details
               </button>
-              <button className="flex-1 py-2 bg-pink-500/20 border border-pink-500/30 rounded-lg font-medium text-pink-400 hover:bg-pink-500/30 transition-all">
+              <button className="flex-1 py-2 bg-teal-500/20 border border-teal-500/30 rounded-lg font-medium text-teal-400 hover:bg-teal-500/30 transition-all">
                 Manage
               </button>
             </div>
@@ -728,7 +728,7 @@ function TemplatesTab({ templates }: any) {
               className="pl-10 pr-4 py-2 bg-slate-900/50 border border-slate-700 rounded-xl text-white placeholder-slate-500"
             />
           </div>
-          <button className="px-4 py-2 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl font-semibold">
+          <button className="px-4 py-2 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl font-semibold">
             Create Custom
           </button>
         </div>
@@ -741,7 +741,7 @@ function TemplatesTab({ templates }: any) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all"
+            className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6 hover:border-teal-500/40 transition-all"
           >
             <div className="flex items-start justify-between mb-4">
               <div>
@@ -749,7 +749,7 @@ function TemplatesTab({ templates }: any) {
                 <p className="text-sm text-slate-400">{template.category}</p>
               </div>
               {template.isCustom && (
-                <span className="px-2 py-1 bg-pink-500/20 text-pink-400 text-xs rounded-full">
+                <span className="px-2 py-1 bg-teal-500/20 text-teal-400 text-xs rounded-full">
                   Custom
                 </span>
               )}
@@ -778,7 +778,7 @@ function TemplatesTab({ templates }: any) {
               </div>
             </div>
 
-            <button className="w-full py-3 bg-gradient-to-r from-pink-500/20 to-pink-600/20 border border-pink-500/30 rounded-xl font-semibold text-pink-400 hover:from-pink-500 hover:to-pink-600 hover:text-white transition-all">
+            <button className="w-full py-3 bg-gradient-to-r from-teal-500/20 to-teal-600/20 border border-teal-500/30 rounded-xl font-semibold text-teal-400 hover:from-teal-500 hover:to-teal-600 hover:text-white transition-all">
               Use Template
             </button>
           </motion.div>
@@ -806,15 +806,15 @@ function AnalyticsTab({ analytics }: any) {
   return (
     <div className="space-y-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6">
+        <div className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6">
           <div className="flex items-center gap-3 mb-4">
-            <Briefcase className="w-6 h-6 text-pink-400" />
+            <Briefcase className="w-6 h-6 text-teal-400" />
             <span className="text-slate-400 text-sm">Total Projects</span>
           </div>
           <div className="text-3xl font-bold">{analytics.totalProjects}</div>
         </div>
 
-        <div className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6">
+        <div className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6">
           <div className="flex items-center gap-3 mb-4">
             <Activity className="w-6 h-6 text-green-400" />
             <span className="text-slate-400 text-sm">Active Projects</span>
@@ -822,7 +822,7 @@ function AnalyticsTab({ analytics }: any) {
           <div className="text-3xl font-bold">{analytics.activeProjects}</div>
         </div>
 
-        <div className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6">
+        <div className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6">
           <div className="flex items-center gap-3 mb-4">
             <CheckCircle className="w-6 h-6 text-blue-400" />
             <span className="text-slate-400 text-sm">Completed</span>
@@ -830,7 +830,7 @@ function AnalyticsTab({ analytics }: any) {
           <div className="text-3xl font-bold">{analytics.completedProjects}</div>
         </div>
 
-        <div className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6">
+        <div className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6">
           <div className="flex items-center gap-3 mb-4">
             <Zap className="w-6 h-6 text-yellow-400" />
             <span className="text-slate-400 text-sm">Agent Hours</span>
@@ -840,7 +840,7 @@ function AnalyticsTab({ analytics }: any) {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6">
+        <div className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6">
           <h3 className="text-xl font-bold mb-6">Project Categories</h3>
           <div className="space-y-4">
             {analytics.topCategories.map((category: any, index: number) => (
@@ -849,7 +849,7 @@ function AnalyticsTab({ analytics }: any) {
                 <div className="flex items-center gap-2">
                   <div className="w-24 bg-slate-800 rounded-full h-2">
                     <div
-                      className="bg-pink-500 h-2 rounded-full"
+                      className="bg-teal-500 h-2 rounded-full"
                       style={{ width: `${category.percentage}%` }}
                     ></div>
                   </div>
@@ -860,16 +860,16 @@ function AnalyticsTab({ analytics }: any) {
           </div>
         </div>
 
-        <div className="bg-slate-900/50 backdrop-blur border border-pink-500/20 rounded-2xl p-6">
+        <div className="bg-slate-900/50 backdrop-blur border border-teal-500/20 rounded-2xl p-6">
           <h3 className="text-xl font-bold mb-6">Performance Metrics</h3>
           <div className="space-y-6">
             <div>
               <div className="flex justify-between mb-2">
                 <span className="text-slate-400">Success Rate</span>
-                <span className="text-pink-400 font-semibold">{analytics.successRate}%</span>
+                <span className="text-teal-400 font-semibold">{analytics.successRate}%</span>
               </div>
               <div className="w-full bg-slate-800 rounded-full h-2">
-                <div className="bg-pink-500 h-2 rounded-full" style={{ width: `${analytics.successRate}%` }}></div>
+                <div className="bg-teal-500 h-2 rounded-full" style={{ width: `${analytics.successRate}%` }}></div>
               </div>
             </div>
 
@@ -883,10 +883,10 @@ function AnalyticsTab({ analytics }: any) {
             <div>
               <div className="flex justify-between mb-2">
                 <span className="text-slate-400">Cost Efficiency</span>
-                <span className="text-pink-400 font-semibold">{analytics.costEfficiency}%</span>
+                <span className="text-teal-400 font-semibold">{analytics.costEfficiency}%</span>
               </div>
               <div className="w-full bg-slate-800 rounded-full h-2">
-                <div className="bg-pink-500 h-2 rounded-full" style={{ width: `${analytics.costEfficiency}%` }}></div>
+                <div className="bg-teal-500 h-2 rounded-full" style={{ width: `${analytics.costEfficiency}%` }}></div>
               </div>
             </div>
 
@@ -912,7 +912,7 @@ function TeamTab() {
         <p className="text-slate-400">
           Invite team members and manage collaborative projects
         </p>
-        <button className="mt-6 px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl font-semibold">
+        <button className="mt-6 px-6 py-3 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl font-semibold">
           Invite Team Members
         </button>
       </div>
