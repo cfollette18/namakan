@@ -1,9 +1,12 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
+from passlib.context import CryptContext
 from app.db.models import User as UserModel
 import structlog
 
 logger = structlog.get_logger()
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 router = APIRouter()
 
@@ -11,6 +14,7 @@ router = APIRouter()
 class UserCreate(BaseModel):
     email: str
     name: str
+    password: str
 
 
 class UserResponse(BaseModel):
@@ -29,7 +33,7 @@ async def create_user(user: UserCreate):
         new_user = await UserModel.create(
             email=user.email,
             fullName=user.name,
-            hashedPassword="",  # TODO: hash before storing
+            hashedPassword=pwd_context.hash(user.password),
         )
         return UserResponse(id=new_user.id, email=new_user.email, name=new_user.fullName or user.name)
     except HTTPException:
