@@ -109,7 +109,7 @@ Generic AI tools fail because they're generic. Your business has proprietary dat
 
 **Namakan AI**
 - **Location:** Blaine, MN | Serving clients nationwide
-- **Email:** teams@namakan.ai
+- **Email:** hello@namakan.ai
 - **Web:** www.namakan.ai
 
 ---
