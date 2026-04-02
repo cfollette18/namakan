@@ -1,6 +1,6 @@
-# Namakan AI Consulting — Launch Checklist
+# Namakan AI Engineering — Launch Checklist
 
-_Consolidated action items to take Namakan AI Consulting from formation to first revenue._
+_Consolidated action items to take Namakan AI Engineering from formation to first revenue._
 
 ---
 
@@ -12,7 +12,7 @@ LLC formation is paused per Clint's direction. Filing can resume once business b
 
 ### Action Required:
 1. Go to [MN Secretary of State Business Portal](https://mblsportal.sos.mn.us/)
-2. Search for "Namakan AI Consulting" to confirm name availability
+2. Search for "Namakan AI Engineering" to confirm name availability
 3. File **Articles of Organization** (Minnesota Statutes Chapter 322B)
    - Fee: $100 (online) / $110 (paper)
    - Processing: 3–5 business days online
