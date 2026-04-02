@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://namakan.ai/sitemap.xml
+Sitemap: https://namakanai.com/sitemap.xml

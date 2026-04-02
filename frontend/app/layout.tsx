@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Namakan AI Engineering',
     description: 'We build custom AI systems for businesses with proprietary data — fine-tuned models, RAG pipelines, and agentic workflows trained on YOUR data.',
-    url: 'https://namakan.ai',
+    url: 'https://namakanai.com',
     siteName: 'Namakan AI Engineering',
     locale: 'en_US',
     type: 'website',
