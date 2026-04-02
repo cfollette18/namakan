@@ -3,10 +3,10 @@ from typing import List
 
 class Settings(BaseSettings):
     # Database
-    DATABASE_URL: str = "postgresql://namakan_user:namakan_password@localhost:5432/namakan_dev"
+    DATABASE_URL: str = ""
     
     # Redis
-    REDIS_URL: str = "redis://localhost:6379"
+    REDIS_URL: str = ""
     
     # API Keys
     ANTHROPIC_API_KEY: str = ""
@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     PYTHON_ENV: str = "development"
     
     # JWT & Security
-    JWT_SECRET: str = "your_jwt_secret_here"
+    JWT_SECRET: str = ""
     JWT_ALGORITHM: str = "HS256"
     
     # CORS
