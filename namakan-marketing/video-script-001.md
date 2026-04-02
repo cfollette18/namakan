@@ -88,7 +88,7 @@
 
 **[Text appears]**
 
-> namakan.ai
+> namakanai.com
 
 > Talk to us.
 
@@ -117,7 +117,7 @@ Custom AI employees — full-time workers trained on your business.
 
 Stop guessing. Start knowing.
 
-namakan.ai — Talk to us.
+namakanai.com — Talk to us.
 ```
 
 ---
@@ -131,7 +131,7 @@ namakan.ai — Talk to us.
 0:03 — Generic chat making mistakes (red X)
 0:07 — Namakan getting it right (green ✓)
 0:10 — "We fix that." (text)
-0:12 — Logo + "namakan.ai"
+0:12 — Logo + "namakanai.com"
 0:15 — Loop
 ```
 
