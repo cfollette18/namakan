@@ -151,7 +151,7 @@ Across manufacturing, healthcare, and financial services companies that have mov
 
 The pattern: generic AI tools give you 10–20% improvement. Custom AI built on your data gives you 60–80%.
 
-I've attached a one-page framework we use with clients to evaluate custom AI opportunities — not a sales document, just something that helps leaders think through where to start.
+I've attached (or can send as a PDF) a one-page framework we use with clients to evaluate custom AI opportunities — not a sales document, just something that helps leaders think through where to start. Happy to send it over.
 
 If anything in there is useful, or if you've already been evaluating custom AI options, I'm happy to continue the conversation. If not — I won't keep reaching out.
 
@@ -162,7 +162,7 @@ Thanks for your time either way.
 Namakan AI Engineering  
 [Your Phone]
 
-*Attachment: Custom AI Opportunity Framework (PDF or link to one-pager)*
+*Attachment: Custom AI Opportunity Framework — see `namakan-sales/CUSTOM-AI-OPPORTUNITY-FRAMEWORK.md` (export to PDF before sending, or host at namakanai.com/framework)*
 
 ---
 
