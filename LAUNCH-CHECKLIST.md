@@ -280,7 +280,7 @@ Week 4:
 
 ---
 
-*Document prepared: March 2026 | Last reviewed: April 1, 2026*
+*Document prepared: March 2026 | Last reviewed: April 2, 2026*
 *For Clint Follette — Namakan AI Engineering, LLC*
 
-> **LLC Status (as of Apr 1, 2026):** Filing on hold per Clint's direction — prioritizing business building first. Legal templates (MSA, NDA, SOW, Operating Agreement) are complete and ready in `namakan-legal/`. Filing can resume when ready.
+> **LLC Status (as of Apr 2, 2026):** Filing on hold per Clint's direction — prioritizing business building first. Legal templates (MSA, NDA, SOW, Operating Agreement) are complete and ready in `namakan-legal/`. Filing can resume when ready.
