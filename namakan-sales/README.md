@@ -7,6 +7,7 @@ Cold outreach, prospect tracking, and sales execution for Namakan AI Engineering
 | File | Purpose |
 |------|---------|
 | `COLD-EMAIL-SEQUENCE.md` | 5-email outreach sequence with templates |
+| `CUSTOM-AI-OPPORTUNITY-FRAMEWORK.md` | Leave-behand PDF framework for Email 4 — opportunity scoring, pipeline comparisons, discovery questions |
 | `LINKEDIN-OUTREACH.md` | LinkedIn connection and message templates |
 | `OBJECTION-HANDLING.md` | Common objections + responses |
 | `QUALIFICATION-CHECKLIST.md` | BANT qualification criteria |
