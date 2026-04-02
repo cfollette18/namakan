@@ -42,7 +42,7 @@ Clint
 Clint Follette
 Namakan — Custom AI Engineering
 📞 612-867-2860
-📧 clint@namakanai.com
+📧 clint@namakan.ai
 
 ---
 
@@ -80,7 +80,7 @@ Clint
 Clint Follette
 Namakan — Custom AI Engineering
 📞 612-867-2860
-📧 clint@namakanai.com
+📧 clint@namakan.ai
 
 ---
 
@@ -118,4 +118,4 @@ Clint
 Clint Follette
 Namakan — Custom AI Engineering
 📞 612-867-2860
-📧 clint@namakanai.com
+📧 clint@namakan.ai
