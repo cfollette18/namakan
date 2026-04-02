@@ -7,8 +7,8 @@ services:
     container_name: namakan_postgres
     environment:
       POSTGRES_DB: namakan_dev
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: namakan_user
+      POSTGRES_PASSWORD: namakan_password
     ports:
       - "5432:5432"
     volumes:
