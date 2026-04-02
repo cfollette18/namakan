@@ -303,8 +303,8 @@ We don't sell you an AI tool. We engineer an AI system for your business.
 ## Contact
 
 - **Location:** Blaine, MN | Serving clients nationwide
-- **Email:** [contact@namakan.ai]
-- **Web:** www.namakan.ai
+- **Email:** hello@namakan.ai
+- **Web:** namakanai.com
 
 ---
 
