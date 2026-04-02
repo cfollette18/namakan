@@ -354,7 +354,7 @@ AZURE_STORAGE_CONNECTION_STRING=your_connection_string
 
 # Security
 SECRET_KEY=your_secret_key_here
-ALLOWED_ORIGINS=https://namakan.ai,https://www.namakan.ai
+ALLOWED_ORIGINS=https://namakanai.com,https://www.namakanai.com,https://namakan.ai,https://www.namakan.ai
 
 # Monitoring
 APPLICATION_INSIGHTS_KEY=your_app_insights_key
