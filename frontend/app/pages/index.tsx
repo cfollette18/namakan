@@ -1,4 +1,8 @@
-import { Header, Footer } from '../../components/Header'
+import { Nav, Footer, Hero, ProductCard } from '../../components'
+import { ContactModal } from '../../components/ContactModal'
+import { FineTuningSection } from '../../components/FineTuningSection'
+import { Reveal } from '../../components/Reveal'
+import { WorkflowGraphic } from '../../components/WorkflowGraphic'
 
 export default function Home() {
   const products = [
@@ -7,7 +11,7 @@ export default function Home() {
       title: 'AI trained on YOUR data',
       description: "Generic AI doesn't know your business. We train AI models on your contracts, policies, and knowledge. It learns your voice. Your rules. Your domain.",
       features: ['Trained on your documents', 'Knows your brand voice', 'Cites your sources', '40-60% accuracy improvement'],
-      price: 'Starting at $10K per project'
+      price: 'Starting at $5K–$15K'
     },
     {
       tag: 'RAG Pipelines',
@@ -25,86 +29,150 @@ export default function Home() {
     },
     {
       tag: 'Custom AI Employees',
-      title: 'A full-time worker that never sleeps',
-      description: "AI that actually does the work. Researches leads, drafts emails, updates your CRM, schedules follow-ups. It's an employee that works 24/7.",
+      title: 'AI that NEVER sleeps',
+      description: 'Runs around the clock on repeatable work. Researches leads, drafts emails, updates your CRM, and keeps follow-ups moving without constant human input.',
       features: ['Handles repetitive tasks', 'Integrates with your tools', 'Reports productivity metrics', '20+ hours saved per week'],
       price: 'Starting at $2K/mo per employee'
     }
   ]
+  const ragSources = [
+    'washdown_warranty_policy_v3.pdf',
+    'forged_valve_lot_trace_may.csv',
+    'qa_containment_playbook.docx',
+    'field_failures_q2_2026.xlsx'
+  ]
+
+  const employeeTimeline = [
+    '08:42 AM — Reviewed three new field failure tickets from distributor accounts',
+    '08:47 AM — Matched two incidents to the pre-May die-set lot trace',
+    '08:51 AM — Drafted plant-floor replacement updates for customer service',
+    '08:56 AM — Escalated one washdown-line case to QA and operations'
+  ]
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      <Nav />
+      <Hero />
+      <FineTuningSection />
 
-      {/* Hero Section */}
-      <section className="hero">
-        <h1 className="hero-headline">Your AI has no idea who your customers are.</h1>
-        <p className="hero-subtext">We fix that.</p>
-
-        <div className="comparison">
-          {/* Generic AI */}
-          <div className="card card-generic">
-            <div className="card-label card-label-generic">Generic AI</div>
-            <div className="chat">
-              <div className="bubble bubble-user">What&apos;s our return policy for enterprise clients?</div>
-              <div className="bubble bubble-ai-generic">Our standard enterprise return policy typically follows industry norms of 30-90 days. We aim to accommodate all customer needs on a case-by-case basis.</div>
-            </div>
-            <div className="status-list">
-              <div className="status status-error">✗ No company data</div>
-              <div className="status status-error">✗ Generic response</div>
-              <div className="status status-error">✗ No citations</div>
-            </div>
-            <div className="source">Source: Unknown</div>
+      <section className="section section-rag">
+        <Reveal className="graphic-card graphic-card-wide">
+          <div className="graphic-copy">
+            <span className="graphic-eyebrow">RAG pipeline</span>
+            <h3 className="graphic-title">Private retrieval before the answer is written</h3>
+            <p className="graphic-description">
+              For [Client], retrieval means searching warranty rules, lot traces, and QA procedures
+              before anyone answers a field-failure question.
+            </p>
           </div>
 
-          {/* Namakan */}
-          <div className="card card-namakan">
-            <div className="card-label card-label-namakan">Namakan</div>
-            <div className="chat">
-              <div className="bubble bubble-user">What&apos;s our return policy for enterprise clients?</div>
-              <div className="bubble bubble-ai-namakan">Based on your Contract Template v2.3 Section 4.2: Enterprise clients receive a 2-week acceptance period, followed by 90-day warranty. After warranty, credits are issued at management discretion.</div>
+          <div className="rag-graphic">
+            <div className="rag-docs">
+              {ragSources.map((source) => (
+                <div key={source} className="rag-doc">
+                  <span className="rag-doc-check">✓</span>
+                  <span>{source}</span>
+                </div>
+              ))}
             </div>
-            <div className="status-list">
-              <div className="status status-success">✓ From Contract v2.3</div>
-              <div className="status status-success">✓ Exact policy cited</div>
-              <div className="status status-success">✓ Your brand voice</div>
-            </div>
-            <div className="source source-namakan">Source: Your Knowledge Base</div>
-          </div>
-        </div>
 
-        <div className="cta-wrapper">
-          <button className="cta">Talk to Us →</button>
+            <div className="rag-answer">
+              <div className="rag-answer-badge">Retrieved from 847 documents</div>
+              <div className="rag-answer-question">Which lots are eligible for same-day replacement under the washdown warranty?</div>
+              <div className="rag-answer-body">
+                Based on the warranty policy, lot-trace file, and field-failure history: only the post-rework
+                lots tagged for washdown environments qualify for immediate replacement, while pre-May die-set
+                inventory requires QA hold and containment review before release.
+              </div>
+              <div className="rag-answer-meta">
+                <span>Vector match: 0.94</span>
+                <span>Chunks retrieved: 12</span>
+                <span>Sources verified: 3</span>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="section section-automation">
+        <Reveal className="section-copy automation-copy">
+          <span className="section-kicker">Agentic execution</span>
+          <h2 className="section-title section-title-left">Workflows and AI employees belong in their own operating layer.</h2>
+          <p className="section-description">
+            Once the model and retrieval stack are right, Namakan can turn that intelligence into systems that
+            execute tasks, move work across tools, and keep humans focused on the highest-risk decisions.
+          </p>
+        </Reveal>
+
+        <div className="automation-grid">
+          <Reveal className="graphic-card graphic-card-automation" delay={0.08}>
+            <div className="graphic-copy">
+              <span className="graphic-eyebrow">Agentic workflow</span>
+              <h3 className="graphic-title">A workflow that can do the task, not just describe it</h3>
+              <p className="graphic-description">
+                Here the workflow is built around a manufacturing incident: triage the failure, validate the
+                lot, draft the response, and move ops forward without losing control of risk.
+              </p>
+            </div>
+
+            <WorkflowGraphic />
+          </Reveal>
+
+          <Reveal className="graphic-card graphic-card-automation" delay={0.14}>
+            <div className="graphic-copy">
+              <span className="graphic-eyebrow">AI employee</span>
+              <h3 className="graphic-title">A task-running system with throughput and accountability</h3>
+              <p className="graphic-description">
+                The AI employee example is also manufacturing-specific: processing field failures, preparing
+                replacement comms, and handing only the highest-risk issues to the team.
+              </p>
+            </div>
+
+            <div className="employee-graphic">
+              <div className="employee-topline">
+                <div>
+                  <span className="employee-name">[Client] Service Ops AI</span>
+                  <span className="employee-status">Active</span>
+                </div>
+                <div className="employee-metrics">
+                  <span>17 incident tasks today</span>
+                  <span>5.8 hours saved</span>
+                </div>
+              </div>
+
+              <div className="employee-timeline">
+                {employeeTimeline.map((entry) => (
+                  <div key={entry} className="employee-timeline-item">
+                    <span className="employee-timeline-dot" />
+                    <span>{entry}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Products Section */}
       <section className="section">
-        <h2 className="section-title">Four ways we help companies stop losing to generic AI</h2>
-        <div className="products-grid">
+        <Reveal>
+          <h2 className="section-title">Four systems we build after the model foundation is right</h2>
+        </Reveal>
+        <Reveal className="products-grid" delay={0.08}>
           {products.map((product, index) => (
-            <div key={index} className="product-card">
-              <span className="product-tag">{product.tag}</span>
-              <h3 className="product-title">{product.title}</h3>
-              <p className="product-desc">{product.description}</p>
-              <div className="product-features">
-                {product.features.map((feature, i) => (
-                  <div key={i} className="product-feature">
-                    <span className="product-feature-check">✓</span>
-                    <span>{feature}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="product-price">{product.price}</div>
-            </div>
+            <ProductCard key={index} {...product} />
           ))}
-        </div>
+        </Reveal>
       </section>
 
       {/* CTA Section */}
       <section className="cta-section">
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '24px' }}>Stop guessing. Start knowing.</h2>
-        <button className="cta">Talk to Us →</button>
+        <Reveal>
+          <h2>Stop guessing. Start knowing.</h2>
+        </Reveal>
+        <Reveal delay={0.08}>
+          <ContactModal className="cta" />
+        </Reveal>
       </section>
 
       <Footer />
