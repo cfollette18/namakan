@@ -7,7 +7,6 @@ Business strategy, pricing, and operational planning for Namakan AI Engineering.
 | File | Purpose |
 |------|---------|
 | `BUSINESS-PLAN.md` | Full business plan with market analysis, strategy, financials |
-| `BUSINESS_MODEL.md` | Business model canvas — value prop, revenue, costs, channels |
 | `service-offerings.md` | Detailed service descriptions and pricing tiers |
 | `pricing_section.md` | Project-based pricing ($5K–$15K build, $2K/mo retainer) |
 | `30-60-90-day-plan.md` | Startup execution plan |
@@ -17,7 +16,8 @@ Business strategy, pricing, and operational planning for Namakan AI Engineering.
 | File | Reason |
 |------|--------|
 | `ARCHIVED-business-plan-old-SMB.md` | Old SMB positioning — superseded by BUSINESS-PLAN.md |
-| `ARCHIVED-business-model-canvas-old.md` | Older canvas format — superseded by BUSINESS_MODEL.md |
+| `ARCHIVED-business-model-canvas-old.md` | Older canvas format |
+| `ARCHIVED-business-model-old.md` | Usage-based SaaS platform model — wrong positioning for custom AI engineering firm |
 
 ## Key Business Facts
 
