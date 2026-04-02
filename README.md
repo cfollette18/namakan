@@ -110,7 +110,7 @@ Generic AI tools fail because they're generic. Your business has proprietary dat
 **Namakan AI**
 - **Location:** Blaine, MN | Serving clients nationwide
 - **Email:** hello@namakan.ai
-- **Web:** www.namakan.ai
+- **Web:** namakanai.com
 
 ---
 
@@ -128,4 +128,4 @@ All Namakan AI work lives in subdirectories:
 
 *"We fine-tune AI for businesses. Any size."*
 
-Namakan AI — Fine-Tuning & Custom Agents
+Namakan AI — Fine-Tuning & Custom Agents | namakanai.com
