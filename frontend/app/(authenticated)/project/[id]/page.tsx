@@ -127,13 +127,13 @@ export default function ProjectPage() {
   };
 
   const handleApprove = (checkpointId: string) => {
-    console.log("Approved checkpoint:", checkpointId);
-    // In production, send approval to API
+    // TODO: POST /api/projects/:id/checkpoints/:checkpointId/approve
+    void checkpointId;
   };
 
   const handleRevise = (checkpointId: string) => {
-    console.log("Revision requested for checkpoint:", checkpointId);
-    // In production, send revision request to API
+    // TODO: POST /api/projects/:id/checkpoints/:checkpointId/revise
+    void checkpointId;
   };
 
   if (loading) {
