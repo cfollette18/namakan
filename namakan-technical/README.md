@@ -40,9 +40,11 @@ namakan-technical/
 
 **Key files:**
 - `PIPELINE.md` (17K chars) — full engagement guide
+- `workflows/intake.py` — prospect intake and data assessment
 - `workflows/data_pipeline.py` — PII redaction, cleaning, formatting
 - `workflows/training_pipeline.py` — LoRA/QLoRA training
 - `workflows/evaluation_pipeline.py` — perplexity, accuracy, red teaming
+- `workflows/evaluate.py` — per-run evaluation harness
 - `workflows/deployment_pipeline.py` — Ollama, vLLM, FastAPI
 - `colab/namakan-reusable-finetune.ipynb` — universal training notebook
 
@@ -57,8 +59,10 @@ namakan-technical/
 
 **Key files:**
 - `PIPELINE.md` (10K chars) — full engagement guide
+- `workflows/intake.py` — client data intake and validation
 - `workflows/ingestion_pipeline.py` — extract, chunk, embed, index
 - `workflows/retrieval_pipeline.py` — query, retrieve, re-rank, generate
+- `workflows/evaluate.py` — retrieval accuracy evaluation
 
 ### 3. Agentic Workflows ($5K–$15K)
 **ReAct autonomous agents with custom tools**
@@ -86,6 +90,9 @@ namakan-technical/
 
 **Key files:**
 - `PIPELINE.md` (14K chars) — full engagement guide
+- `workflows/intake.py` — prospect intake and qualification
+- `workflows/onboarding.py` — onboarding workflow (Shadow → Assist → Partial → Full)
+- `workflows/monitor.py` — KPI tracking, alerting, and retraining triggers
 
 ---
 
