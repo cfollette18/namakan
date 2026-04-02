@@ -170,4 +170,4 @@
 
 ---
 
-*Namakan AI Consulting — Qualification Checklist*
+*Namakan AI Engineering — Qualification Checklist*
