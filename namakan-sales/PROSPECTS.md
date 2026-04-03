@@ -76,6 +76,7 @@ This tool generates emails but does NOT send them. Use:
 - [ ] Identify their proprietary data assets
 - [ ] Personalize the subject line to THEM
 - [ ] No typos. Every sentence feels written for THEM.
+- [ ] For Email 4: attach or link to `CUSTOM-AI-OPPORTUNITY-FRAMEWORK.md` — export as PDF or host at namakanai.com/framework
 
 ## Success Metrics
 
