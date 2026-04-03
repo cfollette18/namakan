@@ -63,7 +63,7 @@ The n8n workflow handles:
 
 ### 1. Import Workflow
 
-In n8n (http://heater.local:5678):
+In n8n (http://localhost:5678):
 1. Click **Templates**
 2. **Import from JSON**
 3. Select `n8n-workflow-production.json`

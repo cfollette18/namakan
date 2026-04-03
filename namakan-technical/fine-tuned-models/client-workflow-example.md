@@ -251,7 +251,7 @@ POST https://api.acme.com/ai/support
 |------|------|
 | Initial training (847 records) | $2,500 |
 | Colab (free or $10/mo Pro) | $0-10 |
-| n8n hosting (heater.local) | $0 |
+| n8n hosting (self-hosted) | $0 |
 | Model deployment (local Ollama) | $0 |
 | Monthly API hosting (if used) | $200/mo |
 | Quarterly retraining | $500/quarter |

@@ -29,7 +29,7 @@ This document describes the complete fine-tuning pipeline from data extraction t
                             │
                             ▼
 ┌─────────────────────────────────────────────────────────────────────────┐
-│  n8n AUTOMATION (heater.local:5678)                                   │
+│  n8n AUTOMATION (localhost:5678)                                   │
 │                                                                         │
 │  1. Pull data from all sources                                         │
 │  2. Combine and deduplicate                                            │
@@ -187,7 +187,7 @@ export GOOGLE_APPLICATION_CREDENTIALS=/path/to/credentials.json
 
 ### Manual Trigger (n8n)
 
-1. Open n8n: http://heater.local:5678
+1. Open n8n: http://localhost:5678
 2. Open "Namakan Fine-Tuning Pipeline"
 3. Click "Test Workflow" on Manual Trigger
 4. Enter client configuration:

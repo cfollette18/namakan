@@ -120,7 +120,7 @@ Google Drive:
 
 ### Step 2.1: n8n Workflow Setup (Day 5-7)
 
-**Where:** Clint sets up in n8n at http://heater.local:5678
+**Where:** Clint sets up in n8n at http://localhost:5678
 
 **Acme's data sources in n8n:**
 
@@ -475,7 +475,7 @@ Process:
 | Stage | Data Location | Who Has Access |
 |-------|---------------|----------------|
 | Credentials shared | Acme's systems | Only Acme |
-| Data pulled | n8n (heater.local) | Clint only |
+| Data pulled | n8n (localhost) | Clint only |
 | Raw data | Google Drive (Namakan folder) | Clint only |
 | Cleaned data | Google Drive (Namakan folder) | Clint only |
 | Training | Google Colab | Clint only |
@@ -488,7 +488,7 @@ Process:
 Acme's Data Journey:
 1. Lives in Acme's Salesforce/PostgreSQL/Drive
 2. Read-only access granted to Clint (temporary)
-3. Pulled via n8n to heater.local
+3. Pulled via n8n to localhost
 4. Stored in Clint's Google Drive (private)
 5. Sent to Colab for training (processed, not stored long-term)
 6. Only model weights (not raw data) returned

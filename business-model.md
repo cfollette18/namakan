@@ -155,7 +155,7 @@ NET PROFIT YEAR 1:    ~$37,400
 ### Fixed Costs (Monthly)
 | Item | Cost |
 |------|------|
-| n8n hosting (heater.local) | $0 |
+| n8n hosting (localhost) | $0 |
 | Domain (namakanai.com) | $0 |
 | Email (clint@namakanai.com) | $0 |
 | Vercel (frontend) | $0 |

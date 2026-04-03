@@ -19,7 +19,7 @@ This document covers the technical implementation of Namakan's fine-tuning pipel
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  n8n (heater.local:5678)                                  │
+│  n8n (localhost:5678)                                  │
 │                                                             │
 │  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐      │
 │  │Salesforce│  │PostgreSQL│  │Google   │  │Clean PII│      │
@@ -76,7 +76,7 @@ This document covers the technical implementation of Namakan's fine-tuning pipel
 
 ### Setup
 
-**n8n URL:** http://heater.local:5678
+**n8n URL:** http://localhost:5678
 
 **Required credentials:**
 - Salesforce API

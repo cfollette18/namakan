@@ -12,7 +12,7 @@ This n8n workflow:
 
 ## Import Workflow
 
-1. Open n8n: http://heater.local:5678
+1. Open n8n: http://localhost:5678  *(or your n8n host URL)*
 2. Click "Templates" → "Import from JSON"
 3. Paste contents of `n8n-workflow.json`
 4. Click "Save"
@@ -139,7 +139,7 @@ Notify (Telegram)
 
 ## Cost Estimate
 
-- **n8n**: Free (self-hosted on heater.local)
+- **n8n**: Free (self-hosted — see your n8n instance URL)
 - **Colab**: Free (Pro optional for faster GPU)
 - **Google Drive**: Free tier (15GB)
 - **Salesforce API**: Client's existing license

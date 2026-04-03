@@ -7,7 +7,7 @@
 ## Quick Start
 
 ### 1. Set Up n8n
-Import `n8n-workflow-production.json` into n8n at http://heater.local:5678
+Import `n8n-workflow-production.json` into n8n at http://localhost:5678
 
 ### 2. Configure Credentials
 - Salesforce API
