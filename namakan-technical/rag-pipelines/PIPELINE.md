@@ -38,7 +38,7 @@ Discovery → Document Audit → Architecture → Build → Evaluation → Deplo
 - Document inventory (types, volumes, formats)
 - User personas and query types
 - Scope and timeline
-- Ballpark: $5K-15K build + $500-2K/mo
+- Ballpark: $5K-15K build + $500/mo
 
 ---
 
@@ -1018,7 +1018,7 @@ def check_content_freshness():
 | **Starter** | < 10K docs | Single source | $5K-8K |
 | **Professional** | 10K-100K docs | 2-3 sources | $8K-15K |
 | **Enterprise** | 100K+ docs | Multiple + real-time | $15K-25K |
-| **Monthly Maintenance** | Ongoing | Updates, monitoring | $500-2K/mo |
+| **Monthly Maintenance** | Ongoing | Updates, monitoring | $500/mo |
 
 ---
 
