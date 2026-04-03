@@ -8,7 +8,7 @@ Business strategy, pricing, and operational planning for Namakan AI Engineering.
 |------|---------|
 | `BUSINESS-PLAN.md` | Full business plan with market analysis, strategy, financials |
 | `service-offerings.md` | Detailed service descriptions and pricing tiers |
-| `pricing_section.md` | Project-based pricing ($5K–$15K build, $2K/mo retainer) |
+| `../pricing_section.md` | Project-based pricing ($5K–$15K build, $2K/mo retainer) |
 | `30-60-90-day-plan.md` | Startup execution plan |
 
 ## Archived
