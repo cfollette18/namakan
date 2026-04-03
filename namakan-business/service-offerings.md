@@ -161,5 +161,5 @@ Start with a **Discovery Call**. We'll listen to your situation, ask the right q
 
 *Ready to build AI that actually works for your business?*
 
-**Contact:** hello@namakan.ai  
+**Contact:** hello@namakanai.com  
 **Location:** Blaine, MN | Serving clients nationwide

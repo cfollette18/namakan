@@ -121,7 +121,7 @@ Do you have 20 minutes in the next few weeks?
 —  
 Clint Follette  
 Namakan AI Engineering  
-clint@namakan.ai"""
+clint@namakanai.com"""
 
     elif num == 2:
         subject = f"Re: Question about {possessive(company)} custom AI strategy"
@@ -202,7 +202,7 @@ Thanks for your time.
 —  
 Clint Follette  
 Namakan AI Engineering  
-clint@namakan.ai"""
+clint@namakanai.com"""
 
     else:  # num == 5
         subject = f"Last note from Clint at Namakan — closing your file"

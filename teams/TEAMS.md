@@ -42,6 +42,6 @@ Each team executes one of Namakan's core AI engineering pipelines:
 
 ## Contact
 
-**Email:** hello@namakan.ai  
+**Email:** hello@namakanai.com  
 **Web:** namakanai.com  
 **Location:** Blaine, MN

@@ -354,7 +354,7 @@ AZURE_STORAGE_CONNECTION_STRING=your_connection_string
 
 # Security
 SECRET_KEY=your_secret_key_here
-ALLOWED_ORIGINS=https://namakanai.com,https://www.namakanai.com,https://namakan.ai,https://www.namakan.ai
+ALLOWED_ORIGINS=https://namakanai.com,https://www.namakanai.com
 
 # Monitoring
 APPLICATION_INSIGHTS_KEY=your_app_insights_key
@@ -365,8 +365,8 @@ APPLICATION_INSIGHTS_KEY=your_app_insights_key
 Create `.env.local` in `frontend/`:
 
 ```env
-NEXT_PUBLIC_API_URL=https://api.namakan.ai
-NEXT_PUBLIC_WS_URL=wss://api.namakan.ai/ws
+NEXT_PUBLIC_API_URL=https://api.namakanai.com
+NEXT_PUBLIC_WS_URL=wss://api.namakanai.com/ws
 ```
 
 ---
@@ -535,9 +535,9 @@ kubectl logs <pod-name> -n namakan
 ## Support
 
 For deployment issues:
-- Email: devops@namakan.ai
+- Email: devops@namakanai.com
 - Slack: #namakan-deployment
-- Docs: https://docs.namakan.ai
+- Docs: https://docs.namakanai.com
 
 ---
 

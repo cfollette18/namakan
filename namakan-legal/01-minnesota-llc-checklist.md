@@ -100,7 +100,7 @@
 
 ## Phase 5: Day 1 Startup Actions
 
-- [ ] Set up business email (info@namakan.ai)
+- [ ] Set up business email (info@namakanai.com)
 - [ ] Create website with privacy policy and terms of service
 - [ ] Draft standard contract templates (MSA, SOW, NDA)
 - [ ] Set up client intake process

@@ -130,7 +130,7 @@ Before scoping a custom AI project, clarify:
 ## Ready to Explore?
 
 **Namakan AI Engineering**  
-hello@namakan.ai  
+hello@namakanai.com  
 namakanai.com
 
 *We engineer custom AI systems built on YOUR data — not generic tools, bespoke systems for your specific domain.*

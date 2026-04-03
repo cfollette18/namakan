@@ -365,7 +365,7 @@ Per Client Total:    $11,900–$92,800
 ## Contact
 
 - **Location:** Blaine, MN | Serving clients nationwide
-- **Email:** hello@namakan.ai
+- **Email:** hello@namakanai.com
 - **Web:** namakanai.com
 
 ---

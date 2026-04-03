@@ -41,7 +41,7 @@ export function ContactModal({ className, label = 'Contact Us' }: ContactModalPr
       ].join('\n')
     )
 
-    window.location.href = `mailto:hello@namakan.ai?subject=${subject}&body=${body}`
+    window.location.href = `mailto:hello@namakanai.com?subject=${subject}&body=${body}`
   }
 
   return (
