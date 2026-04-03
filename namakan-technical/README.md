@@ -113,14 +113,14 @@ Run any pipeline phase directly:
 
 ```bash
 # Fine-tuned models
-./run_pipeline.sh fine-tuned-models data --input ./raw-data
-./run_pipeline.sh fine-tuned-models train --client "Acme Corp"
-./run_pipeline.sh fine-tuned-models eval --model ./outputs/final
-./run_pipeline.sh fine-tuned-models deploy --adapter ./adapters/acme
+./namakan-technical/run_pipeline.sh fine-tuned-models data --input ./raw-data
+./namakan-technical/run_pipeline.sh fine-tuned-models train --client "Acme Corp"
+./namakan-technical/run_pipeline.sh fine-tuned-models eval --model ./outputs/final
+./namakan-technical/run_pipeline.sh fine-tuned-models deploy --adapter ./adapters/acme
 
 # RAG pipelines
-./run_pipeline.sh rag-pipelines ingest --input ./documents
-./run_pipeline.sh rag-pipelines query --question "What is the warranty policy?"
+./namakan-technical/run_pipeline.sh rag-pipelines ingest --input ./documents
+./namakan-technical/run_pipeline.sh rag-pipelines retrieve --question "What is the warranty policy?"
 
 # Agentic workflows
 python3 agentic-workflows/workflows/agent_engine.py --task "Process incoming email"
