@@ -34,13 +34,13 @@ LLC formation is paused per Clint's direction. Filing can resume once business b
 **Status: NOT SET UP** ⚠️
 
 ### Recommended: Google Workspace or Proton Mail
-- **Google Workspace** (~¥6/user/mo): professional @namakan.ai address, Calendar, Drive, Meet
+- **Google Workspace** (~¥6/user/mo): professional @namakanai.com address, Calendar, Drive, Meet
 - **Proton Mail** (free tier available): encrypted, privacy-focused
 
 ### Action Required:
-- [ ] Register domain `namakan.ai` (if not already registered)
-- [ ] Set up `info@namakan.ai` as primary business address
-- [ ] Set up `clint@namakan.ai` as primary contact
+- [ ] Register domain `namakanai.com` (if not already registered)
+- [ ] Set up `info@namakanai.com` as primary business address
+- [ ] Set up `clint@namakanai.com` as primary contact
 - [ ] Configure SPF/DKIM/DMARC for email deliverability
 
 ---
@@ -125,8 +125,8 @@ Founder & Principal AI Engineer
 
 Namakan AI Engineering
 📞 [Phone]
-✉️  info@namakan.ai
-🌐  www.namakan.ai
+✉️  info@namakanai.com
+🌐  www.namakanai.com
 
 "Ship AI That Actually Works"
 ```
@@ -151,7 +151,7 @@ Namakan AI Engineering
    - **Business Category:** AI Development, Machine Learning
    - **Address:** Blaine, MN (use Clint's address or virtual office)
    - **Phone:** Clint's cell or VoIP number
-   - **Website:** namakan.ai (when live)
+   - **Website:** namakanai.com (when live)
 5. Verify via phone or postcard (postcard takes 5–7 days)
 
 ### Tips:
@@ -174,11 +174,11 @@ Namakan AI Engineering
 Website files are in `namakan-website/`. Domain may not yet be live.
 
 ### Action Required:
-- [ ] Confirm domain `namakan.ai` is registered
+- [ ] Confirm domain `namakanai.com` is registered
 - [ ] Deploy website (Vercel, Netlify, or Cloudflare Pages)
 - [ ] Add privacy policy (required — see `namakan-legal/`)
 - [ ] Add terms of service
-- [ ] Add contact form with `info@namakan.ai`
+- [ ] Add contact form with `info@namakanai.com`
 - [ ] Set up SSL (automatic with hosting providers)
 - [ ] Submit sitemap to Google Search Console
 
@@ -251,7 +251,7 @@ Week 1 (Do These First):
 
 Week 2:
   4. ☐ Open business bank account
-  5. ☐ Set up business email (info@namakan.ai)
+  5. ☐ Set up business email (info@namakanai.com)
   6. ☐ Register domain if not done
 
 Week 3:
