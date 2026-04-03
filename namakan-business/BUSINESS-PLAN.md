@@ -15,10 +15,12 @@ Namakan AI is a **Custom AI Engineering Firm** — we build bespoke AI systems f
 **The Positioning:** Namakan is not an AI reseller. We are an AI engineering firm. Every engagement is custom. Every solution is built for one client. We don't sell subscriptions to pre-built agents — we engineer AI systems from the ground up for each client's specific needs.
 
 **Core Services:**
-1. **Fine-Tuning** — Train a private model on your proprietary data ($5K–$15K/project)
-2. **RAG Pipelines** — Connect AI to your documents, knowledge bases, and systems ($5K–15K build + $500–2K/mo maintenance)
-3. **Agentic Workflows** — Autonomous AI workers that complete multi-step tasks in your systems ($5K–30K)
-4. **Custom AI Employees** — Full-time AI workers trained on your business ($2K–5K/mo retainer)
+1. **Fine-Tuning** — Connect to your data sources, clean it, train an 8B model on Google Colab ($2.5K–$10K)
+2. **Model Hosting** — Run your trained model on our infrastructure ($200–400/mo)
+3. **Agentic Workflows** — Build on your fine-tuned model to automate multi-step tasks ($5K–$20K)
+4. **Custom AI Employees** — Full-time AI workers trained on your business ($2K–4K/mo)
+
+**The Order Matters:** Fine-tuning comes first. Agents build on top of the model that knows your business.
 
 **Market Opportunity:** $50B+ enterprise AI market, growing 40% annually. The real opportunity isn't selling AI tools — it's engineering AI that works. Most businesses fail with AI because they use generic tools instead of building systems designed for them.
 
@@ -84,48 +86,93 @@ We don't sell you an AI tool. We engineer an AI system for your business.
 
 ## Services & Pricing
 
-### Custom Engineering Services
+### Services & Pricing
 
-| Service | Description | Investment |
-|---------|-------------|------------|
-| **Fine-Tuning** | Train a private model on your proprietary data — your own domain-specific AI | $10,000–$50,000/project |
-| **RAG Pipeline** | Connect AI to your documents, knowledge base, CRM — AI that knows YOUR stuff | $5,000–$15,000 build + $500–2,000/mo maintenance |
-| **Agentic Workflow** | Autonomous AI workers that complete multi-step tasks in your systems | $5,000–$30,000/project |
-| **Custom AI Employee** | Full-time AI worker trained on your business, integrated into your operations | $2,000–$5,000/month retainer |
+**The Order:** Fine-tune first. Then add agents.
 
-### Project Pricing Model
+#### 1. Fine-Tuning (Required Foundation)
+Connect to your data → Clean it → Train an 8B model on Google Colab.
 
-| Project Type | Price Range | Timeline |
-|--------------|-------------|----------|
-| RAG Pipeline (standard) | $5,000–$15,000 | 2–6 weeks |
-| RAG Pipeline (enterprise) | $15,000–$30,000 | 6–12 weeks |
-| Agentic Workflow | $5,000–$30,000 | 4–12 weeks |
-| Fine-Tuning Project | $10,000–$50,000 | 4–16 weeks |
-| Custom AI Employee (setup) | $5,000–$15,000 | 4–8 weeks |
-| Custom AI Employee (ongoing) | $2,000–$5,000/month | Ongoing |
+| Tier | Data Size | Price | Timeline |
+|------|-----------|-------|----------|
+| Starter | 500–2K examples | $2,500 | 1–2 weeks |
+| Professional | 2K–5K examples | $5,000 | 2–3 weeks |
+| Enterprise | 5K–10K examples | $10,000 | 3–4 weeks |
 
-**Payment Terms:** 50% upfront, 25% at midpoint, 25% on delivery
+**Includes:** Data connection (CRM, DB, files), PII removal, Colab training, model delivery
+
+#### 2. Model Hosting (Optional)
+Run your trained model on our infrastructure.
+
+| Tier | Specs | Price |
+|------|-------|-------|
+| API Standard | Shared GPU | $200/mo |
+| API Performance | Dedicated GPU | $400/mo |
+
+#### 3. Retraining (Quarterly)
+Keep your model fresh with new data.
+
+| Data Size | Price |
+|-----------|-------|
+| Under 1K new examples | $500/quarter |
+| 1K–5K new examples | $1,000/quarter |
+| 5K+ new examples | $2,500/quarter |
+
+#### 4. Agentic Workflows (Add-On)
+Requires fine-tuning first. Build on your model to automate tasks.
+
+| Tier | Complexity | Price |
+|------|------------|-------|
+| Starter | 1–2 steps | $5,000 |
+| Professional | 3–5 steps | $10,000 |
+| Enterprise | 5+ steps | $20,000 |
+
+#### 5. Custom AI Employees (Add-On)
+Requires fine-tuning first. Full-time AI worker.
+
+| Tier | Complexity | Price |
+|------|------------|-------|
+| Standard | Single domain | $2,000/mo |
+| Senior | Multi-domain | $4,000/mo |
+
+**Payment Terms:** 50% upfront, 50% on delivery
 
 ## Business Model
 
 ### Revenue Streams
 
-1. **Project Revenue** — Custom AI engineering projects (high-ticket, one-time)
-2. **Retainer Revenue** — Custom AI Employees on monthly retainers
-3. **Maintenance Revenue** — RAG pipelines and ongoing optimization
-4. **Success Fees** — Performance-based pricing where appropriate
+1. **Initial Training** — One-time fine-tuning project ($2.5K–$10K)
+2. **Hosting MRR** — Model hosting on infrastructure ($200–400/mo)
+3. **Retraining NRR** — Quarterly retraining keeps model fresh ($500–2.5K/quarter)
+4. **Agentic Upsells** — Workflows and employees on top of trained model ($5K–20K + $2–4K/mo)
+
+### The Expansion Model
+
+**Year 1 Example — Acme Corp:**
+```
+Initial Training:      $2,500
+Quarterly Retraining:  $2,000  (4x $500)
+Model Hosting:         $2,400  (12x $200)
+Agentic Workflow:      $5,000  (added in Q2)
+AI Employee:           $24,000 (12x $2,000)
+─────────────────────────────
+Year 1 Total:          $35,900
+
+MRR at end of Year 1: $2,200/mo
+```
 
 ### Unit Economics
 
 | Metric | Target |
 |--------|--------|
-| Average Project Size | $15,000–$30,000 |
-| Average Retainer | $3,000–$4,000/month |
-| Project Timeline | 4–12 weeks |
-| Gross Margin | 75%+ |
+| Initial Training | $2,500–$10,000 |
+| MRR per Client | $200–$4,000/month |
+| NRR (Net Revenue Retention) | 120%+ |
+| Gross Margin (Hosting) | 70%+ |
+| Gross Margin (Services) | 80%+ |
 | Client Retention | 90%+ |
 | Referral Rate | 60%+ |
-| Sales Cycle | 4–12 weeks |
+| Sales Cycle | 2–4 weeks |
 
 ### Growth Strategy
 
@@ -161,21 +208,22 @@ We don't sell you an AI tool. We engineer an AI system for your business.
 
 ### Engagement Process
 
-1. **Discovery Call** (60 min) — Understand the client's data, domain, and workflows
-2. **AI Assessment** — Audit their current data, systems, and workflows; identify highest-impact AI opportunities
-3. **Proposal & Scoping** — Custom engineering plan with specific deliverables, timeline, and investment
-4. **Engineering** — Build the custom AI system (fine-tuning, RAG pipeline, workflow, or AI employee)
-5. **Testing & Validation** — Validate against real client data and workflows
-6. **Deployment** — Go live with integration into client systems
-7. **Optimization** — Ongoing monitoring, tuning, and improvement
+1. **Discovery Call** (30 min) — Map their data sources (CRM, DB, files), understand workflows
+2. **Data Assessment** — Audit data volume, quality, PII exposure; define training scope
+3. **Proposal** — Fine-tuning tier + optional add-ons (hosting, agents, employees)
+4. **Data Connection** — n8n workflow connects to their sources; extract and clean data
+5. **Training** — Colab trains the 8B model (~45 min); you get notified
+6. **Delivery** — Download the .gguf model file, or host on our infrastructure
+7. **Expand** — Add agentic workflows and AI employees as they see value
 
 ### Technology Stack
 
-- **Foundation Models:** OpenAI, Anthropic, open-source models (Llama, Mistral)
-- **Fine-Tuning:** Custom training pipelines, LoRA, RLHF
-- **RAG:** Vector databases (Pinecone, Weaviate, Chroma), document processing
-- **Agentic:** LangChain, Custom frameworks, tool-use pipelines
-- **Infrastructure:** AWS, GCP, cloud-native deployment
+- **Training:** Google Colab (GPU), Qwen2.5-8B base model
+- **Fine-Tuning:** LoRA (QLoRA technique), Axolotl
+- **Automation:** n8n (data connectors, workflows, webhooks)
+- **Data Cleaning:** Custom JavaScript nodes (PII removal, formatting)
+- **Agentic:** Custom agents with tool calling, n8n orchestration
+- **Hosting:** Dedicated GPU VMs (Lambda Labs, RunPod)
 - **Integration:** API-first, webhooks, direct database connections
 
 ### Engineering Standards
@@ -188,30 +236,44 @@ We don't sell you an AI tool. We engineer an AI system for your business.
 
 ## Financial Projections
 
-### Year 1
+### Revenue Model
 
-| Quarter | Clients | Project Revenue | Retainer Revenue | Total |
-|---------|---------|-----------------|------------------|-------|
-| Q1 | 2–3 | $30,000–$60,000 | $0 | $30K–$60K |
-| Q2 | 4–6 | $50,000–$100,000 | $5,000–$15,000 | $55K–$115K |
-| Q3 | 6–8 | $60,000–$120,000 | $15,000–$25,000 | $75K–$145K |
-| Q4 | 8–12 | $80,000–$150,000 | $25,000–$40,000 | $105K–$190K |
+**Per Client Year 1:**
+```
+Initial Training:    $2,500–$10,000  (one-time)
+Retraining:          $2,000–$10,000   (4x quarterly)
+Hosting MRR:         $2,400–$4,800   (12x $200–400)
+Agentic Add-ons:     $5,000–$20,000   (optional)
+AI Employees:       $24,000–$48,000 (optional)
+─────────────────────────────────────────────
+Per Client Total:    $11,900–$92,800
+```
 
-**Year 1 Total:** $265K–$510K revenue, ~$200K–$400K profit
+### Year 1 Target
 
-### Year 2
+| Quarter | New Clients | New MRR | Annual Revenue |
+|---------|-------------|---------|----------------|
+| Q1 | 2–3 | $400–$600 | $15K–$30K |
+| Q2 | 3–4 | $1,000–$1,500 | $30K–$55K |
+| Q3 | 4–5 | $2,000–$3,000 | $50K–$80K |
+| Q4 | 5–6 | $3,000–$5,000 | $75K–$120K |
 
-- 15–25 clients
-- $600K–$1M revenue
-- $400K–$700K profit
-- Hire 1–2 technical staff
+**Year 1 Total:** $170K–$285K revenue  
+**MRR by EOY:** $3K–$5K/month
 
-### Year 3
+### Year 2 Target
+
+- 15–20 total clients
+- MRR: $10K–$20K
+- ARR: $200K–$400K
+- Full-year revenue: $300K–$500K
+
+### Year 3 Target
 
 - 30–50 clients
-- $1.2M–$2M revenue
-- $800K–$1.4M profit
-- 3–5 person team
+- MRR: $25K–$50K
+- ARR: $400K–$800K
+- Full-year revenue: $600K–$1M
 
 ## Marketing Strategy
 
