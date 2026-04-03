@@ -15,7 +15,7 @@ export default function PricingPage() {
         'Architecture recommendation',
         'Delivery roadmap and scope'
       ],
-      price: 'Starting at $3K'
+      price: 'Starting at $5K'
     },
     {
       tag: 'Build',
