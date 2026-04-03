@@ -1,0 +1,190 @@
+{
+  "name": "Fine-Tuning Pipeline: Data → Clean → Colab",
+  "nodes": [
+    {
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [250, 300],
+      "parameters": {}
+    },
+    {
+      "name": "Salesforce Connection",
+      "type": "n8n-nodes-base.salesforce",
+      "position": [500, 300],
+      "parameters": {
+        "operation": "search",
+        "objectType": "Case",
+        "filterConditions": {
+          "conditions": [
+            { "field": "Status", "operator": "equals", "value": "Closed" }
+          ]
+        },
+        "returnAll": true
+      },
+      "credentials": { "salesforceApi": "..." }
+    },
+    {
+      "name": "HTTP Request (Get Records)",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [500, 500],
+      "parameters": {
+        "url": "https://your-salesforce-instance.salesforce.com/services/data/v52.0/query/",
+        "method": "GET",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth"
+      }
+    },
+    {
+      "name": "Clean PII - Remove Names",
+      "type": "n8n-nodes-base.code",
+      "position": [750, 300],
+      "parameters": {
+        "jsCode": "// Remove PII from each record\nconst records = $input.all();\nconst piiPatterns = [\n  /\\b[A-Za-z]+ [A-Za-z]+\\b/g,           // Names (crude)\n  /\\b\\d{3}-\\d{2}-\\d{4}\\b/g,           // SSN\n  /\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b/g,  // Emails\n  /\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b/g,   // Phone numbers\n  /\\b\\d{1,5}\\s+\\w+\\s+(Street|St|Avenue|Ave|Road|Rd|Dr|Drive)\\b/gi  // Addresses\n];\n\nconst cleaned = records.map((record, i) => {\n  let text = JSON.stringify(record.json);\n  piiPatterns.forEach(pattern => {\n    text = text.replace(pattern, '[REDACTED]');\n  });\n  return { json: { ...JSON.parse(text), _originalIndex: i } };\n});\n\nreturn cleaned;"
+      }
+    },
+    {
+      "name": "Format to Q&A Pairs",
+      "type": "n8n-nodes-base.code",
+      "position": [1000, 300],
+      "parameters": {
+        "jsCode": "// Convert records to Q&A training format\nconst records = $input.all();\n\nconst trainingData = records.map(record => {\n  const r = record.json;\n  \n  // Build Q&A pair from case data\n  return {\n    instruction: `Classify and respond to: ${r.Subject || r.Description || 'Support case'}`,\n    input: '',\n    output: `Category: ${r.Category}\nStatus: ${r.Status}\nResolution: ${r.Resolution || r.Description}\nEscalation: ${r.EscalationLevel || 'Standard'}\nResponse: ${r.TrainedResponse || r.Resolution || 'Handle per standard protocol.'}`\n  };\n});\n\nreturn trainingData.map(d => ({ json: d }));"
+      }
+    },
+    {
+      "name": "Convert to CSV",
+      "type": "n8n-nodes-base.convert",
+      "position": [1250, 300],
+      "parameters": {
+        "mode": "jsonToCsv",
+        "options": {}
+      }
+    },
+    {
+      "name": "Upload to Google Drive",
+      "type": "n8n-nodes-base.googleDrive",
+      "position": [1500, 300],
+      "parameters": {
+        "operation": "upload",
+        "fileName": "=/training-data-{{ $today }}.csv",
+        "folderId": "YOUR_FOLDER_ID",
+        "options": {
+          "mimeType": "text/csv"
+        }
+      },
+      "credentials": { "googleDriveOAuth2Api": "..." }
+    },
+    {
+      "name": "Get Colab Shareable Link",
+      "type": "n8n-nodes-base.set",
+      "position": [1500, 500],
+      "parameters": {
+        "mode": "manual",
+        "duplicateItem": false,
+        "assignments": {
+          "colabNotebookUrl": {
+            "value": "YOUR_COLAB_NOTEBOOK_URL",
+            "type": "string"
+          },
+          "driveFileId": {
+            "value": "={{ $json.id }}",
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "Trigger Colab Webhook",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1750, 300],
+      "parameters": {
+        "url": "https://colab.research.google.com/github/YOUR_REPO/train.ipynb",
+        "method": "POST",
+        "bodyParameters": {
+          "parameters": {
+            "data_file_id": "={{ $json.driveFileId }}",
+            "base_model": "qwen2.5-8b",
+            "output_model_name": "client-finetuned-{{ $today }}"
+          }
+        },
+        "options": {}
+      }
+    },
+    {
+      "name": "Wait for Colab",
+      "type": "n8n-nodes-base.wait",
+      "position": [2000, 300],
+      "parameters": {
+        "amount": 30,
+        "unit": "minutes",
+        "resume": "webhook"
+      }
+    },
+    {
+      "name": "Download Trained Model",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [2250, 300],
+      "parameters": {
+        "url": "YOUR_COLAB_WEBHOOK_URL/callback",
+        "method": "GET",
+        "options": {}
+      }
+    },
+    {
+      "name": "Notify - Training Complete",
+      "type": "n8n-nodes-base.telegram",
+      "position": [2500, 300],
+      "parameters": {
+        "chatId": "7982591864",
+        "text": "=✅ Training Complete!\n\nModel: client-finetuned\nFile: {{ $json.modelUrl }}\nReady to deploy."
+      },
+      "credentials": { "telegramBotApi": "..." }
+    },
+    {
+      "name": "Error Notification",
+      "type": "n8n-nodes-base.telegram",
+      "position": [2500, 500],
+      "parameters": {
+        "chatId": "7982591864",
+        "text": "=❌ Training Failed\n\nError: {{ $json.error }}"
+      }
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [[{ "node": "Salesforce Connection", "type": "main", "index": 0 }]]
+    },
+    "Salesforce Connection": {
+      "main": [[{ "node": "Clean PII - Remove Names", "type": "main", "index": 0 }]]
+    },
+    "Clean PII - Remove Names": {
+      "main": [[{ "node": "Format to Q&A Pairs", "type": "main", "index": 0 }]]
+    },
+    "Format to Q&A Pairs": {
+      "main": [[{ "node": "Convert to CSV", "type": "main", "index": 0 }]]
+    },
+    "Convert to CSV": {
+      "main": [[{ "node": "Upload to Google Drive", "type": "main", "index": 0 }]]
+    },
+    "Upload to Google Drive": {
+      "main": [
+        [{ "node": "Trigger Colab Webhook", "type": "main", "index": 0 }],
+        [{ "node": "Get Colab Shareable Link", "type": "main", "index": 0 }]
+      ]
+    },
+    "Get Colab Shareable Link": {
+      "main": [[{ "node": "Trigger Colab Webhook", "type": "main", "index": 0 }]]
+    },
+    "Trigger Colab Webhook": {
+      "main": [[{ "node": "Wait for Colab", "type": "main", "index": 0 }]]
+    },
+    "Wait for Colab": {
+      "main": [[{ "node": "Download Trained Model", "type": "main", "index": 0 }]]
+    },
+    "Download Trained Model": {
+      "main": [[{ "node": "Notify - Training Complete", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
