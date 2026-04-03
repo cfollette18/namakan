@@ -44,6 +44,12 @@ python3 send_sequence.py replied graco
 
 # Mark as converted
 python3 send_sequence.py converted graco
+
+# Show prospect status
+python3 send_sequence.py status graco
+
+# Close a prospect (no reply)
+python3 send_sequence.py close graco --reason "no reply"
 ```
 
 ## Email Sequence Cadence
