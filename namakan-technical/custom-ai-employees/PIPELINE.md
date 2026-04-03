@@ -27,7 +27,7 @@ Onboarding → Monitoring → Ongoing Optimization
 
 
 ### Client-Specific Decisions Locked
-- **Deployment**: Namakan-hosted on cloud — clients pay monthly subscription ($2K-$5K/mo)
+- **Deployment**: Namakan-hosted on cloud — clients pay monthly subscription ($2K/mo)
 - **Supervisor**: Client assigns human manager per AI Employee
 - **Retraining Cadence**: Per-client — monthly, quarterly, or on-demand
 
@@ -87,7 +87,7 @@ MUST ESCALATE:
 - Detailed role document
 - Training data inventory
 - Integration requirements
-- Pricing: $2K-5K/mo retainer
+- Pricing: $2K/mo retainer
 
 ---
 
@@ -545,13 +545,13 @@ def should_retrain():
 
 ## Pricing
 
-| Tier | Role Complexity | Data Volume | Price |
-|------|----------------|-------------|-------|
-| **Starter** | Single domain, 1-2 tools | < 5K examples | $2K-3K/mo |
-| **Professional** | Multi-domain, 3-5 tools | 5K-15K examples | $3K-4K/mo |
-| **Enterprise** | Complex, 5+ tools, multi-language | 15K+ examples | $4K-5K/mo |
+| Tier | Role Complexity | Data Volume | Setup Fee |
+|------|----------------|-------------|-----------|
+| **Build** | Single workflow, 1-2 integrations | < 5K examples | $5K-15K |
+| **Growth** | Multi-step workflow, 3-5 integrations | 5K-15K examples | $15K-25K |
+| **Enterprise** | Complex end-to-end, 5+ integrations | 15K+ examples | $25K-30K |
 
-**Setup Fee:** $5K-15K (includes training data collection, fine-tuning, integration)
+**Monthly Retainer:** $2K/mo per AI Employee (performance monitoring, retraining, optimization)
 
 ---
 
