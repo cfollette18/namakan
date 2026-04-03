@@ -11,7 +11,7 @@ export default function Home() {
       title: 'Your CRM. Your database. Your AI.',
       description: "We connect to your existing data sources, clean it, and train a model that actually knows your business — not generic AI.",
       features: ['Pulls from your CRM, database, docs', 'Cleans and structures your data', 'Trains a 8B model on YOUR data', 'Model runs on your infrastructure'],
-      price: 'Starting at $15K'
+      price: 'Starting at $5K'
     },
     {
       tag: 'Agentic Workflows',
