@@ -180,7 +180,7 @@
           "properties": {
             "headerRow": true,
             "quoteAll": false,
-            " delimiter\": \",\"
+            "delimiter": ","
           }
         }
       }
