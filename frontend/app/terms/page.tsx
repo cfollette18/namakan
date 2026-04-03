@@ -283,9 +283,9 @@ export default function TermsPage() {
                   Contact Legal Team
                 </button>
               </Link>
-              <Link href="mailto:legal@namakan.ai">
+              <Link href="mailto:legal@namakanai.com">
                 <button className="px-8 py-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-xl font-bold text-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
-                  legal@namakan.ai
+                  legal@namakanai.com
                 </button>
               </Link>
             </div>

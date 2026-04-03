@@ -308,9 +308,9 @@ export default function PrivacyPage() {
                   Contact Privacy Team
                 </button>
               </Link>
-              <Link href="mailto:privacy@namakan.ai">
+              <Link href="mailto:privacy@namakanai.com">
                 <button className="px-8 py-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-xl font-bold text-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
-                  privacy@namakan.ai
+                  privacy@namakanai.com
                 </button>
               </Link>
             </div>

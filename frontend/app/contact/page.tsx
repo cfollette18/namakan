@@ -19,7 +19,7 @@ export default function ContactPage() {
     {
       title: 'General inquiries',
       description: 'Questions about Namakan, partnerships, or where to start.',
-      contact: 'hello@namakan.ai'
+      contact: 'hello@namakanai.com'
     },
     {
       title: 'Project scoping',
@@ -62,7 +62,7 @@ export default function ContactPage() {
       ].join('\n')
     )
 
-    window.location.href = `mailto:hello@namakan.ai?subject=${subject}&body=${body}`
+    window.location.href = `mailto:hello@namakanai.com?subject=${subject}&body=${body}`
   }
 
   return (
@@ -79,8 +79,8 @@ export default function ContactPage() {
             workflows, or a larger rollout.
           </p>
           <div className="page-actions">
-            <a href="mailto:hello@namakan.ai" className="cta">
-              Email hello@namakan.ai
+            <a href="mailto:hello@namakanai.com" className="cta">
+              Email hello@namakanai.com
             </a>
             <Link href="/services" className="cta cta-secondary">
               View Services
