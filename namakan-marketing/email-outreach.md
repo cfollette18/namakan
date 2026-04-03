@@ -32,7 +32,7 @@ Do you have 20 minutes in the next few weeks?
 Best,
 Clint Follette
 Namakan AI Engineering
-clint@namakan.ai
+hello@namakan.ai
 
 ---
 
@@ -68,7 +68,7 @@ Open to a 20-minute conversation?
 Best,
 Clint Follette
 Namakan AI Engineering
-clint@namakan.ai
+hello@namakan.ai
 
 ---
 
@@ -101,7 +101,7 @@ I put together a brief on each of these. Happy to walk through in 20 minutes if 
 Best,
 Clint Follette
 Namakan AI Engineering
-clint@namakan.ai
+hello@namakan.ai
 
 ---
 
@@ -134,7 +134,7 @@ Thanks for your time.
 Best,
 Clint Follette
 Namakan AI Engineering
-clint@namakan.ai
+hello@namakan.ai
 
 ---
 
