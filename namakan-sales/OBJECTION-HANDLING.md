@@ -22,7 +22,7 @@ Every objection is a buying signal in disguise.
 - Genuinely budget constrained
 
 **Response:**
-> "I get it — upfront it can seem that way. But compare it to the alternative: hiring even part-time help runs $1,500-3,000/month, plus benefits, training, and management time. Our agents cost $500-5K/month and work 24/7, never call in sick, and don't need training. What would it be worth to get [specific task] off your plate permanently?"
+> "I get it — upfront it can seem that way. But compare it to the alternative: hiring a domain expert to handle [specific task] runs $80K+/year in salary plus benefits, training, and management time. Our custom AI systems are one-time builds ($5K–$15K) that learn YOUR data and workflows, then operate 24/7. What would it be worth to get [specific task] handled accurately and consistently?"
 
 ---
 
