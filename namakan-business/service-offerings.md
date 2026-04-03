@@ -56,8 +56,6 @@ RAG pipelines, data ingestion, document processing, vector search — all built 
 
 **Payment:** 50% upfront, 25% at midpoint, 25% on delivery
 
-**Payment:** 50% upfront, 25% at midpoint, 25% on delivery
-
 ---
 
 ## 👤 Service 2: Custom Agents
