@@ -138,12 +138,12 @@
 
 ---
 
-## ⚠️ Key Differences From Off-the-Shelf AI Sales
+## ⚠️ Key Differences From Generic AI Tool Sales
 
-| Off-the-Shelf Agent Sales | Custom AI Engineering |
-|--------------------------|------------------------|
+| Generic AI Tools (Competitors) | Custom AI Engineering (Namakan) |
+|-------------------------------|-------------------------------|
 | Fast sales cycle (days–weeks) | Longer sales cycle (6–12 weeks) |
-| Low ticket ($500–$2K/mo) | High ticket ($5K–$50K/project) |
+| Low ticket (monthly subscriptions) | High ticket ($5K–$50K/project) |
 | Volume: many small clients | Focused: fewer, larger clients |
 | Rapid onboarding | Deep discovery required |
 | Product configured by client | System engineered for client |
