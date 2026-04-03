@@ -1,0 +1,438 @@
+{
+  "name": "Namakan Fine-Tuning Pipeline (Production)",
+  "nodes": [
+    {
+      "id": "trigger",
+      "name": "Manual/Webhook Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [250, 300],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "client-config",
+      "name": "Set Client Config",
+      "type": "n8n-nodes-base.set",
+      "position": [500, 300],
+      "parameters": {
+        "mode": "manual",
+        "duplicateItem": false,
+        "assignments": {
+          "clientName": {
+            "value": "={{ $json.clientName || 'acme_corp' }}",
+            "type": "string"
+          },
+          "clientSlug": {
+            "value": "={{ $json.clientSlug || 'acme' }}",
+            "type": "string"
+          },
+          "trainingDataFileId": {
+            "value": "={{ $json.trainingDataFileId }}",
+            "type": "string"
+          },
+          "modelOutputFolderId": {
+            "value": "={{ $json.modelOutputFolderId }}",
+            "type": "string"
+          },
+          "version": {
+            "value": "={{ $json.version || '1' }}",
+            "type": "string"
+          },
+          "webhookUrl": {
+            "value": "={{ $json.webhookUrl }}",
+            "type": "string"
+          },
+          "timestamp": {
+            "value": "={{ $now.toISO() }}",
+            "type": "string"
+          }
+        }
+      },
+      "typeVersion": 4
+    },
+    {
+      "id": "salesforce",
+      "name": "Salesforce - Pull Cases",
+      "type": "n8n-nodes-base.salesforce",
+      "position": [750, 150],
+      "parameters": {
+        "operation": "search",
+        "objectType": "Case",
+        "filterConditions": {
+          "conditions": [
+            {
+              "field": "Status",
+              "operator": "equals",
+              "value": "Closed"
+            }
+          ]
+        },
+        "returnAll": true,
+        "outputFields": [
+          "Id",
+          "CaseNumber",
+          "Subject",
+          "Description",
+          "Status",
+          "Category__c",
+          "Resolution",
+          "EscalationLevel__c",
+          "CustomerType__c",
+          "ProductFamily__c",
+          "CreatedDate",
+          "ClosedDate"
+        ]
+      },
+      "credentials": {
+        "salesforceApi": {
+          "id": "CREDENTIAL_ID_HERE",
+          "name": "Salesforce API"
+        }
+      }
+    },
+    {
+      "id": "postgres",
+      "name": "PostgreSQL - Pull Records",
+      "type": "n8n-nodes-base.postgres",
+      "position": [750, 400],
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT \n  order_id,\n  customer_tier,\n  product_line,\n  defect_type,\n  root_cause,\n  resolution_code,\n  lot_number,\n  created_at\nFROM quality_records\nWHERE created_at > '2024-01-01'\nAND archived = false\nLIMIT 10000"
+      },
+      "credentials": {
+        "postgres": {
+          "id": "CREDENTIAL_ID_HERE",
+          "name": "PostgreSQL"
+        }
+      }
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot - Pull Tickets",
+      "type": "n8n-nodes-base.hubspot",
+      "position": [750, 600],
+      "parameters": {
+        "operation": "getAll",
+        "resource": "ticket",
+        "limit": 5000
+      },
+      "credentials": {
+        "hubspotApi": {
+          "id": "CREDENTIAL_ID_HERE",
+          "name": "HubSpot API"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "id": "combine",
+      "name": "Combine Data Sources",
+      "type": "n8n-nodes-base.code",
+      "position": [1000, 300],
+      "parameters": {
+        "jsCode": "// Combine all data sources into single array\nconst salesforceData = $input.all()\nconst filtered = salesforceData.filter(n => n.json.objectType !== undefined)\nconst cases = filtered.map(n => ({\n  ...n.json,\n  _source: 'salesforce',\n  _sourceId: n.json.Id || n.json.CaseNumber\n}))\n\n// Limit to most recent 10,000 records\nconst combined = cases.slice(0, 10000)\n\nreturn combined.map(d => ({ json: d }));"
+      }
+    },
+    {
+      "id": "pii-clean-1",
+      "name": "Clean PII - Names",
+      "type": "n8n-nodes-base.code",
+      "position": [1250, 200],
+      "parameters": {
+        "jsCode": "// Remove PII from each record\nconst records = $input.all();\n\n// PII patterns\nconst patterns = [\n  // Full names (First Last)\n  { regex: /\\b[A-Z][a-z]+ [A-Z][a-z]+\\b/g, replacement: '[PERSON]' },\n  // Email addresses\n  { regex: /\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b/g, replacement: '[EMAIL]' },\n  // Phone numbers (various formats)\n  { regex: /\\b(\\+1[-.\\s]?)?\\(?\\d{3}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}\\b/g, replacement: '[PHONE]' },\n  // SSN\n  { regex: /\\b\\d{3}-\\d{2}-\\d{4}\\b/g, replacement: '[SSN]' },\n  // Credit cards\n  { regex: /\\b\\d{4}[-\\s]?\\d{4}[-\\s]?\\d{4}[-\\s]?\\d{4}\\b/g, replacement: '[CARD]' },\n  // Addresses\n  { regex: /\\b\\d{1,5}\\s+[\\w\\s]+(Street|St|Avenue|Ave|Road|Rd|Drive|Dr|Boulevard|Blvd|Lane|Ln|Way|Court|Ct|Circle|Cir)\\b/gi, replacement: '[ADDRESS]' },\n  // Order numbers (common patterns)\n  { regex: /\\b(ORD-|ORDER-|INV-|QUOTE-)\\d{4,10}\\b/gi, replacement: '[ORDER_ID]' },\n  // Internal IDs (optional - removes but logs)\n  { regex: /\\b(id:|ID:|ref:|REF:)[A-Z0-9-_]+\\b/gi, replacement: '[REF]' }\n];\n\nfunction cleanRecord(record) {\n  const cleaned = { ...record.json };\n  \n  for (const key of Object.keys(cleaned)) {\n    if (typeof cleaned[key] === 'string') {\n      let value = cleaned[key];\n      patterns.forEach(({ regex, replacement }) => {\n        value = value.replace(regex, replacement);\n      });\n      cleaned[key] = value;\n    }\n  }\n  \n  // Log PII stats\n  const originalStr = JSON.stringify(record.json);\n  const cleanedStr = JSON.stringify(cleaned);\n  if (originalStr !== cleanedStr) {\n    cleaned._pii_cleaned = true;\n  }\n  \n  return { json: cleaned };\n}\n\nconst cleaned = records.map(cleanRecord);\nconst piiCount = cleaned.filter(d => d.json._pii_cleaned).length;\nconsole.log(`PII cleaned in ${piiCount} of ${records.length} records`);\n\nreturn cleaned;"
+      }
+    },
+    {
+      "id": "pii-check",
+      "name": "PII Validation Check",
+      "type": "n8n-nodes-base.code",
+      "position": [1500, 200],
+      "parameters": {
+        "jsCode": "// Final PII validation\nconst records = $input.all();\n\n// Check for any remaining PII patterns\nconst remainingPII = [\n  { name: 'Names', pattern: /\\b[A-Z][a-z]+ [A-Z][a-z]+\\b/g },\n  { name: 'Emails', pattern: /\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b/g },\n  { name: 'Phones', pattern: /\\b\\d{3}[-.\\s]?\\d{3}[-.\\s]?\\d{4}\\b/g }\n];\n\nlet flagged = 0;\nconst checked = records.map(record => {\n  const checked = { ...record.json };\n  let hasPII = false;\n  \n  for (const key of Object.keys(checked)) {\n    if (typeof checked[key] === 'string') {\n      for (const { name, pattern } of remainingPII) {\n        const matches = checked[key].match(pattern);\n        if (matches && !checked[key].includes('[REDACTED]') && !checked[key].includes('[PERSON]')) {\n          hasPII = true;\n          flagged++;\n          break;\n        }\n      }\n    }\n    if (hasPII) break;\n  }\n  \n  checked._pii_validated = !hasPII;\n  return { json: checked };\n});\n\nconsole.log(`PII validation: ${flagged} potential issues found in ${records.length} records`);\n\n// Return all records (PII is acceptable if redacted)\nreturn checked;"
+      }
+    },
+    {
+      "id": "format-qa",
+      "name": "Format to Q&A Pairs",
+      "type": "n8n-nodes-base.code",
+      "position": [1750, 200],
+      "parameters": {
+        "jsCode": "// Convert records to instruction-following format\nconst records = $input.all();\n\nfunction classifyCategory(record) {\n  const r = record.json;\n  const subject = (r.Subject || r.subject || '').toLowerCase();\n  const category = (r.Category__c || r.category || '').toLowerCase();\n  const desc = (r.Description || r.description || '').toLowerCase();\n  const combined = subject + ' ' + category + ' ' + desc;\n  \n  if (combined.includes('quality') || combined.includes('defect') || combined.includes('warranty')) {\n    return 'Quality - Warranty Claim';\n  } else if (combined.includes('billing') || combined.includes('invoice') || combined.includes('payment')) {\n    return 'Billing Inquiry';\n  } else if (combined.includes('shipping') || combined.includes('delivery') || combined.includes('order')) {\n    return 'Shipping - Order Status';\n  } else if (combined.includes('return') || combined.includes('refund')) {\n    return 'Returns - Refunds';\n  } else {\n    return 'General Inquiry';\n  }\n}\n\nfunction determineEscalation(record) {\n  const r = record.json;\n  const level = r.EscalationLevel__c || r.escalationLevel || r.escalation_level || 'L1';\n  return level.toString().toUpperCase();\n}\n\nfunction createInstruction(record) {\n  const r = record.json;\n  const subject = r.Subject || r.subject || '';\n  const desc = r.Description || r.description || '';\n  \n  if (desc && desc.length > 10) {\n    return `A customer reports: ${desc.substring(0, 300)}`;\n  }\n  return subject || 'Handle customer inquiry';\n}\n\nfunction createOutput(record) {\n  const r = record.json;\n  const category = classifyCategory(record);\n  const escalation = determineEscalation(record);\n  const resolution = r.Resolution || r.resolution || r.root_cause || '';\n  const product = r.ProductFamily__c || r.product_line || r.ProductFamily || '';\n  const customerTier = r.CustomerType__c || r.customer_tier || 'Standard';\n  \n  let response = `Category: ${category}\nEscalation Level: ${escalation}\nProduct Line: ${product}\nCustomer Tier: ${customerTier}\n`;\n  \n  if (resolution) {\n    response += `\\nKnown Resolution: ${resolution}`;\n  }\n  \n  // Standard response protocols\n  if (category.includes('Quality') || category.includes('Warranty')) {\n    response += `\\n\\nResponse Protocol:\\n1. Verify purchase date and warranty status\\n2. Check lot trace for manufacturing date\\n3. If under warranty: Issue return authorization\\n4. Document: lot_number, warranty_status, resolution\\n5. If out of warranty: Quote repair/replacement options`;\n  } else if (category.includes('Billing')) {\n    response += `\\n\\nResponse Protocol:\\n1. Review account and invoice in question\\n2. Verify charges against contract terms\\n3. If error: Issue credit or adjustment\\n4. If correct: Explain charges clearly\\n5. Document in CRM`;\n  } else {\n    response += `\\n\\nResponse Protocol:\\n1. Acknowledge customer concern\\n2. Review relevant records\\n3. Provide resolution or escalation path\\n4. Document in system`;\n  }\n  \n  return response;\n}\n\nconst trainingData = records.map(record => {\n  const r = record.json;\n  return {\n    json: {\n      instruction: createInstruction(record),\n      input: '',\n      output: createOutput(record),\n      _recordId: r._sourceId || r.Id || Math.random().toString(36)\n    }\n  };\n});\n\nconsole.log(`Formatted ${trainingData.length} training examples`);\nreturn trainingData;"
+      }
+    },
+    {
+      "id": "dedupe",
+      "name": "Deduplicate",
+      "type": "n8n-nodes-base.code",
+      "position": [2000, 200],
+      "parameters": {
+        "jsCode": "// Remove duplicate instructions\nconst records = $input.all();\nconst seen = new Set();\nconst unique = [];\nlet duplicates = 0;\n\nfor (const record of records) {\n  const instruction = record.json.instruction;\n  if (!seen.has(instruction)) {\n    seen.add(instruction);\n    unique.push(record);\n  } else {\n    duplicates++;\n  }\n}\n\nconsole.log(`Deduplication: ${duplicates} duplicates removed, ${unique.length} unique records`);\nreturn unique;"
+      }
+    },
+    {
+      "id": "convert-csv",
+      "name": "Convert to CSV",
+      "type": "n8n-nodes-base.convert",
+      "position": [2250, 200],
+      "parameters": {
+        "mode": "jsonToCsv",
+        "options": {
+          "properties": {
+            "headerRow": true,
+            "quoteAll": false,
+            " delimiter\": \",\"
+          }
+        }
+      }
+    },
+    {
+      "id": "upload-drive",
+      "name": "Upload to Google Drive",
+      "type": "n8n-nodes-base.googleDrive",
+      "position": [2500, 200],
+      "parameters": {
+        "operation": "upload",
+        "fileName": "=/training-data.csv",
+        "folderId": "NAMAKAN_TRAINING_FOLDER_ID",
+        "options": {
+          "mimeType": "text/csv"
+        }
+      },
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "CREDENTIAL_ID_HERE",
+          "name": "Google Drive"
+        }
+      }
+    },
+    {
+      "id": "prepare-colab",
+      "name": "Prepare Colab Payload",
+      "type": "n8n-nodes-base.code",
+      "position": [2750, 200],
+      "parameters": {
+        "jsCode": "// Prepare Colab notebook configuration\nconst driveFile = $input.first().json;\nconst config = {\n  clientName: 'ACME_CORP',\n  clientSlug: 'acme',\n  trainingDataFileId: driveFile.id || 'FILE_ID',\n  modelOutputFolderId: 'NAMAKAN_MODELS_FOLDER_ID',\n  version: '1',\n  webhookUrl: 'YOUR_N8N_WEBHOOK_URL',\n  timestamp: new Date().toISOString()\n};\n\nconsole.log('Colab configuration prepared');\nconsole.log(JSON.stringify(config, null, 2));\n\nreturn [{ json: config }];"
+      }
+    },
+    {
+      "id": "trigger-colab",
+      "name": "Trigger Colab (Email)",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [3000, 200],
+      "parameters": {
+        "to": "namakan-colab@gmail.com",
+        "subject": "=New Training Job: {{ $json.clientName }}",
+        "body": "New fine-tuning job ready.\\n\\nClient: {{ $json.clientName }}\\nVersion: {{ $json.version }}\\nData File ID: {{ $json.trainingDataFileId }}\\nOutput Folder: {{ $json.modelOutputFolderId }}\\n\\nPlease create new Colab instance and run training.\\n\\nWebhook URL: {{ $json.webhookUrl }}",
+        "options": {}
+      },
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "CREDENTIAL_ID_HERE",
+          "name": "Gmail"
+        }
+      }
+    },
+    {
+      "id": "set-waiting",
+      "name": "Set Waiting State",
+      "type": "n8n-nodes-base.set",
+      "position": [3250, 200],
+      "parameters": {
+        "mode": "manual",
+        "assignments": {
+          "status": {
+            "value": "waiting_for_colab",
+            "type": "string"
+          },
+          "clientName": {
+            "value": "={{ $json.clientName }}",
+            "type": "string"
+          },
+          "colabStarted": {
+            "value": "={{ $now.toISO() }}",
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "id": "wait",
+      "name": "Wait for Completion",
+      "type": "n8n-nodes-base.wait",
+      "position": [3500, 200],
+      "parameters": {
+        "amount": 90,
+        "unit": "minutes",
+        "resume": "webhook",
+        "resumeUrl": "={{ $json.webhookUrl }}/callback"
+      }
+    },
+    {
+      "id": "check-result",
+      "name": "Check Training Result",
+      "type": "n8n-nodes-base.switch",
+      "position": [3750, 200],
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $json.status }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "complete",
+              "operation": "equals",
+              "output": 0
+            },
+            {
+              "value2": "failed",
+              "operation": "equals",
+              "output": 1
+            }
+          ]
+        },
+        "fallbackOutput": 2
+      }
+    },
+    {
+      "id": "success-notify",
+      "name": "Notify Success (Telegram)",
+      "type": "n8n-nodes-base.telegram",
+      "position": [4000, 100],
+      "parameters": {
+        "chatId": "7982591864",
+        "text": "=✅ Training Complete!\n\nClient: {{ $json.client }}\nModel: {{ $json.model }}\nExamples: {{ $json.training_examples }}\nTime: {{ $json.training_time_minutes }} min\n\n📁 Model: {{ $json.drive_link }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramBotApi": {
+          "id": "CREDENTIAL_ID_HERE",
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "id": "failure-notify",
+      "name": "Notify Failure (Telegram)",
+      "type": "n8n-nodes-base.telegram",
+      "position": [4000, 300],
+      "parameters": {
+        "chatId": "7982591864",
+        "text": "=❌ Training Failed\n\nClient: {{ $json.client }}\nError: {{ $json.error }}\n\nPlease check Colab logs.",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramBotApi": {
+          "id": "CREDENTIAL_ID_HERE",
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "id": "update-db",
+      "name": "Update Training Log",
+      "type": "n8n-nodes-base.postgres",
+      "position": [4250, 200],
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO training_runs (client_name, model_name, status, training_examples, duration_minutes, drive_link, created_at)\\nVALUES ('{{ $json.client }}', '{{ $json.model }}', '{{ $json.status }}', {{ $json.training_examples || 0 }}, {{ $json.training_time_minutes || 0 }}, '{{ $json.drive_link || '' }}', NOW())\\nRETURNING id;"
+      },
+      "credentials": {
+        "postgres": {
+          "id": "CREDENTIAL_ID_HERE",
+          "name": "PostgreSQL"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Manual/Webhook Trigger": {
+      "main": [
+        [{ "node": "Set Client Config", "type": "main", "index": 0 }]
+      ]
+    },
+    "Set Client Config": {
+      "main": [
+        [{ "node": "Salesforce - Pull Cases", "type": "main", "index": 0 }],
+        [{ "node": "PostgreSQL - Pull Records", "type": "main", "index": 0 }]
+      ]
+    },
+    "Salesforce - Pull Cases": {
+      "main": [
+        [{ "node": "Combine Data Sources", "type": "main", "index": 0 }]
+      ]
+    },
+    "PostgreSQL - Pull Records": {
+      "main": [
+        [{ "node": "Combine Data Sources", "type": "main", "index": 0 }]
+      ]
+    },
+    "Combine Data Sources": {
+      "main": [
+        [{ "node": "Clean PII - Names", "type": "main", "index": 0 }]
+      ]
+    },
+    "Clean PII - Names": {
+      "main": [
+        [{ "node": "PII Validation Check", "type": "main", "index": 0 }]
+      ]
+    },
+    "PII Validation Check": {
+      "main": [
+        [{ "node": "Format to Q&A Pairs", "type": "main", "index": 0 }]
+      ]
+    },
+    "Format to Q&A Pairs": {
+      "main": [
+        [{ "node": "Deduplicate", "type": "main", "index": 0 }]
+      ]
+    },
+    "Deduplicate": {
+      "main": [
+        [{ "node": "Convert to CSV", "type": "main", "index": 0 }]
+      ]
+    },
+    "Convert to CSV": {
+      "main": [
+        [{ "node": "Upload to Google Drive", "type": "main", "index": 0 }]
+      ]
+    },
+    "Upload to Google Drive": {
+      "main": [
+        [{ "node": "Prepare Colab Payload", "type": "main", "index": 0 }]
+      ]
+    },
+    "Prepare Colab Payload": {
+      "main": [
+        [{ "node": "Trigger Colab (Email)", "type": "main", "index": 0 }]
+      ]
+    },
+    "Trigger Colab (Email)": {
+      "main": [
+        [{ "node": "Set Waiting State", "type": "main", "index": 0 }]
+      ]
+    },
+    "Set Waiting State": {
+      "main": [
+        [{ "node": "Wait for Completion", "type": "main", "index": 0 }]
+      ]
+    },
+    "Wait for Completion": {
+      "main": [
+        [{ "node": "Check Training Result", "type": "main", "index": 0 }]
+      ]
+    },
+    "Check Training Result": {
+      "main": [
+        [{ "node": "Notify Success (Telegram)", "type": "main", "index": 0 }],
+        [{ "node": "Failure Notify (Telegram)", "type": "main", "index": 0 }],
+        [{ "node": "Update Training Log", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
+  },
+  "staticData": null
+}

@@ -1,379 +1,391 @@
-## The Offering
+# Namakan Fine-Tuning Pipeline Guide
 
-We build **private, domain-specific AI models** trained on a client's proprietary data. Unlike generic AI, their model understands their industry, their products, their customers — and nothing else.
-
-**What you get:**
-- A private AI model they own and control
-- Deployed on their infrastructure or ours
-- Continuously improved as more data becomes available
+**Complete, Secure, and Efficient Process for Custom AI Training**
 
 ---
 
-## Pipeline Overview
+## Overview
+
+This document describes the complete fine-tuning pipeline from data extraction to model delivery. Each client gets:
+- **Isolated Colab instance** — No data mixing between clients
+- **Automated workflow** — n8n handles data processing
+- **Secure pipeline** — PII removal, encrypted storage
+- **Reliable delivery** — Webhook notifications, retry logic
+
+---
+
+## Pipeline Architecture
 
 ```
-Client Data → Assessment → Data Prep → Training → Evaluation → Deployment → Monitoring
+┌─────────────────────────────────────────────────────────────────────────┐
+│  CLIENT DATA SOURCES                                                   │
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐                  │
+│  │Salesforce│  │PostgreSQL│  │HubSpot  │  │Google   │                  │
+│  │         │  │         │  │         │  │Drive    │                  │
+│  └────┬────┘  └────┬────┘  └────┬────┘  └────┬────┘                  │
+└───────┼────────────┼────────────┼────────────┼────────────────────────┘
+        │            │            │            │
+        └────────────┴─────┬──────┴────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  n8n AUTOMATION (heater.local:5678)                                   │
+│                                                                         │
+│  1. Pull data from all sources                                         │
+│  2. Combine and deduplicate                                            │
+│  3. Remove PII (names, emails, phones, addresses)                      │
+│  4. Validate PII removal                                                │
+│  5. Format to Q&A training pairs                                       │
+│  6. Upload to Google Drive (isolated folder)                            │
+│  7. Trigger Colab via email                                             │
+│  8. Wait for completion (webhook)                                       │
+│  9. Notify via Telegram                                                │
+│  10. Log to database                                                    │
+└─────────────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  GOOGLE COLAB (Dedicated Per-Client Instance)                         │
+│                                                                         │
+│  1. Download training data from Drive                                   │
+│  2. Final PII validation                                                │
+│  3. Load Qwen2.5-8B with QLoRA (4-bit)                                 │
+│  4. Fine-tune on client data                                           │
+│  5. Merge LoRA weights                                                 │
+│  6. Upload model to Drive                                              │
+│  7. Send webhook notification                                           │
+│                                                                         │
+│  ⚠️ SECURITY: Each client = New Colab instance = Isolated            │
+└─────────────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  MODEL DELIVERY                                                        │
+│                                                                         │
+│  Option A: Client downloads from Drive                                  │
+│  Option B: Deploy to Lambda/RunPod hosting                             │
+│  Option C: Namakan hosts on API                                         │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Phase 1: Discovery & Assessment
+## Security Model
 
-### 1.1 Data Audit
-- Inventory all available data sources
-- Estimate data volume and quality
-- Identify PII and sensitive data
-- Assess labeling requirements
+### Data Isolation
 
-### 1.2 Use Case Definition
-- What should the model do?
-- How will it be used?
-- What does success look like?
+| Layer | Security Measure |
+|-------|------------------|
+| **Colab** | Dedicated instance per client, runtime deleted after training |
+| **Training Data** | Stored in isolated Google Drive folder per client |
+| **Credentials** | Stored in n8n credential manager, never in code |
+| **PII** | Removed before training, validated twice |
+| **Model** | Only model weights delivered, no raw data |
 
-### 1.3 Base Model Selection
+### PII Removal
 
-| Use Case | Recommended Base | Size | Hardware |
-|----------|-----------------|------|----------|
-| General chat | Llama 3.1/3.2 | 8B, 13B | 1x A100 or 4x 3090 |
-| Code generation | CodeLlama, Qwen2.5-Coder | 7B, 13B | 1x A100 |
-| Reasoning | DeepSeek R1 | 7B, 14B | 1x A100 |
-| Multimodal | Qwen2-VL, Llama 3.2-Vision | 11B, 90B | 2x A100 |
-| Domain expert | Llama 3.1 + domain corpus | 8B-70B | Varies |
-| Edge/deployment | Qwen2.5-3B, Mistral-3B | 3B-7B | Consumer GPU |
+**Removed patterns:**
+- Full names (First Last)
+- Email addresses
+- Phone numbers (all formats)
+- Social Security Numbers
+- Credit card numbers
+- Street addresses
+- Order/Invoice numbers
 
-### 1.4 Scope & Proposal
-- Data prep timeline
-- Training timeline
-- Evaluation criteria
-- Deployment approach
-- Pricing
+**Validation:**
+1. n8n node removes PII using regex
+2. Colab notebook does final check
+3. Any remaining PII is flagged
+
+### Colab Instance Isolation
+
+**Per-client workflow:**
+1. Namakan creates new Colab notebook (copy of template)
+2. Notebook configured with client's File IDs
+3. Client-specific variables set (CLIENT_NAME, CLIENT_SLUG)
+4. Notebook shared via email or Drive link
+5. Training runs on fresh runtime
+6. Runtime deleted after completion
+
+**Benefits:**
+- No data persists between clients
+- No risk of model contamination
+- Audit trail per client
 
 ---
 
-## Phase 2: Data Collection & Preparation
+## Setup Requirements
 
-### 2.1 Data Sources
-- Internal documents (PDF, Markdown, HTML)
-- CRM data
-- Support tickets and chat logs
-- Email archives
-- Product databases
-- Public datasets (industry-specific)
-- Synthetic data generation
+### 1. Google Cloud Setup
 
-### 2.2 Data Cleaning
-```python
-# Example: cleaning text data
-import re
-from datasets import load_dataset
+```bash
+# Create service account for Drive API
+gcloud iam service-accounts create namakan-pipeline \
+  --display-name="Namakan Pipeline"
 
-def clean_text(text):
-    # Remove PII
-    text = re.sub(r'\b\d{3}-\d{2}-\d{4}\b', '[SSN]', text)  # SSN
-    text = re.sub(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z]{2,}\b', '[EMAIL]', text)
-    # Normalize whitespace
-    text = re.sub(r'\s+', ' ', text).strip()
-    return text
+# Grant Drive API access
+gcloud projects add-iam-policy-binding PROJECT_ID \
+  --member="serviceAccount:namakan-pipeline@PROJECT_ID.iam.gserviceaccount.com" \
+  --role="roles/drive.fileEditor"
 
-def filter_quality(texts, min_length=50, max_length=8192):
-    return [t for t in texts if min_length <= len(t) <= max_length]
+# Download key JSON
+gcloud iam service-accounts keys create namakan-key.json \
+  --iam-account=namakan-pipeline@PROJECT_ID.iam.gserviceaccount.com
 ```
 
-### 2.3 Data Formats
+### 2. n8n Setup
 
-**Instruction Tuning (recommended for task completion):**
+```bash
+# Install n8n (if not already)
+npm install -g n8n
+
+# Start n8n
+n8n start
+
+# Or run with Docker
+docker run -d --name n8n \
+  -p 5678:5678 \
+  -v n8n_data:/home/node/.n8n \
+  n8nio/n8n
+```
+
+### 3. n8n Credentials
+
+Create these credentials in n8n:
+
+| Credential | Purpose |
+|------------|---------|
+| **Salesforce API** | Connect to client Salesforce |
+| **PostgreSQL** | Client database + training logs |
+| **Google Drive** | Training data + model storage |
+| **Gmail** | Send Colab notifications |
+| **Telegram Bot** | Status notifications |
+
+### 4. Colab Template
+
+1. Upload `colab-notebook.ipynb` to Google Drive
+2. Share folder with namakan-colab@gmail.com
+3. Note the folder ID
+
+### 5. Environment Variables
+
+```bash
+# n8n environment
+export N8N_BASIC_AUTH_ACTIVE=true
+export N8N_BASIC_AUTH_USER=admin
+export N8N_BASIC_AUTH_PASSWORD=YOUR_PASSWORD
+export WEBHOOK_URL=https://your-domain.com/webhook
+
+# Google credentials
+export GOOGLE_APPLICATION_CREDENTIALS=/path/to/credentials.json
+```
+
+---
+
+## Running the Pipeline
+
+### Manual Trigger (n8n)
+
+1. Open n8n: http://heater.local:5678
+2. Open "Namakan Fine-Tuning Pipeline"
+3. Click "Test Workflow" on Manual Trigger
+4. Enter client configuration:
+
 ```json
 {
-  "instruction": "What is the return policy for widget X?",
-  "input": "",
-  "output": "Widget X can be returned within 30 days of purchase with receipt..."
+  "clientName": "Acme Corp",
+  "clientSlug": "acme",
+  "trainingDataFileId": "1XKmj83k...",
+  "modelOutputFolderId": "1XKmj83k...",
+  "version": "1",
+  "webhookUrl": "https://your-domain.com/webhook/namakan-training"
 }
 ```
 
-**Chat Format (for conversational AI):**
-```json
-{
-  "messages": [
-    {"role": "system", "content": "You are AcmeBot, a customer service AI."},
-    {"role": "user", "content": "How do I reset my password?"},
-    {"role": "assistant", "content": "To reset your password, go to acme.com/reset..."}
-  ]
-}
-```
+### Automated Trigger (Webhook)
 
-**Completion Format (for text generation):**
-```json
-{"text": "Customer: I need to return my order.\nAgent: I'm sorry to hear that..."}
-```
-
-### 2.4 Data Volume Guidelines
-
-| Model Size | Min Examples | Recommended | Max Context |
-|-----------|-------------|-------------|-------------|
-| 3B | 1,000 | 5,000 | 8K |
-| 7B | 2,000 | 10,000 | 16K |
-| 13B | 5,000 | 20,000 | 32K |
-| 70B | 10,000 | 50,000 | 128K |
-
-### 2.5 Synthetic Data Generation
-For clients with limited data, generate synthetic examples:
-```python
-# Use a stronger model to generate training examples
-from openai import OpenAI
-client = OpenAI()
-
-def generate_synthetic_examples(domain, n=100):
-    prompt = f"""Generate {n} question-answer pairs about {domain}.
-    Format as JSON array of {{"instruction": "...", "output": "..."}}
-    Make questions diverse and realistic."""
-    response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[{"role": "user", "content": prompt}]
-    )
-    return json.loads(response.choices[0].message.content)
+```bash
+# Trigger via webhook
+curl -X POST https://your-domain.com/webhook/namakan-training \
+  -H "Content-Type: application/json" \
+  -d '{
+    "clientName": "Acme Corp",
+    "clientSlug": "acme",
+    "trainingDataFileId": "1XKmj83k...",
+    "modelOutputFolderId": "1XKmj83k...",
+    "version": "1",
+    "webhookUrl": "https://your-domain.com/webhook/callback"
+  }'
 ```
 
 ---
 
-## Phase 3: Training
+## Monitoring & Notifications
 
-### 3.1 Training Stack
-- **Framework**: Axolotl, Unsloth, or PEFT + Transformers
-- **Method**: LoRA (default), QLoRA (for large models on limited hardware), DPO (for preference alignment)
-- **Hardware**: Our GPU cluster or client infrastructure
+### Telegram Notifications
 
-### 3.2 LoRA Configuration
-```yaml
-# axolotl config for LoRA fine-tuning
-base_model: Qwen/Qwen2.5-14B-Instruct
-model_type: AutoAutoModelForCausalLM
+**Training started:**
+```
+🔄 Training Started
 
-dataset_prepared_path: ./data/prepared
-output_dir: ./outputs
-sequence_len: 2048
-
-adapter: lora
-lora_r: 16
-lora_alpha: 32
-lora_dropout: 0.05
-lora_target_modules:
-  - q_proj
-  - v_proj
-  - k_proj
-  - o_proj
-  - gate_proj
-  - up_proj
-  - down_proj
-
-dataset:
-  type: instruction
-  train_file: ./data/train.jsonl
-  val_file: ./data/val.jsonl
-
-training:
-  num_epochs: 3
-  micro_batch_size: 2
-  gradient_accumulation_steps: 8
-  learning_rate: 0.0002
-  warmup_steps: 10
-  optimizer: adamw_torch
-  torch_dtype: float16
-  bf16: full
-  gradient_checkpointing: true
-  logging_steps: 10
-  save_steps: 100
-  eval_steps: 100
-  save_total_limit: 3
+Client: Acme Corp
+Version: v1
+Records: 3,247
+Started: 10:30 AM
 ```
 
-### 3.3 Training Process
+**Training complete:**
 ```
-1. Load base model (quantized if large)
-2. Tokenize dataset
-3. Initialize LoRA adapters
-4. Run training with gradient checkpointing
-5. Save checkpoints
-6. Evaluate at intervals
-7. Select best checkpoint
-```
+✅ Training Complete!
 
-### 3.4 Common Issues & Fixes
+Client: Acme Corp
+Model: acme-v1
+Records: 3,247
+Time: 47 minutes
+Loss: 0.82
 
-| Issue | Cause | Fix |
-|-------|-------|-----|
-| Loss NaN | Learning rate too high, bad data | Reduce LR, clean data |
-| Catastrophic forgetting | Too many epochs, wrong data ratio | Early stopping, more diverse data |
-| Mode collapse | Data too homogeneous | Increase data diversity |
-| Bad output format | Instruction format mismatch | Fix template, validate data |
-| Overfitting | Too few examples, too many epochs | Add regularization, early stopping |
-
----
-
-## Phase 4: Evaluation
-
-### 4.1 Metrics
-- **Perplexity** — Model confidence (lower = better)
-- **ROUGE/BLEU** — N-gram overlap with reference
-- **BERTScore** — Semantic similarity
-- **Task-specific accuracy** — Did it complete the task?
-- **Human evaluation** — Gold standard
-
-### 4.2 Evaluation Framework
-```python
-from transformers import LLMCharacterLevelCrossEntropy
-import evaluate
-
-def evaluate_model(model, test_data, tokenizer):
-    perplexity = LLMCharacterLevelCrossEntropy.compute(
-        model=model, data=test_data
-    )
-    
-    rouge = evaluate.load("rouge")
-    bleurt = evaluate.load("bleurt")
-    
-    predictions = [generate(prompt) for prompt in test_data["prompt"]]
-    references = test_data["reference"]
-    
-    return {
-        "perplexity": perplexity,
-        "rouge": rouge.compute(predictions=predictions, references=references),
-        "bleurt": bleurt.compute(predictions=predictions, references=references)
-    }
+📁 Model: https://drive.google.com/...
 ```
 
-### 4.3 Red Teaming
-- Adversarial prompts
-- PII extraction attempts
-- Hallucination tests
-- Out-of-domain queries
-- Format injection attacks
-
----
-
-## Phase 5: Deployment
-
-### 5.1 Deployment Options
-
-**Option A: Our Infrastructure (Fastest)**
-- Deploy on our GPU servers
-- API access for client
-- We handle maintenance
-- Monthly fee
-
-**Option B: Client's Cloud**
-- Deploy on AWS, GCP, or Azure
-- We set up, client manages
-- One-time setup + hourly consulting
-
-**Option C: On-Premise**
-- Deploy on client's hardware
-- Full privacy, highest latency
-- Longest setup time
-
-**Option D: Hybrid**
-- Sensitive data stays on-prem
-- Inference in our cloud
-- Custom architecture
-
-### 5.2 Inference Stack
-
-**For 3B-13B models:**
-```python
-# llama.cpp (CPU/GPU, fast, portable)
-from llama_cpp import Llama
-llm = Llama(model_path="./model.gguf", n_ctx=4096)
-
-# or vLLM (higher throughput, needs GPU)
-from vllm import LLM
-llm = LLM(model="./model/", tensor_parallel_size=1)
+**Training failed:**
 ```
+❌ Training Failed
 
-**For 70B+ models:**
-```python
-# vLLM with tensor parallelism
-from vllm import LLM
-llm = LLM(
-    model="./model/",
-    tensor_parallel_size=4,  # 4x A100
-    gpu_memory_utilization=0.9,
-    max_model_len=8192
-)
-```
+Client: Acme Corp
+Error: OOM - Out of memory
+Time: 12 minutes
 
-### 5.3 API Layer
-```python
-from fastapi import FastAPI
-from pydantic import BaseModel
-
-app = FastAPI()
-
-class Query(BaseModel):
-    prompt: str
-    max_tokens: int = 512
-    temperature: float = 0.3
-
-@app.post("/generate")
-async def generate(query: Query):
-    output = llm.generate(
-        query.prompt,
-        max_tokens=query.max_tokens,
-        temperature=query.temperature
-    )
-    return {"output": output}
-
-@app.post("/batch")
-async def batch_generate(queries: list[Query]):
-    return [generate(q) for q in queries]
+Check Colab logs.
 ```
 
 ---
 
-## Phase 6: Monitoring & Iteration
+## Troubleshooting
 
-### 6.1 Production Monitoring
-- Request latency
-- Token usage
-- Error rates
-- Output quality sampling
-- Drift detection
+### Common Issues
 
-### 6.2 Retraining Triggers
-- Performance drops below threshold
-- New data available (>1K new examples)
-- Quarterly refresh cycle
-- Client feedback
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| **OOM in Colab** | Batch size too high | Reduce to 2 or 1 |
+| **PII detected** | Regex missed something | Add pattern, re-run |
+| **Webhook timeout** | Colab takes >90 min | Increase wait time |
+| **Drive upload failed** | Permission error | Check service account |
+| **No data pulled** | API credentials expired | Refresh credentials |
 
-### 6.3 Continuous Improvement
+### Debug Mode
+
+```javascript
+// Add to n8n code nodes for debugging
+console.log('Records:', records.length);
+console.log('Sample:', JSON.stringify(records[0], null, 2));
+return records; // Continue with data
 ```
-Monthly: Quality review → Flag issues
-Quarterly: Retrain with accumulated data
-On-demand: Hotfix for specific failures
+
+### Manual Recovery
+
+If Colab fails:
+
+1. Check Colab email for error
+2. Fix notebook or data issue
+3. Trigger manual run from n8n
+4. Or re-upload data and restart
+
+---
+
+## Performance Metrics
+
+### Typical Timings
+
+| Step | Duration |
+|------|----------|
+| Data extraction (Salesforce) | 2-5 min |
+| Data extraction (PostgreSQL) | 1-3 min |
+| PII cleaning | <1 min |
+| Q&A formatting | <1 min |
+| Drive upload | 2-5 min |
+| Colab training | 30-60 min |
+| Model upload | 5-15 min |
+| **Total** | **45-90 min** |
+
+### GPU Requirements
+
+| Model Size | GPU | Memory | Training Time |
+|------------|-----|--------|---------------|
+| Qwen2.5-3B | T4 | 8GB | 20-30 min |
+| Qwen2.5-8B | T4 | 16GB | 45-60 min |
+| Qwen2.5-8B | A10G | 24GB | 25-35 min |
+| Qwen2.5-14B | A100 | 80GB | 30-40 min |
+
+---
+
+## Cost Analysis
+
+### Per-Client Training Cost
+
+| Resource | Cost |
+|----------|------|
+| Colab Pro | $0 (with Pro) or $10 |
+| Google Drive | $0 (15GB free) |
+| n8n (self-hosted) | $0 |
+| Namakan time | ~2 hours |
+| **Total** | **~$0-10 + time** |
+
+### Hosting Cost (Post-Training)
+
+| Provider | GPU | $/month | Tokens/sec |
+|----------|-----|---------|------------|
+| Lambda Labs | T4 | $25-50 | 20-30 |
+| RunPod | T4 | $20-30 | 20-30 |
+| Modal | A10G | $30-50 | 40-60 |
+
+---
+
+## File Structure
+
+```
+namakan-technical/fine-tuned-models/
+├── workflow.md              # This guide
+├── technical.md            # Technical deep-dive
+├── deployment.md            # Model deployment guide
+├── client-workflow-example.md  # Acme Corp example
+├── n8n-workflow.json       # Import into n8n
+├── n8n-workflow-production.json  # Production version
+├── colab-notebook.ipynb    # Colab training notebook
+└── PIPELINE.md            # This file
 ```
 
 ---
 
-## Deliverables
+## Checklist: New Client Setup
 
-1. **Trained model weights** (LoRA adapters or full model)
-2. **Inference API** (FastAPI + Docker)
-3. **Deployment documentation**
-4. **Evaluation report** (pre/post metrics)
-5. **User guide** for API integration
-6. **3-month support** included
+```
+□ Discovery call completed
+□ Contract signed (50% paid)
+□ Create Google Drive folders:
+  □ /Namakan/{Client}/training-data/
+  □ /Namakan/{Client}/models/
+□ Upload colab-notebook.ipynb to training folder
+□ Share folders with namakan-colab@gmail.com
+□ Set up credentials in n8n:
+  □ Salesforce
+  □ PostgreSQL
+  □ Google Drive
+  □ Gmail
+  □ Telegram
+□ Test credentials (pull sample data)
+□ Document folder IDs and credential IDs
+□ Schedule training call
+□ Run pipeline
+□ Deliver model
+□ Send setup guide for Ollama/hosting
+□ Schedule quarterly retraining
+```
 
 ---
 
-## Pricing
+## Version History
 
-| Tier | Data Size | Model Size | Timeline | Price |
-|------|-----------|------------|----------|-------|
-| **Starter** | 1-5K examples | 3B-7B | 2-3 weeks | $15K-25K |
-| **Professional** | 5-20K examples | 8B-14B | 3-5 weeks | $25K-40K |
-| **Enterprise** | 20K+ examples | 30B-70B | 6-10 weeks | $40K-75K+ |
-| **Annual Retainer** | Ongoing | Any | Continuous | $3K-10K/mo |
-
-Add-ons:
-- Custom training data generation: $2K-5K
-- On-premise deployment: $5K-15K
-- Priority support (4hr SLA): +$1K/mo
-- Additional fine-tuning rounds: $5K-15K each
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | Apr 2026 | Initial release |
