@@ -253,7 +253,14 @@ def index_to_vectorstore(
                 texts = [c["text"][:2000] for c in batch]
                 embeddings = embedder(texts)
                 ids = [c["chunk_id"] for c in batch]
-                metadatas = [{"index": c["index"], "total": c["total_chunks"]} for c in batch]
+                # Include visibility_level for security filtering (Gap 4)
+                metadatas = [{
+                    "index": c["index"],
+                    "total": c["total_chunks"],
+                    "visibility_level": c.get("visibility_level", 1),
+                    "source_file": c.get("source_file", c.get("source", "")),
+                    "page_number": c.get("page_number"),
+                } for c in batch]
                 
                 collection.add(ids=ids, embeddings=embeddings, documents=texts, metadatas=metadatas)
                 print(f"[INDEX] Indexed {min(i+batch_size, len(chunks))}/{len(chunks)}")
@@ -346,11 +353,20 @@ def run_ingestion(
     print(f"\n[2/4] Chunking documents (strategy={chunk_strategy})...")
     all_chunks = []
     for doc in documents:
-        chunks = chunk_text(doc["text"], chunk_size=chunk_size, strategy=chunk_strategy)
-        for chunk in chunks:
+        doc_chunks = chunk_text(doc["text"], chunk_size=chunk_size, strategy=chunk_strategy)
+        for chunk in doc_chunks:
             chunk["source"] = doc["filename"]
-        all_chunks.extend(chunks)
-        print(f"  {doc['filename']}: {len(chunks)} chunks")
+            chunk["source_file"] = doc["filename"]
+            # Visibility level: 0=public, 1=internal, 2=restricted, 3=confidential
+            # Default to 1 (internal) unless doc path indicates restricted content
+            visibility = 1
+            restricted_paths = ["/restricted/", "/confidential/", "/hr/", "/finance/"]
+            if any(p in doc["path"] for p in restricted_paths):
+                visibility = 2
+            chunk["visibility_level"] = visibility
+            chunk["page_number"] = chunk.get("page_number")  # Will be None unless extracted from PDF
+        all_chunks.extend(doc_chunks)
+        print(f"  {doc['filename']}: {len(doc_chunks)} chunks")
     
     print(f"  Total chunks: {len(all_chunks)}")
     

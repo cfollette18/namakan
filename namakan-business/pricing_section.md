@@ -1,87 +1,133 @@
-## 1. Pricing — Custom AI Engineering
+## 1. Pricing — Fine-Tuning First, Then Agents
 
-Namakan charges by project, not by seat or query. Every engagement is scoped, priced, and delivered as custom engineering work. No lock-in. No recurring platform fees.
+Namakan's approach: **Connect to your data → Clean it → Train your model → Build agents on top.**
 
----
-
-### 1.1 Service Pricing
-
-**Fine-Tuned Models**
-
-| Tier | Scope | Investment | Timeline |
-|------|-------|------------|----------|
-| **SMB** | 1–5K training examples, Qwen/Llama 3B–7B | $5K–$15K | 4–8 weeks |
-| **Mid-Market** | 5–20K examples, Llama 8B–13B | $15K–$25K | 8–12 weeks |
-| **Enterprise** | 20K+ examples, Llama 70B or multimodal | $25K–$40K | 12–16 weeks |
-
-**Monthly Retainer:** $500/mo for RAG operations (see RAG Pipelines)  
-**Payment:** 50% upfront, 25% at midpoint, 25% on delivery
+Every engagement starts with fine-tuning. Agents come after the model knows your business.
 
 ---
 
-**RAG Pipelines**
+### 1.1 Fine-Tuning (Required First Step)
 
-| Tier | Scope | Build | Monthly Ops |
-|------|-------|-------|------------|
-| **Build** | Ingestion, chunking, embedding, index, evaluation | $5K–$15K | — |
-| **Ongoing** | Vector store ops, retraining triggers, monitoring | — | $500–$2K/mo |
+Training a model that actually knows your business is the foundation. Everything else builds on it.
 
----
+| Tier | Training Data | Model Size | Investment | Timeline |
+|------|--------------|------------|------------|----------|
+| **Starter** | 500–2K examples | 8B | $2,500 | 1–2 weeks |
+| **Professional** | 2K–5K examples | 8B | $5,000 | 2–3 weeks |
+| **Enterprise** | 5K–10K examples | 8B–13B | $10,000 | 3–4 weeks |
 
-**Agentic Workflows**
+**What's included:**
+- Data connection (CRM, database, files)
+- PII removal and data cleaning
+- Q&A pair formatting
+- Google Colab training
+- Trained model delivered (.gguf file)
+- 30-day support
 
-| Tier | Complexity | Systems | Price |
-|------|------------|---------|-------|
-| **Starter** | Simple, 1–2 steps | 1 system | $5K–$10K |
-| **Professional** | Medium, 3–5 steps | 2–3 systems | $10K–$20K |
-| **Enterprise** | Complex, 5+ steps | Multiple | $20K–$30K |
-| **Monthly Ops** | Monitoring, retries, audit | — | $500–$1.5K/mo |
-
----
-
-**Custom AI Employees**
-
-| Tier | Role Complexity | Monthly |
-|------|----------------|---------|
-| **Standard** | Single domain, basic tools | $2K–$3K/mo |
-| **Senior** | Multi-domain, complex integrations | $3K–$5K/mo |
-
-Onboarding: included in first month. Monthly includes training refinement, monitoring, and supervisor access.
+**Payment:** 50% upfront, 50% on delivery
 
 ---
 
-### 1.2 How Pricing Works
+### 1.2 Model Hosting (Optional)
 
-- **Fixed project price** — Scope is defined upfront. Price doesn't change unless scope changes.
-- **50/25/25 payment schedule** — 50% to start, 25% at midpoint milestone, 25% on delivery
-- **Monthly retainers** — For ongoing AI employees and RAG ops, billed monthly
-- **Discovery call is free** — No charge to explore whether there's a fit
-- **Paid assessment available** — $1,500–$2,000 for a structured technical assessment, applied to project if engaged
+Run your trained model on our infrastructure.
+
+| Tier | Specs | Price |
+|------|-------|-------|
+| **API Standard** | Shared GPU, 8B model | $200/mo |
+| **API Performance** | Dedicated GPU, faster inference | $400/mo |
+| **High Volume** | Enterprise-grade, 100K+ queries/mo | Custom |
+
+**What's included:**
+- 99.5% uptime SLA
+- API access
+- Usage monitoring
+- Model updates (redeploy only)
 
 ---
 
-### 1.3 What Drives Price
+### 1.3 Retraining (Quarterly)
+
+Keep your model fresh with new data.
+
+| Service | Price |
+|---------|-------|
+| Retrain (under 1K new examples) | $500/quarter |
+| Retrain (1K–5K new examples) | $1,000/quarter |
+| Retrain (5K+ new examples) | $2,500/quarter |
+
+**Included:** Data refresh, PII cleaning, retraining, redeployment
+
+---
+
+### 1.4 Agentic Workflows (Add-On)
+
+Build on top of your fine-tuned model. Requires fine-tuning first.
+
+| Tier | Complexity | Systems | Investment |
+|------|------------|---------|------------|
+| **Starter** | Simple, 1–2 steps | 1 system | $5,000 |
+| **Professional** | Medium, 3–5 steps | 2–3 systems | $10,000 |
+| **Enterprise** | Complex, 5+ steps | Multiple | $20,000 |
+
+**What's included:**
+- Workflow design
+- Tool integrations
+- n8n automation
+- Testing and deployment
+- 30-day support
+
+**Monthly ops (optional):** $300/mo for monitoring and maintenance
+
+---
+
+### 1.5 Custom AI Employees (Add-On)
+
+A full-time AI worker trained on your business. Requires fine-tuning first.
+
+| Tier | Role Complexity | Price |
+|------|----------------|-------|
+| **Standard** | Single domain, basic tools | $2,000/mo |
+| **Senior** | Multi-domain, complex integrations | $4,000/mo |
+
+**What's included:**
+- Role-specific training
+- Tool integrations (CRM, email, calendar)
+- Daily productivity reports
+- Escalation handling
+- Monthly retraining
+
+---
+
+### 1.6 Pricing Tiers (All-In Example)
+
+| Package | Components | Upfront | Monthly |
+|---------|-------------|---------|---------|
+| **Starter** | Fine-tune + deliver model | $2,500 | — |
+| **Professional** | Fine-tune + hosting | $2,500 | $200 |
+| **Growth** | Fine-tune + hosting + agents | $7,500 | $500 |
+| **Enterprise** | Fine-tune + hosting + agents + employees | $12,500 | $2,300 |
+
+---
+
+### 1.7 What Drives Price
 
 - **Data volume** — More training examples = more curation work
-- **Domain complexity** — Highly specialized domains require more expert review
+- **Data complexity** — Multiple sources (CRM + DB + files) add connector work
 - **Integration surface** — More systems to connect = more build work
-- **Accuracy requirements** — Medical/legal grade accuracy requires more red-teaming
-- **Deployment complexity** — Client infra vs. Namakan cloud affects ops costs
+- **Agent complexity** — Multi-step workflows cost more than simple automation
 
 ---
 
-### 1.4 What's Included
+### 1.8 What's Included Every Project
 
-Every project includes:
-- Deep-dive discovery session
-- Data assessment and curation
-- Model/architecture selection
-- Private training (data never leaves client environment unless using Namakan cloud)
-- Evaluation and testing against real scenarios
-- Private deployment (client infra or Namakan cloud)
-- Documentation and handover package
+- Data assessment and connection
+- PII removal and data cleaning
+- Model training on Google Colab
+- Trained model delivery (you own it)
+- Documentation and handover
 - 30-day post-launch support
 
 ---
 
-*See `service-offerings.md` for detailed service descriptions. See `namakan-technical/` for engineering methodology and pipeline documentation.*
+*See `service-offerings.md` for detailed service descriptions. See `namakan-technical/` for engineering methodology.*
