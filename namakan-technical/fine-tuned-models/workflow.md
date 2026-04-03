@@ -1,84 +1,78 @@
 # Fine-Tuned Models Workflow
 
 ## Overview
-Train a custom AI model on your documents, policies, and knowledge so it understands your business like you do.
+Connect to your existing data sources → Clean and structure the data → Train a custom 8B model that actually knows your business.
+
+## The Differentiator
+Most AI companies start with your documents. We start with your data sources — CRM, database, documents — and build the model from your live data.
 
 ## Workflow Steps
 
-### 1. Discovery
-- Audit client documents (contracts, policies, manuals, knowledge bases)
-- Interview team to understand business rules and edge cases
-- Identify training data sources and quality
+### 1. Data Source Connection
+- Connect to CRM (Salesforce, HubSpot, custom)
+- Connect to database (PostgreSQL, MySQL, etc.)
+- Connect to document storage (S3, SharePoint, local files)
+- Export historical data (tickets, emails, contracts)
+- API access or data export + transfer
 
-**Output:** Training data inventory + business rules document
+**Output:** Connected data sources
 
-### 2. Data Preparation
-- Collect and clean training documents
-- Format data for training (conversational Q&A pairs, completion format, etc.)
-- Remove sensitive/PII data
+### 2. Data Cleaning & Structuring
+- Extract and parse all data formats (JSON, CSV, PDF, DOCX, etc.)
+- Remove PII/sensitive data
+- Deduplicate and normalize
+- Structure into training format (conversational Q&A pairs)
 - Create validation set (10-20% of data)
 
 **Output:** Clean training dataset + validation dataset
 
-### 3. Model Selection
-- Choose base model (Qwen2.5, Llama, Mistral variants)
-- Consider: model size, context length, cost, latency requirements
-- Match model to use case complexity
-
-**Output:** Selected base model
-
-### 4. Training Configuration
-- Set LoRA rank and alpha (typical: r=16, lora_alpha=32)
-- Configure learning rate and epochs
-- Set batch size and gradient accumulation
-- Define early stopping criteria
-
-**Output:** Training config file
-
-### 5. Training
-- Run training job (typically 2-8 hours on GPU)
+### 3. Model Training
+- Choose base model (Qwen2.5-8B or similar)
+- Configure LoRA (r=16, lora_alpha=32)
+- Train on your cleaned data
 - Monitor loss curves and validation metrics
-- Early stop if overfitting detected
+- Early stop if overfitting
 
-**Output:** Trained LoRA adapter or full model
+**Output:** Trained 8B model adapter
 
-### 6. Evaluation
-- Run eval pipeline on validation set
-- Measure accuracy, relevance, brand voice alignment
+### 4. Evaluation
+- Run eval pipeline on held-out validation set
 - Human review of sample outputs
 - Compare against baseline (generic AI)
+- Measure accuracy, relevance, brand voice
 
 **Output:** Eval report with metrics
 
-### 7. Deployment
-- Merge LoRA adapter with base model (if using LoRA)
-- Deploy to inference endpoint
-- Set up monitoring and logging
-- Configure fallback (generic AI if service down)
+### 5. Deployment
+- Deploy model to your infrastructure (Ollama, FastAPI)
+- Set up inference endpoint
+- Configure monitoring and logging
+- Optional: run alongside generic AI for comparison
 
-**Output:** Production endpoint
+**Output:** Production 8B model endpoint
 
-### 8. Iteration
+### 6. Iteration
 - Gather user feedback
 - Monitor quality metrics
-- Retrain quarterly or when business rules change
+- Retrain monthly or when data changes significantly
 
 ---
 
 ## Timeline
-- **Total:** 2-4 weeks
-- Discovery: 3-5 days
-- Data Prep: 3-5 days
+- **Total:** 2-3 weeks
+- Data Connection: 3-5 days
+- Data Cleaning: 3-5 days
 - Training: 1-2 days
-- Eval + Deploy: 3-5 days
-- Buffer: 3-7 days
+- Eval + Deploy: 2-3 days
+- Buffer: 3-5 days
 
 ## Pricing
-- Starting at $10K
-- Depends on data volume and model size
+- Starting at $15K
+- Includes data connection, cleaning, training, and deployment
 
 ## Technical Stack
-- Training: Ollama, Axolotl, or cloud GPU
-- Base models: Qwen2.5, Llama3, Mistral
-- LoRA: QLoRA technique for efficient fine-tuning
-- Inference: Ollama or FastAPI server
+- Data: Custom connectors for CRM/DB/file sources
+- Training: Ollama + Axolotl, or cloud GPU
+- Base model: Qwen2.5-8B (efficient, runs on modest hardware)
+- LoRA: QLoRA for efficient fine-tuning
+- Inference: Ollama server or custom FastAPI

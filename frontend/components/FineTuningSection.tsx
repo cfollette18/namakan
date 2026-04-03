@@ -33,11 +33,11 @@ export function FineTuningSection() {
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.06 }}
       >
-        <span className="section-kicker">Fine-tuned models</span>
-        <h2 className="section-title section-title-left">Teach the model how your business actually thinks.</h2>
+        <span className="section-kicker">Fine-tuned 8B models</span>
+        <h2 className="section-title section-title-left">Your data sources. Your cleaned data. Your AI.</h2>
         <p className="section-description">
-          A fine-tuned model should not just "know documents." It should learn how your company classifies
-          incidents, escalates risk, frames replies, and handles edge cases before retrieval or agents ever run.
+          We connect to your CRM, database, and documents. Clean and structure the data. Train a model
+          that actually understands your business. Run it on your infrastructure.
         </p>
       </motion.div>
 
@@ -162,8 +162,8 @@ export function FineTuningSection() {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.16 }}
         >
-          <span className="hero-signal-label">Training inputs</span>
-          <p>Contracts, SOPs, ticket history, CRM notes, playbooks, taxonomies, and approved responses.</p>
+          <span className="hero-signal-label">We pull from</span>
+          <p>CRM, database, documents, tickets, contracts, emails, and anything else that has your business knowledge.</p>
         </motion.div>
 
         <motion.div

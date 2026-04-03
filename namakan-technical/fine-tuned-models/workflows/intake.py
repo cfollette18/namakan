@@ -60,7 +60,7 @@ QUESTIONS = [
         "question": "Where should the model be deployed? (client infra, Namakan cloud, hybrid)",
         "required": True,
         "type": "select",
-        "options": ["Client's own infrastructure", "Namakan hosted (monthly subscription)", "Hybrid (training on Namakan, deploy to client")]
+        "options": ["Client own infrastructure", "Namakan hosted (monthly subscription)", "Hybrid (training on Namakan, deploy to client)"]
     },
     {
         "id": "budget",

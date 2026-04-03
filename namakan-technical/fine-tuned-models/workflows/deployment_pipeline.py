@@ -86,16 +86,17 @@ def _deploy_ollama(base_model: str, adapter_path: str, output_path: str):
     _deploy_huggingface(base_model, adapter_path, merged_path)
     
     # Create Modelfile
-    modelfile = f"""FROM ./
-TEMPLATE \"\"\"{{{{ if .System }}}<|im_start|>system
-{{{{ .System }}}<|im_end|>{{ end }}{{{ range .Messages }}}<|im_start|>{{{{ .Role }}}
-{{{{ .Content }}}<|im_end|>{{ end }}<|im_start|>assistant
-\"\"\"
-PARAMETER temperature 0.3
-PARAMETER top_p 0.9
-PARAMETER repeat_penalty 1.1
-PARAMETER num_ctx 2048
-"""
+    modelfile = (
+        "FROM ./\n"
+        '"""{{{{ if .System }}}<|im_start|>system\n'
+        "{{{{ .System }}}<|im_end|>{{ end }}{{{ range .Messages }}}<|im_start|>{{{{ .Role }}}\n"
+        "{{{{ .Content }}}<|im_end|>{{ end }}<|im_start|>assistant\n"
+        '"""\n'
+        "PARAMETER temperature 0.3\n"
+        "PARAMETER top_p 0.9\n"
+        "PARAMETER repeat_penalty 1.1\n"
+        "PARAMETER num_ctx 2048"
+    )
     
     with open(os.path.join(output_path, "Modelfile"), "w") as f:
         f.write(modelfile)

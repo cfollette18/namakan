@@ -143,8 +143,9 @@ def advance_phase(emp_dir, from_phase, to_phase):
     log_event(emp_dir, to_phase, "phase_advance", f"Advanced from {from_phase} to {to_phase}")
     
     phase = PHASES[to_phase]
+    phase_name = phase['name']
     print(f"\n{color(phase['color'], '─'*60)}")
-    print(f"  {color(phase['color'], f'✓ PHASE ADVANCED: {phase[\"name\"]}')}")
+    print(f"  {color(phase['color'], f'✓ PHASE ADVANCED: {phase_name}')}")
     print(f"  {color(phase['color'], '─'*60)}")
     print(f"\n  {phase['description']}")
     print(f"\n  Supervisor duties:")

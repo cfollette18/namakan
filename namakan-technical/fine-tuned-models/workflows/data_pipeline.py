@@ -36,9 +36,16 @@ class Log:
         self.quiet = quiet
         self.stats = {"files": 0, "chunks": 0, "redacted": 0, "dropped": 0, "duplicates": 0}
 
-    def info(self, msg):  if not self.quiet: print(f"[INFO]  {msg}")
-    def warn(self, msg):  if not self.quiet: print(f"[WARN]  {msg}")
-    def error(self, msg): print(f"[ERROR] {msg}")
+    def info(self, msg):
+        if not self.quiet:
+            print(f"[INFO]  {msg}")
+
+    def warn(self, msg):
+        if not self.quiet:
+            print(f"[WARN]  {msg}")
+
+    def error(self, msg):
+        print(f"[ERROR] {msg}")
 
 # ─── PII Redaction ─────────────────────────────────────────────────────────────
 
