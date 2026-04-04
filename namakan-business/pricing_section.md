@@ -10,43 +10,32 @@ Every engagement starts with fine-tuning. Agents come after the model knows your
 
 Training a model that actually knows your business is the foundation. Everything else builds on it.
 
-| Tier | Training Data | Model Size | Investment | Timeline |
-|------|--------------|------------|------------|----------|
-| **Starter** | 500–2K examples | 8B | $2,500 | 1–2 weeks |
-| **Professional** | 2K–5K examples | 8B | $5,000 | 2–3 weeks |
-| **Enterprise** | 5K–10K examples | 8B–13B | $10,000 | 3–4 weeks |
+| Tier | Scope | Investment | Timeline |
+|------|-------|------------|----------|
+| **SMB** | 1–5K training examples, Qwen / Llama 3B–7B | $5K–$15K | 4–8 weeks |
+| **Mid-Market** | 5–20K examples, Llama 8B–13B | $15K–$25K | 8–12 weeks |
+| **Enterprise** | 20K+ examples, Llama 70B or multimodal | $25K–$40K | 12–16 weeks |
 
 **What's included:**
+- Deep-dive discovery: understanding your data, domain, and goals
 - Data connection (CRM, database, files)
 - PII removal and data cleaning
 - Q&A pair formatting
-- Google Colab training
-- Trained model delivered (.gguf file)
-- 30-day support
+- Base model selection and licensing
+- Fine-tuning training (private, isolated environment)
+- RAG/data pipelines built as part of your project
+- Evaluation and testing against real scenarios
+- Private deployment to your infrastructure
+- Documentation and handover package
+- 30-day post-launch support
 
-**Payment:** 50% upfront, 50% on delivery
+**Monthly Retainer:** $500/mo for RAG operations (optional)
 
----
-
-### 1.2 Model Hosting (Optional)
-
-Run your trained model on our infrastructure.
-
-| Tier | Specs | Price |
-|------|-------|-------|
-| **API Standard** | Shared GPU, 8B model | $200/mo |
-| **API Performance** | Dedicated GPU, faster inference | $400/mo |
-| **High Volume** | Enterprise-grade, 100K+ queries/mo | Custom |
-
-**What's included:**
-- 99.5% uptime SLA
-- API access
-- Usage monitoring
-- Model updates (redeploy only)
+**Payment:** 50% upfront, 25% at midpoint, 25% on delivery
 
 ---
 
-### 1.3 Retraining (Quarterly)
+### 1.2 Retraining (Quarterly)
 
 Keep your model fresh with new data.
 
@@ -60,28 +49,27 @@ Keep your model fresh with new data.
 
 ---
 
-### 1.4 Agentic Workflows (Add-On)
+### 1.3 Custom Agents (Add-On)
 
 Build on top of your fine-tuned model. Requires fine-tuning first.
 
-| Tier | Complexity | Systems | Investment |
-|------|------------|---------|------------|
-| **Starter** | Simple, 1–2 steps | 1 system | $5,000 |
-| **Professional** | Medium, 3–5 steps | 2–3 systems | $10,000 |
-| **Enterprise** | Complex, 5+ steps | Multiple | $20,000 |
+| Tier | Scope | Investment |
+|------|-------|------------|
+| **Build** | Single workflow, 1–2 integrations | $5K–$15K |
+| **Growth** | Multi-step workflow (3–5 stages), 2–4 integrations | $15K–$25K |
+| **Enterprise** | Complex end-to-end workflows, 5+ integrations | $25K–$30K |
 
 **What's included:**
-- Workflow design
-- Tool integrations
-- n8n automation
-- Testing and deployment
-- 30-day support
+- Workflow design and process mapping
+- Tool integrations (CRM, email, calendar, databases)
+- Testing, evaluation, and deployment
+- 30-day post-launch support
 
 **Monthly ops (optional):** $300/mo for monitoring and maintenance
 
 ---
 
-### 1.5 Custom AI Employees (Add-On)
+### 1.4 Custom AI Employees (Add-On)
 
 A full-time AI worker trained on your business. Requires fine-tuning first.
 
@@ -91,7 +79,7 @@ A full-time AI worker trained on your business. Requires fine-tuning first.
 | **Senior** | Multi-domain, complex integrations | $4,000/mo |
 
 **What's included:**
-- Role-specific training
+- Role-specific training on your domain
 - Tool integrations (CRM, email, calendar)
 - Daily productivity reports
 - Escalation handling
@@ -99,18 +87,7 @@ A full-time AI worker trained on your business. Requires fine-tuning first.
 
 ---
 
-### 1.6 Pricing Tiers (All-In Example)
-
-| Package | Components | Upfront | Monthly |
-|---------|-------------|---------|---------|
-| **Starter** | Fine-tune + deliver model | $2,500 | — |
-| **Professional** | Fine-tune + hosting | $2,500 | $200 |
-| **Growth** | Fine-tune + hosting + agents | $7,500 | $500 |
-| **Enterprise** | Fine-tune + hosting + agents + employees | $12,500 | $2,300 |
-
----
-
-### 1.7 What Drives Price
+### 1.5 What Drives Price
 
 - **Data volume** — More training examples = more curation work
 - **Data complexity** — Multiple sources (CRM + DB + files) add connector work
@@ -119,13 +96,17 @@ A full-time AI worker trained on your business. Requires fine-tuning first.
 
 ---
 
-### 1.8 What's Included Every Project
+### 1.6 What's Included Every Project
 
+- Deep-dive discovery session
 - Data assessment and connection
 - PII removal and data cleaning
-- Model training on Google Colab
-- Trained model delivery (you own it)
-- Documentation and handover
+- Base model selection and licensing
+- Fine-tuning training
+- RAG/data pipelines (built into your project scope)
+- Evaluation and testing
+- Private deployment to your infrastructure
+- Documentation and handover package
 - 30-day post-launch support
 
 ---
