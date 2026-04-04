@@ -15,10 +15,10 @@ Namakan AI is a **Custom AI Engineering Firm** — we build bespoke AI systems f
 **The Positioning:** Namakan is not an AI reseller. We are an AI engineering firm. Every engagement is custom. Every solution is built for one client. We don't sell subscriptions to pre-built agents — we engineer AI systems from the ground up for each client's specific needs.
 
 **Core Services:**
-1. **Fine-Tuning** — Connect to your data sources, clean it, train an 8B model on Google Colab ($2.5K–$10K)
-2. **Model Hosting** — Run your trained model on our infrastructure ($200–400/mo)
-3. **Agentic Workflows** — Build on your fine-tuned model to automate multi-step tasks ($5K–$20K)
-4. **Custom AI Employees** — Full-time AI workers trained on your business ($2K–4K/mo)
+1. **Fine-Tuning** — Connect to your data sources, clean it, train an 8B model on Google Colab ($5K–$15K)
+2. **Model Hosting** — Run your trained model on our infrastructure ($200–400/mo) — *contact for custom quote*
+3. **Agentic Workflows** — Build on your fine-tuned model to automate multi-step tasks ($5K–$15K)
+4. **Custom AI Employees** — Full-time AI workers trained on your business ($2K/mo retainer)
 
 **The Order Matters:** Fine-tuning comes first. Agents build on top of the model that knows your business.
 
@@ -95,11 +95,11 @@ Connect to your data → Clean it → Train an 8B model on Google Colab.
 
 | Tier | Data Size | Price | Timeline |
 |------|-----------|-------|----------|
-| Starter | 500–2K examples | $2,500 | 1–2 weeks |
-| Professional | 2K–5K examples | $5,000 | 2–3 weeks |
-| Enterprise | 5K–10K examples | $10,000 | 3–4 weeks |
+| SMB | 1–5K examples | $5K–$15K | 4–8 weeks |
+| Mid-Market | 5–20K examples | $15K–$25K | 8–12 weeks |
+| Enterprise | 20K+ examples | $25K–$40K | 12–16 weeks |
 
-**Includes:** Data connection (CRM, DB, files), PII removal, Colab training, model delivery
+**Includes:** Data connection (CRM, DB, files), PII removal, Colab training, model delivery. RAG operations retainer: $500/mo.
 
 #### 2. Model Hosting (Optional)
 Run your trained model on our infrastructure.
@@ -123,17 +123,16 @@ Requires fine-tuning first. Build on your model to automate tasks.
 
 | Tier | Complexity | Price |
 |------|------------|-------|
-| Starter | 1–2 steps | $5,000 |
-| Professional | 3–5 steps | $10,000 |
-| Enterprise | 5+ steps | $20,000 |
+| Starter | 1–2 steps | $5K–$15K |
+| Professional | 3–5 steps | $15K–$25K |
+| Enterprise | 5+ steps | $25K–$30K |
 
 #### 5. Custom AI Employees (Add-On)
 Requires fine-tuning first. Full-time AI worker.
 
 | Tier | Complexity | Price |
 |------|------------|-------|
-| Standard | Single domain | $2,000/mo |
-| Senior | Multi-domain | $4,000/mo |
+| Custom AI Employee | All domains | $2,000/mo retainer |
 
 **Payment Terms:** 50% upfront, 50% on delivery
 
@@ -141,32 +140,31 @@ Requires fine-tuning first. Full-time AI worker.
 
 ### Revenue Streams
 
-1. **Initial Training** — One-time fine-tuning project ($2.5K–$10K)
-2. **Hosting MRR** — Model hosting on infrastructure ($200–400/mo)
-3. **Retraining NRR** — Quarterly retraining keeps model fresh ($500–2.5K/quarter)
+1. **Build Projects** — One-time AI system build ($5K–$40K depending on scope)
+2. **RAG Retainer** — Monthly operations ($500/mo)
+3. **AI Employee Retainer** — Monthly per employee ($2K/mo)
 4. **Agentic Upsells** — Workflows and employees on top of trained model ($5K–20K + $2–4K/mo)
 
 ### The Expansion Model
 
 **Year 1 Example — Acme Corp:**
 ```
-Initial Training:      $2,500
-Quarterly Retraining:  $2,000  (4x $500)
-Model Hosting:         $2,400  (12x $200)
+Initial Training:      $5,000
+RAG Retainer:          $6,000  (12x $500)
 Agentic Workflow:      $5,000  (added in Q2)
 AI Employee:           $24,000 (12x $2,000)
 ─────────────────────────────
-Year 1 Total:          $35,900
+Year 1 Total:          $40,000
 
-MRR at end of Year 1: $2,200/mo
+MRR at end of Year 1: $2,500/mo
 ```
 
 ### Unit Economics
 
 | Metric | Target |
 |--------|--------|
-| Initial Training | $2,500–$10,000 |
-| MRR per Client | $200–$4,000/month |
+| Initial Training | $5K–$15K |
+| MRR per Client | $500–$2K/month |
 | NRR (Net Revenue Retention) | 120%+ |
 | Gross Margin (Hosting) | 70%+ |
 | Gross Margin (Services) | 80%+ |
@@ -240,13 +238,12 @@ MRR at end of Year 1: $2,200/mo
 
 **Per Client Year 1:**
 ```
-Initial Training:    $2,500–$10,000  (one-time)
-Retraining:          $2,000–$10,000   (4x quarterly)
-Hosting MRR:         $2,400–$4,800   (12x $200–400)
-Agentic Add-ons:     $5,000–$20,000   (optional)
-AI Employees:       $24,000–$48,000 (optional)
+Build Project:        $5,000–$15,000  (one-time)
+RAG Retainer:         $6,000–$12,000   (12x $500–1,000)
+Agentic Add-ons:     $5,000–$15,000   (optional)
+AI Employees:       $24,000          (12x $2,000, optional)
 ─────────────────────────────────────────────
-Per Client Total:    $11,900–$92,800
+Per Client Year 1:   $40,000–$66,000
 ```
 
 ### Year 1 Target
@@ -298,7 +295,7 @@ Per Client Total:    $11,900–$92,800
 ### Sales Process
 
 1. Discovery Call (60 min, free) — Understand the client's data and domain challenges
-2. AI Assessment ($2,500 applied to project) — Deep-dive audit with specific AI opportunity map
+2. AI Assessment ($5K applied to project) — Deep-dive audit with specific AI opportunity map
 3. Proposal (within 72 hours) — Custom engineering scope, timeline, investment
 4. Contract + 50% deposit
 5. Engineering (4–16 weeks depending on scope)
