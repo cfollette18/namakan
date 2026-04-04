@@ -6,6 +6,12 @@ Every engagement starts with fine-tuning. Agents come after the model knows your
 
 ---
 
+### 1.0 AI Assessment ($2,500 — applied to project)
+
+Before any build engagement, we do a deep-dive audit of your data, systems, and workflows. This maps the opportunity and designs a custom solution. The $2,500 is credited toward your project if you move forward.
+
+---
+
 ### 1.1 Fine-Tuning (Required First Step)
 
 Training a model that actually knows your business is the foundation. Everything else builds on it.
