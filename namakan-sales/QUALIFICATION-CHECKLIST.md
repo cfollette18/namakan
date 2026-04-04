@@ -8,7 +8,7 @@
 
 | Area | Question | Ideal Answer |
 |------|----------|--------------|
-| **Budget** | Can they afford $5K-15K upfront or $2K/mo retainer? | Yes |
+| **Budget** | Can they afford $5K–$40K upfront or $2K–$4K/mo retainer? | Yes |
 | **Authority** | Are they the decision maker? | Yes |
 | **Timeline** | Do they need this soon? | 30-60 days |
 | **Need** | Do they have a real problem? | Yes |
@@ -27,12 +27,12 @@
 
 | Budget | Fit |
 |--------|-----|
-| $3K upfront | ✅ Sprint / Discovery |
-| $5K-15K | ✅ Build |
-| $2K/mo | ✅ Retainer |
-| $25K+ | ✅ Enterprise |
-| <$500/mo | ❌ May need smaller start |
-| "Free" | ❌ Not a fit |
+| $5K–$15K | ✅ SMB (Fine-Tuning or Custom Agents) |
+| $15K–$25K | ✅ Mid-Market |
+| $25K–$40K | ✅ Enterprise |
+| $2K–$4K/mo | ✅ AI Employee retainer |
+| <$5K upfront | ⚠️ May need phased approach |
+| <$500/mo | ❌ Not a fit |
 
 ---
 
@@ -68,8 +68,10 @@
 | Timeline | Fit | Action |
 |----------|-----|--------|
 | ASAP (1-2 weeks) | ✅ Hot lead | Priority call |
-| 30 days | ✅ Good fit | Standard flow |
-| 60-90 days | ⚠️ Long cycle | Nurture campaign |
+| 4–8 weeks | ✅ SMB fit | Standard flow |
+| 8–12 weeks | ✅ Mid-Market fit | Standard flow |
+| 12–16 weeks | ⚠️ Enterprise | Educate, scope |
+| 60–90 days | ⚠️ Long cycle | Nurture campaign |
 | "Someday" | ❌ Not a fit | Keep warm |
 | No timeline | ❌ No urgency | Educate |
 
