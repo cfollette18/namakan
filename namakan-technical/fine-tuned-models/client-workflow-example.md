@@ -247,16 +247,19 @@ POST https://api.acme.com/ai/support
 
 ## Cost Breakdown (Acme Corp)
 
+> Pricing reflects Namakan's current SMB tier. See [service-offerings.md](../../namakan-business/service-offerings.md) for full pricing details.
+
 | Item | Cost |
 |------|------|
-| Initial training (847 records) | $2,500 |
-| Colab (free or $10/mo Pro) | $0-10 |
-| n8n hosting (self-hosted) | $0 |
-| Model deployment (local Ollama) | $0 |
-| Monthly API hosting (if used) | $200/mo |
-| Quarterly retraining | $500/quarter |
+| Initial fine-tuning (SMB tier: 500–2K examples) | $5,000–$15,000 |
+| Colab (free or $10/mo Pro) | $0–10 |
+| Model deployment (local Ollama, self-hosted) | $0 |
+| Monthly API hosting (optional, Namakan cloud) | $200/mo |
+| Quarterly retraining | $500–$1,000/quarter |
 
-**Year 1 Total:** ~$4,500 + optional hosting
+**Year 1 Total:** ~$5,500–$16,500 + optional hosting
+
+*This example uses 847 records (within SMB tier). Mid-Market ($15K–$25K) and Enterprise ($25K–$40K) pricing available for larger datasets.*
 
 ---
 
@@ -264,9 +267,10 @@ POST https://api.acme.com/ai/support
 
 1. **This call:** Answer questions, sign MSA
 2. **Next day:** Send credentials, grant folder access
-3. **Week 2:** Review sample training data
-4. **Week 3:** AI trained and ready
-5. **Week 4:** Live and testing
+3. **Week 1–2:** Review sample training data, finalize dataset
+4. **Week 3–4:** Fine-tuning training (Colab)
+5. **Week 5–6:** Evaluation and testing
+6. **Week 6–8:** Live deployment and handoff *(SMB timeline: 4–8 weeks total)*
 
 ---
 
