@@ -545,23 +545,25 @@ def should_retrain():
 
 ## Pricing
 
-| Tier | Role Complexity | Data Volume | Setup Fee |
-|------|----------------|-------------|-----------|
-| **Build** | Single workflow, 1-2 integrations | < 5K examples | $5K-15K |
-| **Growth** | Multi-step workflow, 3-5 integrations | 5K-15K examples | $15K-25K |
-| **Enterprise** | Complex end-to-end, 5+ integrations | 15K+ examples | $25K-30K |
+| Tier | Role Complexity | Systems | Monthly Retainer |
+|------|----------------|---------|------------------|
+| **Standard** | Single domain, basic tools | 1–2 systems | $2,000/mo |
+| **Senior** | Multi-domain, complex integrations | 3+ systems | $4,000/mo |
 
-**Monthly Retainer:** $2K/mo per AI Employee (performance monitoring, retraining, optimization)
+**What's included:** Role-specific training, tool integrations, daily productivity reports, escalation handling, monthly retraining.
+
+**Role expansion:** $500–$1K/month per additional skill or system.
 
 ---
 
-## Timeline
+## Timeline (Onboarding Phases)
 
 ```
 Week 1-2:    Discovery + Role Definition
-Week 2-4:    Training Data Collection
-Week 4-6:    Agent Build + Testing
-Week 6-7:    Integration
-Week 8-9:    Onboarding (Shadow → Assist → Autonomy)
-Ongoing:     Monitoring + Monthly Retraining
+Week 3-4:    Training Data Collection + Persona Build
+Week 5-6:    Shadow Mode (AI observes human work)
+Week 7-8:    Assisted Mode (AI works alongside human)
+Week 9+:     Full Autonomy (AI operates independently)
+
+Ongoing:     Monthly retainer covers monitoring, optimization, and retraining
 ```
