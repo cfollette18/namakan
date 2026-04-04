@@ -85,15 +85,20 @@ Build multi-step AI workflows that autonomously complete tasks end-to-end, integ
 ---
 
 ## Timeline
-- **Total:** 2-4 weeks per workflow
-- Discovery + Design: 3-5 days
-- Tool Integration: 3-5 days
-- Implementation: 5-7 days
-- Testing + Deploy: 3-5 days
+- **Total:** 4–8 weeks (SMB), 8–12 weeks (Mid-Market), 12–16 weeks (Enterprise) — depends on workflow complexity
+- Discovery + Design: 1 week
+- Architecture + Tool Building: 1 week
+- Core Workflow + Testing: 1–2 weeks
+- Integration + UAT: 1–2 weeks
+- Deployment + Handoff: 1 week
+
+*See [01-ENGAGEMENT-PIPELINE.md](./docs/01-ENGAGEMENT-PIPELINE.md) for phase-by-phase breakdown.*
 
 ## Pricing
-- Starting at $5K per workflow
-- Depends on complexity and integrations
+- **Build:** $5K–$15K (single workflow, 1–2 integrations)
+- **Growth:** $15K–$25K (multi-step, 3–5 stages, 2–4 integrations)
+- **Enterprise:** $25K–$30K (complex end-to-end, 5+ integrations)
+- *See [01-ENGAGEMENT-PIPELINE.md](./docs/01-ENGAGEMENT-PIPELINE.md) for full pricing details.*
 
 ## Example Workflows
 - Lead research → email draft → CRM update
@@ -101,7 +106,8 @@ Build multi-step AI workflows that autonomously complete tasks end-to-end, integ
 - Document intake → extraction → database write
 
 ## Technical Stack
-- Orchestration: Azure Durable Functions, Temporal, or custom FastAPI
-- Agent framework: Custom agents with tool calling
-- LLM: GPT-4o, Claude, or local via Ollama
-- Monitoring: Prometheus + Grafana
+- Orchestration: LangGraph (stateful multi-agent)
+- Agent pattern: ReAct loop (Reason + Act + Observe)
+- LLM: Dynamic provider selection (OpenAI, Anthropic, or local via Ollama)
+- Monitoring: Prometheus metrics + Loki structured logging
+- Testing: pytest with eval_pipeline.py
