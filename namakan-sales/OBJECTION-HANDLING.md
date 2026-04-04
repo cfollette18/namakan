@@ -22,7 +22,7 @@ Every objection is a buying signal in disguise.
 - Genuinely budget constrained
 
 **Response:**
-> "I get it — upfront it can seem that way. But compare it to the alternative: hiring a domain expert to handle [specific task] runs $80K+/year in salary plus benefits, training, and management time. Our custom AI systems are builds ($5K–$15K) with a $2K/mo retainer that learn YOUR data and workflows, then operate 24/7. What would it be worth to get [specific task] handled accurately and consistently?"
+> "I get it — upfront it can seem that way. But compare it to the alternative: hiring a domain expert to handle [specific task] runs $80K+/year in salary plus benefits, training, and management time. Our custom AI systems are builds ($5K–$30K) that learn YOUR data and workflows, then operate 24/7. Optional retainer ($300/mo) for ongoing monitoring and optimization. What would it be worth to get [specific task] handled accurately and consistently?"
 
 ---
 
