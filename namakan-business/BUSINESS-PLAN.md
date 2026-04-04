@@ -123,9 +123,9 @@ Requires fine-tuning first. Build on your model to automate tasks.
 
 | Tier | Complexity | Price |
 |------|------------|-------|
-| Starter | 1–2 steps | $5K–$15K |
-| Professional | 3–5 steps | $15K–$25K |
-| Enterprise | 5+ steps | $25K–$30K |
+| **Build** | 1–2 steps, 1–2 integrations | $5K–$15K |
+| **Growth** | 3–5 steps, 2–4 integrations | $15K–$25K |
+| **Enterprise** | 5+ steps, 5+ integrations | $25K–$30K |
 
 #### 5. Custom AI Employees (Add-On)
 Requires fine-tuning first. Full-time AI worker.
@@ -143,7 +143,7 @@ Requires fine-tuning first. Full-time AI worker.
 1. **Build Projects** — One-time AI system build ($5K–$40K depending on scope)
 2. **RAG Retainer** — Monthly operations ($500/mo)
 3. **AI Employee Retainer** — Monthly per employee ($2K/mo)
-4. **Agentic Upsells** — Workflows and employees on top of trained model ($5K–20K + $2–4K/mo)
+4. **Agentic Upsells** — Workflows and employees on top of trained model ($5K–$30K + $2K–$4K/mo)
 
 ### The Expansion Model
 
