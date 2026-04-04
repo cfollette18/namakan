@@ -14,7 +14,7 @@ QUESTIONS = [
     {"id": "workflows", "q": "Top 5 workflows it should handle?", "required": True},
     {"id": "success_metric", "q": "How do we measure success? (tickets/hour, CSAT, time saved)", "required": True},
     {"id": "escalation_policy", "q": "When should it escalate to a human?", "required": True},
-    {"id": "pricing_tier", "q": "Pricing tier? (Standard $2K/mo, Professional $3K/mo, Enterprise $5K/mo)", "required": True},
+    {"id": "pricing_tier", "q": "Pricing tier? (Standard $2K/mo, Senior $4K/mo)", "required": True},
 ]
 
 def ask(q):
