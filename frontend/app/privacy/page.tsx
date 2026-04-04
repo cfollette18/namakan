@@ -343,8 +343,8 @@ export default function PrivacyPage() {
             <div>
               <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Resources</h5>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-                <li><Link href="/services" className="hover:text-teal-500 transition-colors">Documentation</Link></li>
-                <li><Link href="/solutions" className="hover:text-teal-500 transition-colors">Technical Overview</Link></li>
+                <li><Link href="/templates" className="hover:text-teal-500 transition-colors">Templates</Link></li>
+                <li><Link href="/about" className="hover:text-teal-500 transition-colors">About</Link></li>
               </ul>
             </div>
 
