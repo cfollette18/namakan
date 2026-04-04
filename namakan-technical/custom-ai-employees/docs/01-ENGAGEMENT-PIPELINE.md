@@ -51,7 +51,7 @@ STAKEHOLDER PAIN:
 - Top 3 AI employee roles identified
 - ROI estimate per role
 - Autonomy level assessment
-- Ballpark: $2K–$5K/month per AI employee
+- Ballpark: $2K–$4K/month per AI employee
 
 ---
 
@@ -228,9 +228,8 @@ WEEKLY REPORT:
 
 | Tier | Role Complexity | Systems | Autonomy | Price |
 |------|----------------|---------|----------|-------|
-| **Starter** | Simple, 2-3 skills | 1 system | Shadow → Assisted | $2K–$3K/mo |
-| **Professional** | Medium, 4-6 skills | 2-3 systems | Assisted → Full | $3K–$4K/mo |
-| **Enterprise** | Complex, 7+ skills | 4+ systems | Full autonomy | $4K–$5K/mo |
+| **Standard** | Single domain, basic tools | 1–2 systems | Shadow → Full | $2,000/mo |
+| **Senior** | Multi-domain, complex integrations | 3+ systems | Full autonomy | $4,000/mo |
 
 **Role expansion:** $500–$1K/month per additional skill or system
 
