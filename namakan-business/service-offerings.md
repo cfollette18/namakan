@@ -52,7 +52,7 @@ RAG pipelines, data ingestion, document processing, vector search — all built 
 | **Mid-Market** | 5–20K examples, Llama 8B–13B | $15K–$25K | 8–12 weeks |
 | **Enterprise** | 20K+ examples, Llama 70B or multimodal | $25K–$40K | 12–16 weeks |
 
-**Monthly Retainer:** $500/mo for RAG operations (see RAG Pipelines)
+**Monthly Retainer:** $500/mo base for RAG operations — scales with deployment size (Starter $500/mo, Professional $1K–$1.5K/mo, Enterprise $1.5K–$2K/mo). See [RAG Pipelines](../namakan-technical/rag-pipelines/) for full tier details.
 
 **Payment:** 50% upfront, 25% at midpoint, 25% on delivery
 
