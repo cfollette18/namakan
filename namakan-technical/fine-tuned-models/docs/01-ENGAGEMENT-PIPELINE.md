@@ -143,26 +143,26 @@ See [../workflows/deployment_pipeline.py](../workflows/deployment_pipeline.py)
 
 ## Pricing
 
-| Tier | Model Size | Training Data | Timeline | Price |
-|------|------------|---------------|----------|-------|
-| **Build** | 3B-7B params | <5K examples | 2-3 weeks | $5K–$15K |
-| **Professional** | 7B params | 5K–20K examples | 3-4 weeks | $15K–$30K |
-| **Growth** | 8B-13B params | 5K-20K examples | 3-4 weeks | $15K–$25K |
-| **Enterprise** | 13B-72B params | 20K+ examples | 4-6 weeks | $25K–$40K |
+| Tier | Training Data | Base Model | Timeline | Price |
+|------|---------------|------------|----------|-------|
+| **SMB** | 500–5K examples | Qwen / Llama 3B–7B | 4–8 weeks | $5K–$15K |
+| **Mid-Market** | 5K–20K examples | Llama 8B–13B | 8–12 weeks | $15K–$25K |
+| **Enterprise** | 20K+ examples | Llama 70B or multimodal | 12–16 weeks | $25K–$40K |
 
-**Annual maintenance:** $2K–$5K/year (retraining, monitoring)
+**Quarterly retraining:** $500–$2,500/quarter (scales with new data volume)
+*See [service-offerings.md](../../namakan-business/service-offerings.md) for full pricing details.*
 
 ---
 
 ## Timeline
 
 ```
-Week 1:    Discovery + Data Assessment
-Week 2:    Secure Intake + Data Pipeline
-Week 3:    Training Run + Iteration
-Week 4:    Evaluation + Business QA
-Week 5:    Deployment + Testing
-Week 6:    Monitoring Setup + Handoff
+SMB (4–8 weeks):
+  Week 1–2:    Discovery + Data Assessment + Secure Intake
+  Week 3–4:    Data Pipeline + Training Run
+  Week 5–6:    Evaluation + QA + Deployment
+  Week 7–8:    Monitoring Setup + Handoff
 
-Total: 5-6 weeks typical
+Mid-Market (8–12 weeks): + discovery depth, larger dataset processing, additional evaluation rounds
+Enterprise (12–16 weeks): + multimodal components, larger model licensing, extended UAT
 ```
