@@ -225,19 +225,21 @@ An AI agent system that autonomously handles [specific end-to-end workflow — e
 
 | Solution | Investment Range | Timeline |
 |----------|----------------|----------|
-| **Option A: RAG Pipeline** | $5K–$15K | [4–6 weeks] |
-| **Option B: Fine-Tuned Model** | $15K–$25K | [6–10 weeks] |
-| **Option C: Agentic Workflow** | $25K–$40K | [8–14 weeks] |
+| **Option A: Fine-Tuned Model (SMB)** | $5K–$15K | 4–8 weeks |
+| **Option B: Fine-Tuned Model + Custom Agents (Mid-Market)** | $15K–$25K | 8–12 weeks |
+| **Option C: Full Platform (Enterprise)** | $25K–$40K | 12–16 weeks |
+
+*For Custom AI Employees: $2,000/mo (Standard) or $4,000/mo (Senior) — ongoing retainer, not a one-time build.*
 
 **We recommend starting with:** [Option that fits their situation and budget]
 
 ### Payment Terms
 
 - **50%** upon project kickoff
-- **50%** upon successful deployment to production
+- **25%** at midpoint milestone
+- **25%** upon successful deployment to production
 
-*Alternative terms for projects over $50K:*  
-- 40% kickoff / 30% midpoint / 30% completion
+*For larger projects ($50K+): 40% kickoff / 30% midpoint / 30% completion*
 
 ### What's Included
 
