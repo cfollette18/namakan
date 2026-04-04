@@ -1015,9 +1015,9 @@ def check_content_freshness():
 
 | Tier | Document Volume | Complexity | Price |
 |------|----------------|-------------|-------|
-| **Starter** | < 10K docs | Single source | $5K-8K |
-| **Professional** | 10K-100K docs | 2-3 sources | $8K-15K |
-| **Enterprise** | 100K+ docs | Multiple + real-time | $15K-25K |
+| **Starter** | < 10K docs | Single source | $5K–$8K |
+| **Professional** | 10K–50K docs | 2–3 sources | $8K–$12K |
+| **Enterprise** | 50K+ docs | Multiple + real-time | $12K–$15K |
 | **Monthly Maintenance** | Ongoing | Updates, monitoring | $500/mo |
 
 ---
