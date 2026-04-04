@@ -417,9 +417,9 @@ export default function MarketplacePage() {
               <h5 className="font-bold mb-4 text-slate-900 dark:text-white">Resources</h5>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400">
                 <li><Link href="/services" className="hover:text-teal-500 transition-colors">Documentation</Link></li>
-                <li><Link href="/solutions" className="hover:text-teal-500 transition-colors">Blog</Link></li>
-                <li><Link href="/services" className="hover:text-teal-500 transition-colors">Guides</Link></li>
-                <li><Link href="/contact" className="hover:text-teal-500 transition-colors">API Reference</Link></li>
+                <li><Link href="/templates" className="hover:text-teal-500 transition-colors">Templates</Link></li>
+                <li><Link href="/about" className="hover:text-teal-500 transition-colors">About</Link></li>
+                <li><Link href="/contact" className="hover:text-teal-500 transition-colors">Contact</Link></li>
               </ul>
             </div>
 
