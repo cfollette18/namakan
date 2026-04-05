@@ -10,12 +10,12 @@ Internal agent teams for executing Namakan's custom AI engineering projects.
 
 Each team executes one of Namakan's core AI engineering pipelines:
 
-| Pipeline | Description | Starting Price |
+| Pipeline | Description | Price Range |
 |---------|-------------|----------------|
-| [Fine-Tuned Models](./product-pipeline/) | LoRA/QLoRA fine-tuning via Google Colab | $5K–$15K |
-| [RAG Pipelines](./product-pipeline/) | ChromaDB document retrieval pipelines | $5K–$15K + $500/mo |
-| [Agentic Workflows](./product-pipeline/) | ReAct autonomous agents | $5K–$15K |
-| [Custom AI Employees](./product-pipeline/) | Role-specific AI workers | $2K–$5K/mo |
+| [Fine-Tuned Models](./product-pipeline/) | Train AI on your proprietary data | SMB $5K–$15K / Mid-Market $15K–$25K / Enterprise $25K–$40K |
+| [Custom Agents](./product-pipeline/) | AI workers on top of your fine-tuned model | Build $5K–$15K / Growth $15K–$25K / Enterprise $25K–$30K |
+| [Custom AI Employees](./product-pipeline/) | Full-time AI workers, ongoing retainer | Standard $2K/mo / Senior $4K/mo |
+| [RAG Pipelines](./product-pipeline/) | Document retrieval — built into fine-tuning projects | $500–$2K/mo operations |
 
 ---
 
