@@ -168,4 +168,4 @@ Namakan AI Engineering
 - **Custom AI engineering** — trained on client's proprietary data
 - **Proprietary data is the moat** — generic AI can't replicate it
 - **We build, not advise** — we're engineers, not consultants
-- Target: Enterprise manufacturers with proprietary data assets, $5K-$15K project budget
+- Target: Enterprise manufacturers with proprietary data assets, $25K–$40K project budget
