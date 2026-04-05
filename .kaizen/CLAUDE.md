@@ -2,58 +2,54 @@
 
 ## What We Build
 
-Custom AI systems for businesses:
-1. **Fine-Tuned Models** — LoRA/QLoRA fine-tuning via Google Colab (Build: $5K–$15K)
-2. **RAG Pipelines** — ChromaDB + document retrieval (Build: $5K–$15K + $500/mo)
-3. **Agentic Workflows** — ReAct agents with custom tools (Build: $5K–$15K)
-4. **Custom AI Employees** — Role-specific AI workers (Retainer: $2K/mo)
+Custom AI systems for businesses with proprietary data:
+1. **Fine-Tuned Models** — Train AI on your data (SMB: $5K–$15K, Mid-Market: $15K–$25K, Enterprise: $25K–$40K)
+2. **Custom Agents** — AI workers on top of your fine-tuned model (Build/Growth/Enterprise: $5K–$30K)
+3. **Custom AI Employees** — Full-time AI workers, ongoing retainer (Standard: $2K/mo, Senior: $4K/mo)
+4. **RAG Pipelines** — Document retrieval, built into fine-tuning projects ($500–$2K/mo operations)
+
+Every engagement starts with fine-tuning. Agents build on top of the model that knows your business.
 
 ## The Stack
 
 ```
-Frontend:     Next.js 14 (App Router) + TailwindCSS + TypeScript
-Backend:      FastAPI (Python) + Pydantic + LangGraph
-Database:     PostgreSQL 16 + pgvector
-Cache/Queue:  Redis 7
-AI Runtime:   LangGraph multi-agent orchestration
-Vector Store: ChromaDB (client) / FAISS (local)
 Training:     Google Colab (LoRA/QLoRA via PEFT + transformers)
+Agent Runtime: LangGraph (stateful multi-agent orchestration)
+ReAct Pattern: Reason + Act + Observe loop
+LLM:          Dynamic (OpenAI, Anthropic, or local Ollama)
+Vector Store:  ChromaDB (client) / FAISS (local)
+Observability: Prometheus metrics + Loki structured logging
+Testing:       pytest with eval_pipeline.py
 ```
 
 ## Repo Structure
 
 ```
 namakan/
-├── frontend/              # Next.js 14 app
-│   └── app/              # App Router pages
-├── backend/              # FastAPI Python app
-│   └── app/
-│       ├── agents/       # Agent definitions
-│       ├── routers/      # API endpoints
-│       ├── services/     # Business logic
-│       ├── models/       # Pydantic models
-│       ├── tools/        # Agent tools
-│       └── core/         # Config, DB, Redis
-├── namakan-technical/
-│   └── agentic-workflows/  # Workflows: intake, agent_engine, eval_pipeline, monitoring
-│       └── workflows/    # Core workflow modules
-├── namakan-business/     # Business plans, pricing
-├── namakan-sales/        # Sales scripts, target list
-├── namakan-marketing/    # Content, strategy
-├── namakan-legal/        # MSA, NDA, contracts
-├── teams/               # Pre-configured agent teams
-└── docker-compose.yml    # PostgreSQL + Redis
+├── namakan-technical/          # Engineering pipelines
+│   ├── fine-tuned-models/      # LoRA/QLoRA training + workflows
+│   ├── rag-pipelines/         # ChromaDB document retrieval
+│   ├── agentic-workflows/      # ReAct autonomous agents (v2.0)
+│   └── custom-ai-employees/   # Role-specific AI workers
+├── namakan-business/           # Pricing, business plans, service offerings
+├── namakan-sales/             # Cold outreach, objection handling, proposals
+├── namakan-marketing/         # Content, advertising, strategy
+├── namakan-legal/             # MSA, NDA, contracts
+├── frontend/                   # Next.js website (namakanai.com)
+└── .kaizen/                   # Kaizen agent config (this file)
 ```
 
 ## Key Files
 
 | File | Purpose |
 |------|---------|
-| `docker-compose.yml` | PostgreSQL 16 + pgvector, Redis 7 |
-| `init.sql` | Database schema + pgvector extension |
-| `namakan-technical/SECURE-DATA-PIPELINE.md` | Client data handling |
-| `namakan-technical/agentic-workflows/` | Core workflow modules |
-| `teams/` | Pre-built agent teams |
+| `namakan-business/service-offerings.md` | Current pricing and service descriptions |
+| `namakan-business/pricing_section.md` | Detailed pricing breakdown |
+| `namakan-technical/*/PIPELINE.md` | Phase-by-phase engagement guides |
+| `namakan-sales/COLD-EMAIL-SEQUENCE.md` | 5-email outreach sequence |
+| `namakan-sales/OBJECTION-HANDLING.md` | Top 10 objections + responses |
+| `namakan-sales/PROPOSAL-TEMPLATE.md` | Proposal template |
+| `namakan-technical/*/SECURE-DATA-PIPELINE.md` | Client data handling |
 
 ## Philosophy
 

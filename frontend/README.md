@@ -40,4 +40,4 @@ npm start
 
 ## Note
 
-The current live website is the static HTML/CSS version in `../namakan-website/`. This Next.js version is for future production deployment.
+The current live website is this Next.js app, deployed to Vercel at namakanai.com. Domain is configured.
