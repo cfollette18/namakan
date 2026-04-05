@@ -6,8 +6,6 @@ Namakan AI agent setup for Claude Code / OpenClaw agentic development.
 
 | Directory | Purpose |
 |----------|---------|
-| `agents/` | Pre-configured agent definitions (team leads, specialists) |
-| `skills/` | Reusable skill modules for agent tasks |
 | `rules/` | Operational rules and guidelines |
 | `commands/` | Custom slash commands |
 | `training/` | Agent training data and examples |
