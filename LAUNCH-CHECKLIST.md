@@ -169,14 +169,13 @@ Namakan AI Engineering
 
 ## 7. Website Status
 
-**Status: IN DEVELOPMENT** 🚧
+**Status: LIVE** ✅
 
-Website files are in `namakan-website/`. Domain may not yet be live.
+Website is the Next.js app in `frontend/`, deployed to Vercel at namakanai.com. Domain is configured.
 
 ### Action Required:
-- [ ] Confirm domain `namakanai.com` is registered
-- [ ] Deploy website (Vercel, Netlify, or Cloudflare Pages)
-- [ ] Add privacy policy (required — see `namakan-legal/`)
+- [ ] Confirm DNS is pointing correctly to Vercel
+- [ ] Privacy policy in place (see `namakan-legal/`)
 - [ ] Add terms of service
 - [ ] Add contact form with `info@namakanai.com`
 - [ ] Set up SSL (automatic with hosting providers)
